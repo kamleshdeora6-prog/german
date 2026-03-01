@@ -1,10 +1,150 @@
 [
   {
-    "german": "Ich möchte Deutsch lernen, weil ich in Deutschland arbeite.",
-    "english": "I want to learn German because I work in Germany."
+    "level": "A1.1",
+    "german": "Hallo! Ich heiße Anna und ich komme aus Spanien. Ich wohne jetzt in Berlin und lerne Deutsch. In meiner Freizeit lese ich gern Bücher und treffe Freunde im Café.",
+    "english": "Hello! My name is Anna and I come from Spain. I now live in Berlin and learn German. In my free time I like reading books and meeting friends in a café."
   },
   {
-    "german": "Obwohl es regnet, gehe ich spazieren.",
-    "english": "Although it is raining, I go for a walk."
+    "level": "A1.1",
+    "german": "Ich arbeite von Montag bis Freitag im Büro. Am Wochenende schlafe ich lange und gehe spazieren. Manchmal koche ich mit meiner Familie zusammen.",
+    "english": "I work in the office from Monday to Friday. On weekends I sleep long and go for walks. Sometimes I cook together with my family."
+  },
+  {
+    "level": "A1.1",
+    "german": "Mein Bruder studiert Informatik an der Universität. Er mag Computer und spielt gern Videospiele. Abends schauen wir oft gemeinsam Filme.",
+    "english": "My brother studies computer science at the university. He likes computers and enjoys playing video games. In the evenings we often watch movies together."
+  },
+  {
+    "level": "A1.1",
+    "german": "Ich fahre jeden Tag mit dem Bus zur Arbeit. Die Fahrt dauert zwanzig Minuten. Im Bus höre ich Musik oder lese Nachrichten.",
+    "english": "I go to work by bus every day. The trip takes twenty minutes. On the bus I listen to music or read news."
+  },
+  {
+    "level": "A1.1",
+    "german": "Am Morgen trinke ich Kaffee und esse Brot mit Käse. Danach gehe ich zur Arbeit. Abends esse ich oft Reis oder Nudeln.",
+    "english": "In the morning I drink coffee and eat bread with cheese. Then I go to work. In the evening I often eat rice or pasta."
+  },
+
+  {
+    "level": "A1.2",
+    "german": "Letztes Wochenende habe ich meine Eltern besucht. Wir haben zusammen gekocht und einen Film gesehen. Das Wetter war schön und wir sind im Park spazieren gegangen.",
+    "english": "Last weekend I visited my parents. We cooked together and watched a movie. The weather was nice and we went for a walk in the park."
+  },
+  {
+    "level": "A1.2",
+    "german": "Morgen möchte ich früher aufstehen, weil ich Sport machen will. Danach treffe ich meine Kollegin zum Frühstück in der Stadt.",
+    "english": "Tomorrow I want to get up earlier because I want to do sports. Afterwards I will meet my colleague for breakfast in the city."
+  },
+  {
+    "level": "A1.2",
+    "german": "Im Sommer fahre ich gern ans Meer. Ich schwimme, lese Bücher und entspanne am Strand. Urlaub ist sehr wichtig für mich.",
+    "english": "In summer I like to go to the sea. I swim, read books and relax at the beach. Vacation is very important for me."
+  },
+  {
+    "level": "A1.2",
+    "german": "Heute Abend koche ich für meine Freunde. Ich mache Pasta mit Gemüse und Salat. Danach spielen wir Brettspiele.",
+    "english": "Tonight I cook for my friends. I make pasta with vegetables and salad. Afterwards we play board games."
+  },
+  {
+    "level": "A1.1",
+    "german": "Meine Mutter arbeitet in einem Krankenhaus. Sie hilft vielen Menschen jeden Tag. Am Abend ist sie oft müde, aber sie liebt ihren Beruf sehr.",
+    "english": "My mother works in a hospital. She helps many people every day. In the evening she is often tired, but she loves her job."
+  },
+  {
+    "level": "A1.1",
+    "german": "Ich gehe gern einkaufen. Im Supermarkt kaufe ich Obst, Gemüse und Brot. Manchmal kaufe ich auch Schokolade.",
+    "english": "I like to go shopping. In the supermarket I buy fruit, vegetables and bread. Sometimes I also buy chocolate."
+  },
+  {
+    "level": "A1.1",
+    "german": "Am Sonntag frühstücke ich lange. Ich esse Eier, Brot und trinke Tee. Danach lese ich die Zeitung.",
+    "english": "On Sunday I have a long breakfast. I eat eggs, bread and drink tea. Afterwards I read the newspaper."
+  },
+  {
+    "level": "A1.1",
+    "german": "Meine Freundin wohnt in München. Wir telefonieren oft am Wochenende und planen unsere Reisen.",
+    "english": "My friend lives in Munich. We often talk on the phone on weekends and plan our trips."
+  },
+  {
+    "level": "A1.1",
+    "german": "Im Winter ist es kalt und ich trage einen Mantel. Ich mag Schnee, aber ich mag keinen starken Wind.",
+    "english": "In winter it is cold and I wear a coat. I like snow, but I don’t like strong wind."
+  },
+  {
+    "level": "A1.1",
+    "german": "Nach der Arbeit gehe ich ins Fitnessstudio. Sport ist gut für meine Gesundheit.",
+    "english": "After work I go to the gym. Sport is good for my health."
+  },
+  {
+    "level": "A1.1",
+    "german": "Ich habe zwei Katzen. Sie schlafen viel und spielen gern mit einem Ball.",
+    "english": "I have two cats. They sleep a lot and like to play with a ball."
+  },
+  {
+    "level": "A1.1",
+    "german": "Am Abend höre ich Musik und entspanne mich. Musik macht mich glücklich.",
+    "english": "In the evening I listen to music and relax. Music makes me happy."
+  },
+  {
+    "level": "A1.1",
+    "german": "Ich lerne Deutsch jeden Tag für eine Stunde. Es ist manchmal schwer, aber sehr interessant.",
+    "english": "I learn German every day for one hour. It is sometimes difficult but very interesting."
+  },
+  {
+    "level": "A1.1",
+    "german": "Ich treffe meine Freunde gern im Park. Wir reden und trinken Kaffee zusammen.",
+    "english": "I like meeting my friends in the park. We talk and drink coffee together."
+  },
+
+  {
+    "level": "A1.2",
+    "german": "Gestern habe ich einen neuen Film gesehen. Er war sehr spannend und lustig zugleich.",
+    "english": "Yesterday I watched a new movie. It was very exciting and funny at the same time."
+  },
+  {
+    "level": "A1.2",
+    "german": "Letzte Woche bin ich nach Hamburg gereist. Die Stadt ist groß und sehr schön.",
+    "english": "Last week I traveled to Hamburg. The city is big and very beautiful."
+  },
+  {
+    "level": "A1.2",
+    "german": "Ich möchte in Zukunft besser Deutsch sprechen, deshalb übe ich jeden Tag.",
+    "english": "I want to speak better German in the future, therefore I practice every day."
+  },
+  {
+    "level": "A1.2",
+    "german": "Heute habe ich keine Zeit, weil ich viel Arbeit habe.",
+    "english": "Today I don’t have time because I have a lot of work."
+  },
+  {
+    "level": "A1.2",
+    "german": "Wenn das Wetter schön ist, fahre ich Fahrrad.",
+    "english": "When the weather is nice, I ride my bike."
+  },
+  {
+    "level": "A1.2",
+    "german": "Ich habe vergessen Milch zu kaufen, deshalb gehe ich noch einmal zum Supermarkt.",
+    "english": "I forgot to buy milk, therefore I go to the supermarket again."
+  },
+  {
+    "level": "A1.2",
+    "german": "Am Wochenende möchte ich meine Wohnung putzen und Wäsche waschen.",
+    "english": "On the weekend I want to clean my apartment and wash clothes."
+  },
+  {
+    "level": "A1.2",
+    "german": "Ich habe heute lange gearbeitet und bin jetzt sehr müde.",
+    "english": "I worked long today and I am very tired now."
+  },
+  {
+    "level": "A1.2",
+    "german": "Meine Kollegen sind freundlich und hilfsbereit.",
+    "english": "My colleagues are friendly and helpful."
+  },
+  {
+    "level": "A1.2",
+    "german": "Im Urlaub möchte ich neue Länder sehen und neue Kulturen kennenlernen.",
+    "english": "On vacation I want to see new countries and learn about new cultures."
   }
+]
 ]
