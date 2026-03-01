@@ -65,7 +65,6 @@ button{
   </div>
 </header>
 
-<!-- Tabs (always visible) -->
 <div class="tabs card" id="tabBar">
   <button onclick="showTab('practice')">Practice</button>
   <button onclick="showTab('library')">Library</button>
@@ -73,7 +72,6 @@ button{
   <button onclick="showTab('translator')">Translator</button>
 </div>
 
-<!-- PRACTICE -->
 <div id="practice" class="card">
   <h3 style="margin-top:0;">Typing Practice</h3>
   <div class="small">Select a passage → read reference → type it exactly.</div>
@@ -94,12 +92,11 @@ button{
   <p id="result" class="small"></p>
 </div>
 
-<!-- LIBRARY (local only) -->
 <div id="library" class="card hidden">
   <h3 style="margin-top:0;">Library (local only)</h3>
   <div class="small">
-    Passages are loaded from <b>passages.json</b>.  
-    If you want to permanently add passages, edit <b>passages.json</b> in GitHub.
+    Passages are loaded from <b>passages.json</b>.<br>
+    To permanently add passages, edit <b>passages.json</b> in GitHub.
   </div>
 
   <textarea id="germanInput" placeholder="German text (local)"></textarea>
@@ -109,7 +106,6 @@ button{
   <div id="libraryList" style="margin-top:12px;"></div>
 </div>
 
-<!-- NOTES -->
 <div id="notes" class="card hidden">
   <h3 style="margin-top:0;">Notes</h3>
   <div class="small">Loaded from <b>notes.json</b>. Select a topic.</div>
@@ -117,7 +113,7 @@ button{
   <select id="notesTopic"></select>
   <textarea id="notesArea" style="min-height:320px;" readonly></textarea>
 </div>
-<!-- TRANSLATOR -->
+
 <div id="translator" class="card hidden">
   <h3 style="margin-top:0;">Translator</h3>
 
@@ -151,7 +147,7 @@ button{
   <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
 
   <h3 style="margin-top:18px;">Dictionary</h3>
-  <div class="small">Looks up German words on Wiktionary (best with base form, e.g., “wollen”, not “willst”).</div>
+  <div class="small">Best with base form (e.g., “wollen”, not “willst”).</div>
   <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
   <div class="row">
     <button onclick="lookupWord()">Lookup</button>
@@ -161,9 +157,6 @@ button{
 </div>
 
 <script>
-/* =========================
-   Theme + Tabs
-========================= */
 function toggleTheme(){ document.body.classList.toggle("light"); }
 function goHome(){ showTab('practice'); }
 
@@ -175,25 +168,17 @@ function showTab(id){
   document.getElementById(id).classList.remove("hidden");
 }
 
-/* =========================
-   Data + Status
-========================= */
-let passages = []; // normalized to {g,e,level}
+let passages = [];
 const statusEl = document.getElementById("status");
 function setStatus(msg){ statusEl.textContent = msg || ""; }
 function esc(s){ return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 
-/* =========================
-   Load from GitHub JSON
-========================= */
 async function loadPassagesFromGitHub(){
-  // IMPORTANT: cache-bust so GitHub updates show immediately
   const url = "./passages.json?v=" + Date.now();
-
   const res = await fetch(url, { cache: "no-store" });
   if(!res.ok) throw new Error("passages.json not reachable (404 or not in root).");
 
-  const raw = await res.json(); // will throw if JSON invalid
+  const raw = await res.json();
   if(!Array.isArray(raw)) throw new Error("passages.json must be an array: [ {...}, {...} ]");
 
   passages = raw.map(p => ({
@@ -209,88 +194,62 @@ async function loadNotesFromGitHub(){
   const notesArea  = document.getElementById("notesArea");
   const notesTopic = document.getElementById("notesTopic");
 
-  try{
-    const url = "./notes.json?v=" + Date.now(); // cache-bust
-    const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
+  const url = "./notes.json?v=" + Date.now();
+  const res = await fetch(url, { cache: "no-store" });
+  if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
 
-    const notesObj = await res.json();
-    if(!notesObj || typeof notesObj !== "object" || Array.isArray(notesObj)){
-      throw new Error("notes.json must be an object: { key: value }");
-    }
-
-    // Make nice labels
-    const labelMap = {
-      articles_table: "DER / DIE / DAS",
-      cases_overview: "Cases overview",
-      personal_pronouns: "Personal pronouns",
-      modal_verbs: "Modal verbs",
-      important_conjunctions: "Conjunctions",
-      sentence_structure: "Sentence structure",
-      perfect_tense: "Perfect tense",
-      separable_verbs: "Separable verbs",
-      accusative_prepositions: "Prepositions (Akk)",
-      dative_prepositions: "Prepositions (Dat)",
-      two_way_prepositions: "Two-way prepositions",
-      adjective_rule: "Adjectives",
-      question_words: "Question words",
-      time_words: "Time words",
-      daily_verbs: "Daily verbs",
-      b1_connectors: "B1 connectors",
-      b1_passive_intro: "B1 passive (intro)",
-      b1_reflexive_verbs: "B1 reflexive verbs",
-      b1_subordinate_clauses: "B1 subordinate clauses",
-      vocab_work: "Vocab: work",
-      vocab_home: "Vocab: home"
-    };
-
-    const keys = Object.keys(notesObj);
-
-    // Fill dropdown
-    notesTopic.innerHTML = "";
-    keys.forEach(k => {
-      const opt = document.createElement("option");
-      opt.value = k;
-      opt.textContent = labelMap[k] || k.replaceAll("_"," ");
-      notesTopic.appendChild(opt);
-    });
-
-    // Restore last selected topic if available
-    const last = localStorage.getItem("notes_topic");
-    const chosen = (last && keys.includes(last)) ? last : keys[0];
-
-    notesTopic.value = chosen;
-    notesArea.value = String(notesObj[chosen] ?? "");
-
-    notesTopic.onchange = () => {
-      const k = notesTopic.value;
-      localStorage.setItem("notes_topic", k);
-      notesArea.value = String(notesObj[k] ?? "");
-    };
-
-    // cache notes object for offline fallback
-    localStorage.setItem("notes_obj", JSON.stringify(notesObj));
-  }catch(e){
-    // fallback
-    const cached = localStorage.getItem("notes_obj");
-    if (cached){
-      const notesObj = JSON.parse(cached);
-      const keys = Object.keys(notesObj);
-      notesTopic.innerHTML = "";
-      keys.forEach(k => {
-        const opt = document.createElement("option");
-        opt.value = k;
-        opt.textContent = k.replaceAll("_"," ");
-        notesTopic.appendChild(opt);
-      });
-      const chosen = keys[0];
-      notesTopic.value = chosen;
-      notesArea.value = String(notesObj[chosen] ?? "");
-    } else {
-      notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
-      notesArea.value = "";
-    }
+  const notesObj = await res.json();
+  if(!notesObj || typeof notesObj !== "object" || Array.isArray(notesObj)){
+    throw new Error("notes.json must be an object: { key: value }");
   }
+
+  const labelMap = {
+    articles_table: "DER / DIE / DAS",
+    cases_overview: "Cases overview",
+    personal_pronouns: "Personal pronouns",
+    modal_verbs: "Modal verbs",
+    important_conjunctions: "Conjunctions",
+    sentence_structure: "Sentence structure",
+    perfect_tense: "Perfect tense",
+    separable_verbs: "Separable verbs",
+    accusative_prepositions: "Prepositions (Akk)",
+    dative_prepositions: "Prepositions (Dat)",
+    two_way_prepositions: "Two-way prepositions",
+    adjective_rule: "Adjectives",
+    question_words: "Question words",
+    time_words: "Time words",
+    daily_verbs: "Daily verbs",
+    b1_connectors: "B1 connectors",
+    b1_passive_intro: "B1 passive (intro)",
+    b1_reflexive_verbs: "B1 reflexive verbs",
+    b1_subordinate_clauses: "B1 subordinate clauses",
+    vocab_work: "Vocab: work",
+    vocab_home: "Vocab: home"
+  };
+
+  const keys = Object.keys(notesObj);
+
+  notesTopic.innerHTML = "";
+  keys.forEach(k => {
+    const opt = document.createElement("option");
+    opt.value = k;
+    opt.textContent = labelMap[k] || k.replaceAll("_"," ");
+    notesTopic.appendChild(opt);
+  });
+
+  const last = localStorage.getItem("notes_topic");
+  const chosen = (last && keys.includes(last)) ? last : keys[0];
+
+  notesTopic.value = chosen;
+  notesArea.value = String(notesObj[chosen] ?? "");
+
+  notesTopic.onchange = () => {
+    const k = notesTopic.value;
+    localStorage.setItem("notes_topic", k);
+    notesArea.value = String(notesObj[k] ?? "");
+  };
+
+  localStorage.setItem("notes_obj", JSON.stringify(notesObj));
 }
 
 async function reloadData(){
@@ -301,17 +260,39 @@ async function reloadData(){
     await loadPassagesFromGitHub();
     setStatus(`✅ Loaded ${passages.length} passages from passages.json`);
   }catch(e){
-    // fallback
     passages = JSON.parse(localStorage.getItem("passages") || "[]");
     setStatus(`⚠️ Passages not loaded: ${e.message} (Using local: ${passages.length})`);
   }
 
   try{
     await loadNotesFromGitHub();
-    // keep status if passages had warning
     if(statusEl.textContent.startsWith("✅")) setStatus("✅ Passages + notes loaded.");
   }catch(e){
-  
+    const cached = localStorage.getItem("notes_obj");
+    if (cached) {
+      const notesObj = JSON.parse(cached);
+      const notesTopic = document.getElementById("notesTopic");
+      const notesArea  = document.getElementById("notesArea");
+      const keys = Object.keys(notesObj);
+
+      notesTopic.innerHTML = "";
+      keys.forEach(k => {
+        const opt = document.createElement("option");
+        opt.value = k;
+        opt.textContent = k.replaceAll("_"," ");
+        notesTopic.appendChild(opt);
+      });
+
+      const chosen = keys[0] || "";
+      notesTopic.value = chosen;
+      notesArea.value = String(notesObj[chosen] ?? "");
+      notesTopic.onchange = () => {
+        const k = notesTopic.value;
+        localStorage.setItem("notes_topic", k);
+        notesArea.value = String(notesObj[k] ?? "");
+      };
+    }
+
     if(statusEl.textContent.startsWith("✅")){
       setStatus(`⚠️ Notes not loaded: ${e.message}`);
     }else{
@@ -323,9 +304,6 @@ async function reloadData(){
   renderLibrary();
 }
 
-/* =========================
-   Practice UI
-========================= */
 const practiceSelect = document.getElementById("practiceSelect");
 const referenceArea  = document.getElementById("referenceArea");
 const practiceArea   = document.getElementById("practiceArea");
@@ -363,7 +341,6 @@ function updateReference(){
   practiceArea.value = "";
   practiceArea.focus();
 }
-
 practiceSelect.addEventListener("change", updateReference);
 
 function checkTyping(){
@@ -383,9 +360,6 @@ function clearTyping(){
   practiceArea.focus();
 }
 
-/* =========================
-   Library (local only)
-========================= */
 function saveParagraphLocal(){
   const g = document.getElementById("germanInput").value || "";
   const e = document.getElementById("englishInput").value || "";
@@ -434,9 +408,7 @@ function deleteLocal(i){
   renderPracticeDropdown();
 }
 
-/* =========================
-   Translator + Dictionary
-========================= */
+/* Translator */
 function swapLangs(){
   const from = document.getElementById("langFrom");
   const to = document.getElementById("langTo");
@@ -444,7 +416,6 @@ function swapLangs(){
   from.value = to.value;
   to.value = tmp;
 
-  // swap text boxes too (optional but convenient)
   const inp = document.getElementById("translateInput");
   const out = document.getElementById("translateOutput");
   const t = inp.value;
@@ -464,7 +435,6 @@ async function translateText(){
   const sl = document.getElementById("langFrom").value;
   const tl = document.getElementById("langTo").value;
 
-  // Google translate free endpoint (can be rate-limited, but fine for personal use)
   const url =
     "https://translate.googleapis.com/translate_a/single?client=gtx" +
     `&sl=${encodeURIComponent(sl)}` +
@@ -480,6 +450,7 @@ async function translateText(){
   }
 }
 
+/* Dictionary (improved: long extract + wikitext fallback) */
 function clearDict(){
   document.getElementById("dictWord").value = "";
   document.getElementById("dictResult").textContent = "";
@@ -491,45 +462,59 @@ async function lookupWord(){
   out.textContent = "";
   if(!w) return;
 
-  // Use MediaWiki API with origin=* (CORS-friendly)
-  const url =
+  // 1) full long extract
+  const url1 =
     "https://de.wiktionary.org/w/api.php" +
-    "?action=query&format=json&prop=extracts&exintro=1&explaintext=1&redirects=1" +
+    "?action=query&format=json&prop=extracts" +
+    "&explaintext=1&redirects=1" +
+    "&exchars=5000" +
     "&titles=" + encodeURIComponent(w) +
     "&origin=*";
 
   try{
-    const res = await fetch(url);
-    const data = await res.json();
-    const pages = data?.query?.pages;
-    const pageId = pages ? Object.keys(pages)[0] : null;
-    const page = pageId ? pages[pageId] : null;
+    const res1 = await fetch(url1);
+    const data1 = await res1.json();
+    const pages1 = data1?.query?.pages;
+    const pageId1 = pages1 ? Object.keys(pages1)[0] : null;
+    const page1 = pageId1 ? pages1[pageId1] : null;
 
-    if(!page || page.missing){
-      out.textContent = "Not found on Wiktionary. Try the base form (Infinitiv / singular).";
+    if(!page1 || page1.missing){
+      out.textContent = "Not found on Wiktionary. Try base form (Infinitiv / singular).";
       return;
     }
 
-    const title = page.title || w;
-    const extract = (page.extract || "").trim();
+    const title = page1.title || w;
+    const extract = (page1.extract || "").trim();
 
-    if(!extract){
-      out.textContent = `${title}\n\n(Found, but no short extract. Try another form.)`;
+    if(extract){
+      out.textContent = `${title}\n\n${extract}`;
       return;
     }
 
-    out.textContent = `${title}\n\n${extract}`;
-  }catch(e){
-    out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
+    // 2) fallback: wikitext (raw)
+    const url2 =
+      "https://de.wiktionary.org/w/api.php" +
+      "?action=parse&format=json&prop=wikitext" +
+      "&page=" + encodeURIComponent(title) +
+      "&origin=*";
+
+    const res2 = await fetch(url2);
+    const data2 = await res2.json();
+    const wiki = (data2?.parse?.wikitext?.["*"] || "").trim();
+
+    if(!wiki){
+      out.textContent = `${title}\n\n(Found, but no readable content returned.)`;
+      return;
+    }
+
+    out.textContent = `${title}\n\n${wiki.slice(0,5000)}${wiki.length > 5000 ? "\n\n…(truncated)" : ""}`;
+  }catch{
+    out.textContent = "Dictionary lookup failed (network). Try again.";
   }
 }
 
-/* =========================
-   Init
-========================= */
+/* Init */
 (async () => {
-  // show cached notes immediately, then load fresh notes.json
-  document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
   await reloadData();
   showTab("practice");
 })();
@@ -537,4 +522,3 @@ async function lookupWord(){
 
 </body>
 </html>
-
