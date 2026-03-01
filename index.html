@@ -112,23 +112,52 @@ button{
 <!-- NOTES -->
 <div id="notes" class="card hidden">
   <h3 style="margin-top:0;">Notes</h3>
-  <div class="small">
-    Loaded from <b>notes.json</b>. If it doesn’t load, your JSON might be invalid.
-  </div>
-  <textarea id="notesArea" placeholder="Notes..." style="min-height:320px;"></textarea>
-</div>
+  <div class="small">Loaded from <b>notes.json</b>. Select a topic.</div>
 
+  <select id="notesTopic"></select>
+  <textarea id="notesArea" style="min-height:320px;" readonly></textarea>
+</div>
 <!-- TRANSLATOR -->
 <div id="translator" class="card hidden">
-  <h3 style="margin-top:0;">German → English Translator</h3>
-  <textarea id="translateInput" placeholder="Paste German here..."></textarea>
-  <button onclick="translateText()">Translate</button>
-  <textarea id="translateOutput" placeholder="English output..." readonly></textarea>
+  <h3 style="margin-top:0;">Translator</h3>
 
-  <h3>Dictionary</h3>
-  <input id="dictWord" placeholder="German word (e.g., wollen)">
-  <button onclick="lookupWord()">Lookup</button>
-  <div id="dictResult" class="small" style="margin-top:10px;"></div>
+  <div class="row" style="margin-top:8px;">
+    <div style="min-width:180px;">
+      <div class="small">From</div>
+      <select id="langFrom">
+        <option value="de">German (DE)</option>
+        <option value="en">English (EN)</option>
+      </select>
+    </div>
+
+    <div style="min-width:180px;">
+      <div class="small">To</div>
+      <select id="langTo">
+        <option value="en">English (EN)</option>
+        <option value="de">German (DE)</option>
+      </select>
+    </div>
+
+    <div style="margin-top:22px;">
+      <button onclick="swapLangs()">⇄ Swap</button>
+    </div>
+  </div>
+
+  <textarea id="translateInput" placeholder="Type/paste text here..."></textarea>
+  <div class="row">
+    <button onclick="translateText()">Translate</button>
+    <button onclick="clearTranslate()">Clear</button>
+  </div>
+  <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
+
+  <h3 style="margin-top:18px;">Dictionary</h3>
+  <div class="small">Looks up German words on Wiktionary (best with base form, e.g., “wollen”, not “willst”).</div>
+  <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
+  <div class="row">
+    <button onclick="lookupWord()">Lookup</button>
+    <button onclick="clearDict()">Clear</button>
+  </div>
+  <div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
 </div>
 
 <script>
@@ -177,20 +206,91 @@ async function loadPassagesFromGitHub(){
 }
 
 async function loadNotesFromGitHub(){
-  const url = "./notes.json?v=" + Date.now();
+  const notesArea  = document.getElementById("notesArea");
+  const notesTopic = document.getElementById("notesTopic");
 
-  const res = await fetch(url, { cache: "no-store" });
-  if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
+  try{
+    const url = "./notes.json?v=" + Date.now(); // cache-bust
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
 
-  const obj = await res.json(); // will throw if JSON invalid
-  if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object: { key: value }");
+    const notesObj = await res.json();
+    if(!notesObj || typeof notesObj !== "object" || Array.isArray(notesObj)){
+      throw new Error("notes.json must be an object: { key: value }");
+    }
 
-  const text = Object.entries(obj)
-    .map(([k,v]) => `### ${k}\n${String(v)}\n`)
-    .join("\n");
+    // Make nice labels
+    const labelMap = {
+      articles_table: "DER / DIE / DAS",
+      cases_overview: "Cases overview",
+      personal_pronouns: "Personal pronouns",
+      modal_verbs: "Modal verbs",
+      important_conjunctions: "Conjunctions",
+      sentence_structure: "Sentence structure",
+      perfect_tense: "Perfect tense",
+      separable_verbs: "Separable verbs",
+      accusative_prepositions: "Prepositions (Akk)",
+      dative_prepositions: "Prepositions (Dat)",
+      two_way_prepositions: "Two-way prepositions",
+      adjective_rule: "Adjectives",
+      question_words: "Question words",
+      time_words: "Time words",
+      daily_verbs: "Daily verbs",
+      b1_connectors: "B1 connectors",
+      b1_passive_intro: "B1 passive (intro)",
+      b1_reflexive_verbs: "B1 reflexive verbs",
+      b1_subordinate_clauses: "B1 subordinate clauses",
+      vocab_work: "Vocab: work",
+      vocab_home: "Vocab: home"
+    };
 
-  document.getElementById("notesArea").value = text;
-  localStorage.setItem("notes", text);
+    const keys = Object.keys(notesObj);
+
+    // Fill dropdown
+    notesTopic.innerHTML = "";
+    keys.forEach(k => {
+      const opt = document.createElement("option");
+      opt.value = k;
+      opt.textContent = labelMap[k] || k.replaceAll("_"," ");
+      notesTopic.appendChild(opt);
+    });
+
+    // Restore last selected topic if available
+    const last = localStorage.getItem("notes_topic");
+    const chosen = (last && keys.includes(last)) ? last : keys[0];
+
+    notesTopic.value = chosen;
+    notesArea.value = String(notesObj[chosen] ?? "");
+
+    notesTopic.onchange = () => {
+      const k = notesTopic.value;
+      localStorage.setItem("notes_topic", k);
+      notesArea.value = String(notesObj[k] ?? "");
+    };
+
+    // cache notes object for offline fallback
+    localStorage.setItem("notes_obj", JSON.stringify(notesObj));
+  }catch(e){
+    // fallback
+    const cached = localStorage.getItem("notes_obj");
+    if (cached){
+      const notesObj = JSON.parse(cached);
+      const keys = Object.keys(notesObj);
+      notesTopic.innerHTML = "";
+      keys.forEach(k => {
+        const opt = document.createElement("option");
+        opt.value = k;
+        opt.textContent = k.replaceAll("_"," ");
+        notesTopic.appendChild(opt);
+      });
+      const chosen = keys[0];
+      notesTopic.value = chosen;
+      notesArea.value = String(notesObj[chosen] ?? "");
+    } else {
+      notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
+      notesArea.value = "";
+    }
+  }
 }
 
 async function reloadData(){
@@ -211,7 +311,7 @@ async function reloadData(){
     // keep status if passages had warning
     if(statusEl.textContent.startsWith("✅")) setStatus("✅ Passages + notes loaded.");
   }catch(e){
-    document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
+  
     if(statusEl.textContent.startsWith("✅")){
       setStatus(`⚠️ Notes not loaded: ${e.message}`);
     }else{
@@ -337,14 +437,52 @@ function deleteLocal(i){
 /* =========================
    Translator + Dictionary
 ========================= */
+function swapLangs(){
+  const from = document.getElementById("langFrom");
+  const to = document.getElementById("langTo");
+  const tmp = from.value;
+  from.value = to.value;
+  to.value = tmp;
+
+  // swap text boxes too (optional but convenient)
+  const inp = document.getElementById("translateInput");
+  const out = document.getElementById("translateOutput");
+  const t = inp.value;
+  inp.value = out.value;
+  out.value = t;
+}
+
+function clearTranslate(){
+  document.getElementById("translateInput").value = "";
+  document.getElementById("translateOutput").value = "";
+}
+
 async function translateText(){
   const text = (document.getElementById("translateInput").value || "").trim();
   if(!text) return;
 
-  const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=" + encodeURIComponent(text);
-  const res = await fetch(url);
-  const data = await res.json();
-  document.getElementById("translateOutput").value = (data[0] || []).map(x => x[0]).join("");
+  const sl = document.getElementById("langFrom").value;
+  const tl = document.getElementById("langTo").value;
+
+  // Google translate free endpoint (can be rate-limited, but fine for personal use)
+  const url =
+    "https://translate.googleapis.com/translate_a/single?client=gtx" +
+    `&sl=${encodeURIComponent(sl)}` +
+    `&tl=${encodeURIComponent(tl)}` +
+    "&dt=t&q=" + encodeURIComponent(text);
+
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    document.getElementById("translateOutput").value = (data[0] || []).map(x => x[0]).join("");
+  }catch{
+    document.getElementById("translateOutput").value = "Translation failed (network/rate-limit). Try again.";
+  }
+}
+
+function clearDict(){
+  document.getElementById("dictWord").value = "";
+  document.getElementById("dictResult").textContent = "";
 }
 
 async function lookupWord(){
@@ -353,13 +491,36 @@ async function lookupWord(){
   out.textContent = "";
   if(!w) return;
 
+  // Use MediaWiki API with origin=* (CORS-friendly)
+  const url =
+    "https://de.wiktionary.org/w/api.php" +
+    "?action=query&format=json&prop=extracts&exintro=1&explaintext=1&redirects=1" +
+    "&titles=" + encodeURIComponent(w) +
+    "&origin=*";
+
   try{
-    const res = await fetch("https://en.wiktionary.org/api/rest_v1/page/summary/" + encodeURIComponent(w));
-    if(!res.ok) throw new Error("Not found");
+    const res = await fetch(url);
     const data = await res.json();
-    out.textContent = data.extract || "No definition found.";
-  }catch{
-    out.textContent = "Not found.";
+    const pages = data?.query?.pages;
+    const pageId = pages ? Object.keys(pages)[0] : null;
+    const page = pageId ? pages[pageId] : null;
+
+    if(!page || page.missing){
+      out.textContent = "Not found on Wiktionary. Try the base form (Infinitiv / singular).";
+      return;
+    }
+
+    const title = page.title || w;
+    const extract = (page.extract || "").trim();
+
+    if(!extract){
+      out.textContent = `${title}\n\n(Found, but no short extract. Try another form.)`;
+      return;
+    }
+
+    out.textContent = `${title}\n\n${extract}`;
+  }catch(e){
+    out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
   }
 }
 
@@ -376,3 +537,4 @@ async function lookupWord(){
 
 </body>
 </html>
+
