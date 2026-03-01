@@ -37,6 +37,7 @@ button{padding:8px 12px;border-radius:8px;border:1px solid var(--line);backgroun
 <header>
 <h2>German Study App</h2>
 <button onclick="toggleTheme()">Toggle Dark/Light</button>
+<button onclick="goHome()">🏠 Home</button>
 </header>
 
 <div class="tabs card">
@@ -143,7 +144,11 @@ async function lookupWord(){
 }
 
 loadLibrary();
+  function goHome(){
+  showTab('practice');
+}
 </script>
 </body>
 
 </html>
+
