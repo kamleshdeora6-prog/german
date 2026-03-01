@@ -60,6 +60,7 @@ button{
   <div class="row">
     <button onclick="toggleTheme()">Toggle Dark/Light</button>
     <button onclick="goHome()">🏠 Home</button>
+    <button onclick="reloadData()">🔄 Reload Data</button>
     <span id="status" class="small"></span>
   </div>
 </header>
@@ -75,15 +76,15 @@ button{
 <!-- PRACTICE -->
 <div id="practice" class="card">
   <h3 style="margin-top:0;">Typing Practice</h3>
-  <div class="small">Select a passage, then type it exactly.</div>
+  <div class="small">Select a passage → read reference → type it exactly.</div>
 
   <select id="practiceSelect"></select>
 
   <div style="margin-top:12px;" class="small">Reference (German)</div>
-  <textarea id="referenceArea" readonly style="min-height:110px;"></textarea>
+  <textarea id="referenceArea" readonly style="min-height:120px;"></textarea>
 
   <div style="margin-top:12px;" class="small">Type here</div>
-  <textarea id="practiceArea" placeholder="Type here..."></textarea>
+  <textarea id="practiceArea" placeholder="Type here..." style="min-height:120px;"></textarea>
 
   <div class="row">
     <button onclick="checkTyping()">Check</button>
@@ -93,16 +94,16 @@ button{
   <p id="result" class="small"></p>
 </div>
 
-<!-- LIBRARY -->
+<!-- LIBRARY (local only) -->
 <div id="library" class="card hidden">
-  <h3 style="margin-top:0;">Add Paragraph (local only)</h3>
+  <h3 style="margin-top:0;">Library (local only)</h3>
   <div class="small">
-    Note: Passages loaded from <b>passages.json</b> cannot be permanently saved from the website.
-    Use GitHub to edit passages.json for permanent changes.
+    Passages are loaded from <b>passages.json</b>.  
+    If you want to permanently add passages, edit <b>passages.json</b> in GitHub.
   </div>
 
-  <textarea id="germanInput" placeholder="German text"></textarea>
-  <textarea id="englishInput" placeholder="English translation"></textarea>
+  <textarea id="germanInput" placeholder="German text (local)"></textarea>
+  <textarea id="englishInput" placeholder="English translation (local)"></textarea>
   <button onclick="saveParagraphLocal()">Save locally</button>
 
   <div id="libraryList" style="margin-top:12px;"></div>
@@ -111,9 +112,10 @@ button{
 <!-- NOTES -->
 <div id="notes" class="card hidden">
   <h3 style="margin-top:0;">Notes</h3>
-  <div class="small">Loaded from <b>notes.json</b> (and cached in your browser).</div>
-  <textarea id="notesArea" placeholder="Grammar / vocab / etc" style="min-height:260px;"></textarea>
-  <button onclick="saveNotesLocal()">Save Notes locally</button>
+  <div class="small">
+    Loaded from <b>notes.json</b>. If it doesn’t load, your JSON might be invalid.
+  </div>
+  <textarea id="notesArea" placeholder="Notes..." style="min-height:320px;"></textarea>
 </div>
 
 <!-- TRANSLATOR -->
@@ -145,50 +147,80 @@ function showTab(id){
 }
 
 /* =========================
-   Data
+   Data + Status
 ========================= */
-let passages = []; // normalized to {g, e, level}
+let passages = []; // normalized to {g,e,level}
 const statusEl = document.getElementById("status");
-
 function setStatus(msg){ statusEl.textContent = msg || ""; }
+function esc(s){ return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 
-/* Load from GitHub JSON files (preferred) with localStorage fallback */
+/* =========================
+   Load from GitHub JSON
+========================= */
 async function loadPassagesFromGitHub(){
-  try{
-    const res = await fetch("./passages.json", { cache: "no-store" });
-    if(!res.ok) throw new Error("passages.json not found");
-    const raw = await res.json();
+  // IMPORTANT: cache-bust so GitHub updates show immediately
+  const url = "./passages.json?v=" + Date.now();
 
-    passages = raw.map(p => ({
-      g: p.german ?? p.g ?? "",
-      e: p.english ?? p.e ?? "",
-      level: p.level ?? ""
-    })).filter(p => (p.g || "").trim().length);
+  const res = await fetch(url, { cache: "no-store" });
+  if(!res.ok) throw new Error("passages.json not reachable (404 or not in root).");
 
-    localStorage.setItem("passages", JSON.stringify(passages));
-    setStatus(`Loaded ${passages.length} passages from passages.json`);
-  }catch(e){
-    passages = JSON.parse(localStorage.getItem("passages") || "[]");
-    setStatus(`Using local passages (${passages.length}). Add passages.json to sync.`);
-  }
+  const raw = await res.json(); // will throw if JSON invalid
+  if(!Array.isArray(raw)) throw new Error("passages.json must be an array: [ {...}, {...} ]");
+
+  passages = raw.map(p => ({
+    g: p.german ?? p.g ?? "",
+    e: p.english ?? p.e ?? "",
+    level: p.level ?? ""
+  })).filter(p => (p.g || "").trim().length);
+
+  localStorage.setItem("passages", JSON.stringify(passages));
 }
 
 async function loadNotesFromGitHub(){
-  const notesArea = document.getElementById("notesArea");
+  const url = "./notes.json?v=" + Date.now();
+
+  const res = await fetch(url, { cache: "no-store" });
+  if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
+
+  const obj = await res.json(); // will throw if JSON invalid
+  if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object: { key: value }");
+
+  const text = Object.entries(obj)
+    .map(([k,v]) => `### ${k}\n${String(v)}\n`)
+    .join("\n");
+
+  document.getElementById("notesArea").value = text;
+  localStorage.setItem("notes", text);
+}
+
+async function reloadData(){
+  setStatus("Loading…");
+  document.getElementById("result").textContent = "";
+
   try{
-    const res = await fetch("./notes.json", { cache: "no-store" });
-    if(!res.ok) throw new Error("notes.json not found");
-    const notesObj = await res.json();
-
-    const text = Object.entries(notesObj)
-      .map(([k,v]) => `### ${k}\n${v}\n`)
-      .join("\n");
-
-    notesArea.value = text;
-    localStorage.setItem("notes", text);
+    await loadPassagesFromGitHub();
+    setStatus(`✅ Loaded ${passages.length} passages from passages.json`);
   }catch(e){
-    notesArea.value = localStorage.getItem("notes") || "";
+    // fallback
+    passages = JSON.parse(localStorage.getItem("passages") || "[]");
+    setStatus(`⚠️ Passages not loaded: ${e.message} (Using local: ${passages.length})`);
   }
+
+  try{
+    await loadNotesFromGitHub();
+    // keep status if passages had warning
+    if(statusEl.textContent.startsWith("✅")) setStatus("✅ Passages + notes loaded.");
+  }catch(e){
+    document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
+    if(statusEl.textContent.startsWith("✅")){
+      setStatus(`⚠️ Notes not loaded: ${e.message}`);
+    }else{
+      setStatus(statusEl.textContent + " | Notes failed.");
+    }
+  }
+
+  renderPracticeDropdown();
+  renderLibrary();
 }
 
 /* =========================
@@ -219,7 +251,6 @@ function renderPracticeDropdown(){
     practiceSelect.appendChild(opt);
   });
 
-  // show first passage by default
   practiceSelect.value = "0";
   updateReference();
 }
@@ -241,12 +272,9 @@ function checkTyping(){
   if(!p){ resultEl.textContent = "No passage selected."; return; }
 
   const typed = practiceArea.value;
-  if(typed === p.g){
-    resultEl.textContent = "✅ Perfect! Exact match.";
-  }else{
-    // quick feedback (not fancy)
-    resultEl.textContent = "❌ Not exact. Tip: check commas, umlauts, spaces, and line breaks.";
-  }
+  resultEl.textContent = (typed === p.g)
+    ? "✅ Perfect! Exact match."
+    : "❌ Not exact. Tip: check commas, umlauts, spaces, and line breaks.";
 }
 
 function clearTyping(){
@@ -290,9 +318,9 @@ function renderLibrary(){
     box.style.padding = "10px";
     box.style.marginTop = "10px";
     box.innerHTML = `
-      <div class="small"><b>${(p.level||"").toString()}</b></div>
-      <div style="white-space:pre-wrap;margin-top:6px;">${escapeHtml(p.g)}</div>
-      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${escapeHtml(p.e)}</div>` : ""}
+      <div class="small"><b>${esc((p.level||"").toString())}</b></div>
+      <div style="white-space:pre-wrap;margin-top:6px;">${esc(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${esc(p.e)}</div>` : ""}
       <button style="background:#4b1a1a;border-color:#c0392b;" onclick="deleteLocal(${i})">Delete (local)</button>
     `;
     list.appendChild(box);
@@ -304,18 +332,6 @@ function deleteLocal(i){
   localStorage.setItem("passages", JSON.stringify(passages));
   renderLibrary();
   renderPracticeDropdown();
-}
-
-function escapeHtml(s){
-  return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
-}
-
-/* =========================
-   Notes (local save)
-========================= */
-function saveNotesLocal(){
-  localStorage.setItem("notes", document.getElementById("notesArea").value || "");
-  alert("Notes saved locally.");
 }
 
 /* =========================
@@ -351,16 +367,9 @@ async function lookupWord(){
    Init
 ========================= */
 (async () => {
-  // Load notes from local (fast) first, then try GitHub
+  // show cached notes immediately, then load fresh notes.json
   document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
-
-  await loadPassagesFromGitHub();
-  await loadNotesFromGitHub();
-
-  renderPracticeDropdown();
-  renderLibrary();
-
-  // Ensure the practice tab is visible
+  await reloadData();
   showTab("practice");
 })();
 </script>
