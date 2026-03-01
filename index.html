@@ -89,9 +89,16 @@ let passages = JSON.parse(localStorage.getItem("passages")||"[]");
 document.getElementById("notesArea").value = localStorage.getItem("notes")||"";
 
 function toggleTheme(){document.body.classList.toggle("light")}
+  
 function showTab(id){
- document.querySelectorAll(".card").forEach(c=>c.classList.add("hidden"));
- document.getElementById(id).classList.remove("hidden");
+  // hide only the CONTENT sections
+  document.getElementById("practice").classList.add("hidden");
+  document.getElementById("library").classList.add("hidden");
+  document.getElementById("notes").classList.add("hidden");
+  document.getElementById("translator").classList.add("hidden");
+
+  // show selected tab
+  document.getElementById(id).classList.remove("hidden");
 }
 
 function saveParagraph(){
@@ -138,4 +145,5 @@ async function lookupWord(){
 loadLibrary();
 </script>
 </body>
+
 </html>
