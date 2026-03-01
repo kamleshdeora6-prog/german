@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>German Study App</title>
+
+<style>
+:root{
+  --bg:#0b0f14;
+  --card:#121824;
+  --text:#e6eaf2;
+  --muted:#98a2b3;
+  --line:#263042;
+  --panel:#0f1520;
+}
+body.light{
+  --bg:#f5f7fb;
+  --card:#fff;
+  --text:#111;
+  --muted:#666;
+  --line:#ddd;
+  --panel:#f1f1f1;
+}
+body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
+header{padding:16px;border-bottom:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);padding:16px;margin:16px;border-radius:12px}
+textarea,input{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:10px;border-radius:8px;margin-top:8px}
+button{padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#1e293b;color:white;cursor:pointer;margin-top:8px}
+.tabs button{margin-right:8px}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>German Study App</h2>
+<button onclick="toggleTheme()">Toggle Dark/Light</button>
+</header>
+
+<div class="tabs card">
+<button onclick="showTab('practice')">Practice</button>
+<button onclick="showTab('library')">Library</button>
+<button onclick="showTab('notes')">Notes</button>
+<button onclick="showTab('translator')">Translator</button>
+</div>
+
+<!-- PRACTICE -->
+<div id="practice" class="card">
+<h3>Typing Practice</h3>
+<select id="practiceSelect"></select>
+<textarea id="practiceArea" placeholder="Type here..."></textarea>
+<button onclick="checkTyping()">Check</button>
+<p id="result"></p>
+</div>
+
+<!-- LIBRARY -->
+<div id="library" class="card hidden">
+<h3>Add Paragraph</h3>
+<textarea id="germanInput" placeholder="German text"></textarea>
+<textarea id="englishInput" placeholder="English translation"></textarea>
+<button onclick="saveParagraph()">Save</button>
+<div id="libraryList"></div>
+</div>
+
+<!-- NOTES -->
+<div id="notes" class="card hidden">
+<h3>Notes</h3>
+<textarea id="notesArea" placeholder="Grammar / vocab / etc"></textarea>
+<button onclick="saveNotes()">Save Notes</button>
+</div>
+
+<!-- TRANSLATOR -->
+<div id="translator" class="card hidden">
+<h3>German → English Translator</h3>
+<textarea id="translateInput"></textarea>
+<button onclick="translateText()">Translate</button>
+<textarea id="translateOutput"></textarea>
+
+<h3>Dictionary</h3>
+<input id="dictWord" placeholder="German word">
+<button onclick="lookupWord()">Lookup</button>
+<div id="dictResult"></div>
+</div>
+
+<script>
+let passages = JSON.parse(localStorage.getItem("passages")||"[]");
+document.getElementById("notesArea").value = localStorage.getItem("notes")||"";
+
+function toggleTheme(){document.body.classList.toggle("light")}
+function showTab(id){
+ document.querySelectorAll(".card").forEach(c=>c.classList.add("hidden"));
+ document.getElementById(id).classList.remove("hidden");
+}
+
+function saveParagraph(){
+ const g=document.getElementById("germanInput").value;
+ const e=document.getElementById("englishInput").value;
+ passages.push({g,e});
+ localStorage.setItem("passages",JSON.stringify(passages));
+ loadLibrary();
+}
+
+function loadLibrary(){
+ const list=document.getElementById("libraryList");
+ const sel=document.getElementById("practiceSelect");
+ list.innerHTML=""; sel.innerHTML="";
+ passages.forEach((p,i)=>{
+  list.innerHTML+=`<p>${p.g}<button onclick="del(${i})">Delete</button></p>`;
+  sel.innerHTML+=`<option value="${i}">${p.g.slice(0,40)}</option>`;
+ });
+}
+function del(i){passages.splice(i,1);localStorage.setItem("passages",JSON.stringify(passages));loadLibrary()}
+
+function checkTyping(){
+ const p=passages[practiceSelect.value];
+ const typed=document.getElementById("practiceArea").value;
+ document.getElementById("result").innerText= typed===p.g?"Perfect!":"Not exact.";
+}
+
+function saveNotes(){localStorage.setItem("notes",notesArea.value)}
+
+async function translateText(){
+ const text=translateInput.value;
+ const url="https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q="+encodeURIComponent(text);
+ const res=await fetch(url);const data=await res.json();
+ translateOutput.value=data[0].map(x=>x[0]).join("");
+}
+
+async function lookupWord(){
+ const w=dictWord.value;
+ const res=await fetch("https://en.wiktionary.org/api/rest_v1/page/summary/"+w);
+ const data=await res.json();
+ dictResult.innerText=data.extract||"Not found";
+}
+
+loadLibrary();
+</script>
+</body>
+</html>
