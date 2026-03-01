@@ -1,0 +1,43 @@
+{
+  "articles_table": "DER / DIE / DAS\n\nMasculine → der\nFeminine → die\nNeuter → das\nPlural → die\n\nExamples:\nder Mann – the man\ndie Frau – the woman\ndas Kind – the child",
+
+  "cases_overview": "GERMAN CASES OVERVIEW\n\nNominativ → subject (who?)\nAkkusativ → direct object (whom?)\nDativ → indirect object (to whom?)\nGenitiv → possession (whose?)",
+
+  "personal_pronouns": "ich – I\ndu – you (informal)\ner – he\nsie – she\nes – it\nwir – we\nihr – you plural\nSie – you formal",
+
+  "modal_verbs": "können – can\nmüssen – must\nwollen – want\ndürfen – may\nsollen – should\nmöchten – would like",
+
+  "important_conjunctions": "und – and\noder – or\naber – but\ndenn – because (normal order)\nweil – because (verb at end)\ndass – that\nobwohl – although\nwenn – if/when\ndamit – so that",
+
+  "sentence_structure": "MAIN SENTENCE:\nSubject + Verb + Object\nIch gehe heute ins Büro.\n\nTIME–MANNER–PLACE rule:\nIch gehe heute mit dem Bus zur Arbeit.",
+
+  "perfect_tense": "PERFECT TENSE (A1–A2)\n\nhaben/sein + Partizip II\nIch habe gearbeitet.\nIch bin gegangen.",
+
+  "separable_verbs": "aufstehen → Ich stehe um 7 Uhr auf.\neinkaufen → Ich kaufe ein.",
+
+  "accusative_prepositions": "durch – through\nfür – for\nohne – without\ngegen – against\num – around",
+
+  "dative_prepositions": "mit – with\nnach – after/to\nvon – from\nzu – to\nbei – at",
+
+  "two_way_prepositions": "in, an, auf, über, unter, vor, hinter, neben, zwischen\n\nMovement → Akk\nLocation → Dat",
+
+  "adjective_rule": "Adjective before noun gets ending:\nEin guter Mann\nEine schöne Frau\nEin kleines Kind",
+
+  "question_words": "wer – who\nwas – what\nwann – when\nwarum – why\nwo – where\nwie – how",
+
+  "time_words": "heute – today\nmorgen – tomorrow\ngestern – yesterday\njetzt – now\nspäter – later",
+
+  "daily_verbs": "gehen – go\nkommen – come\nsehen – see\nmachen – make\nlernen – learn",
+
+  "b1_connectors": "deshalb – therefore\ntrotzdem – nevertheless\naußerdem – besides\nzuerst – first\ndanach – after that",
+
+  "b1_passive_intro": "PASSIVE:\nDas Auto wird repariert.\nThe car is being repaired.",
+
+  "b1_reflexive_verbs": "sich erinnern – remember\nsich freuen – be happy\nsich fühlen – feel",
+
+  "b1_subordinate_clauses": "Verb goes to END:\nIch bleibe zu Hause, weil ich krank bin.",
+
+  "vocab_work": "der Job – job\ndie Firma – company\nder Kollege – colleague",
+
+  "vocab_home": "die Wohnung – apartment\ndie Küche – kitchen\ndas Schlafzimmer – bedroom"
+}
