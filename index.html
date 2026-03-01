@@ -13,198 +13,357 @@
   --muted:#98a2b3;
   --line:#263042;
   --panel:#0f1520;
+  --btn:#1e293b;
 }
 body.light{
   --bg:#f5f7fb;
-  --card:#fff;
+  --card:#ffffff;
   --text:#111;
   --muted:#666;
   --line:#ddd;
   --panel:#f1f1f1;
+  --btn:#1e293b;
 }
 body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
 header{padding:16px;border-bottom:1px solid var(--line)}
 .card{background:var(--card);border:1px solid var(--line);padding:16px;margin:16px;border-radius:12px}
-textarea,input{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:10px;border-radius:8px;margin-top:8px}
-button{padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#1e293b;color:white;cursor:pointer;margin-top:8px}
+textarea,input,select{
+  width:100%;
+  background:var(--panel);
+  border:1px solid var(--line);
+  color:var(--text);
+  padding:10px;
+  border-radius:8px;
+  margin-top:8px;
+}
+button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:var(--btn);
+  color:white;
+  cursor:pointer;
+  margin-top:8px;
+}
 .tabs button{margin-right:8px}
 .hidden{display:none}
+.small{font-size:13px;color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row > *{flex:0 0 auto}
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>German Study App</h2>
-<button onclick="toggleTheme()">Toggle Dark/Light</button>
-<button onclick="goHome()">🏠 Home</button>
+  <h2 style="margin:0 0 10px 0;">German Study App</h2>
+  <div class="row">
+    <button onclick="toggleTheme()">Toggle Dark/Light</button>
+    <button onclick="goHome()">🏠 Home</button>
+    <span id="status" class="small"></span>
+  </div>
 </header>
 
-<div class="tabs card">
-<button onclick="showTab('practice')">Practice</button>
-<button onclick="showTab('library')">Library</button>
-<button onclick="showTab('notes')">Notes</button>
-<button onclick="showTab('translator')">Translator</button>
+<!-- Tabs (always visible) -->
+<div class="tabs card" id="tabBar">
+  <button onclick="showTab('practice')">Practice</button>
+  <button onclick="showTab('library')">Library</button>
+  <button onclick="showTab('notes')">Notes</button>
+  <button onclick="showTab('translator')">Translator</button>
 </div>
 
 <!-- PRACTICE -->
 <div id="practice" class="card">
-<h3>Typing Practice</h3>
-<select id="practiceSelect"></select>
-<textarea id="practiceArea" placeholder="Type here..."></textarea>
-<button onclick="checkTyping()">Check</button>
-<p id="result"></p>
+  <h3 style="margin-top:0;">Typing Practice</h3>
+  <div class="small">Select a passage, then type it exactly.</div>
+
+  <select id="practiceSelect"></select>
+
+  <div style="margin-top:12px;" class="small">Reference (German)</div>
+  <textarea id="referenceArea" readonly style="min-height:110px;"></textarea>
+
+  <div style="margin-top:12px;" class="small">Type here</div>
+  <textarea id="practiceArea" placeholder="Type here..."></textarea>
+
+  <div class="row">
+    <button onclick="checkTyping()">Check</button>
+    <button onclick="clearTyping()">Clear</button>
+  </div>
+
+  <p id="result" class="small"></p>
 </div>
 
 <!-- LIBRARY -->
 <div id="library" class="card hidden">
-<h3>Add Paragraph</h3>
-<textarea id="germanInput" placeholder="German text"></textarea>
-<textarea id="englishInput" placeholder="English translation"></textarea>
-<button onclick="saveParagraph()">Save</button>
-<div id="libraryList"></div>
+  <h3 style="margin-top:0;">Add Paragraph (local only)</h3>
+  <div class="small">
+    Note: Passages loaded from <b>passages.json</b> cannot be permanently saved from the website.
+    Use GitHub to edit passages.json for permanent changes.
+  </div>
+
+  <textarea id="germanInput" placeholder="German text"></textarea>
+  <textarea id="englishInput" placeholder="English translation"></textarea>
+  <button onclick="saveParagraphLocal()">Save locally</button>
+
+  <div id="libraryList" style="margin-top:12px;"></div>
 </div>
 
 <!-- NOTES -->
 <div id="notes" class="card hidden">
-<h3>Notes</h3>
-<textarea id="notesArea" placeholder="Grammar / vocab / etc"></textarea>
-<button onclick="saveNotes()">Save Notes</button>
+  <h3 style="margin-top:0;">Notes</h3>
+  <div class="small">Loaded from <b>notes.json</b> (and cached in your browser).</div>
+  <textarea id="notesArea" placeholder="Grammar / vocab / etc" style="min-height:260px;"></textarea>
+  <button onclick="saveNotesLocal()">Save Notes locally</button>
 </div>
 
 <!-- TRANSLATOR -->
 <div id="translator" class="card hidden">
-<h3>German → English Translator</h3>
-<textarea id="translateInput"></textarea>
-<button onclick="translateText()">Translate</button>
-<textarea id="translateOutput"></textarea>
+  <h3 style="margin-top:0;">German → English Translator</h3>
+  <textarea id="translateInput" placeholder="Paste German here..."></textarea>
+  <button onclick="translateText()">Translate</button>
+  <textarea id="translateOutput" placeholder="English output..." readonly></textarea>
 
-<h3>Dictionary</h3>
-<input id="dictWord" placeholder="German word">
-<button onclick="lookupWord()">Lookup</button>
-<div id="dictResult"></div>
+  <h3>Dictionary</h3>
+  <input id="dictWord" placeholder="German word (e.g., wollen)">
+  <button onclick="lookupWord()">Lookup</button>
+  <div id="dictResult" class="small" style="margin-top:10px;"></div>
 </div>
 
 <script>
-let passages = [];
-  async function loadPassagesFromGitHub(){
+/* =========================
+   Theme + Tabs
+========================= */
+function toggleTheme(){ document.body.classList.toggle("light"); }
+function goHome(){ showTab('practice'); }
+
+function showTab(id){
+  document.getElementById("practice").classList.add("hidden");
+  document.getElementById("library").classList.add("hidden");
+  document.getElementById("notes").classList.add("hidden");
+  document.getElementById("translator").classList.add("hidden");
+  document.getElementById(id).classList.remove("hidden");
+}
+
+/* =========================
+   Data
+========================= */
+let passages = []; // normalized to {g, e, level}
+const statusEl = document.getElementById("status");
+
+function setStatus(msg){ statusEl.textContent = msg || ""; }
+
+/* Load from GitHub JSON files (preferred) with localStorage fallback */
+async function loadPassagesFromGitHub(){
   try{
     const res = await fetch("./passages.json", { cache: "no-store" });
     if(!res.ok) throw new Error("passages.json not found");
-    passages = await res.json();
+    const raw = await res.json();
 
-    // Optional: if your passages have {german, english} instead of {g,e}, normalize:
-    passages = passages.map(p => ({
+    passages = raw.map(p => ({
       g: p.german ?? p.g ?? "",
       e: p.english ?? p.e ?? "",
       level: p.level ?? ""
-    }));
+    })).filter(p => (p.g || "").trim().length);
 
-    // save into localStorage too (so it works even if fetch fails later)
     localStorage.setItem("passages", JSON.stringify(passages));
+    setStatus(`Loaded ${passages.length} passages from passages.json`);
   }catch(e){
-    // fallback to localStorage
-    passages = JSON.parse(localStorage.getItem("passages")||"[]");
+    passages = JSON.parse(localStorage.getItem("passages") || "[]");
+    setStatus(`Using local passages (${passages.length}). Add passages.json to sync.`);
   }
 }
 
 async function loadNotesFromGitHub(){
+  const notesArea = document.getElementById("notesArea");
   try{
     const res = await fetch("./notes.json", { cache: "no-store" });
     if(!res.ok) throw new Error("notes.json not found");
     const notesObj = await res.json();
 
-    // Convert notes object into one big text block for your Notes textarea:
     const text = Object.entries(notesObj)
       .map(([k,v]) => `### ${k}\n${v}\n`)
       .join("\n");
 
-    document.getElementById("notesArea").value = text;
-
-    // save into localStorage too
+    notesArea.value = text;
     localStorage.setItem("notes", text);
   }catch(e){
-    document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
+    notesArea.value = localStorage.getItem("notes") || "";
   }
 }
 
-async function loadPassagesFromFile(){
-  try{
-    const res = await fetch("passages.json");
-    passages = await res.json();
-    (async () => {
-  await loadPassagesFromGitHub();
-  loadLibrary();
-  await loadNotesFromGitHub();
-})();
-  }catch(e){
-    console.log("Could not load passages.json");
+/* =========================
+   Practice UI
+========================= */
+const practiceSelect = document.getElementById("practiceSelect");
+const referenceArea  = document.getElementById("referenceArea");
+const practiceArea   = document.getElementById("practiceArea");
+const resultEl       = document.getElementById("result");
+
+function renderPracticeDropdown(){
+  practiceSelect.innerHTML = "";
+
+  if(!passages.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No passages loaded";
+    practiceSelect.appendChild(opt);
+    referenceArea.value = "";
+    return;
   }
-}
-document.getElementById("notesArea").value = localStorage.getItem("notes")||"";
 
-function toggleTheme(){document.body.classList.toggle("light")}
-  
-function showTab(id){
-  // hide only the CONTENT sections
-  document.getElementById("practice").classList.add("hidden");
-  document.getElementById("library").classList.add("hidden");
-  document.getElementById("notes").classList.add("hidden");
-  document.getElementById("translator").classList.add("hidden");
+  passages.forEach((p,i) => {
+    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,60).replace(/\n/g," ");
+    const opt = document.createElement("option");
+    opt.value = String(i);
+    opt.textContent = label;
+    practiceSelect.appendChild(opt);
+  });
 
-  // show selected tab
-  document.getElementById(id).classList.remove("hidden");
+  // show first passage by default
+  practiceSelect.value = "0";
+  updateReference();
 }
 
-function saveParagraph(){
- const g=document.getElementById("germanInput").value;
- const e=document.getElementById("englishInput").value;
- passages.push({g,e});
- localStorage.setItem("passages",JSON.stringify(passages));
- loadPassagesFromFile();
+function updateReference(){
+  const idx = Number(practiceSelect.value);
+  const p = passages[idx];
+  referenceArea.value = p ? p.g : "";
+  resultEl.textContent = "";
+  practiceArea.value = "";
+  practiceArea.focus();
 }
 
-function loadLibrary(){
- const list=document.getElementById("libraryList");
- const sel=document.getElementById("practiceSelect");
- list.innerHTML=""; sel.innerHTML="";
- passages.forEach((p,i)=>{
-  list.innerHTML+=`<p>${p.g}<button onclick="del(${i})">Delete</button></p>`;
-  sel.innerHTML+=`<option value="${i}">${p.g.slice(0,40)}</option>`;
- });
-}
-function del(i){passages.splice(i,1);localStorage.setItem("passages",JSON.stringify(passages));loadLibrary()}
+practiceSelect.addEventListener("change", updateReference);
 
 function checkTyping(){
- const p=passages[practiceSelect.value];
- const typed=document.getElementById("practiceArea").value;
- document.getElementById("result").innerText= typed===p.g?"Perfect!":"Not exact.";
+  const idx = Number(practiceSelect.value);
+  const p = passages[idx];
+  if(!p){ resultEl.textContent = "No passage selected."; return; }
+
+  const typed = practiceArea.value;
+  if(typed === p.g){
+    resultEl.textContent = "✅ Perfect! Exact match.";
+  }else{
+    // quick feedback (not fancy)
+    resultEl.textContent = "❌ Not exact. Tip: check commas, umlauts, spaces, and line breaks.";
+  }
 }
 
-function saveNotes(){localStorage.setItem("notes",notesArea.value)}
+function clearTyping(){
+  practiceArea.value = "";
+  resultEl.textContent = "";
+  practiceArea.focus();
+}
 
+/* =========================
+   Library (local only)
+========================= */
+function saveParagraphLocal(){
+  const g = document.getElementById("germanInput").value || "";
+  const e = document.getElementById("englishInput").value || "";
+  if(!g.trim()){ alert("German text required."); return; }
+
+  passages.push({ g, e, level:"local" });
+  localStorage.setItem("passages", JSON.stringify(passages));
+
+  document.getElementById("germanInput").value = "";
+  document.getElementById("englishInput").value = "";
+
+  renderLibrary();
+  renderPracticeDropdown();
+  alert("Saved locally. For permanent saving, add it to passages.json on GitHub.");
+}
+
+function renderLibrary(){
+  const list = document.getElementById("libraryList");
+  list.innerHTML = "";
+
+  if(!passages.length){
+    list.innerHTML = `<div class="small">No passages.</div>`;
+    return;
+  }
+
+  passages.forEach((p,i) => {
+    const box = document.createElement("div");
+    box.style.border = "1px solid var(--line)";
+    box.style.borderRadius = "10px";
+    box.style.padding = "10px";
+    box.style.marginTop = "10px";
+    box.innerHTML = `
+      <div class="small"><b>${(p.level||"").toString()}</b></div>
+      <div style="white-space:pre-wrap;margin-top:6px;">${escapeHtml(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${escapeHtml(p.e)}</div>` : ""}
+      <button style="background:#4b1a1a;border-color:#c0392b;" onclick="deleteLocal(${i})">Delete (local)</button>
+    `;
+    list.appendChild(box);
+  });
+}
+
+function deleteLocal(i){
+  passages.splice(i,1);
+  localStorage.setItem("passages", JSON.stringify(passages));
+  renderLibrary();
+  renderPracticeDropdown();
+}
+
+function escapeHtml(s){
+  return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+}
+
+/* =========================
+   Notes (local save)
+========================= */
+function saveNotesLocal(){
+  localStorage.setItem("notes", document.getElementById("notesArea").value || "");
+  alert("Notes saved locally.");
+}
+
+/* =========================
+   Translator + Dictionary
+========================= */
 async function translateText(){
- const text=translateInput.value;
- const url="https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q="+encodeURIComponent(text);
- const res=await fetch(url);const data=await res.json();
- translateOutput.value=data[0].map(x=>x[0]).join("");
+  const text = (document.getElementById("translateInput").value || "").trim();
+  if(!text) return;
+
+  const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=" + encodeURIComponent(text);
+  const res = await fetch(url);
+  const data = await res.json();
+  document.getElementById("translateOutput").value = (data[0] || []).map(x => x[0]).join("");
 }
 
 async function lookupWord(){
- const w=dictWord.value;
- const res=await fetch("https://en.wiktionary.org/api/rest_v1/page/summary/"+w);
- const data=await res.json();
- dictResult.innerText=data.extract||"Not found";
+  const w = (document.getElementById("dictWord").value || "").trim();
+  const out = document.getElementById("dictResult");
+  out.textContent = "";
+  if(!w) return;
+
+  try{
+    const res = await fetch("https://en.wiktionary.org/api/rest_v1/page/summary/" + encodeURIComponent(w));
+    if(!res.ok) throw new Error("Not found");
+    const data = await res.json();
+    out.textContent = data.extract || "No definition found.";
+  }catch{
+    out.textContent = "Not found.";
+  }
 }
 
+/* =========================
+   Init
+========================= */
+(async () => {
+  // Load notes from local (fast) first, then try GitHub
+  document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
 
-  function goHome(){
-  showTab('practice');
-}
+  await loadPassagesFromGitHub();
+  await loadNotesFromGitHub();
+
+  renderPracticeDropdown();
+  renderLibrary();
+
+  // Ensure the practice tab is visible
+  showTab("practice");
+})();
 </script>
+
 </body>
-
 </html>
-
-
-
