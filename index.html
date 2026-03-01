@@ -87,12 +87,56 @@ button{padding:8px 12px;border-radius:8px;border:1px solid var(--line);backgroun
 
 <script>
 let passages = [];
+  async function loadPassagesFromGitHub(){
+  try{
+    const res = await fetch("./passages.json", { cache: "no-store" });
+    if(!res.ok) throw new Error("passages.json not found");
+    passages = await res.json();
+
+    // Optional: if your passages have {german, english} instead of {g,e}, normalize:
+    passages = passages.map(p => ({
+      g: p.german ?? p.g ?? "",
+      e: p.english ?? p.e ?? "",
+      level: p.level ?? ""
+    }));
+
+    // save into localStorage too (so it works even if fetch fails later)
+    localStorage.setItem("passages", JSON.stringify(passages));
+  }catch(e){
+    // fallback to localStorage
+    passages = JSON.parse(localStorage.getItem("passages")||"[]");
+  }
+}
+
+async function loadNotesFromGitHub(){
+  try{
+    const res = await fetch("./notes.json", { cache: "no-store" });
+    if(!res.ok) throw new Error("notes.json not found");
+    const notesObj = await res.json();
+
+    // Convert notes object into one big text block for your Notes textarea:
+    const text = Object.entries(notesObj)
+      .map(([k,v]) => `### ${k}\n${v}\n`)
+      .join("\n");
+
+    document.getElementById("notesArea").value = text;
+
+    // save into localStorage too
+    localStorage.setItem("notes", text);
+  }catch(e){
+    document.getElementById("notesArea").value = localStorage.getItem("notes") || "";
+  }
+}
 
 async function loadPassagesFromFile(){
   try{
     const res = await fetch("passages.json");
     passages = await res.json();
-    loadLibrary();
+    (async () => {
+  await loadPassagesFromGitHub();
+  loadLibrary();
+  await loadNotesFromGitHub();
+})();
   }catch(e){
     console.log("Could not load passages.json");
   }
@@ -161,5 +205,6 @@ async function lookupWord(){
 </body>
 
 </html>
+
 
 
