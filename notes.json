@@ -5,47 +5,43 @@
 
   "personal_pronouns": "ich – I\ndu – you (informal)\ner – he\nsie – she\nes – it\nwir – we\nihr – you plural\nSie – you formal",
 
-  "modal_verbs": "können – can\nmüssen – must\nwollen – want\ndürfen – may\nsollen – should\nmöchten – would like",
+  "modal_verbs": "MODAL VERBS\n\nkönnen – can\nmüssen – must\nwollen – want\ndürfen – may\nsollen – should\nmöchten – would like",
 
-  "important_conjunctions": "und – and\noder – or\naber – but\ndenn – because (normal order)\nweil – because (verb at end)\ndass – that\nobwohl – although\nwenn – if/when\ndamit – so that",
+  "reflexive_verbs": "REFLEXIVE VERBS\n\nsich erinnern – remember\nsich freuen – be happy\nsich fühlen – feel",
 
-  "sentence_structure": "MAIN SENTENCE:\nSubject + Verb + Object\nIch gehe heute ins Büro.\n\nTIME–MANNER–PLACE rule:\nIch gehe heute mit dem Bus zur Arbeit.",
+  "important_conjunctions": "CONJUNCTIONS\n\nund – and\noder – or\naber – but\ndenn – because (normal order)\nweil – because (verb at end)\ndass – that\nobwohl – although\nwenn – if/when\ndamit – so that",
+
+  "sentence_structure": "SENTENCE STRUCTURE\n\nMAIN SENTENCE:\nSubject + Verb + Object\nIch gehe heute ins Büro.\n\nTIME–MANNER–PLACE rule:\nIch gehe heute mit dem Bus zur Arbeit.",
 
   "perfect_tense": "PERFECT TENSE (A1–A2)\n\nhaben/sein + Partizip II\nIch habe gearbeitet.\nIch bin gegangen.",
 
-  "separable_verbs": "aufstehen → Ich stehe um 7 Uhr auf.\neinkaufen → Ich kaufe ein.",
+  "separable_verbs": "SEPARABLE VERBS\n\naufstehen → Ich stehe um 7 Uhr auf.\neinkaufen → Ich kaufe ein.",
 
-  "accusative_prepositions": "durch – through\nfür – for\nohne – without\ngegen – against\num – around",
+  "prepositions_accusative": "PREPOSITIONS (AKKUSATIV)\n\ndurch – through\nfür – for\nohne – without\ngegen – against\num – around",
 
-  "dative_prepositions": "mit – with\nnach – after/to\nvon – from\nzu – to\nbei – at",
+  "prepositions_dative": "PREPOSITIONS (DATIV)\n\nmit – with\nnach – after/to\nvon – from\nzu – to\nbei – at",
 
-  "two_way_prepositions": "in, an, auf, über, unter, vor, hinter, neben, zwischen\n\nMovement → Akk\nLocation → Dat",
+  "prepositions_two_way": "TWO-WAY PREPOSITIONS (WECHSELPRÄPOSITIONEN)\n\nin, an, auf, über, unter, vor, hinter, neben, zwischen\n\nMovement → Akk\nLocation → Dat",
 
-  "adjective_rule": "Adjective before noun gets ending:\nEin guter Mann\nEine schöne Frau\nEin kleines Kind",
+  "adjectives_rule": "ADJECTIVES (Rule)\n\nAdjective before noun gets ending:\nEin guter Mann\nEine schöne Frau\nEin kleines Kind",
 
-  "question_words": "wer – who\nwas – what\nwann – when\nwarum – why\nwo – where\nwie – how",
+  "adjectives_list": "ADJECTIVES (List)\n\nlaut — loud\nleise — quiet\nfalsch — wrong\nneu — new\nschnell — fast\nteuer — expensive\ngut — good\nzufrieden — satisfied\ntraditionell — traditional\nschön — beautiful/nice\nwichtig — important\nfreundlich — friendly\nhilfsbereit — helpful\nnett — nice\nmüde — tired\nlänger — longer\npraktisch — practical\nonline — online\nkrank — sick\ngleich — equal\nrichtig — correct\nzuverlässig — reliable\nsozial — social\nviele — many",
 
-  "time_words": "heute – today\nmorgen – tomorrow\ngestern – yesterday\njetzt – now\nspäter – later",
+  "question_words": "QUESTION WORDS\n\nwer – who\nwas – what\nwann – when\nwarum – why\nwo – where\nwie – how",
 
-  "daily_verbs": "gehen – go\nkommen – come\nsehen – see\nmachen – make\nlernen – learn",
+  "time_words": "TIME WORDS\n\nheute – today\nmorgen – tomorrow\ngestern – yesterday\njetzt – now\nspäter – later",
 
-  "b1_connectors": "deshalb – therefore\ntrotzdem – nevertheless\naußerdem – besides\nzuerst – first\ndanach – after that",
+  "connectors_b1": "CONNECTORS (B1)\n\ndeshalb – therefore\ntrotzdem – nevertheless\naußerdem – besides\nzuerst – first\ndanach – after that",
 
-  "b1_passive_intro": "PASSIVE:\nDas Auto wird repariert.\nThe car is being repaired.",
+  "b1_passive_intro": "PASSIVE (Intro)\n\nDas Auto wird repariert.\nThe car is being repaired.",
 
-  "b1_reflexive_verbs": "sich erinnern – remember\nsich freuen – be happy\nsich fühlen – feel",
+  "b1_subordinate_clauses": "SUBORDINATE CLAUSES (B1)\n\nVerb goes to END:\nIch bleibe zu Hause, weil ich krank bin.",
 
-  "b1_subordinate_clauses": "Verb goes to END:\nIch bleibe zu Hause, weil ich krank bin.",
+  "verbs": "VERBS\n\nvereinbaren — to arrange\nbeginnen — to begin\nmögen — to like\nmachen — to do/make\nerledigen — to complete\nsprechen — to speak\nhoffen — to hope\nkaufen — to buy\nfunktionieren — to function/work\ntun — to do\nreparieren — to repair\naustauschen — to replace\nfeiern — to celebrate\nkommen — to come\ndekorieren — to decorate\nessen — to eat\nbesuchen — to visit\nschicken — to send\nschreiben — to write\narbeiten — to work\nanalysieren — to analyse/analyze\nerzählen — to tell\nbenötigen — to need\nwarten — to wait\nbekommen — to receive/get\nwünschen — to wish\neinladen — to invite\ndiskutieren — to discuss\nlösen — to solve\nbleiben — to stay/remain\nlesen — to read\nentspannen — to relax\nlernen — to learn\ntreffen — to meet\nkochen — to cook\nsehen — to see/watch\nspazieren gehen — to go for a walk\nstudieren — to study\nsammeln — to collect/gain\nverdienen — to earn\nhelfen — to help\nverstehen — to understand\nklären — to clarify/resolve\nteilen — to share/inform\nfehlen — to be missing\ngehen — to go\nkonzentrieren — to concentrate",
 
-  "vocab_work": "der Job – job\ndie Firma – company\nder Kollege – colleague",
+  "nouns": "NOUNS\n\nSchool & Family\n- der Elternsprechtag — parent-teacher meeting\n- die Schule — school\n- das Fach / die Fächer — subject(s)\n- die Hausaufgaben — homework\n- der Test — test\n- die Pause — break\n- die Schüler — students\n- die Tochter — daughter\n\nHome & Living\n- die Wohnung — apartment\n- die Nachbarn — neighbours/neighbors\n- der Mitbewohner — flatmate/roommate\n- die Hausarbeit — housework\n- der Plan — plan\n\nTechnology & Media\n- das Smartphone — smartphone\n- die Kamera — camera\n- der Laptop — laptop\n- das Gerät — device\n- die sozialen Medien — social media\n- die Informationen — information\n- die Zeit — time\n\nCelebrations & Social Life\n- der Geburtstag — birthday\n- die Party — party\n- das Fest — festival\n- die Familie — family\n- die Atmosphäre — atmosphere\n- der Weihnachtsbaum — Christmas tree\n- der Weihnachtsmarkt — Christmas market\n- der Film — movie\n\nWork & Career\n- die Stelle — job position\n- der Praktikant — intern\n- der Finanzbereich — finance sector\n- die Zahlen — numbers\n- die Daten — data\n- die Entwicklungsmöglichkeiten — development opportunities\n- das Unternehmen — company\n- das Praktikum — internship\n- die Erfahrung — experience\n- die Ausbildung — vocational training\n- der Beruf — profession\n- die Jobsuche — job search\n\nFriendship & People\n- der Freund — friend\n- die Hilfe — help\n- das Missverständnis — misunderstanding\n- die Antwort — answer\n\nGovernment & Office\n- die Verlängerung — extension\n- der Aufenthaltstitel — residence permit\n- die Unterlagen — documents\n- das Bürgeramt — citizens’ office\n- die Mitarbeiter — employees\n- das Dokument — document\n- die Unterschrift — signature\n- das Amt — office\n- der Termin — appointment\n- das Firmenjubiläum — company anniversary\n- der Konferenzraum — conference room\n\nFood & Free time\n- der Kaffee — coffee\n- der Kuchen — cake\n- das Wochenende — weekend\n- das Wetter — weather\n- die Freizeit — free time\n- das Buch / die Bücher — book(s)\n- die Wörter — words",
 
-  "vocab_home": "die Wohnung – apartment\ndie Küche – kitchen\ndas Schlafzimmer – bedroom",
+  "adverbs_time_expressions": "ADVERBS & TIME EXPRESSIONS\n\nleider — unfortunately\nabends — in the evening\ngestern — yesterday\ninsgesamt — overall\nzusammen — together\nmanchmal — sometimes\nschnell — quickly\nspäter — later\njetzt — now\nwieder — again\nmorgen — tomorrow\nnächste Woche — next week\nam Ende — in the end\nim Voraus — in advance",
 
-  "vocab_a2b1_verbs": "VERBS\n\nvereinbaren — to arrange\nbeginnen — to begin\nmögen — to like\nmachen — to do\nsprechen — to speak\nhoffen — to hope\nkaufen — to buy\nfunktionieren — to work\nreparieren — to repair\naustauschen — to replace\nfeiern — to celebrate\ndekorieren — to decorate\nbesuchen — to visit\nschicken — to send\nanalysieren — to analyse\nbenötigen — to need\nwünschen — to wish\neinladen — to invite\ndiskutieren — to discuss\nlösen — to solve\nentspannen — to relax\nsammeln — to gain\nverdienen — to earn\nklären — to clarify\nfehlen — to be missing\nkonzentrieren — to concentrate",
-
-  "vocab_a2b1_nouns": "NOUNS\n\nSchool:\nder Elternsprechtag — parent meeting\ndie Hausaufgaben — homework\nder Test — test\ndie Pause — break\n\nTechnology:\ndas Smartphone — smartphone\nder Laptop — laptop\ndas Gerät — device\n\nSocial:\nder Geburtstag — birthday\ndie Party — party\ndas Fest — festival\ndie Atmosphäre — atmosphere\n\nWork:\ndie Stelle — job position\ndas Unternehmen — company\ndas Praktikum — internship\ndie Erfahrung — experience\n\nGovernment:\nder Aufenthaltstitel — residence permit\ndie Unterlagen — documents\ndas Bürgeramt — citizens office\ndie Unterschrift — signature\n\nFree time:\nder Kaffee — coffee\nder Kuchen — cake\ndas Wochenende — weekend",
-
-  "vocab_a2b1_adjectives": "ADJECTIVES\n\nlaut — loud\nleise — quiet\nteuer — expensive\nzufrieden — satisfied\ntraditionell — traditional\nfreundlich — friendly\nhilfsbereit — helpful\npraktisch — practical\nzuverlässig — reliable",
-
-  "vocab_a2b1_phrases": "WRITING PHRASES\n\nVielen Dank im Voraus — Thanks in advance\nMit freundlichen Grüßen — Kind regards\nLiebe Grüße — Best wishes\nEs tut mir leid — I am sorry\nIch würde mich sehr freuen — I would be happy\nKönnten Sie bitte — Could you please\nBitte teilen Sie mir mit — Please let me know"
+  "writing_phrases": "USEFUL PHRASES (Writing)\n\nVielen Dank im Voraus — Many thanks in advance\nMit freundlichen Grüßen — Kind regards\nLiebe Grüße — Best wishes\nEs tut mir leid — I’m sorry\nIch würde mich sehr freuen — I would be very happy\nHaben Sie Zeit? — Do you have time?\nKönnten Sie bitte… — Could you please…\nIch hoffe, wir können… — I hope we can…\nWir freuen uns auf Ihr Kommen — We look forward to your coming\nBitte teilen Sie mir mit — Please let me know\nIch interessiere mich für… — I am interested in…"
 }
