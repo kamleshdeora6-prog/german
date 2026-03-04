@@ -199,7 +199,7 @@ pre{white-space:pre-wrap}
   <div class="subtabs" style="margin-top:10px">
     <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
     <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
-    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation (soon)</button>
+    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation ...</button>
   </div>
 
   <!-- ===== Typing ===== -->
@@ -329,8 +329,48 @@ pre{white-space:pre-wrap}
 
   <!-- ===== Conjugation placeholder ===== -->
   <div id="practice_conjugation" class="hidden" style="margin-top:14px">
-    <div class="small">Coming next: verb conjugation trainer (Präsens/Perfekt/Präteritum) + modal verbs + separable verbs.</div>
+  <div class="small">
+    Verb conjugation trainer (Präsens). Loaded from <b>conjugations.json</b>.
   </div>
+
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:220px">
+      <div class="small">Type</div>
+      <select id="verbTypeFilter" onchange="renderVerbList()">
+        <option value="ALL">All</option>
+        <option value="regular">regular</option>
+        <option value="irregular">irregular</option>
+        <option value="modal">modal</option>
+        <option value="separable">separable</option>
+        <option value="reflexive">reflexive</option>
+      </select>
+    </div>
+
+    <div style="min-width:360px;flex:1">
+      <div class="small">Verb</div>
+      <select id="verbSelect" onchange="renderVerb()"></select>
+    </div>
+
+    <div style="min-width:220px">
+      <div class="small">Search</div>
+      <input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()">
+    </div>
+  </div>
+
+  <div class="small" style="margin-top:10px">
+    <span class="badge">English: <span id="verbEnglish">—</span></span>
+    <span class="badge">Type: <span id="verbType">—</span></span>
+  </div>
+
+  <table class="table" style="margin-top:10px">
+    <tr><th>Pronoun</th><th>Form</th></tr>
+    <tr><td>ich</td><td id="v_ich"></td></tr>
+    <tr><td>du</td><td id="v_du"></td></tr>
+    <tr><td>er/sie/es</td><td id="v_er"></td></tr>
+    <tr><td>wir</td><td id="v_wir"></td></tr>
+    <tr><td>ihr</td><td id="v_ihr"></td></tr>
+    <tr><td>sie/Sie</td><td id="v_sie"></td></tr>
+  </table>
 </div>
 
 <!-- =========================
@@ -654,7 +694,96 @@ async function loadExercises(){
   }
 }
 
-async function loadFlashcards(){
+async function loadFlashcards()/* =========================
+   CONJUGATIONS
+========================= */
+let conjugations = []; // {verb, english, type, present:{...}}
+
+async function loadConjugations(){
+  try{
+    const obj = await loadJson("conjugations.json");
+    const arr = obj?.verbs;
+    if(!Array.isArray(arr)) throw new Error("conjugations.json must be { verbs: [...] }");
+    conjugations = arr;
+
+    localStorage.setItem("conjugations_cache", JSON.stringify(conjugations));
+    return { ok:true, count: conjugations.length };
+  }catch(e){
+    conjugations = JSON.parse(localStorage.getItem("conjugations_cache") || "[]");
+    return { ok:false, count: conjugations.length, err: e.message };
+  }
+}
+
+function renderVerbList(){
+  const sel = document.getElementById("verbSelect");
+  const type = (document.getElementById("verbTypeFilter")?.value || "ALL").toLowerCase();
+  const q = (document.getElementById("verbSearch")?.value || "").trim().toLowerCase();
+
+  let list = conjugations.slice();
+
+  if(type !== "all"){
+    list = list.filter(v => String(v.type||"").toLowerCase() === type);
+  }
+  if(q){
+    list = list.filter(v =>
+      String(v.verb||"").toLowerCase().includes(q) ||
+      String(v.english||"").toLowerCase().includes(q)
+    );
+  }
+
+  sel.innerHTML = "";
+  if(!list.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No verbs found";
+    sel.appendChild(opt);
+    clearVerbTable();
+    return;
+  }
+
+  list
+    .sort((a,b)=> String(a.verb).localeCompare(String(b.verb)))
+    .forEach((v)=>{
+      const opt = document.createElement("option");
+      opt.value = v.verb; // use verb string as key
+      opt.textContent = `${v.verb} — ${v.english || ""}`.trim();
+      sel.appendChild(opt);
+    });
+
+  // select first and render
+  sel.value = sel.options[0].value;
+  renderVerb();
+}
+
+function getSelectedVerb(){
+  const key = document.getElementById("verbSelect")?.value || "";
+  return conjugations.find(v => String(v.verb) === String(key));
+}
+
+function clearVerbTable(){
+  ["v_ich","v_du","v_er","v_wir","v_ihr","v_sie"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = "";
+  });
+  const en = document.getElementById("verbEnglish"); if(en) en.textContent = "—";
+  const ty = document.getElementById("verbType"); if(ty) ty.textContent = "—";
+}
+
+function renderVerb(){
+  const v = getSelectedVerb();
+  if(!v){ clearVerbTable(); return; }
+
+  document.getElementById("verbEnglish").textContent = v.english || "—";
+  document.getElementById("verbType").textContent = v.type || "—";
+
+  const p = v.present || {};
+  document.getElementById("v_ich").textContent = p.ich || "";
+  document.getElementById("v_du").textContent = p.du || "";
+  document.getElementById("v_er").textContent = p.er_sie_es || "";
+  document.getElementById("v_wir").textContent = p.wir || "";
+  document.getElementById("v_ihr").textContent = p.ihr || "";
+  document.getElementById("v_sie").textContent = p.sie_Sie || "";
+}{
   try{
     const obj = await loadJson("flashcards.json");
     const arr = obj?.flashcards;
@@ -672,9 +801,10 @@ async function reloadAll(){
   setStatus("Loading…");
 
   const p = await loadPassages();
-  const n = await loadNotes();
-  const ex = await loadExercises();
-  const fc = await loadFlashcards();
+const n = await loadNotes();
+const ex = await loadExercises();
+const fc = await loadFlashcards();
+const cj = await loadConjugations();
 
   // status message
   const parts = [];
@@ -682,6 +812,7 @@ async function reloadAll(){
   parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
   parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
   parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
+  parts.push(cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`);
   setStatus(parts.join(" • "));
 
   renderPassageDropdown();
@@ -690,6 +821,8 @@ async function reloadAll(){
   resetExerciseFlow();
   renderFlashcardCategories();
   startFlashcards();
+  renderVerbList();
+  renderVerb();
 }
 
 /* =========================
@@ -1272,3 +1405,4 @@ async function lookupWord(){
 
 </body>
 </html>
+
