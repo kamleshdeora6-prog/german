@@ -23,6 +23,21 @@
   --bad:#ef4444;
 }
 
+/* Dark theme (same as default, but explicit) */
+body.theme-dark{
+  --bg:#0b0f14;
+  --card:#121824;
+  --text:#e6eaf2;
+  --muted:#98a2b3;
+  --line:#263042;
+  --panel:#0f1520;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#60a5fa;
+  --good:#22c55e;
+  --bad:#ef4444;
+}
+
 body.theme-light{
   --bg:#f5f7fb;
   --card:#ffffff;
@@ -33,6 +48,8 @@ body.theme-light{
   --btn:#1e293b;
   --btnText:#ffffff;
   --accent:#2563eb;
+  --good:#16a34a;
+  --bad:#dc2626;
 }
 
 body.theme-vibrant{
@@ -193,13 +210,13 @@ pre{white-space:pre-wrap}
 <div id="practiceTab" class="card">
   <div class="row" style="justify-content:space-between">
     <h3 style="margin:0">Practice</h3>
-    <span class="badge">Typing • Exercises • (More soon)</span>
+    <span class="badge">Typing • Exercises • Conjugation</span>
   </div>
 
   <div class="subtabs" style="margin-top:10px">
     <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
     <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
-    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation (soon)</button>
+    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation</button>
   </div>
 
   <!-- ===== Typing ===== -->
@@ -327,9 +344,52 @@ pre{white-space:pre-wrap}
     </div>
   </div>
 
-  <!-- ===== Conjugation placeholder ===== -->
+  <!-- ===== Conjugation ===== -->
   <div id="practice_conjugation" class="hidden" style="margin-top:14px">
-    <div class="small">Coming next: verb conjugation trainer (Präsens/Perfekt/Präteritum) + modal verbs + separable verbs.</div>
+    <div class="small">
+      Conjugation trainer (Präsens). Loaded from <b>conjugations.json</b>.
+      If it shows “0 verbs”, your file format is wrong or the file is not in repo root.
+    </div>
+
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:220px">
+        <div class="small">Type</div>
+        <select id="verbTypeFilter" onchange="renderVerbList()">
+          <option value="ALL">All</option>
+          <option value="regular">regular</option>
+          <option value="irregular">irregular</option>
+          <option value="modal">modal</option>
+          <option value="separable">separable</option>
+          <option value="reflexive">reflexive</option>
+        </select>
+      </div>
+
+      <div style="min-width:360px;flex:1">
+        <div class="small">Verb</div>
+        <select id="verbSelect" onchange="renderVerb()"></select>
+      </div>
+
+      <div style="min-width:220px">
+        <div class="small">Search</div>
+        <input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()">
+      </div>
+    </div>
+
+    <div class="small" style="margin-top:10px">
+      <span class="badge">English: <span id="verbEnglish">—</span></span>
+      <span class="badge">Type: <span id="verbType">—</span></span>
+      <span class="badge">Total verbs: <span id="verbCount">0</span></span>
+    </div>
+
+    <table class="table" style="margin-top:10px">
+      <tr><th>Pronoun</th><th>Form</th></tr>
+      <tr><td>ich</td><td id="v_ich"></td></tr>
+      <tr><td>du</td><td id="v_du"></td></tr>
+      <tr><td>er/sie/es</td><td id="v_er"></td></tr>
+      <tr><td>wir</td><td id="v_wir"></td></tr>
+      <tr><td>ihr</td><td id="v_ihr"></td></tr>
+      <tr><td>sie/Sie</td><td id="v_sie"></td></tr>
+    </table>
   </div>
 </div>
 
@@ -527,10 +587,11 @@ pre{white-space:pre-wrap}
 /* =========================
    GLOBAL STATE
 ========================= */
-let passages = [];   // {g, e, level}
-let notesObj = {};   // { key: value }
-let exercises = [];  // {id, level, type, mode, question, options?, answer}
-let flashcards = []; // {category, front, back}
+let passages = [];        // {g, e, level}
+let notesObj = {};        // { key: value }
+let exercises = [];       // {id, level, type, mode, question, options?, answer}
+let flashcards = [];      // {category, front, back}
+let conjugations = [];    // normalized to {verb, english, type, forms:{ich,du,er,wir,ihr,sie}}
 
 const statusEl = document.getElementById("status");
 
@@ -612,7 +673,6 @@ async function loadPassages(){
       level: (p.level ?? "").toString().toUpperCase()
     })).filter(p => (p.g||"").trim().length);
 
-    // merge local additions (browser)
     const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
     if(Array.isArray(local) && local.length){
       passages = passages.concat(local);
@@ -621,7 +681,6 @@ async function loadPassages(){
     localStorage.setItem("passages_cache", JSON.stringify(passages));
     return { ok:true, count: passages.length };
   }catch(e){
-    // fallback cache
     passages = JSON.parse(localStorage.getItem("passages_cache") || "[]");
     return { ok:false, count: passages.length, err: e.message };
   }
@@ -668,20 +727,60 @@ async function loadFlashcards(){
   }
 }
 
+/* Conjugations: accepts either:
+   1) { verbs: [ ... ] }
+   2) [ ... ]
+   Each item can be:
+   { verb|infinitive, english, type, forms:{ich,du,er,wir,ihr,sie} }
+*/
+async function loadConjugations(){
+  try{
+    const raw = await loadJson("conjugations.json");
+
+    const arr = Array.isArray(raw) ? raw : (Array.isArray(raw?.verbs) ? raw.verbs : []);
+    if(!Array.isArray(arr)) throw new Error("conjugations.json must be an array or { verbs:[...] }");
+
+    conjugations = arr.map(v=>{
+      const verb = (v.verb ?? v.infinitive ?? v.base ?? "").toString().trim();
+      const english = (v.english ?? v.en ?? v.meaning ?? "").toString().trim();
+      const type = (v.type ?? v.group ?? "").toString().trim().toLowerCase();
+
+      const f = v.forms ?? v.conjugation ?? v.prasens ?? {};
+      const forms = {
+        ich: (f.ich ?? f.Ich ?? "").toString(),
+        du: (f.du ?? f.Du ?? "").toString(),
+        er: (f.er ?? f["er/sie/es"] ?? f.ersiees ?? f.Er ?? "").toString(),
+        wir: (f.wir ?? f.Wir ?? "").toString(),
+        ihr: (f.ihr ?? f.Ihr ?? "").toString(),
+        sie: (f.sie ?? f["sie/Sie"] ?? f.sieSie ?? f.Sie ?? "").toString(),
+      };
+
+      return { verb, english, type, forms };
+    }).filter(v => v.verb && v.forms && v.forms.ich);
+
+    localStorage.setItem("conjugations_cache", JSON.stringify(conjugations));
+    return { ok:true, count: conjugations.length };
+  }catch(e){
+    conjugations = JSON.parse(localStorage.getItem("conjugations_cache") || "[]");
+    return { ok:false, count: conjugations.length, err: e.message };
+  }
+}
+
 async function reloadAll(){
   setStatus("Loading…");
 
-  const p = await loadPassages();
-  const n = await loadNotes();
+  const p  = await loadPassages();
+  const n  = await loadNotes();
   const ex = await loadExercises();
   const fc = await loadFlashcards();
+  const cj = await loadConjugations();
 
-  // status message
   const parts = [];
-  parts.push(p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`);
-  parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
-  parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
-  parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
+  parts.push(p.ok  ? `✅ passages:${p.count}`      : `⚠️ passages:${p.count}`);
+  parts.push(n.ok  ? `✅ notes:${n.count}`         : `⚠️ notes:${n.count}`);
+  parts.push(ex.ok ? `✅ exercises:${ex.count}`    : `⚠️ exercises:${ex.count}`);
+  parts.push(fc.ok ? `✅ flashcards:${fc.count}`   : `⚠️ flashcards:${fc.count}`);
+  parts.push(cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`);
   setStatus(parts.join(" • "));
 
   renderPassageDropdown();
@@ -690,6 +789,8 @@ async function reloadAll(){
   resetExerciseFlow();
   renderFlashcardCategories();
   startFlashcards();
+  renderVerbList();
+  renderVerb();
 }
 
 /* =========================
@@ -748,7 +849,6 @@ function updateReference(){
 
   referenceArea.value = p ? p.g : "";
   referenceEnglishArea.value = p ? (p.e || "") : "";
-
   clearTyping();
 }
 
@@ -782,7 +882,6 @@ function computeWpm(typedText, startMs){
 }
 
 function diffStrings(ref, typed){
-  // Simple char-by-char alignment (good enough for personal practice)
   const maxLen = Math.max(ref.length, typed.length);
   let correct = 0;
   let out = "";
@@ -868,7 +967,6 @@ function renderLibrary(){
     return;
   }
 
-  // show all (including local)
   passages.forEach((p,i) => {
     const box = document.createElement("div");
     box.style.border = "1px solid var(--line)";
@@ -910,7 +1008,6 @@ function renderNotesTopics(){
     return;
   }
 
-  // friendly labels (optional)
   const labelMap = {
     articles_table: "DER / DIE / DAS",
     cases_overview: "Cases overview",
@@ -957,7 +1054,6 @@ function renderNotesTopics(){
     notesArea.value = String(notesObj[k] ?? "");
   };
 
-  // personal notes
   document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
   document.getElementById("personalNotesStatus").textContent = "";
 }
@@ -991,7 +1087,7 @@ function buildExercisePool(){
     return okLvl && okType;
   });
 
-  if(order === "shuffle" || order === "random"){
+  if(order === "random"){
     exPool = exPool.slice().sort(()=>Math.random()-0.5);
   }else{
     exPool = exPool.slice().sort((a,b)=> (a.id||0)-(b.id||0));
@@ -1073,7 +1169,6 @@ function checkExerciseTyping(){
   if(!exCurrent) return;
   const inp = document.getElementById("exTyping").value || "";
   const right = String(exCurrent.answer ?? "");
-
   const ok = normAnswer(inp) === normAnswer(right);
 
   document.getElementById("exFeedback").innerHTML = ok
@@ -1166,6 +1261,93 @@ function prevCard(){
 }
 
 /* =========================
+   CONJUGATION UI
+========================= */
+function getFilteredVerbs(){
+  const type = document.getElementById("verbTypeFilter").value;
+  const q = (document.getElementById("verbSearch").value || "").trim().toLowerCase();
+  let list = conjugations || [];
+
+  if(type !== "ALL"){
+    list = list.filter(v => (v.type || "") === type);
+  }
+  if(q){
+    list = list.filter(v =>
+      (v.verb || "").toLowerCase().includes(q) ||
+      (v.english || "").toLowerCase().includes(q)
+    );
+  }
+  return list;
+}
+
+function renderVerbList(){
+  const sel = document.getElementById("verbSelect");
+  const list = getFilteredVerbs();
+  document.getElementById("verbCount").textContent = String(list.length);
+
+  const current = sel.value || "";
+  sel.innerHTML = "";
+
+  if(!list.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No verbs loaded";
+    sel.appendChild(opt);
+    renderVerb(null);
+    return;
+  }
+
+  list
+    .slice()
+    .sort((a,b)=> (a.verb || "").localeCompare(b.verb || ""))
+    .forEach(v=>{
+      const opt = document.createElement("option");
+      opt.value = v.verb;
+      opt.textContent = `${v.verb}${v.type ? " • " + v.type : ""}${v.english ? " • " + v.english : ""}`;
+      sel.appendChild(opt);
+    });
+
+  if(current && Array.from(sel.options).some(o=>o.value===current)){
+    sel.value = current;
+  }else{
+    sel.value = sel.options[0].value;
+  }
+
+  renderVerb();
+}
+
+function renderVerb(passed){
+  const sel = document.getElementById("verbSelect");
+  const list = getFilteredVerbs();
+
+  let v = passed;
+  if(!v){
+    const chosen = sel.value;
+    v = list.find(x => x.verb === chosen) || list[0] || null;
+  }
+
+  const setCell = (id, val) => { const el = document.getElementById(id); if(el) el.textContent = val || "—"; };
+
+  if(!v){
+    document.getElementById("verbEnglish").textContent = "—";
+    document.getElementById("verbType").textContent = "—";
+    setCell("v_ich", "—"); setCell("v_du", "—"); setCell("v_er", "—");
+    setCell("v_wir", "—"); setCell("v_ihr", "—"); setCell("v_sie", "—");
+    return;
+  }
+
+  document.getElementById("verbEnglish").textContent = v.english || "—";
+  document.getElementById("verbType").textContent = v.type || "—";
+
+  setCell("v_ich", v.forms?.ich);
+  setCell("v_du", v.forms?.du);
+  setCell("v_er", v.forms?.er);
+  setCell("v_wir", v.forms?.wir);
+  setCell("v_ihr", v.forms?.ihr);
+  setCell("v_sie", v.forms?.sie);
+}
+
+/* =========================
    TRANSLATOR + DICTIONARY
 ========================= */
 function swapLangs(){
@@ -1216,7 +1398,6 @@ async function lookupWord(){
   out.textContent = "";
   if(!w) return;
 
-  // Full extract (not just intro) so you don't get "no short extract"
   const url =
     "https://de.wiktionary.org/w/api.php" +
     "?action=query&format=json&prop=extracts&explaintext=1&redirects=1" +
@@ -1237,13 +1418,7 @@ async function lookupWord(){
 
     const title = page.title || w;
     const extract = (page.extract || "").trim();
-
-    if(!extract){
-      out.textContent = `${title}\n\n(Found, but no extract available. Try another form.)`;
-      return;
-    }
-
-    out.textContent = `${title}\n\n${extract}`;
+    out.textContent = extract ? `${title}\n\n${extract}` : `${title}\n\n(Found, but no extract available. Try another form.)`;
   }catch{
     out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
   }
@@ -1253,15 +1428,12 @@ async function lookupWord(){
    INIT
 ========================= */
 (function init(){
-  // theme restore
   const savedTheme = localStorage.getItem("theme") || "theme-vibrant";
   setTheme(savedTheme);
   document.getElementById("themeSelect").value = savedTheme;
 
-  // personal notes quick load
   document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
 
-  // set default view
   showTab("practiceTab");
   showPracticeSub("typing");
   showNotesSub("study");
