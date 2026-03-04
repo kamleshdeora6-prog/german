@@ -6,6 +6,9 @@
 <title>German Study App</title>
 
 <style>
+/* =========================
+   THEMES
+========================= */
 :root{
   --bg:#0b0f14;
   --card:#121824;
@@ -14,18 +17,41 @@
   --line:#263042;
   --panel:#0f1520;
   --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#60a5fa;
+  --good:#22c55e;
+  --bad:#ef4444;
 }
-body.light{
+
+body.theme-light{
   --bg:#f5f7fb;
   --card:#ffffff;
-  --text:#111;
-  --muted:#666;
-  --line:#ddd;
-  --panel:#f1f1f1;
+  --text:#111111;
+  --muted:#5b6470;
+  --line:#d7dde6;
+  --panel:#f1f3f7;
   --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#2563eb;
 }
-body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
-header{padding:16px;border-bottom:1px solid var(--line)}
+
+body.theme-vibrant{
+  --bg:#f6f8ff;
+  --card:#ffffff;
+  --text:#0b1020;
+  --muted:#55607a;
+  --line:#dfe6ff;
+  --panel:#f0f4ff;
+  --btn:#0ea5e9;
+  --btnText:#07111c;
+  --accent:#ec4899;
+  --good:#16a34a;
+  --bad:#dc2626;
+}
+
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:50}
+h2{margin:0 0 10px 0}
 .card{background:var(--card);border:1px solid var(--line);padding:16px;margin:16px;border-radius:12px}
 textarea,input,select{
   width:100%;
@@ -35,87 +61,383 @@ textarea,input,select{
   padding:10px;
   border-radius:8px;
   margin-top:8px;
+  box-sizing:border-box;
 }
 button{
   padding:8px 12px;
   border-radius:8px;
   border:1px solid var(--line);
   background:var(--btn);
-  color:white;
+  color:var(--btnText);
   cursor:pointer;
   margin-top:8px;
+}
+button.ghost{
+  background:transparent;
+  color:var(--text);
+}
+button.danger{
+  background:#4b1a1a;
+  border-color:#c0392b;
+  color:#fff;
 }
 .tabs button{margin-right:8px}
 .hidden{display:none}
 .small{font-size:13px;color:var(--muted)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .row > *{flex:0 0 auto}
+hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+
+.badge{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+.pill{border-radius:999px}
+a{color:var(--accent)}
+
+.subtabs{display:flex;gap:8px;flex-wrap:wrap}
+.subtabs button{
+  margin:0;
+  padding:7px 10px;
+  border-radius:999px;
+}
+.subtabs button.active{
+  outline:2px solid var(--accent);
+  border-color:transparent;
+}
+
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+pre{white-space:pre-wrap}
+
+/* typing diff */
+.diffBox{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px;
+  margin-top:10px;
+}
+.okChar{color:var(--good)}
+.badChar{color:var(--bad);text-decoration:underline}
+.missChar{background:rgba(239,68,68,.18);color:var(--bad)}
+.insChar{background:rgba(34,197,94,.18);color:var(--good)}
+
+/* flashcards */
+.flashwrap{display:grid;gap:12px}
+.flashcard{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  min-height:140px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  user-select:none;
+}
+.flashFront{font-size:22px;font-weight:700}
+.flashBack{font-size:16px;color:var(--muted)}
+.flashHint{margin-top:10px;color:var(--muted);font-size:12px}
+
+/* tables */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+.table th,.table td{
+  border:1px solid var(--line);
+  padding:8px;
+  vertical-align:top;
+}
+.table th{
+  background:rgba(99,102,241,.08);
+}
+.hl{background:rgba(236,72,153,.10)}
 </style>
 </head>
 
-<body>
+<body class="theme-vibrant">
 
 <header>
-  <h2 style="margin:0 0 10px 0;">German Study App</h2>
+  <h2>German Study App</h2>
   <div class="row">
-    <button onclick="toggleTheme()">Toggle Dark/Light</button>
     <button onclick="goHome()">🏠 Home</button>
-    <button onclick="reloadData()">🔄 Reload Data</button>
+    <button onclick="reloadAll()">🔄 Reload Data</button>
+
+    <div style="min-width:190px">
+      <div class="small">Theme</div>
+      <select id="themeSelect" onchange="setTheme(this.value)">
+        <option value="theme-vibrant">Vibrant (default)</option>
+        <option value="theme-dark">Dark</option>
+        <option value="theme-light">Light</option>
+      </select>
+    </div>
+
     <span id="status" class="small"></span>
   </div>
 </header>
 
+<!-- Tabs (always visible) -->
 <div class="tabs card" id="tabBar">
-  <button onclick="showTab('practice')">Practice</button>
-  <button onclick="showTab('library')">Library</button>
-  <button onclick="showTab('notes')">Notes</button>
-  <button onclick="showTab('translator')">Translator</button>
+  <button onclick="showTab('practiceTab')">Practice</button>
+  <button onclick="showTab('libraryTab')">Library</button>
+  <button onclick="showTab('notesTab')">Notes</button>
+  <button onclick="showTab('flashcardsTab')">Flashcards</button>
+  <button onclick="showTab('translatorTab')">Translator</button>
+  <button onclick="showTab('tablesTab')">Grammar Tables</button>
 </div>
 
-<div id="practice" class="card">
-  <h3 style="margin-top:0;">Typing Practice</h3>
-  <div class="small">Select a passage → read reference → type it exactly.</div>
-
-  <select id="practiceSelect"></select>
-
-  <div style="margin-top:12px;" class="small">Reference (German)</div>
-  <textarea id="referenceArea" readonly style="min-height:120px;"></textarea>
-
-  <div style="margin-top:12px;" class="small">Type here</div>
-  <textarea id="practiceArea" placeholder="Type here..." style="min-height:120px;"></textarea>
-
-  <div class="row">
-    <button onclick="checkTyping()">Check</button>
-    <button onclick="clearTyping()">Clear</button>
+<!-- =========================
+     PRACTICE
+========================= -->
+<div id="practiceTab" class="card">
+  <div class="row" style="justify-content:space-between">
+    <h3 style="margin:0">Practice</h3>
+    <span class="badge">Typing • Exercises • (More soon)</span>
   </div>
 
-  <p id="result" class="small"></p>
+  <div class="subtabs" style="margin-top:10px">
+    <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
+    <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
+    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation (soon)</button>
+  </div>
+
+  <!-- ===== Typing ===== -->
+  <div id="practice_typing" style="margin-top:14px">
+    <div class="small">Select a passage → read reference → type it. You’ll see WPM, accuracy, and red highlights for mistakes.</div>
+
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:210px;flex:1">
+        <div class="small">Difficulty</div>
+        <select id="passageLevelFilter" onchange="renderPassageDropdown()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+        </select>
+      </div>
+
+      <div style="min-width:330px;flex:2">
+        <div class="small">Passage</div>
+        <select id="practiceSelect"></select>
+      </div>
+
+      <div style="min-width:210px;flex:1">
+        <div class="small">Show English</div>
+        <select id="showEnglishToggle" onchange="updateReference()">
+          <option value="0">Off</option>
+          <option value="1">On</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="margin-top:12px" class="small">Reference (German)</div>
+    <textarea id="referenceArea" readonly style="min-height:120px"></textarea>
+
+    <div id="referenceEnglishWrap" class="hidden">
+      <div style="margin-top:12px" class="small">Reference (English)</div>
+      <textarea id="referenceEnglishArea" readonly style="min-height:110px"></textarea>
+    </div>
+
+    <div style="margin-top:12px" class="small">Type here</div>
+    <textarea id="practiceArea" placeholder="Type here..." style="min-height:130px" oninput="onTypingInput()"></textarea>
+
+    <div class="row">
+      <button onclick="checkTyping()">Check</button>
+      <button class="ghost" onclick="clearTyping()">Clear</button>
+    </div>
+
+    <div class="row" style="margin-top:6px">
+      <span class="badge">WPM: <span id="wpm">0</span></span>
+      <span class="badge">Accuracy: <span id="acc">0</span>%</span>
+      <span class="badge">Chars: <span id="chars">0</span></span>
+    </div>
+
+    <div id="typingFeedback" class="small" style="margin-top:10px"></div>
+    <div id="diffOutput" class="diffBox hidden"></div>
+  </div>
+
+  <!-- ===== Exercises ===== -->
+  <div id="practice_exercises" class="hidden" style="margin-top:14px">
+    <div class="small">Exercises are loaded from <b>exercises.json</b>. Filter by level/type, then practice MCQ or typing.</div>
+
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:210px">
+        <div class="small">Level</div>
+        <select id="exLevel" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+        </select>
+      </div>
+
+      <div style="min-width:260px">
+        <div class="small">Type</div>
+        <select id="exType" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="articles">articles</option>
+          <option value="cases">cases</option>
+          <option value="prepositions">prepositions</option>
+          <option value="adjectives">adjectives</option>
+          <option value="conjunctions">conjunctions</option>
+          <option value="modal_verbs">modal_verbs</option>
+          <option value="verbs">verbs</option>
+          <option value="w_questions">w_questions</option>
+          <option value="sentence_order">sentence_order</option>
+          <option value="connectors">connectors</option>
+          <option value="phrases">phrases</option>
+          <option value="vocab">vocab</option>
+        </select>
+      </div>
+
+      <div style="min-width:190px">
+        <div class="small">Order</div>
+        <select id="exOrder" onchange="resetExerciseFlow()">
+          <option value="random">Random</option>
+          <option value="sequential">Sequential</option>
+        </select>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row" style="justify-content:space-between">
+      <div class="badge">Progress: <span id="exProg">0/0</span></div>
+      <div class="badge">Mode: <span id="exMode">-</span></div>
+    </div>
+
+    <div style="margin-top:10px">
+      <div id="exQ" style="font-size:18px;font-weight:700"></div>
+      <div id="exHint" class="small" style="margin-top:6px"></div>
+    </div>
+
+    <div id="exMCQ" class="row" style="margin-top:10px"></div>
+
+    <div id="exTypingWrap" class="hidden" style="margin-top:10px">
+      <input id="exTyping" placeholder="Type your answer…" onkeydown="if(event.key==='Enter'){checkExerciseTyping()}">
+      <button onclick="checkExerciseTyping()">Check</button>
+    </div>
+
+    <div id="exFeedback" class="small" style="margin-top:10px"></div>
+
+    <div class="row">
+      <button onclick="nextExercise()">Next</button>
+      <button class="ghost" onclick="resetExerciseFlow()">Restart</button>
+    </div>
+  </div>
+
+  <!-- ===== Conjugation placeholder ===== -->
+  <div id="practice_conjugation" class="hidden" style="margin-top:14px">
+    <div class="small">Coming next: verb conjugation trainer (Präsens/Perfekt/Präteritum) + modal verbs + separable verbs.</div>
+  </div>
 </div>
 
-<div id="library" class="card hidden">
-  <h3 style="margin-top:0;">Library (local only)</h3>
+<!-- =========================
+     LIBRARY
+========================= -->
+<div id="libraryTab" class="card hidden">
+  <h3 style="margin-top:0">Library (local only)</h3>
   <div class="small">
-    Passages are loaded from <b>passages.json</b>.<br>
-    To permanently add passages, edit <b>passages.json</b> in GitHub.
+    Passages are loaded from <b>passages.json</b>. If you want to permanently add passages, edit <b>passages.json</b> in GitHub.
+    Anything you add here is saved only in this browser (localStorage).
+  </div>
+
+  <div class="row" style="margin-top:10px">
+    <div style="flex:1;min-width:260px">
+      <div class="small">Level (for your local entry)</div>
+      <select id="localLevel">
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="local">local</option>
+      </select>
+    </div>
   </div>
 
   <textarea id="germanInput" placeholder="German text (local)"></textarea>
   <textarea id="englishInput" placeholder="English translation (local)"></textarea>
   <button onclick="saveParagraphLocal()">Save locally</button>
 
-  <div id="libraryList" style="margin-top:12px;"></div>
+  <div id="libraryList" style="margin-top:12px"></div>
 </div>
 
-<div id="notes" class="card hidden">
-  <h3 style="margin-top:0;">Notes</h3>
-  <div class="small">Loaded from <b>notes.json</b>. Select a topic.</div>
+<!-- =========================
+     NOTES
+========================= -->
+<div id="notesTab" class="card hidden">
+  <h3 style="margin-top:0">Notes</h3>
+  <div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
 
-  <select id="notesTopic"></select>
-  <textarea id="notesArea" style="min-height:320px;" readonly></textarea>
+  <div class="subtabs" style="margin-top:10px">
+    <button id="notes_sub_study" class="active" onclick="showNotesSub('study')">Study Notes</button>
+    <button id="notes_sub_personal" onclick="showNotesSub('personal')">Personal Notes</button>
+  </div>
+
+  <div id="notes_study" style="margin-top:14px">
+    <div class="small">Select a topic</div>
+    <select id="notesTopic"></select>
+    <textarea id="notesArea" style="min-height:320px" readonly></textarea>
+  </div>
+
+  <div id="notes_personal" class="hidden" style="margin-top:14px">
+    <div class="small">This is your private note pad (saved locally).</div>
+    <textarea id="personalNotesArea" style="min-height:320px" placeholder="Write your own notes here…"></textarea>
+    <div class="row">
+      <button onclick="savePersonalNotes()">Save</button>
+      <button class="ghost" onclick="clearPersonalNotes()">Clear</button>
+    </div>
+    <div id="personalNotesStatus" class="small" style="margin-top:8px"></div>
+  </div>
 </div>
 
-<div id="translator" class="card hidden">
-  <h3 style="margin-top:0;">Translator</h3>
+<!-- =========================
+     FLASHCARDS
+========================= -->
+<div id="flashcardsTab" class="card hidden">
+  <h3 style="margin-top:0">Flashcards</h3>
+  <div class="small">Loaded from <b>flashcards.json</b>. Click the card to flip.</div>
+
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:260px">
+      <div class="small">Category</div>
+      <select id="fcCategory" onchange="startFlashcards()">
+        <option value="ALL">All</option>
+      </select>
+    </div>
+
+    <div style="min-width:190px">
+      <div class="small">Order</div>
+      <select id="fcOrder" onchange="startFlashcards()">
+        <option value="shuffle">Shuffle</option>
+        <option value="sequential">Sequential</option>
+      </select>
+    </div>
+
+    <div class="badge">Card: <span id="fcIndex">0</span>/<span id="fcTotal">0</span></div>
+  </div>
+
+  <div class="flashwrap" style="margin-top:12px">
+    <div id="flashcard" class="flashcard" onclick="flipCard()">
+      <div>
+        <div id="fcText" class="flashFront">No cards loaded</div>
+        <div id="fcHint" class="flashHint">Click to flip</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <button onclick="prevCard()">← Prev</button>
+      <button onclick="nextCard()">Next →</button>
+      <button class="ghost" onclick="flipToFront()">Front</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+     TRANSLATOR
+========================= -->
+<div id="translatorTab" class="card hidden">
+  <h3 style="margin-top:0">Translator</h3>
 
   <div class="row" style="margin-top:8px;">
     <div style="min-width:180px;">
@@ -142,67 +464,453 @@ button{
   <textarea id="translateInput" placeholder="Type/paste text here..."></textarea>
   <div class="row">
     <button onclick="translateText()">Translate</button>
-    <button onclick="clearTranslate()">Clear</button>
+    <button class="ghost" onclick="clearTranslate()">Clear</button>
   </div>
   <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
 
-  <h3 style="margin-top:18px;">Dictionary</h3>
-  <div class="small">Best with base form (e.g., “wollen”, not “willst”).</div>
+  <hr>
+
+  <h3 style="margin-top:0">Dictionary</h3>
+  <div class="small">
+    Uses Wiktionary (German). It can be long — that’s fine. Best with base form (Infinitiv / singular).
+  </div>
   <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
   <div class="row">
     <button onclick="lookupWord()">Lookup</button>
-    <button onclick="clearDict()">Clear</button>
+    <button class="ghost" onclick="clearDict()">Clear</button>
   </div>
   <div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
 </div>
 
-<script>
-function toggleTheme(){ document.body.classList.toggle("light"); }
-function goHome(){ showTab('practice'); }
+<!-- =========================
+     GRAMMAR TABLES
+========================= -->
+<div id="tablesTab" class="card hidden">
+  <h3 style="margin-top:0">Grammar Tables</h3>
+  <div class="small">Quick reference tables (definite/indefinite/negative articles). Pink highlight shows changes across cases.</div>
 
+  <h4>Definite articles (der/die/das)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">den</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Dativ</td><td class="hl">dem</td><td class="hl">der</td><td class="hl">dem</td><td class="hl">den (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">des (+s)</td><td class="hl">der</td><td class="hl">des (+s)</td><td class="hl">der</td></tr>
+  </table>
+
+  <h4 style="margin-top:18px">Indefinite articles (ein/eine)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
+    <tr><td>Nominativ</td><td>ein</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">einen</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Dativ</td><td class="hl">einem</td><td class="hl">einer</td><td class="hl">einem</td></tr>
+    <tr><td>Genitiv</td><td class="hl">eines</td><td class="hl">einer</td><td class="hl">eines</td></tr>
+  </table>
+
+  <h4 style="margin-top:18px">Negative articles (kein/keine)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>kein</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">keinen</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Dativ</td><td class="hl">keinem</td><td class="hl">keiner</td><td class="hl">keinem</td><td class="hl">keinen (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">keines</td><td class="hl">keiner</td><td class="hl">keines</td><td class="hl">keiner</td></tr>
+  </table>
+
+  <h4 style="margin-top:18px">Two-way prepositions (Wechselpräpositionen)</h4>
+  <div class="small">in, an, auf, über, unter, vor, hinter, neben, zwischen</div>
+  <div class="small" style="margin-top:6px">
+    <b>Movement</b> (Wohin?) → Akkusativ • <b>Location</b> (Wo?) → Dativ
+  </div>
+</div>
+
+<script>
+/* =========================
+   GLOBAL STATE
+========================= */
+let passages = [];   // {g, e, level}
+let notesObj = {};   // { key: value }
+let exercises = [];  // {id, level, type, mode, question, options?, answer}
+let flashcards = []; // {category, front, back}
+
+const statusEl = document.getElementById("status");
+
+/* =========================
+   NAV + THEME
+========================= */
 function showTab(id){
-  document.getElementById("practice").classList.add("hidden");
-  document.getElementById("library").classList.add("hidden");
-  document.getElementById("notes").classList.add("hidden");
-  document.getElementById("translator").classList.add("hidden");
+  const ids = ["practiceTab","libraryTab","notesTab","flashcardsTab","translatorTab","tablesTab"];
+  ids.forEach(x => document.getElementById(x).classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
 }
-
-let passages = [];
-const statusEl = document.getElementById("status");
+function goHome(){ showTab("practiceTab"); }
 function setStatus(msg){ statusEl.textContent = msg || ""; }
-function esc(s){ return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 
-async function loadPassagesFromGitHub(){
-  const url = "./passages.json?v=" + Date.now();
-  const res = await fetch(url, { cache: "no-store" });
-  if(!res.ok) throw new Error("passages.json not reachable (404 or not in root).");
-
-  const raw = await res.json();
-  if(!Array.isArray(raw)) throw new Error("passages.json must be an array: [ {...}, {...} ]");
-
-  passages = raw.map(p => ({
-    g: p.german ?? p.g ?? "",
-    e: p.english ?? p.e ?? "",
-    level: p.level ?? ""
-  })).filter(p => (p.g || "").trim().length);
-
-  localStorage.setItem("passages", JSON.stringify(passages));
+function setTheme(themeClass){
+  document.body.classList.remove("theme-dark","theme-light","theme-vibrant");
+  document.body.classList.add(themeClass);
+  localStorage.setItem("theme", themeClass);
 }
 
-async function loadNotesFromGitHub(){
-  const notesArea  = document.getElementById("notesArea");
-  const notesTopic = document.getElementById("notesTopic");
+/* =========================
+   PRACTICE SUBTABS
+========================= */
+function setSubActive(which){
+  ["typing","exercises","conjugation"].forEach(s=>{
+    document.getElementById("sub_"+s).classList.toggle("active", s===which);
+  });
+}
+function showPracticeSub(which){
+  setSubActive(which);
+  document.getElementById("practice_typing").classList.toggle("hidden", which!=="typing");
+  document.getElementById("practice_exercises").classList.toggle("hidden", which!=="exercises");
+  document.getElementById("practice_conjugation").classList.toggle("hidden", which!=="conjugation");
+}
 
-  const url = "./notes.json?v=" + Date.now();
-  const res = await fetch(url, { cache: "no-store" });
-  if(!res.ok) throw new Error("notes.json not reachable (404 or not in root).");
+/* =========================
+   NOTES SUBTABS
+========================= */
+function setNotesSubActive(which){
+  document.getElementById("notes_sub_study").classList.toggle("active", which==="study");
+  document.getElementById("notes_sub_personal").classList.toggle("active", which==="personal");
+}
+function showNotesSub(which){
+  setNotesSubActive(which);
+  document.getElementById("notes_study").classList.toggle("hidden", which!=="study");
+  document.getElementById("notes_personal").classList.toggle("hidden", which!=="personal");
+}
 
-  const notesObj = await res.json();
-  if(!notesObj || typeof notesObj !== "object" || Array.isArray(notesObj)){
-    throw new Error("notes.json must be an object: { key: value }");
+/* =========================
+   HELPERS
+========================= */
+function esc(s){ return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+function normAnswer(s){
+  return (s||"")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g," ")
+    .replace(/[“”„]/g,'"')
+    .replace(/[’]/g,"'");
+}
+
+/* =========================
+   LOAD JSON (GitHub root)
+========================= */
+async function loadJson(path){
+  const url = `./${path}?v=${Date.now()}`;
+  const res = await fetch(url, { cache:"no-store" });
+  if(!res.ok) throw new Error(`${path} not reachable (404 or not in root).`);
+  return await res.json();
+}
+
+async function loadPassages(){
+  try{
+    const raw = await loadJson("passages.json");
+    if(!Array.isArray(raw)) throw new Error("passages.json must be an array");
+    passages = raw.map(p => ({
+      g: p.german ?? p.g ?? "",
+      e: p.english ?? p.e ?? "",
+      level: (p.level ?? "").toString().toUpperCase()
+    })).filter(p => (p.g||"").trim().length);
+
+    // merge local additions (browser)
+    const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+    if(Array.isArray(local) && local.length){
+      passages = passages.concat(local);
+    }
+
+    localStorage.setItem("passages_cache", JSON.stringify(passages));
+    return { ok:true, count: passages.length };
+  }catch(e){
+    // fallback cache
+    passages = JSON.parse(localStorage.getItem("passages_cache") || "[]");
+    return { ok:false, count: passages.length, err: e.message };
+  }
+}
+
+async function loadNotes(){
+  try{
+    const obj = await loadJson("notes.json");
+    if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object");
+    notesObj = obj;
+    localStorage.setItem("notes_obj_cache", JSON.stringify(notesObj));
+    return { ok:true, count: Object.keys(notesObj).length };
+  }catch(e){
+    notesObj = JSON.parse(localStorage.getItem("notes_obj_cache") || "{}");
+    return { ok:false, count: Object.keys(notesObj).length, err: e.message };
+  }
+}
+
+async function loadExercises(){
+  try{
+    const obj = await loadJson("exercises.json");
+    const arr = obj?.exercises;
+    if(!Array.isArray(arr)) throw new Error("exercises.json must be { exercises: [...] }");
+    exercises = arr;
+    localStorage.setItem("exercises_cache", JSON.stringify(exercises));
+    return { ok:true, count: exercises.length };
+  }catch(e){
+    exercises = JSON.parse(localStorage.getItem("exercises_cache") || "[]");
+    return { ok:false, count: exercises.length, err: e.message };
+  }
+}
+
+async function loadFlashcards(){
+  try{
+    const obj = await loadJson("flashcards.json");
+    const arr = obj?.flashcards;
+    if(!Array.isArray(arr)) throw new Error("flashcards.json must be { flashcards: [...] }");
+    flashcards = arr;
+    localStorage.setItem("flashcards_cache", JSON.stringify(flashcards));
+    return { ok:true, count: flashcards.length };
+  }catch(e){
+    flashcards = JSON.parse(localStorage.getItem("flashcards_cache") || "[]");
+    return { ok:false, count: flashcards.length, err: e.message };
+  }
+}
+
+async function reloadAll(){
+  setStatus("Loading…");
+
+  const p = await loadPassages();
+  const n = await loadNotes();
+  const ex = await loadExercises();
+  const fc = await loadFlashcards();
+
+  // status message
+  const parts = [];
+  parts.push(p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`);
+  parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
+  parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
+  parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
+  setStatus(parts.join(" • "));
+
+  renderPassageDropdown();
+  renderLibrary();
+  renderNotesTopics();
+  resetExerciseFlow();
+  renderFlashcardCategories();
+  startFlashcards();
+}
+
+/* =========================
+   TYPING PRACTICE
+========================= */
+const practiceSelect = document.getElementById("practiceSelect");
+const referenceArea = document.getElementById("referenceArea");
+const referenceEnglishArea = document.getElementById("referenceEnglishArea");
+const referenceEnglishWrap = document.getElementById("referenceEnglishWrap");
+const practiceArea = document.getElementById("practiceArea");
+const diffOutput = document.getElementById("diffOutput");
+
+let typingStartMs = null;
+let typingStarted = false;
+
+function getFilteredPassages(){
+  const lvl = document.getElementById("passageLevelFilter").value;
+  if(lvl === "ALL") return passages;
+  return passages.filter(p => (p.level||"").toUpperCase() === lvl);
+}
+
+function renderPassageDropdown(){
+  const list = getFilteredPassages();
+  practiceSelect.innerHTML = "";
+  if(!list.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No passages loaded";
+    practiceSelect.appendChild(opt);
+    referenceArea.value = "";
+    referenceEnglishArea.value = "";
+    return;
   }
 
+  list.forEach((p, idx) => {
+    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,60).replace(/\n/g," ");
+    const opt = document.createElement("option");
+    opt.value = String(idx);
+    opt.textContent = label;
+    practiceSelect.appendChild(opt);
+  });
+
+  practiceSelect.value = "0";
+  updateReference();
+}
+
+practiceSelect.addEventListener("change", updateReference);
+
+function updateReference(){
+  const showEn = document.getElementById("showEnglishToggle").value === "1";
+  referenceEnglishWrap.classList.toggle("hidden", !showEn);
+
+  const list = getFilteredPassages();
+  const idx = Number(practiceSelect.value);
+  const p = list[idx];
+
+  referenceArea.value = p ? p.g : "";
+  referenceEnglishArea.value = p ? (p.e || "") : "";
+
+  clearTyping();
+}
+
+function onTypingInput(){
+  if(!typingStarted){
+    typingStarted = true;
+    typingStartMs = Date.now();
+  }
+  document.getElementById("chars").textContent = String(practiceArea.value.length);
+}
+
+function clearTyping(){
+  practiceArea.value = "";
+  document.getElementById("typingFeedback").textContent = "";
+  diffOutput.classList.add("hidden");
+  diffOutput.innerHTML = "";
+  typingStarted = false;
+  typingStartMs = null;
+  document.getElementById("wpm").textContent = "0";
+  document.getElementById("acc").textContent = "0";
+  document.getElementById("chars").textContent = "0";
+  practiceArea.focus();
+}
+
+function computeWpm(typedText, startMs){
+  if(!startMs) return 0;
+  const mins = (Date.now() - startMs) / 60000;
+  if(mins <= 0) return 0;
+  const words = typedText.trim().length ? typedText.trim().split(/\s+/).length : 0;
+  return Math.round(words / mins);
+}
+
+function diffStrings(ref, typed){
+  // Simple char-by-char alignment (good enough for personal practice)
+  const maxLen = Math.max(ref.length, typed.length);
+  let correct = 0;
+  let out = "";
+  for(let i=0;i<maxLen;i++){
+    const r = ref[i];
+    const t = typed[i];
+
+    if(r === undefined && t !== undefined){
+      out += `<span class="insChar">${esc(t)}</span>`;
+      continue;
+    }
+    if(t === undefined && r !== undefined){
+      out += `<span class="missChar">${esc(r)}</span>`;
+      continue;
+    }
+    if(r === t){
+      correct++;
+      out += `<span class="okChar">${esc(t)}</span>`;
+    }else{
+      out += `<span class="badChar">${esc(t)}</span>`;
+    }
+  }
+  const acc = ref.length ? Math.round((correct / ref.length) * 100) : 0;
+  return { html: out, accuracy: acc, correctChars: correct };
+}
+
+function checkTyping(){
+  const list = getFilteredPassages();
+  const idx = Number(practiceSelect.value);
+  const p = list[idx];
+  if(!p){
+    document.getElementById("typingFeedback").textContent = "No passage selected.";
+    return;
+  }
+
+  const ref = p.g || "";
+  const typed = practiceArea.value || "";
+
+  const wpm = computeWpm(typed, typingStartMs);
+  document.getElementById("wpm").textContent = String(wpm);
+
+  const d = diffStrings(ref, typed);
+  document.getElementById("acc").textContent = String(d.accuracy);
+
+  if(typed === ref){
+    document.getElementById("typingFeedback").innerHTML = `<span style="color:var(--good)">✅ Perfect! Exact match.</span>`;
+    diffOutput.classList.add("hidden");
+  }else{
+    document.getElementById("typingFeedback").innerHTML =
+      `<span style="color:var(--bad)">❌ Not exact.</span> Tip: check commas, umlauts, spaces, and line breaks.`;
+    diffOutput.classList.remove("hidden");
+    diffOutput.innerHTML = `<div class="small" style="margin-bottom:6px">Highlight view (red = wrong/missing, green = extra):</div><div class="mono">${d.html}</div>`;
+  }
+}
+
+/* =========================
+   LIBRARY (LOCAL ONLY)
+========================= */
+function saveParagraphLocal(){
+  const g = (document.getElementById("germanInput").value || "").trim();
+  const e = (document.getElementById("englishInput").value || "").trim();
+  const level = (document.getElementById("localLevel").value || "local").toUpperCase();
+
+  if(!g){ alert("German text required."); return; }
+
+  const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+  local.push({ g, e, level });
+  localStorage.setItem("passages_local", JSON.stringify(local));
+
+  document.getElementById("germanInput").value = "";
+  document.getElementById("englishInput").value = "";
+
+  reloadAll();
+  alert("Saved locally (this browser). For permanent saving, add it to passages.json on GitHub.");
+}
+
+function renderLibrary(){
+  const list = document.getElementById("libraryList");
+  list.innerHTML = "";
+
+  if(!passages.length){
+    list.innerHTML = `<div class="small">No passages.</div>`;
+    return;
+  }
+
+  // show all (including local)
+  passages.forEach((p,i) => {
+    const box = document.createElement("div");
+    box.style.border = "1px solid var(--line)";
+    box.style.borderRadius = "10px";
+    box.style.padding = "10px";
+    box.style.marginTop = "10px";
+
+    const isLocal = (p.level || "").toUpperCase() === "LOCAL";
+
+    box.innerHTML = `
+      <div class="small"><b>${esc(p.level || "")}</b> ${isLocal ? `<span class="badge pill">local</span>` : ``}</div>
+      <div style="white-space:pre-wrap;margin-top:6px">${esc(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px">EN: ${esc(p.e)}</div>` : ""}
+      ${isLocal ? `<button class="danger" onclick="deleteLocalPassageByText(${JSON.stringify(p.g)})">Delete (local)</button>` : `<div class="small">Edit in GitHub to change.</div>`}
+    `;
+    list.appendChild(box);
+  });
+}
+
+function deleteLocalPassageByText(gText){
+  const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+  const filtered = local.filter(p => p.g !== gText);
+  localStorage.setItem("passages_local", JSON.stringify(filtered));
+  reloadAll();
+}
+
+/* =========================
+   NOTES
+========================= */
+function renderNotesTopics(){
+  const notesTopic = document.getElementById("notesTopic");
+  const notesArea = document.getElementById("notesArea");
+  const keys = Object.keys(notesObj || {});
+  notesTopic.innerHTML = "";
+
+  if(!keys.length){
+    notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
+    notesArea.value = "";
+    return;
+  }
+
+  // friendly labels (optional)
   const labelMap = {
     articles_table: "DER / DIE / DAS",
     cases_overview: "Cases overview",
@@ -224,13 +932,14 @@ async function loadNotesFromGitHub(){
     b1_reflexive_verbs: "B1 reflexive verbs",
     b1_subordinate_clauses: "B1 subordinate clauses",
     vocab_work: "Vocab: work",
-    vocab_home: "Vocab: home"
+    vocab_home: "Vocab: home",
+    vocab_verbs: "Vocab: verbs",
+    vocab_nouns: "Vocab: nouns",
+    vocab_adjectives: "Vocab: adjectives",
+    vocab_phrases: "Vocab: writing phrases"
   };
 
-  const keys = Object.keys(notesObj);
-
-  notesTopic.innerHTML = "";
-  keys.forEach(k => {
+  keys.forEach(k=>{
     const opt = document.createElement("option");
     opt.value = k;
     opt.textContent = labelMap[k] || k.replaceAll("_"," ");
@@ -239,7 +948,6 @@ async function loadNotesFromGitHub(){
 
   const last = localStorage.getItem("notes_topic");
   const chosen = (last && keys.includes(last)) ? last : keys[0];
-
   notesTopic.value = chosen;
   notesArea.value = String(notesObj[chosen] ?? "");
 
@@ -249,178 +957,225 @@ async function loadNotesFromGitHub(){
     notesArea.value = String(notesObj[k] ?? "");
   };
 
-  localStorage.setItem("notes_obj", JSON.stringify(notesObj));
+  // personal notes
+  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
+  document.getElementById("personalNotesStatus").textContent = "";
 }
 
-async function reloadData(){
-  setStatus("Loading…");
-  document.getElementById("result").textContent = "";
-
-  try{
-    await loadPassagesFromGitHub();
-    setStatus(`✅ Loaded ${passages.length} passages from passages.json`);
-  }catch(e){
-    passages = JSON.parse(localStorage.getItem("passages") || "[]");
-    setStatus(`⚠️ Passages not loaded: ${e.message} (Using local: ${passages.length})`);
-  }
-
-  try{
-    await loadNotesFromGitHub();
-    if(statusEl.textContent.startsWith("✅")) setStatus("✅ Passages + notes loaded.");
-  }catch(e){
-    const cached = localStorage.getItem("notes_obj");
-    if (cached) {
-      const notesObj = JSON.parse(cached);
-      const notesTopic = document.getElementById("notesTopic");
-      const notesArea  = document.getElementById("notesArea");
-      const keys = Object.keys(notesObj);
-
-      notesTopic.innerHTML = "";
-      keys.forEach(k => {
-        const opt = document.createElement("option");
-        opt.value = k;
-        opt.textContent = k.replaceAll("_"," ");
-        notesTopic.appendChild(opt);
-      });
-
-      const chosen = keys[0] || "";
-      notesTopic.value = chosen;
-      notesArea.value = String(notesObj[chosen] ?? "");
-      notesTopic.onchange = () => {
-        const k = notesTopic.value;
-        localStorage.setItem("notes_topic", k);
-        notesArea.value = String(notesObj[k] ?? "");
-      };
-    }
-
-    if(statusEl.textContent.startsWith("✅")){
-      setStatus(`⚠️ Notes not loaded: ${e.message}`);
-    }else{
-      setStatus(statusEl.textContent + " | Notes failed.");
-    }
-  }
-
-  renderPracticeDropdown();
-  renderLibrary();
+function savePersonalNotes(){
+  const t = document.getElementById("personalNotesArea").value || "";
+  localStorage.setItem("personal_notes", t);
+  document.getElementById("personalNotesStatus").textContent = "✅ Saved locally.";
+}
+function clearPersonalNotes(){
+  document.getElementById("personalNotesArea").value = "";
+  localStorage.removeItem("personal_notes");
+  document.getElementById("personalNotesStatus").textContent = "Cleared.";
 }
 
-const practiceSelect = document.getElementById("practiceSelect");
-const referenceArea  = document.getElementById("referenceArea");
-const practiceArea   = document.getElementById("practiceArea");
-const resultEl       = document.getElementById("result");
+/* =========================
+   EXERCISES
+========================= */
+let exPool = [];
+let exIndex = 0;
+let exCurrent = null;
 
-function renderPracticeDropdown(){
-  practiceSelect.innerHTML = "";
+function buildExercisePool(){
+  const lvl = document.getElementById("exLevel").value;
+  const type = document.getElementById("exType").value;
+  const order = document.getElementById("exOrder").value;
 
-  if(!passages.length){
-    const opt = document.createElement("option");
-    opt.value = "";
-    opt.textContent = "No passages loaded";
-    practiceSelect.appendChild(opt);
-    referenceArea.value = "";
+  exPool = (exercises || []).filter(e=>{
+    const okLvl = (lvl==="ALL") || ((e.level||"").toUpperCase()===lvl);
+    const okType = (type==="ALL") || ((e.type||"")===type);
+    return okLvl && okType;
+  });
+
+  if(order === "shuffle" || order === "random"){
+    exPool = exPool.slice().sort(()=>Math.random()-0.5);
+  }else{
+    exPool = exPool.slice().sort((a,b)=> (a.id||0)-(b.id||0));
+  }
+
+  exIndex = 0;
+}
+
+function resetExerciseFlow(){
+  buildExercisePool();
+  document.getElementById("exFeedback").textContent = "";
+  nextExercise(true);
+}
+
+function renderExercise(e){
+  const exQ = document.getElementById("exQ");
+  const exHint = document.getElementById("exHint");
+  const exMCQ = document.getElementById("exMCQ");
+  const exTypingWrap = document.getElementById("exTypingWrap");
+  const exTyping = document.getElementById("exTyping");
+  const exProg = document.getElementById("exProg");
+  const exMode = document.getElementById("exMode");
+
+  exMCQ.innerHTML = "";
+  exTypingWrap.classList.add("hidden");
+  exTyping.value = "";
+
+  if(!e){
+    exQ.textContent = "No exercises found for this filter.";
+    exHint.textContent = "Change filters above.";
+    exProg.textContent = `0/0`;
+    exMode.textContent = "-";
     return;
   }
 
-  passages.forEach((p,i) => {
-    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,60).replace(/\n/g," ");
+  exQ.textContent = e.question || "";
+  exHint.textContent = `${(e.level||"")} • ${(e.type||"")} • id:${e.id ?? "-"}`;
+  exProg.textContent = `${Math.min(exIndex+1, exPool.length)}/${exPool.length}`;
+  exMode.textContent = e.mode || "-";
+
+  if(e.mode === "mcq" && Array.isArray(e.options)){
+    e.options.forEach(opt=>{
+      const b = document.createElement("button");
+      b.textContent = opt;
+      b.onclick = ()=> checkExerciseMCQ(opt);
+      exMCQ.appendChild(b);
+    });
+  }else{
+    exTypingWrap.classList.remove("hidden");
+    setTimeout(()=> exTyping.focus(), 0);
+  }
+}
+
+function nextExercise(isFirst=false){
+  if(!exPool.length){
+    renderExercise(null);
+    return;
+  }
+  if(!isFirst){
+    exIndex++;
+    if(exIndex >= exPool.length) exIndex = 0;
+  }
+  exCurrent = exPool[exIndex];
+  document.getElementById("exFeedback").textContent = "";
+  renderExercise(exCurrent);
+}
+
+function checkExerciseMCQ(chosen){
+  if(!exCurrent) return;
+  const right = String(exCurrent.answer ?? "");
+  const ok = normAnswer(chosen) === normAnswer(right);
+
+  document.getElementById("exFeedback").innerHTML = ok
+    ? `<span style="color:var(--good)">✅ Correct!</span>`
+    : `<span style="color:var(--bad)">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+function checkExerciseTyping(){
+  if(!exCurrent) return;
+  const inp = document.getElementById("exTyping").value || "";
+  const right = String(exCurrent.answer ?? "");
+
+  const ok = normAnswer(inp) === normAnswer(right);
+
+  document.getElementById("exFeedback").innerHTML = ok
+    ? `<span style="color:var(--good)">✅ Correct!</span>`
+    : `<span style="color:var(--bad)">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+/* =========================
+   FLASHCARDS
+========================= */
+let fcPool = [];
+let fcIdx = 0;
+let fcFlipped = false;
+
+function renderFlashcardCategories(){
+  const sel = document.getElementById("fcCategory");
+  const cats = Array.from(new Set((flashcards||[]).map(c => (c.category||"").toString()))).filter(Boolean).sort();
+  const current = sel.value || "ALL";
+
+  sel.innerHTML = `<option value="ALL">All</option>`;
+  cats.forEach(c=>{
     const opt = document.createElement("option");
-    opt.value = String(i);
-    opt.textContent = label;
-    practiceSelect.appendChild(opt);
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
   });
 
-  practiceSelect.value = "0";
-  updateReference();
+  if(cats.includes(current)) sel.value = current;
 }
 
-function updateReference(){
-  const idx = Number(practiceSelect.value);
-  const p = passages[idx];
-  referenceArea.value = p ? p.g : "";
-  resultEl.textContent = "";
-  practiceArea.value = "";
-  practiceArea.focus();
-}
-practiceSelect.addEventListener("change", updateReference);
+function startFlashcards(){
+  const cat = document.getElementById("fcCategory").value;
+  const order = document.getElementById("fcOrder").value;
 
-function checkTyping(){
-  const idx = Number(practiceSelect.value);
-  const p = passages[idx];
-  if(!p){ resultEl.textContent = "No passage selected."; return; }
+  fcPool = (flashcards||[]).filter(c => (cat==="ALL") || (String(c.category)===cat));
+  if(order === "shuffle") fcPool = fcPool.slice().sort(()=>Math.random()-0.5);
 
-  const typed = practiceArea.value;
-  resultEl.textContent = (typed === p.g)
-    ? "✅ Perfect! Exact match."
-    : "❌ Not exact. Tip: check commas, umlauts, spaces, and line breaks.";
+  fcIdx = 0;
+  fcFlipped = false;
+
+  document.getElementById("fcTotal").textContent = String(fcPool.length);
+  showFlashCard();
 }
 
-function clearTyping(){
-  practiceArea.value = "";
-  resultEl.textContent = "";
-  practiceArea.focus();
-}
+function showFlashCard(){
+  const fcText = document.getElementById("fcText");
+  const fcHint = document.getElementById("fcHint");
 
-function saveParagraphLocal(){
-  const g = document.getElementById("germanInput").value || "";
-  const e = document.getElementById("englishInput").value || "";
-  if(!g.trim()){ alert("German text required."); return; }
-
-  passages.push({ g, e, level:"local" });
-  localStorage.setItem("passages", JSON.stringify(passages));
-
-  document.getElementById("germanInput").value = "";
-  document.getElementById("englishInput").value = "";
-
-  renderLibrary();
-  renderPracticeDropdown();
-  alert("Saved locally. For permanent saving, add it to passages.json on GitHub.");
-}
-
-function renderLibrary(){
-  const list = document.getElementById("libraryList");
-  list.innerHTML = "";
-
-  if(!passages.length){
-    list.innerHTML = `<div class="small">No passages.</div>`;
+  if(!fcPool.length){
+    fcText.textContent = "No cards loaded";
+    fcHint.textContent = "Check flashcards.json";
+    document.getElementById("fcIndex").textContent = "0";
     return;
   }
 
-  passages.forEach((p,i) => {
-    const box = document.createElement("div");
-    box.style.border = "1px solid var(--line)";
-    box.style.borderRadius = "10px";
-    box.style.padding = "10px";
-    box.style.marginTop = "10px";
-    box.innerHTML = `
-      <div class="small"><b>${esc((p.level||"").toString())}</b></div>
-      <div style="white-space:pre-wrap;margin-top:6px;">${esc(p.g)}</div>
-      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${esc(p.e)}</div>` : ""}
-      <button style="background:#4b1a1a;border-color:#c0392b;" onclick="deleteLocal(${i})">Delete (local)</button>
-    `;
-    list.appendChild(box);
-  });
+  const c = fcPool[fcIdx];
+  document.getElementById("fcIndex").textContent = String(fcIdx+1);
+
+  if(!fcFlipped){
+    fcText.className = "flashFront";
+    fcText.textContent = c.front ?? "";
+    fcHint.textContent = "Click to flip (show meaning)";
+  }else{
+    fcText.className = "flashBack";
+    fcText.textContent = c.back ?? "";
+    fcHint.textContent = "Click to flip (show word)";
+  }
 }
 
-function deleteLocal(i){
-  passages.splice(i,1);
-  localStorage.setItem("passages", JSON.stringify(passages));
-  renderLibrary();
-  renderPracticeDropdown();
+function flipCard(){
+  if(!fcPool.length) return;
+  fcFlipped = !fcFlipped;
+  showFlashCard();
+}
+function flipToFront(){
+  fcFlipped = false;
+  showFlashCard();
+}
+function nextCard(){
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx + 1) % fcPool.length;
+  fcFlipped = false;
+  showFlashCard();
+}
+function prevCard(){
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx - 1 + fcPool.length) % fcPool.length;
+  fcFlipped = false;
+  showFlashCard();
 }
 
-/* Translator */
+/* =========================
+   TRANSLATOR + DICTIONARY
+========================= */
 function swapLangs(){
   const from = document.getElementById("langFrom");
   const to = document.getElementById("langTo");
-  const tmp = from.value;
-  from.value = to.value;
-  to.value = tmp;
+  const tmp = from.value; from.value = to.value; to.value = tmp;
 
   const inp = document.getElementById("translateInput");
   const out = document.getElementById("translateOutput");
-  const t = inp.value;
-  inp.value = out.value;
-  out.value = t;
+  const t = inp.value; inp.value = out.value; out.value = t;
 }
 
 function clearTranslate(){
@@ -450,7 +1205,6 @@ async function translateText(){
   }
 }
 
-/* Dictionary (improved: long extract + wikitext fallback) */
 function clearDict(){
   document.getElementById("dictWord").value = "";
   document.getElementById("dictResult").textContent = "";
@@ -462,61 +1216,57 @@ async function lookupWord(){
   out.textContent = "";
   if(!w) return;
 
-  // 1) full long extract
-  const url1 =
+  // Full extract (not just intro) so you don't get "no short extract"
+  const url =
     "https://de.wiktionary.org/w/api.php" +
-    "?action=query&format=json&prop=extracts" +
-    "&explaintext=1&redirects=1" +
-    "&exchars=5000" +
+    "?action=query&format=json&prop=extracts&explaintext=1&redirects=1" +
     "&titles=" + encodeURIComponent(w) +
     "&origin=*";
 
   try{
-    const res1 = await fetch(url1);
-    const data1 = await res1.json();
-    const pages1 = data1?.query?.pages;
-    const pageId1 = pages1 ? Object.keys(pages1)[0] : null;
-    const page1 = pageId1 ? pages1[pageId1] : null;
+    const res = await fetch(url);
+    const data = await res.json();
+    const pages = data?.query?.pages;
+    const pageId = pages ? Object.keys(pages)[0] : null;
+    const page = pageId ? pages[pageId] : null;
 
-    if(!page1 || page1.missing){
-      out.textContent = "Not found on Wiktionary. Try base form (Infinitiv / singular).";
+    if(!page || page.missing){
+      out.textContent = "Not found on Wiktionary. Try the base form (Infinitiv / singular).";
       return;
     }
 
-    const title = page1.title || w;
-    const extract = (page1.extract || "").trim();
+    const title = page.title || w;
+    const extract = (page.extract || "").trim();
 
-    if(extract){
-      out.textContent = `${title}\n\n${extract}`;
+    if(!extract){
+      out.textContent = `${title}\n\n(Found, but no extract available. Try another form.)`;
       return;
     }
 
-    // 2) fallback: wikitext (raw)
-    const url2 =
-      "https://de.wiktionary.org/w/api.php" +
-      "?action=parse&format=json&prop=wikitext" +
-      "&page=" + encodeURIComponent(title) +
-      "&origin=*";
-
-    const res2 = await fetch(url2);
-    const data2 = await res2.json();
-    const wiki = (data2?.parse?.wikitext?.["*"] || "").trim();
-
-    if(!wiki){
-      out.textContent = `${title}\n\n(Found, but no readable content returned.)`;
-      return;
-    }
-
-    out.textContent = `${title}\n\n${wiki.slice(0,5000)}${wiki.length > 5000 ? "\n\n…(truncated)" : ""}`;
+    out.textContent = `${title}\n\n${extract}`;
   }catch{
-    out.textContent = "Dictionary lookup failed (network). Try again.";
+    out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
   }
 }
 
-/* Init */
-(async () => {
-  await reloadData();
-  showTab("practice");
+/* =========================
+   INIT
+========================= */
+(function init(){
+  // theme restore
+  const savedTheme = localStorage.getItem("theme") || "theme-vibrant";
+  setTheme(savedTheme);
+  document.getElementById("themeSelect").value = savedTheme;
+
+  // personal notes quick load
+  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
+
+  // set default view
+  showTab("practiceTab");
+  showPracticeSub("typing");
+  showNotesSub("study");
+
+  reloadAll();
 })();
 </script>
 
