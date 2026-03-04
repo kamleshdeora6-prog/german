@@ -1,1 +1,1305 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Mann arbeitet im Büro.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Der"
+    },
+    {
+      "id": 2,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Frau kauft Brot.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Die"
+    },
+    {
+      "id": 3,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Kind spielt im Park.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Das"
+    },
+    {
+      "id": 4,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Ich habe ___ Katze.",
+      "options": ["ein", "eine", "einen"],
+      "answer": "eine"
+    },
+    {
+      "id": 5,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Er hat ___ Auto.",
+      "options": ["ein", "eine", "einen"],
+      "answer": "ein"
+    },
+    {
+      "id": 6,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Ich sehe ___ Hund.",
+      "options": ["den", "der", "dem"],
+      "answer": "den"
+    },
+    {
+      "id": 7,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Ich ___ Deutsch.",
+      "options": ["lerne", "lernst", "lernt"],
+      "answer": "lerne"
+    },
+    {
+      "id": 8,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Er ___ nach Berlin.",
+      "options": ["fährt", "fahren", "fährst"],
+      "answer": "fährt"
+    },
+    {
+      "id": 9,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ Pizza.",
+      "options": ["essen", "isst", "esse"],
+      "answer": "essen"
+    },
+    {
+      "id": 10,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Du ___ sehr schnell.",
+      "options": ["läufst", "laufen", "läuft"],
+      "answer": "läufst"
+    },
+    {
+      "id": 11,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich gehe ___ Schule.",
+      "options": ["in die", "im", "ins"],
+      "answer": "in die"
+    },
+    {
+      "id": 12,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Er fährt ___ Bus zur Arbeit.",
+      "options": ["mit dem", "auf dem", "von dem"],
+      "answer": "mit dem"
+    },
+    {
+      "id": 13,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Das Buch liegt ___ Tisch.",
+      "options": ["auf dem", "auf den", "in dem"],
+      "answer": "auf dem"
+    },
+    {
+      "id": 14,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Wir wohnen ___ Berlin.",
+      "options": ["in", "auf", "zu"],
+      "answer": "in"
+    },
+    {
+      "id": 15,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich komme ___ Deutschland.",
+      "options": ["aus", "mit", "bei"],
+      "answer": "aus"
+    },
+    {
+      "id": 16,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ heißt du?",
+      "options": ["Wie", "Wer", "Was"],
+      "answer": "Wie"
+    },
+    {
+      "id": 17,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ kommst du?",
+      "options": ["Woher", "Wann", "Was"],
+      "answer": "Woher"
+    },
+    {
+      "id": 18,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ ist das?",
+      "options": ["Was", "Wer", "Wann"],
+      "answer": "Was"
+    },
+    {
+      "id": 19,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ gehst du nach Hause?",
+      "options": ["Wann", "Wer", "Was"],
+      "answer": "Wann"
+    },
+    {
+      "id": 20,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ wohnt hier?",
+      "options": ["Wer", "Wo", "Wann"],
+      "answer": "Wer"
+    },
+    {
+      "id": 21,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Das ist ___ Apfel.",
+      "options": ["ein", "eine", "einen"],
+      "answer": "ein"
+    },
+    {
+      "id": 22,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Sie kauft ___ Banane.",
+      "options": ["eine", "ein", "einen"],
+      "answer": "eine"
+    },
+    {
+      "id": 23,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ heute arbeiten.",
+      "options": ["müssen", "muss", "musst"],
+      "answer": "müssen"
+    },
+    {
+      "id": 24,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Er ___ Kaffee.",
+      "options": ["trinkt", "trinken", "trinkst"],
+      "answer": "trinkt"
+    },
+    {
+      "id": 25,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Ich ___ morgen nach Hause.",
+      "options": ["gehe", "gehst", "geht"],
+      "answer": "gehe"
+    },
+    {
+      "id": 26,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Wir gehen ___ Kino.",
+      "options": ["ins", "im", "auf"],
+      "answer": "ins"
+    },
+    {
+      "id": 27,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Das Bild hängt ___ der Wand.",
+      "options": ["an", "auf", "bei"],
+      "answer": "an"
+    },
+    {
+      "id": 28,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich arbeite ___ Büro.",
+      "options": ["im", "ins", "auf"],
+      "answer": "im"
+    },
+    {
+      "id": 29,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Du ___ Deutsch sehr gut.",
+      "options": ["sprichst", "sprechen", "spricht"],
+      "answer": "sprichst"
+    },
+    {
+      "id": 30,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ heute einen Film.",
+      "options": ["sehen", "siehst", "sieht"],
+      "answer": "sehen"
+    },
+    {
+      "id": 31,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Tisch ist neu.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Der"
+    },
+    {
+      "id": 32,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Lampe ist schön.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Die"
+    },
+    {
+      "id": 33,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "___ Fenster ist offen.",
+      "options": ["Der", "Die", "Das"],
+      "answer": "Das"
+    },
+    {
+      "id": 34,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Ich ___ heute viel.",
+      "options": ["arbeite", "arbeitest", "arbeitet"],
+      "answer": "arbeite"
+    },
+    {
+      "id": 35,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Sie ___ morgen nach Hamburg.",
+      "options": ["fahren", "fährt", "fährst"],
+      "answer": "fährt"
+    },
+    {
+      "id": 36,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich sitze ___ dem Stuhl.",
+      "options": ["auf", "in", "bei"],
+      "answer": "auf"
+    },
+    {
+      "id": 37,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Wir treffen uns ___ Bahnhof.",
+      "options": ["am", "im", "auf"],
+      "answer": "am"
+    },
+    {
+      "id": 38,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ lernst du Deutsch?",
+      "options": ["Warum", "Wann", "Wo"],
+      "answer": "Warum"
+    },
+    {
+      "id": 39,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ gehst du?",
+      "options": ["Wo", "Wer", "Was"],
+      "answer": "Wo"
+    },
+    {
+      "id": 40,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Er ___ sehr schnell.",
+      "options": ["läuft", "laufen", "läufst"],
+      "answer": "läuft"
+    },
+    {
+      "id": 41,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ morgen arbeiten.",
+      "options": ["wollen", "will", "willst"],
+      "answer": "wollen"
+    },
+    {
+      "id": 42,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Ich ___ einen Termin.",
+      "options": ["habe", "hast", "hat"],
+      "answer": "habe"
+    },
+    {
+      "id": 43,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Ich kaufe ___ Brot.",
+      "options": ["ein", "eine", "einen"],
+      "answer": "ein"
+    },
+    {
+      "id": 44,
+      "level": "A1",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Er hat ___ Schwester.",
+      "options": ["eine", "ein", "einen"],
+      "answer": "eine"
+    },
+    {
+      "id": 45,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Wir fahren ___ Zug.",
+      "options": ["mit dem", "im", "auf dem"],
+      "answer": "mit dem"
+    },
+    {
+      "id": 46,
+      "level": "A1",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich gehe ___ Arzt.",
+      "options": ["zum", "im", "bei"],
+      "answer": "zum"
+    },
+    {
+      "id": 47,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Du ___ heute arbeiten.",
+      "options": ["musst", "muss", "müssen"],
+      "answer": "musst"
+    },
+    {
+      "id": 48,
+      "level": "A1",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ Deutsch lernen.",
+      "options": ["können", "kann", "kannst"],
+      "answer": "können"
+    },
+    {
+      "id": 49,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ kostet das?",
+      "options": ["Wie viel", "Wann", "Wo"],
+      "answer": "Wie viel"
+    },
+    {
+      "id": 50,
+      "level": "A1",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ arbeitest du?",
+      "options": ["Wo", "Wann", "Wer"],
+      "answer": "Wo"
+    },
 
+    {
+      "id": 51,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Ich gebe ___ Mann das Buch. (Dativ)",
+      "options": ["dem", "den", "der"],
+      "answer": "dem"
+    },
+    {
+      "id": 52,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Ich sehe ___ Hund. (Akkusativ)",
+      "options": ["den", "dem", "des"],
+      "answer": "den"
+    },
+    {
+      "id": 53,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Wir helfen ___ Frau. (Dativ)",
+      "options": ["der", "die", "den"],
+      "answer": "der"
+    },
+    {
+      "id": 54,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Ich kaufe ___ neuen Laptop. (Akkusativ)",
+      "options": ["einen", "ein", "eine"],
+      "answer": "einen"
+    },
+    {
+      "id": 55,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Ich spreche mit ___ Lehrer. (Dativ)",
+      "options": ["dem", "den", "der"],
+      "answer": "dem"
+    },
+    {
+      "id": 56,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Er wartet ___ den Bus.",
+      "options": ["auf", "für", "mit"],
+      "answer": "auf"
+    },
+    {
+      "id": 57,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich fahre ___ meiner Freundin nach Hause. (Dativ)",
+      "options": ["mit", "für", "durch"],
+      "answer": "mit"
+    },
+    {
+      "id": 58,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Das Geschenk ist ___ meinen Bruder. (Akkusativ)",
+      "options": ["für", "mit", "bei"],
+      "answer": "für"
+    },
+    {
+      "id": 59,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Wir gehen ___ das Kino. (Akkusativ, Richtung)",
+      "options": ["in", "ins", "im"],
+      "answer": "ins"
+    },
+    {
+      "id": 60,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Das Buch liegt ___ dem Tisch. (Dativ, Ort)",
+      "options": ["auf", "auf dem", "auf den"],
+      "answer": "auf dem"
+    },
+    {
+      "id": 61,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "mcq",
+      "question": "Ich bleibe zu Hause, ___ ich krank bin.",
+      "options": ["weil", "und", "aber"],
+      "answer": "weil"
+    },
+    {
+      "id": 62,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "mcq",
+      "question": "Ich komme morgen, ___ ich Zeit habe.",
+      "options": ["wenn", "weil", "oder"],
+      "answer": "wenn"
+    },
+    {
+      "id": 63,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "mcq",
+      "question": "Er sagt, ___ er morgen kommt.",
+      "options": ["dass", "weil", "und"],
+      "answer": "dass"
+    },
+    {
+      "id": 64,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich gehe nicht raus, ___ es regnet. (because)",
+      "answer": "weil"
+    },
+    {
+      "id": 65,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich rufe dich an, ___ ich zu Hause bin. (if/when)",
+      "answer": "wenn"
+    },
+    {
+      "id": 66,
+      "level": "A2",
+      "type": "adjectives",
+      "mode": "mcq",
+      "question": "Das ist ein ___ Auto.",
+      "options": ["schnell", "schnelles", "schnelle"],
+      "answer": "schnelles"
+    },
+    {
+      "id": 67,
+      "level": "A2",
+      "type": "adjectives",
+      "mode": "mcq",
+      "question": "Ich habe eine ___ Wohnung.",
+      "options": ["schön", "schöne", "schönen"],
+      "answer": "schöne"
+    },
+    {
+      "id": 68,
+      "level": "A2",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Er trägt einen ___ Mantel. (new)",
+      "answer": "neuen"
+    },
+    {
+      "id": 69,
+      "level": "A2",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Sie hat ein ___ Kind. (small)",
+      "answer": "kleines"
+    },
+    {
+      "id": 70,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Ich ___ gestern lange gearbeitet. (Perfekt)",
+      "options": ["habe", "bin", "hat"],
+      "answer": "habe"
+    },
+    {
+      "id": 71,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Wir ___ gestern nach Hause gegangen. (Perfekt)",
+      "options": ["sind", "haben", "hat"],
+      "answer": "sind"
+    },
+    {
+      "id": 72,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Ich ___ um 7 Uhr ___. (aufstehen, Präsens: I get up)",
+      "answer": "stehe auf"
+    },
+    {
+      "id": 73,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Wir ___ am Samstag ___. (einkaufen, Präsens: we shop)",
+      "answer": "kaufen ein"
+    },
+    {
+      "id": 74,
+      "level": "A2",
+      "type": "modal_verbs",
+      "mode": "mcq",
+      "question": "Ich ___ heute nicht kommen. (can)",
+      "options": ["kann", "muss", "will"],
+      "answer": "kann"
+    },
+    {
+      "id": 75,
+      "level": "A2",
+      "type": "modal_verbs",
+      "mode": "mcq",
+      "question": "Wir ___ morgen früh aufstehen. (must)",
+      "options": ["müssen", "können", "mögen"],
+      "answer": "müssen"
+    },
+    {
+      "id": 76,
+      "level": "A2",
+      "type": "modal_verbs",
+      "mode": "typing",
+      "question": "___ Sie mir bitte helfen? (polite: can)",
+      "answer": "können"
+    },
+    {
+      "id": 77,
+      "level": "A2",
+      "type": "modal_verbs",
+      "mode": "typing",
+      "question": "Ich ___ einen Kaffee, bitte. (would like)",
+      "answer": "möchte"
+    },
+    {
+      "id": 78,
+      "level": "A2",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ hast du keine Zeit? (reason)",
+      "options": ["Warum", "Wo", "Wie"],
+      "answer": "Warum"
+    },
+    {
+      "id": 79,
+      "level": "A2",
+      "type": "w_questions",
+      "mode": "mcq",
+      "question": "___ lange arbeitest du heute?",
+      "options": ["Wie", "Wie lange", "Wann"],
+      "answer": "Wie lange"
+    },
+    {
+      "id": 80,
+      "level": "A2",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ kostet das Ticket? (How much)",
+      "answer": "wie viel"
+    },
+    {
+      "id": 81,
+      "level": "A2",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Ich danke ___ Lehrer. (Dativ)",
+      "answer": "dem"
+    },
+    {
+      "id": 82,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich interessiere mich ___ Musik.",
+      "answer": "für"
+    },
+    {
+      "id": 83,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich gehe ___ dem Hund spazieren.",
+      "answer": "mit"
+    },
+    {
+      "id": 84,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Das Geschenk kommt ___ meiner Mutter.",
+      "answer": "von"
+    },
+    {
+      "id": 85,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich fahre morgen ___ Berlin. (to)",
+      "answer": "nach"
+    },
+    {
+      "id": 86,
+      "level": "A2",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Ich habe ___ neuen Termin.",
+      "options": ["einen", "ein", "eine"],
+      "answer": "einen"
+    },
+    {
+      "id": 87,
+      "level": "A2",
+      "type": "articles",
+      "mode": "mcq",
+      "question": "Sie hat ___ schöne Tasche.",
+      "options": ["eine", "ein", "einen"],
+      "answer": "eine"
+    },
+    {
+      "id": 88,
+      "level": "A2",
+      "type": "articles",
+      "mode": "typing",
+      "question": "Ich sehe ___ Mann. (Akkusativ)",
+      "answer": "den"
+    },
+    {
+      "id": 89,
+      "level": "A2",
+      "type": "articles",
+      "mode": "typing",
+      "question": "Ich helfe ___ Frau. (Dativ)",
+      "answer": "der"
+    },
+    {
+      "id": 90,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Er ___ gestern sehr müde gewesen.",
+      "options": ["ist", "hat", "haben"],
+      "answer": "ist"
+    },
+    {
+      "id": 91,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "mcq",
+      "question": "Sie ___ gestern einen Laptop gekauft.",
+      "options": ["hat", "ist", "haben"],
+      "answer": "hat"
+    },
+    {
+      "id": 92,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Ich ___ gestern zu Hause ___. (bleiben, Perfekt)",
+      "answer": "bin geblieben"
+    },
+    {
+      "id": 93,
+      "level": "A2",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Wir ___ gestern viel ___. (lernen, Perfekt)",
+      "answer": "haben gelernt"
+    },
+    {
+      "id": 94,
+      "level": "A2",
+      "type": "sentence_order",
+      "mode": "mcq",
+      "question": "Welche Satzstellung ist richtig? (weil)",
+      "options": [
+        "Ich bleibe zu Hause, weil ich krank bin.",
+        "Ich bleibe zu Hause, weil ich bin krank.",
+        "Ich bleibe zu Hause, weil krank ich bin."
+      ],
+      "answer": "Ich bleibe zu Hause, weil ich krank bin."
+    },
+    {
+      "id": 95,
+      "level": "A2",
+      "type": "sentence_order",
+      "mode": "mcq",
+      "question": "Welche Satzstellung ist richtig? (wenn)",
+      "options": [
+        "Ich rufe dich an, wenn ich Zeit habe.",
+        "Ich rufe dich an, wenn ich habe Zeit.",
+        "Ich rufe dich an, wenn Zeit ich habe."
+      ],
+      "answer": "Ich rufe dich an, wenn ich Zeit habe."
+    },
+    {
+      "id": 96,
+      "level": "A2",
+      "type": "cases",
+      "mode": "mcq",
+      "question": "Ich gebe ___ Kindern Schokolade. (Dativ Plural)",
+      "options": ["den", "die", "der"],
+      "answer": "den"
+    },
+    {
+      "id": 97,
+      "level": "A2",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Ich spreche mit ___ Nachbarn. (Dativ)",
+      "answer": "dem"
+    },
+    {
+      "id": 98,
+      "level": "A2",
+      "type": "prepositions",
+      "mode": "mcq",
+      "question": "Ich gehe ___ meinem Freund. (with)",
+      "options": ["mit", "für", "durch"],
+      "answer": "mit"
+    },
+    {
+      "id": 99,
+      "level": "A2",
+      "type": "adjectives",
+      "mode": "mcq",
+      "question": "Das ist der ___ Film. (interesting)",
+      "options": ["interessante", "interessanter", "interessantes"],
+      "answer": "interessante"
+    },
+    {
+      "id": 100,
+      "level": "A2",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich bleibe länger, ___ ich noch arbeiten muss. (because)",
+      "answer": "weil"
+    },
+
+    {
+      "id": 101,
+      "level": "B1",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Er geht arbeiten, ___ er krank ist. (although)",
+      "answer": "obwohl"
+    },
+    {
+      "id": 102,
+      "level": "B1",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich lerne viel, ___ ich die Prüfung bestehen will. (so that)",
+      "answer": "damit"
+    },
+    {
+      "id": 103,
+      "level": "B1",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich bleibe zu Hause, ___ ich krank bin. (because)",
+      "answer": "weil"
+    },
+    {
+      "id": 104,
+      "level": "B1",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Ich rufe dich an, ___ ich Zeit habe. (when)",
+      "answer": "wenn"
+    },
+    {
+      "id": 105,
+      "level": "B1",
+      "type": "conjunctions",
+      "mode": "typing",
+      "question": "Er sagt, ___ er morgen kommt. (that)",
+      "answer": "dass"
+    },
+
+    {
+      "id": 106,
+      "level": "B1",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Wegen ___ Wetters bleiben wir zu Hause. (Genitiv)",
+      "answer": "des"
+    },
+    {
+      "id": 107,
+      "level": "B1",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Während ___ Meetings schrieb er Notizen. (Genitiv)",
+      "answer": "des"
+    },
+    {
+      "id": 108,
+      "level": "B1",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Trotz ___ Problems arbeiten wir weiter. (Genitiv)",
+      "answer": "des"
+    },
+    {
+      "id": 109,
+      "level": "B1",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Ich helfe ___ Kollegen. (Dativ)",
+      "answer": "dem"
+    },
+    {
+      "id": 110,
+      "level": "B1",
+      "type": "cases",
+      "mode": "typing",
+      "question": "Ich sehe ___ neuen Film. (Akkusativ)",
+      "answer": "den"
+    },
+
+    {
+      "id": 111,
+      "level": "B1",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich interessiere mich ___ Geschichte.",
+      "answer": "für"
+    },
+    {
+      "id": 112,
+      "level": "B1",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Das hängt ___ der Situation ab.",
+      "answer": "von"
+    },
+    {
+      "id": 113,
+      "level": "B1",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Wir sprechen ___ das Problem.",
+      "answer": "über"
+    },
+    {
+      "id": 114,
+      "level": "B1",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich warte ___ den Bus.",
+      "answer": "auf"
+    },
+    {
+      "id": 115,
+      "level": "B1",
+      "type": "prepositions",
+      "mode": "typing",
+      "question": "Ich fahre ___ meinen Freunden nach Berlin.",
+      "answer": "mit"
+    },
+
+    {
+      "id": 116,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Er ___ viel Erfahrung gesammelt. (Perfekt)",
+      "answer": "hat"
+    },
+    {
+      "id": 117,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Wir ___ gestern lange diskutiert. (Perfekt)",
+      "answer": "haben"
+    },
+    {
+      "id": 118,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Sie ___ einen neuen Job gefunden. (Perfekt)",
+      "answer": "hat"
+    },
+    {
+      "id": 119,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Ich ___ gestern nach Hause gegangen. (Perfekt)",
+      "answer": "bin"
+    },
+    {
+      "id": 120,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Wir ___ viele Informationen gesammelt. (Perfekt)",
+      "answer": "haben"
+    },
+
+    {
+      "id": 121,
+      "level": "B1",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Das ist ein ___ Film. (interesting)",
+      "answer": "interessanter"
+    },
+    {
+      "id": 122,
+      "level": "B1",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Sie hat eine ___ Idee. (good)",
+      "answer": "gute"
+    },
+    {
+      "id": 123,
+      "level": "B1",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Das ist ein ___ Projekt. (big)",
+      "answer": "großes"
+    },
+    {
+      "id": 124,
+      "level": "B1",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Er ist ein ___ Mitarbeiter. (reliable)",
+      "answer": "zuverlässiger"
+    },
+    {
+      "id": 125,
+      "level": "B1",
+      "type": "adjectives",
+      "mode": "typing",
+      "question": "Wir haben eine ___ Atmosphäre. (nice)",
+      "answer": "schöne"
+    },
+
+    {
+      "id": 126,
+      "level": "B1",
+      "type": "connectors",
+      "mode": "typing",
+      "question": "Es regnet, ___ bleiben wir zu Hause. (therefore)",
+      "answer": "deshalb"
+    },
+    {
+      "id": 127,
+      "level": "B1",
+      "type": "connectors",
+      "mode": "typing",
+      "question": "Es ist kalt, ___ gehe ich spazieren. (nevertheless)",
+      "answer": "trotzdem"
+    },
+    {
+      "id": 128,
+      "level": "B1",
+      "type": "connectors",
+      "mode": "typing",
+      "question": "Ich arbeite viel, ___ lerne ich Deutsch. (besides)",
+      "answer": "außerdem"
+    },
+    {
+      "id": 129,
+      "level": "B1",
+      "type": "connectors",
+      "mode": "typing",
+      "question": "___ gehe ich zur Arbeit, danach treffe ich Freunde.",
+      "answer": "zuerst"
+    },
+    {
+      "id": 130,
+      "level": "B1",
+      "type": "connectors",
+      "mode": "typing",
+      "question": "Wir essen zusammen, ___ gehen wir ins Kino.",
+      "answer": "danach"
+    },
+
+    {
+      "id": 131,
+      "level": "B1",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ lange arbeitest du hier?",
+      "answer": "wie lange"
+    },
+    {
+      "id": 132,
+      "level": "B1",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ bist du gestern nicht gekommen?",
+      "answer": "warum"
+    },
+    {
+      "id": 133,
+      "level": "B1",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ hat dir geholfen?",
+      "answer": "wer"
+    },
+    {
+      "id": 134,
+      "level": "B1",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ wohnst du jetzt?",
+      "answer": "wo"
+    },
+    {
+      "id": 135,
+      "level": "B1",
+      "type": "w_questions",
+      "mode": "typing",
+      "question": "___ beginnt das Meeting?",
+      "answer": "wann"
+    },
+
+    {
+      "id": 136,
+      "level": "B1",
+      "type": "sentence_order",
+      "mode": "typing",
+      "question": "Correct order: Ich / Deutsch / lerne / weil / arbeiten / ich / Deutschland / in / will",
+      "answer": "ich lerne deutsch, weil ich in deutschland arbeiten will"
+    },
+    {
+      "id": 137,
+      "level": "B1",
+      "type": "sentence_order",
+      "mode": "typing",
+      "question": "Correct order: Er / kommt / obwohl / krank / er / ist",
+      "answer": "er kommt, obwohl er krank ist"
+    },
+    {
+      "id": 138,
+      "level": "B1",
+      "type": "sentence_order",
+      "mode": "typing",
+      "question": "Correct order: Ich / bleibe / damit / lernen / kann / ich",
+      "answer": "ich bleibe, damit ich lernen kann"
+    },
+
+    {
+      "id": 139,
+      "level": "B1",
+      "type": "phrases",
+      "mode": "typing",
+      "question": "German phrase: Kind regards",
+      "answer": "mit freundlichen grüßen"
+    },
+    {
+      "id": 140,
+      "level": "B1",
+      "type": "phrases",
+      "mode": "typing",
+      "question": "German phrase: Thank you in advance",
+      "answer": "vielen dank im voraus"
+    },
+
+    {
+      "id": 141,
+      "level": "B1",
+      "type": "phrases",
+      "mode": "typing",
+      "question": "German phrase: I am interested in",
+      "answer": "ich interessiere mich für"
+    },
+    {
+      "id": 142,
+      "level": "B1",
+      "type": "phrases",
+      "mode": "typing",
+      "question": "German phrase: I would be happy",
+      "answer": "ich würde mich freuen"
+    },
+
+    {
+      "id": 143,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Verb: sammeln (Perfekt)",
+      "answer": "hat gesammelt"
+    },
+    {
+      "id": 144,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Verb: verdienen (Perfekt)",
+      "answer": "hat verdient"
+    },
+    {
+      "id": 145,
+      "level": "B1",
+      "type": "verbs",
+      "mode": "typing",
+      "question": "Verb: verstehen (Perfekt)",
+      "answer": "hat verstanden"
+    },
+
+    {
+      "id": 146,
+      "level": "B1",
+      "type": "vocab",
+      "mode": "typing",
+      "question": "German word for 'company'",
+      "answer": "firma"
+    },
+    {
+      "id": 147,
+      "level": "B1",
+      "type": "vocab",
+      "mode": "typing",
+      "question": "German word for 'experience'",
+      "answer": "erfahrung"
+    },
+    {
+      "id": 148,
+      "level": "B1",
+      "type": "vocab",
+      "mode": "typing",
+      "question": "German word for 'job search'",
+      "answer": "jobsuche"
+    },
+    {
+      "id": 149,
+      "level": "B1",
+      "type": "vocab",
+      "mode": "typing",
+      "question": "German word for 'documents'",
+      "answer": "unterlagen"
+    },
+    {
+      "id": 150,
+      "level": "B1",
+      "type": "vocab",
+      "mode": "typing",
+      "question": "German word for 'appointment'",
+      "answer": "termin"
+    }
+  ]
+}
