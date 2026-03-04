@@ -6,11 +6,9 @@
 <title>German Study App</title>
 
 <style>
-
 /* =========================
-THEMES
+   THEMES
 ========================= */
-
 :root{
   --bg:#0b0f14;
   --card:#121824;
@@ -28,10 +26,15 @@ THEMES
 body.theme-light{
   --bg:#f5f7fb;
   --card:#ffffff;
-  --text:#111;
+  --text:#111111;
   --muted:#5b6470;
   --line:#d7dde6;
   --panel:#f1f3f7;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#2563eb;
+  --good:#16a34a;
+  --bad:#dc2626;
 }
 
 body.theme-dark{
@@ -41,6 +44,11 @@ body.theme-dark{
   --muted:#98a2b3;
   --line:#263042;
   --panel:#0f1520;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#60a5fa;
+  --good:#22c55e;
+  --bad:#ef4444;
 }
 
 body.theme-vibrant{
@@ -50,12 +58,16 @@ body.theme-vibrant{
   --muted:#55607a;
   --line:#dfe6ff;
   --panel:#f0f4ff;
+  --btn:#0ea5e9;
+  --btnText:#07111c;
   --accent:#ec4899;
+  --good:#16a34a;
+  --bad:#dc2626;
 }
 
 body{
   margin:0;
-  font-family:system-ui;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
@@ -66,8 +78,10 @@ header{
   position:sticky;
   top:0;
   background:var(--bg);
+  z-index:50;
 }
 
+h2{margin:0 0 10px 0}
 .card{
   background:var(--card);
   border:1px solid var(--line);
@@ -84,6 +98,7 @@ textarea,input,select{
   padding:10px;
   border-radius:8px;
   margin-top:8px;
+  box-sizing:border-box;
 }
 
 button{
@@ -91,359 +106,1304 @@ button{
   border-radius:8px;
   border:1px solid var(--line);
   background:var(--btn);
-  color:white;
+  color:var(--btnText);
   cursor:pointer;
+  margin-top:8px;
+}
+button.ghost{
+  background:transparent;
+  color:var(--text);
+}
+button.danger{
+  background:#4b1a1a;
+  border-color:#c0392b;
+  color:#fff;
 }
 
 .tabs button{margin-right:8px}
-
 .hidden{display:none}
+.small{font-size:13px;color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row > *{flex:0 0 auto}
+hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 
-.row{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.small{
-  font-size:13px;
+.badge{
+  display:inline-block;
+  padding:2px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
   color:var(--muted);
 }
 
-.badge{
-  border:1px solid var(--line);
-  padding:4px 8px;
+.subtabs{display:flex;gap:8px;flex-wrap:wrap}
+.subtabs button{
+  margin:0;
+  padding:7px 10px;
   border-radius:999px;
 }
+.subtabs button.active{
+  outline:2px solid var(--accent);
+  border-color:transparent;
+}
+
+.diffBox{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px;
+  margin-top:10px;
+  overflow:auto;
+  max-height:240px;
+}
+.okChar{color:var(--good)}
+.badChar{color:var(--bad);text-decoration:underline}
+.missChar{background:rgba(239,68,68,.18);color:var(--bad)}
+.insChar{background:rgba(34,197,94,.18);color:var(--good)}
+
+.flashwrap{display:grid;gap:12px}
+.flashcard{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  min-height:140px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  user-select:none;
+}
+.flashFront{font-size:22px;font-weight:700}
+.flashBack{font-size:16px;color:var(--muted)}
+.flashHint{margin-top:10px;color:var(--muted);font-size:12px}
 
 .table{
   width:100%;
   border-collapse:collapse;
+  margin-top:10px;
 }
-
-.table td,.table th{
+.table th,.table td{
   border:1px solid var(--line);
   padding:8px;
+  vertical-align:top;
 }
-
-.hl{
-  background:#ffd6f0;
-}
-
-.flashcard{
-  padding:20px;
-  text-align:center;
-  border:1px solid var(--line);
-  border-radius:12px;
-  cursor:pointer;
-}
-
+.table th{background:rgba(99,102,241,.08)}
+.hl{background:rgba(236,72,153,.10)}
 </style>
 </head>
 
 <body class="theme-vibrant">
 
 <header>
+  <h2>German Study App</h2>
+  <div class="row">
+    <button onclick="goHome()">🏠 Home</button>
+    <button onclick="reloadAll()">🔄 Reload Data</button>
 
-<h2>German Study App</h2>
+    <div style="min-width:190px">
+      <div class="small">Theme</div>
+      <select id="themeSelect" onchange="setTheme(this.value)">
+        <option value="theme-vibrant">Vibrant (default)</option>
+        <option value="theme-dark">Dark</option>
+        <option value="theme-light">Light</option>
+      </select>
+    </div>
 
-<div class="row">
-
-<button onclick="showTab('practiceTab')">Practice</button>
-<button onclick="showTab('libraryTab')">Library</button>
-<button onclick="showTab('notesTab')">Notes</button>
-<button onclick="showTab('flashcardsTab')">Flashcards</button>
-<button onclick="showTab('translatorTab')">Translator</button>
-<button onclick="showTab('tablesTab')">Grammar</button>
-
-<select onchange="setTheme(this.value)">
-<option value="theme-vibrant">Vibrant</option>
-<option value="theme-dark">Dark</option>
-<option value="theme-light">Light</option>
-</select>
-
-</div>
-
+    <span id="status" class="small"></span>
+  </div>
 </header>
 
-<!-- ===================== PRACTICE ===================== -->
+<!-- Tabs (always visible) -->
+<div class="tabs card" id="tabBar">
+  <button onclick="showTab('practiceTab')">Practice</button>
+  <button onclick="showTab('libraryTab')">Library</button>
+  <button onclick="showTab('notesTab')">Notes</button>
+  <button onclick="showTab('flashcardsTab')">Flashcards</button>
+  <button onclick="showTab('translatorTab')">Translator</button>
+  <button onclick="showTab('tablesTab')">Grammar Tables</button>
+</div>
 
+<!-- =========================
+     PRACTICE
+========================= -->
 <div id="practiceTab" class="card">
+  <div class="row" style="justify-content:space-between">
+    <h3 style="margin:0">Practice</h3>
+    <span class="badge">Typing • Exercises • Conjugation</span>
+  </div>
 
-<h3>Typing Practice</h3>
+  <div class="subtabs" style="margin-top:10px">
+    <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
+    <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
+    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation</button>
+  </div>
 
-<select id="practiceSelect"></select>
+  <!-- ===== Typing ===== -->
+  <div id="practice_typing" style="margin-top:14px">
+    <div class="small">Select a passage → type it. You’ll see WPM, accuracy, and red highlights for mistakes.</div>
 
-<textarea id="referenceArea" readonly></textarea>
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:210px;flex:1">
+        <div class="small">Difficulty</div>
+        <select id="passageLevelFilter" onchange="renderPassageDropdown()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+        </select>
+      </div>
 
-<textarea id="practiceArea" placeholder="Type here..." oninput="updateStats()"></textarea>
+      <div style="min-width:330px;flex:2">
+        <div class="small">Passage</div>
+        <select id="practiceSelect"></select>
+      </div>
 
-<div class="row">
-<span class="badge">WPM: <span id="wpm">0</span></span>
-<span class="badge">Accuracy: <span id="acc">0</span>%</span>
-</div>
+      <div style="min-width:210px;flex:1">
+        <div class="small">Show English</div>
+        <select id="showEnglishToggle" onchange="updateReference()">
+          <option value="0">Off</option>
+          <option value="1">On</option>
+        </select>
+      </div>
+    </div>
 
-</div>
+    <div style="margin-top:12px" class="small">Reference (German)</div>
+    <textarea id="referenceArea" readonly style="min-height:120px"></textarea>
 
+    <div id="referenceEnglishWrap" class="hidden">
+      <div style="margin-top:12px" class="small">Reference (English)</div>
+      <textarea id="referenceEnglishArea" readonly style="min-height:110px"></textarea>
+    </div>
 
-<!-- ===================== LIBRARY ===================== -->
+    <div style="margin-top:12px" class="small">Type here</div>
+    <textarea id="practiceArea" placeholder="Type here..." style="min-height:130px" oninput="onTypingInput()"></textarea>
 
+    <div class="row">
+      <button onclick="checkTyping()">Check</button>
+      <button class="ghost" onclick="clearTyping()">Clear</button>
+    </div>
+
+    <div class="row" style="margin-top:6px">
+      <span class="badge">WPM: <span id="wpm">0</span></span>
+      <span class="badge">Accuracy: <span id="acc">0</span>%</span>
+      <span class="badge">Chars: <span id="chars">0</span></span>
+    </div>
+
+    <div id="typingFeedback" class="small" style="margin-top:10px"></div>
+    <div id="diffOutput" class="diffBox hidden"></div>
+  </div>
+
+  <!-- ===== Exercises ===== -->
+  <div id="practice_exercises" class="hidden" style="margin-top:14px">
+    <div class="small">Exercises are loaded from <b>exercises.json</b>. Filter by level/type, then practice MCQ or typing.</div>
+
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:210px">
+        <div class="small">Level</div>
+        <select id="exLevel" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+        </select>
+      </div>
+
+      <div style="min-width:260px">
+        <div class="small">Type</div>
+        <select id="exType" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="articles">articles</option>
+          <option value="cases">cases</option>
+          <option value="prepositions">prepositions</option>
+          <option value="adjectives">adjectives</option>
+          <option value="conjunctions">conjunctions</option>
+          <option value="modal_verbs">modal_verbs</option>
+          <option value="verbs">verbs</option>
+          <option value="w_questions">w_questions</option>
+          <option value="sentence_order">sentence_order</option>
+          <option value="connectors">connectors</option>
+          <option value="phrases">phrases</option>
+          <option value="vocab">vocab</option>
+        </select>
+      </div>
+
+      <div style="min-width:190px">
+        <div class="small">Order</div>
+        <select id="exOrder" onchange="resetExerciseFlow()">
+          <option value="random">Random</option>
+          <option value="sequential">Sequential</option>
+        </select>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row" style="justify-content:space-between">
+      <div class="badge">Progress: <span id="exProg">0/0</span></div>
+      <div class="badge">Mode: <span id="exMode">-</span></div>
+    </div>
+
+    <div style="margin-top:10px">
+      <div id="exQ" style="font-size:18px;font-weight:700"></div>
+      <div id="exHint" class="small" style="margin-top:6px"></div>
+    </div>
+
+    <div id="exMCQ" class="row" style="margin-top:10px"></div>
+
+    <div id="exTypingWrap" class="hidden" style="margin-top:10px">
+      <input id="exTyping" placeholder="Type your answer…" onkeydown="if(event.key==='Enter'){checkExerciseTyping()}">
+      <button onclick="checkExerciseTyping()">Check</button>
+    </div>
+
+    <div id="exFeedback" class="small" style="margin-top:10px"></div>
+
+    <div class="row">
+      <button onclick="nextExercise()">Next</button>
+      <button class="ghost" onclick="resetExerciseFlow()">Restart</button>
+    </div>
+  </div>
+
+  <!-- ===== Conjugation ===== -->
+  <div id="practice_conjugation" class="hidden" style="margin-top:14px">
+    <div class="small">Verb conjugation trainer (Präsens). Loaded from <b>conjugations.json</b>.</div>
+
+    <div class="row" style="margin-top:10px">
+      <div style="min-width:220px">
+        <div class="small">Type</div>
+        <select id="verbTypeFilter" onchange="renderVerbList()">
+          <option value="ALL">All</option>
+          <option value="regular">regular</option>
+          <option value="irregular">irregular</option>
+          <option value="modal">modal</option>
+          <option value="separable">separable</option>
+          <option value="reflexive">reflexive</option>
+        </select>
+      </div>
+
+      <div style="min-width:360px;flex:1">
+        <div class="small">Verb</div>
+        <select id="verbSelect" onchange="renderVerb()"></select>
+      </div>
+
+      <div style="min-width:220px">
+        <div class="small">Search</div>
+        <input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()">
+      </div>
+    </div>
+
+    <div class="small" style="margin-top:10px">
+      <span class="badge">English: <span id="verbEnglish">—</span></span>
+      <span class="badge">Type: <span id="verbType">—</span></span>
+    </div>
+
+    <table class="table" style="margin-top:10px">
+      <tr><th>Pronoun</th><th>Form</th></tr>
+      <tr><td>ich</td><td id="v_ich"></td></tr>
+      <tr><td>du</td><td id="v_du"></td></tr>
+      <tr><td>er/sie/es</td><td id="v_er"></td></tr>
+      <tr><td>wir</td><td id="v_wir"></td></tr>
+      <tr><td>ihr</td><td id="v_ihr"></td></tr>
+      <tr><td>sie/Sie</td><td id="v_sie"></td></tr>
+    </table>
+  </div>
+</div><!-- ✅ IMPORTANT: closes practiceTab properly -->
+
+<!-- =========================
+     LIBRARY
+========================= -->
 <div id="libraryTab" class="card hidden">
+  <h3 style="margin-top:0">Library (local only)</h3>
+  <div class="small">
+    Passages are loaded from <b>passages.json</b>. Permanent changes must be made in GitHub.
+    Anything you add here is saved only in this browser (localStorage).
+  </div>
 
-<h3>Library</h3>
+  <div class="row" style="margin-top:10px">
+    <div style="flex:1;min-width:260px">
+      <div class="small">Level (for your local entry)</div>
+      <select id="localLevel">
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="local">local</option>
+      </select>
+    </div>
+  </div>
 
-<textarea id="germanInput" placeholder="German"></textarea>
-<textarea id="englishInput" placeholder="English"></textarea>
+  <textarea id="germanInput" placeholder="German text (local)"></textarea>
+  <textarea id="englishInput" placeholder="English translation (local)"></textarea>
+  <button onclick="saveParagraphLocal()">Save locally</button>
 
-<button onclick="saveParagraphLocal()">Save locally</button>
-
-<div id="libraryList"></div>
-
+  <div id="libraryList" style="margin-top:12px"></div>
 </div>
 
-
-<!-- ===================== NOTES ===================== -->
-
+<!-- =========================
+     NOTES
+========================= -->
 <div id="notesTab" class="card hidden">
+  <h3 style="margin-top:0">Notes</h3>
+  <div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
 
-<h3>Notes</h3>
+  <div class="subtabs" style="margin-top:10px">
+    <button id="notes_sub_study" class="active" onclick="showNotesSub('study')">Study Notes</button>
+    <button id="notes_sub_personal" onclick="showNotesSub('personal')">Personal Notes</button>
+  </div>
 
-<select id="notesTopic"></select>
+  <div id="notes_study" style="margin-top:14px">
+    <div class="small">Select a topic</div>
+    <select id="notesTopic"></select>
+    <textarea id="notesArea" style="min-height:320px" readonly></textarea>
+  </div>
 
-<textarea id="notesArea" readonly></textarea>
-
-<hr>
-
-<h3>Personal Notes</h3>
-
-<textarea id="personalNotesArea"></textarea>
-
-<button onclick="savePersonalNotes()">Save</button>
-
+  <div id="notes_personal" class="hidden" style="margin-top:14px">
+    <div class="small">This is your private note pad (saved locally).</div>
+    <textarea id="personalNotesArea" style="min-height:320px" placeholder="Write your own notes here…"></textarea>
+    <div class="row">
+      <button onclick="savePersonalNotes()">Save</button>
+      <button class="ghost" onclick="clearPersonalNotes()">Clear</button>
+    </div>
+    <div id="personalNotesStatus" class="small" style="margin-top:8px"></div>
+  </div>
 </div>
 
-
-<!-- ===================== FLASHCARDS ===================== -->
-
+<!-- =========================
+     FLASHCARDS
+========================= -->
 <div id="flashcardsTab" class="card hidden">
+  <h3 style="margin-top:0">Flashcards</h3>
+  <div class="small">Loaded from <b>flashcards.json</b>. Click the card to flip.</div>
 
-<h3>Flashcards</h3>
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:260px">
+      <div class="small">Category</div>
+      <select id="fcCategory" onchange="startFlashcards()">
+        <option value="ALL">All</option>
+      </select>
+    </div>
 
-<div id="flashcard" class="flashcard" onclick="flipCard()">
-<div id="fcText">Loading...</div>
+    <div style="min-width:190px">
+      <div class="small">Order</div>
+      <select id="fcOrder" onchange="startFlashcards()">
+        <option value="shuffle">Shuffle</option>
+        <option value="sequential">Sequential</option>
+      </select>
+    </div>
+
+    <div class="badge">Card: <span id="fcIndex">0</span>/<span id="fcTotal">0</span></div>
+  </div>
+
+  <div class="flashwrap" style="margin-top:12px">
+    <div id="flashcard" class="flashcard" onclick="flipCard()">
+      <div>
+        <div id="fcText" class="flashFront">No cards loaded</div>
+        <div id="fcHint" class="flashHint">Click to flip</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <button onclick="prevCard()">← Prev</button>
+      <button onclick="nextCard()">Next →</button>
+      <button class="ghost" onclick="flipToFront()">Front</button>
+    </div>
+  </div>
 </div>
 
-<button onclick="nextCard()">Next</button>
-
-</div>
-
-
-<!-- ===================== TRANSLATOR ===================== -->
-
+<!-- =========================
+     TRANSLATOR
+========================= -->
 <div id="translatorTab" class="card hidden">
+  <h3 style="margin-top:0">Translator</h3>
 
-<h3>Translator</h3>
+  <div class="row" style="margin-top:8px;">
+    <div style="min-width:180px;">
+      <div class="small">From</div>
+      <select id="langFrom">
+        <option value="de">German (DE)</option>
+        <option value="en">English (EN)</option>
+      </select>
+    </div>
 
-<select id="langFrom">
-<option value="de">German</option>
-<option value="en">English</option>
-</select>
+    <div style="min-width:180px;">
+      <div class="small">To</div>
+      <select id="langTo">
+        <option value="en">English (EN)</option>
+        <option value="de">German (DE)</option>
+      </select>
+    </div>
 
-<select id="langTo">
-<option value="en">English</option>
-<option value="de">German</option>
-</select>
+    <div style="margin-top:22px;">
+      <button onclick="swapLangs()">⇄ Swap</button>
+    </div>
+  </div>
 
-<textarea id="translateInput"></textarea>
+  <textarea id="translateInput" placeholder="Type/paste text here..."></textarea>
+  <div class="row">
+    <button onclick="translateText()">Translate</button>
+    <button class="ghost" onclick="clearTranslate()">Clear</button>
+  </div>
+  <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
 
-<button onclick="translateText()">Translate</button>
+  <hr>
 
-<textarea id="translateOutput"></textarea>
-
-<hr>
-
-<h3>Dictionary</h3>
-
-<input id="dictWord">
-
-<button onclick="lookupWord()">Search</button>
-
-<div id="dictResult"></div>
-
+  <h3 style="margin-top:0">Dictionary</h3>
+  <div class="small">Uses Wiktionary (German). Shows long output (not just intro). Best with base form (Infinitiv / singular).</div>
+  <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
+  <div class="row">
+    <button onclick="lookupWord()">Lookup</button>
+    <button class="ghost" onclick="clearDict()">Clear</button>
+  </div>
+  <div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
 </div>
 
-
-<!-- ===================== TABLES ===================== -->
-
+<!-- =========================
+     GRAMMAR TABLES
+========================= -->
 <div id="tablesTab" class="card hidden">
+  <h3 style="margin-top:0">Grammar Tables</h3>
+  <div class="small">Quick reference tables (definite/indefinite/negative articles). Pink highlight shows changes across cases.</div>
 
-<h3>Grammar Tables</h3>
+  <h4>Definite articles (der/die/das)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">den</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Dativ</td><td class="hl">dem</td><td class="hl">der</td><td class="hl">dem</td><td class="hl">den (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">des (+s)</td><td class="hl">der</td><td class="hl">des (+s)</td><td class="hl">der</td></tr>
+  </table>
 
-<table class="table">
-<tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
-<tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td></tr>
-<tr><td>Akkusativ</td><td class="hl">den</td><td>die</td><td>das</td></tr>
-<tr><td>Dativ</td><td class="hl">dem</td><td class="hl">der</td><td class="hl">dem</td></tr>
-</table>
+  <h4 style="margin-top:18px">Indefinite articles (ein/eine)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
+    <tr><td>Nominativ</td><td>ein</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">einen</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Dativ</td><td class="hl">einem</td><td class="hl">einer</td><td class="hl">einem</td></tr>
+    <tr><td>Genitiv</td><td class="hl">eines</td><td class="hl">einer</td><td class="hl">eines</td></tr>
+  </table>
 
+  <h4 style="margin-top:18px">Negative articles (kein/keine)</h4>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>kein</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">keinen</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Dativ</td><td class="hl">keinem</td><td class="hl">keiner</td><td class="hl">keinem</td><td class="hl">keinen (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">keines</td><td class="hl">keiner</td><td class="hl">keines</td><td class="hl">keiner</td></tr>
+  </table>
+
+  <h4 style="margin-top:18px">Two-way prepositions (Wechselpräpositionen)</h4>
+  <div class="small">in, an, auf, über, unter, vor, hinter, neben, zwischen</div>
+  <div class="small" style="margin-top:6px">
+    <b>Movement</b> (Wohin?) → Akkusativ • <b>Location</b> (Wo?) → Dativ
+  </div>
 </div>
-
 
 <script>
+/* =========================
+   BASIC UTILS
+========================= */
+const statusEl = document.getElementById("status");
+function setStatus(msg){ statusEl.textContent = msg || ""; }
 
-/* ================= TAB SYSTEM ================= */
+function esc(s){
+  return (s||"").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
 
+async function loadJson(file){
+  const url = "./" + file + "?v=" + Date.now();
+  const res = await fetch(url, { cache:"no-store" });
+  if(!res.ok) throw new Error(`${file} not reachable (${res.status})`);
+  return await res.json();
+}
+
+/* =========================
+   THEME
+========================= */
+function setTheme(themeClass){
+  document.body.classList.remove("theme-vibrant","theme-dark","theme-light");
+  document.body.classList.add(themeClass);
+  localStorage.setItem("theme", themeClass);
+  const sel = document.getElementById("themeSelect");
+  if(sel) sel.value = themeClass;
+}
+(function initTheme(){
+  const saved = localStorage.getItem("theme") || "theme-vibrant";
+  setTheme(saved);
+})();
+
+/* =========================
+   TABS
+========================= */
 function showTab(id){
+  const ids = ["practiceTab","libraryTab","notesTab","flashcardsTab","translatorTab","tablesTab"];
+  ids.forEach(x => document.getElementById(x)?.classList.add("hidden"));
+  document.getElementById(id)?.classList.remove("hidden");
+}
+function goHome(){ showTab("practiceTab"); }
 
-document.querySelectorAll('.card').forEach(el=>{
-el.classList.add('hidden')
-})
-
-document.getElementById(id).classList.remove('hidden')
-
+/* =========================
+   PRACTICE SUBTABS
+========================= */
+function showPracticeSub(which){
+  const subIds = ["typing","exercises","conjugation"];
+  subIds.forEach(s=>{
+    document.getElementById("practice_"+s)?.classList.add("hidden");
+    document.getElementById("sub_"+s)?.classList.remove("active");
+  });
+  document.getElementById("practice_"+which)?.classList.remove("hidden");
+  document.getElementById("sub_"+which)?.classList.add("active");
 }
 
-/* ================= THEME ================= */
-
-function setTheme(theme){
-
-document.body.className=theme
-
-localStorage.setItem("theme",theme)
-
+/* =========================
+   NOTES SUBTABS
+========================= */
+function showNotesSub(which){
+  const subIds = ["study","personal"];
+  subIds.forEach(s=>{
+    document.getElementById("notes_"+s)?.classList.add("hidden");
+    document.getElementById("notes_sub_"+s)?.classList.remove("active");
+  });
+  document.getElementById("notes_"+which)?.classList.remove("hidden");
+  document.getElementById("notes_sub_"+which)?.classList.add("active");
 }
 
-(function(){
-let t=localStorage.getItem("theme")
-if(t)document.body.className=t
-})()
+/* =========================
+   PASSAGES (passages.json)
+========================= */
+let passages = []; // {g,e,level}
+let visiblePassages = [];
+const practiceSelect = document.getElementById("practiceSelect");
+const referenceArea = document.getElementById("referenceArea");
+const referenceEnglishWrap = document.getElementById("referenceEnglishWrap");
+const referenceEnglishArea = document.getElementById("referenceEnglishArea");
+const practiceArea = document.getElementById("practiceArea");
 
-/* ================= TYPING ================= */
+async function loadPassages(){
+  try{
+    const raw = await loadJson("passages.json");
+    if(!Array.isArray(raw)) throw new Error("passages.json must be an array");
+    passages = raw.map(p => ({
+      g: p.german ?? p.g ?? "",
+      e: p.english ?? p.e ?? "",
+      level: (p.level ?? "").toString().trim().toUpperCase()
+    })).filter(p => p.g.trim().length);
 
-let startTime=null
-
-function updateStats(){
-
-let txt=document.getElementById("practiceArea").value
-
-if(!startTime)startTime=Date.now()
-
-let time=(Date.now()-startTime)/60000
-
-let wpm=Math.round((txt.length/5)/time)
-
-document.getElementById("wpm").innerText=wpm||0
-
+    localStorage.setItem("passages_cache", JSON.stringify(passages));
+    return {ok:true,count:passages.length};
+  }catch(e){
+    passages = JSON.parse(localStorage.getItem("passages_cache") || "[]");
+    return {ok:false,count:passages.length,err:e.message};
+  }
 }
 
-/* ================= FLASHCARDS ================= */
+function renderPassageDropdown(){
+  const level = (document.getElementById("passageLevelFilter").value || "ALL").toUpperCase();
+  visiblePassages = (level==="ALL") ? passages.slice() : passages.filter(p => (p.level||"")===level);
 
-let flashcards=[]
-let fcIndex=0
-let flipped=false
+  practiceSelect.innerHTML = "";
+  if(!visiblePassages.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No passages loaded";
+    practiceSelect.appendChild(opt);
+    referenceArea.value = "";
+    referenceEnglishArea.value = "";
+    return;
+  }
+
+  visiblePassages.forEach((p,i)=>{
+    const opt = document.createElement("option");
+    opt.value = String(i);
+    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,70).replace(/\n/g," ");
+    opt.textContent = label;
+    practiceSelect.appendChild(opt);
+  });
+
+  practiceSelect.value = "0";
+  updateReference();
+}
+
+practiceSelect.addEventListener("change", updateReference);
+
+function updateReference(){
+  const idx = Number(practiceSelect.value);
+  const p = visiblePassages[idx];
+  referenceArea.value = p ? p.g : "";
+  referenceEnglishArea.value = p ? (p.e||"") : "";
+
+  const showEn = document.getElementById("showEnglishToggle").value === "1";
+  referenceEnglishWrap.classList.toggle("hidden", !showEn);
+
+  resetTypingSession();
+}
+
+/* =========================
+   TYPING METRICS + DIFF
+========================= */
+let typingStartMs = null;
+
+function resetTypingSession(){
+  typingStartMs = null;
+  practiceArea.value = "";
+  document.getElementById("wpm").textContent = "0";
+  document.getElementById("acc").textContent = "0";
+  document.getElementById("chars").textContent = "0";
+  document.getElementById("typingFeedback").textContent = "";
+  const diff = document.getElementById("diffOutput");
+  diff.classList.add("hidden");
+  diff.innerHTML = "";
+}
+
+function onTypingInput(){
+  if(typingStartMs === null) typingStartMs = Date.now();
+
+  const typed = practiceArea.value;
+  document.getElementById("chars").textContent = String(typed.length);
+
+  const ref = referenceArea.value || "";
+  const acc = calcAccuracy(ref, typed);
+  document.getElementById("acc").textContent = String(acc);
+
+  const wpm = calcWpm(typed, typingStartMs);
+  document.getElementById("wpm").textContent = String(wpm);
+}
+
+function calcWpm(typed, startMs){
+  if(!startMs) return 0;
+  const minutes = (Date.now() - startMs) / 60000;
+  if(minutes <= 0) return 0;
+  const words = typed.length / 5;
+  return Math.max(0, Math.round(words / minutes));
+}
+
+function calcAccuracy(ref, typed){
+  if(!ref.length && !typed.length) return 100;
+  const maxLen = Math.max(ref.length, typed.length);
+  if(maxLen === 0) return 100;
+
+  let correct = 0;
+  const n = Math.min(ref.length, typed.length);
+  for(let i=0;i<n;i++){
+    if(ref[i] === typed[i]) correct++;
+  }
+  // missing/extra chars count as wrong automatically
+  return Math.max(0, Math.round((correct / maxLen) * 100));
+}
+
+function buildCharDiff(ref, typed){
+  // Simple index-based diff (fast, clear)
+  const maxLen = Math.max(ref.length, typed.length);
+  let html = "";
+  for(let i=0;i<maxLen;i++){
+    const r = ref[i];
+    const t = typed[i];
+
+    if(r === undefined && t !== undefined){
+      html += `<span class="insChar">${esc(t)}</span>`;
+    }else if(t === undefined && r !== undefined){
+      html += `<span class="missChar">${esc(r)}</span>`;
+    }else if(r === t){
+      html += `<span class="okChar">${esc(t)}</span>`;
+    }else{
+      html += `<span class="badChar">${esc(t ?? "")}</span>`;
+    }
+  }
+  return html || "";
+}
+
+function checkTyping(){
+  const ref = referenceArea.value || "";
+  const typed = practiceArea.value || "";
+  const acc = calcAccuracy(ref, typed);
+
+  const feedback = document.getElementById("typingFeedback");
+  const diff = document.getElementById("diffOutput");
+
+  if(!ref.trim()){
+    feedback.textContent = "No passage loaded.";
+    return;
+  }
+
+  if(typed === ref){
+    feedback.textContent = "✅ Perfect! Exact match.";
+    diff.classList.add("hidden");
+    diff.innerHTML = "";
+  }else{
+    feedback.textContent = `❌ Not exact. Accuracy: ${acc}% (check spaces, commas, umlauts, and line breaks).`;
+    diff.classList.remove("hidden");
+    diff.innerHTML = buildCharDiff(ref, typed);
+  }
+}
+
+function clearTyping(){
+  resetTypingSession();
+  practiceArea.focus();
+}
+
+/* =========================
+   LIBRARY (LOCAL PASSAGES)
+========================= */
+function saveParagraphLocal(){
+  const g = (document.getElementById("germanInput").value || "").trim();
+  const e = (document.getElementById("englishInput").value || "").trim();
+  const level = (document.getElementById("localLevel").value || "local").toUpperCase();
+
+  if(!g){ alert("German text required."); return; }
+
+  passages.push({g, e, level});
+  localStorage.setItem("passages_cache", JSON.stringify(passages));
+
+  document.getElementById("germanInput").value = "";
+  document.getElementById("englishInput").value = "";
+
+  renderLibrary();
+  renderPassageDropdown();
+  alert("Saved locally. For permanent saving, add it to passages.json in GitHub.");
+}
+
+function renderLibrary(){
+  const list = document.getElementById("libraryList");
+  list.innerHTML = "";
+
+  if(!passages.length){
+    list.innerHTML = `<div class="small">No passages.</div>`;
+    return;
+  }
+
+  passages.forEach((p,i)=>{
+    const box = document.createElement("div");
+    box.style.border = "1px solid var(--line)";
+    box.style.borderRadius = "10px";
+    box.style.padding = "10px";
+    box.style.marginTop = "10px";
+
+    box.innerHTML = `
+      <div class="small"><b>${esc((p.level||"").toString())}</b></div>
+      <div style="white-space:pre-wrap;margin-top:6px;">${esc(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${esc(p.e)}</div>` : ""}
+      <button class="danger" onclick="deleteLocalPassage(${i})">Delete (local)</button>
+    `;
+    list.appendChild(box);
+  });
+}
+
+function deleteLocalPassage(i){
+  passages.splice(i,1);
+  localStorage.setItem("passages_cache", JSON.stringify(passages));
+  renderLibrary();
+  renderPassageDropdown();
+}
+
+/* =========================
+   NOTES (notes.json)
+========================= */
+let notesObj = {};
+async function loadNotes(){
+  const notesTopic = document.getElementById("notesTopic");
+  const notesArea = document.getElementById("notesArea");
+  try{
+    const obj = await loadJson("notes.json");
+    if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object");
+    notesObj = obj;
+
+    localStorage.setItem("notes_cache", JSON.stringify(notesObj));
+    fillNotesTopics();
+    return {ok:true,count:Object.keys(notesObj).length};
+  }catch(e){
+    notesObj = JSON.parse(localStorage.getItem("notes_cache") || "{}");
+    fillNotesTopics();
+    return {ok:false,count:Object.keys(notesObj).length,err:e.message};
+  }
+
+  function fillNotesTopics(){
+    notesTopic.innerHTML = "";
+    const keys = Object.keys(notesObj || {});
+    if(!keys.length){
+      notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
+      notesArea.value = "";
+      return;
+    }
+
+    keys.forEach(k=>{
+      const opt = document.createElement("option");
+      opt.value = k;
+      opt.textContent = k.replaceAll("_"," ");
+      notesTopic.appendChild(opt);
+    });
+
+    const last = localStorage.getItem("notes_topic");
+    const chosen = (last && keys.includes(last)) ? last : keys[0];
+    notesTopic.value = chosen;
+    notesArea.value = String(notesObj[chosen] ?? "");
+
+    notesTopic.onchange = () => {
+      const k = notesTopic.value;
+      localStorage.setItem("notes_topic", k);
+      notesArea.value = String(notesObj[k] ?? "");
+    };
+  }
+}
+
+/* =========================
+   PERSONAL NOTES (LOCAL)
+========================= */
+function savePersonalNotes(){
+  const t = document.getElementById("personalNotesArea").value || "";
+  localStorage.setItem("personal_notes", t);
+  const s = document.getElementById("personalNotesStatus");
+  s.textContent = "Saved ✅";
+  setTimeout(()=>{ s.textContent=""; }, 1200);
+}
+function clearPersonalNotes(){
+  document.getElementById("personalNotesArea").value = "";
+  localStorage.setItem("personal_notes", "");
+  document.getElementById("personalNotesStatus").textContent = "Cleared.";
+}
+
+/* =========================
+   FLASHCARDS (flashcards.json)
+========================= */
+let allCards = []; // {front,back,category,level}
+let deck = [];
+let fcPos = 0;
+let fcFlipped = false;
 
 async function loadFlashcards(){
+  try{
+    const data = await loadJson("flashcards.json");
+    const cards = data.cards;
+    if(!Array.isArray(cards)) throw new Error("flashcards.json must be {cards:[...]}");
+    allCards = cards;
 
-try{
-
-let res=await fetch("flashcards.json")
-
-let data=await res.json()
-
-flashcards=data.cards||[]
-
-updateCard()
-
-}catch{}
-
+    localStorage.setItem("flashcards_cache", JSON.stringify(allCards));
+    renderFlashcardCategories();
+    startFlashcards();
+    return {ok:true,count:allCards.length};
+  }catch(e){
+    allCards = JSON.parse(localStorage.getItem("flashcards_cache") || "[]");
+    renderFlashcardCategories();
+    startFlashcards();
+    return {ok:false,count:allCards.length,err:e.message};
+  }
 }
 
-function updateCard(){
+function renderFlashcardCategories(){
+  const sel = document.getElementById("fcCategory");
+  sel.innerHTML = `<option value="ALL">All</option>`;
+  const cats = Array.from(new Set(allCards.map(c => (c.category||"").trim()).filter(Boolean))).sort();
+  cats.forEach(c=>{
+    const opt = document.createElement("option");
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
 
-if(!flashcards.length)return
+function startFlashcards(){
+  const cat = document.getElementById("fcCategory").value;
+  const order = document.getElementById("fcOrder").value;
 
-document.getElementById("fcText").innerText=
-flipped?flashcards[fcIndex].back:flashcards[fcIndex].front
+  deck = (cat==="ALL") ? allCards.slice() : allCards.filter(c => (c.category||"")===cat);
 
+  if(order === "shuffle") deck = shuffle(deck);
+
+  fcPos = 0;
+  fcFlipped = false;
+  renderFlashcard();
+}
+
+function renderFlashcard(){
+  const total = deck.length;
+  document.getElementById("fcTotal").textContent = String(total);
+  document.getElementById("fcIndex").textContent = total ? String(fcPos+1) : "0";
+
+  if(!total){
+    document.getElementById("fcText").textContent = "No cards loaded";
+    return;
+  }
+
+  const c = deck[fcPos];
+  document.getElementById("fcText").textContent = fcFlipped ? (c.back||"") : (c.front||"");
 }
 
 function flipCard(){
-
-flipped=!flipped
-
-updateCard()
-
+  if(!deck.length) return;
+  fcFlipped = !fcFlipped;
+  renderFlashcard();
 }
-
+function flipToFront(){
+  fcFlipped = false;
+  renderFlashcard();
+}
 function nextCard(){
-
-fcIndex=(fcIndex+1)%flashcards.length
-
-flipped=false
-
-updateCard()
-
+  if(!deck.length) return;
+  fcPos = (fcPos + 1) % deck.length;
+  fcFlipped = false;
+  renderFlashcard();
+}
+function prevCard(){
+  if(!deck.length) return;
+  fcPos = (fcPos - 1 + deck.length) % deck.length;
+  fcFlipped = false;
+  renderFlashcard();
 }
 
-/* ================= TRANSLATOR ================= */
+/* =========================
+   EXERCISES (exercises.json)
+========================= */
+let exercises = []; // array
+let exList = [];
+let exPos = 0;
+
+async function loadExercises(){
+  try{
+    const data = await loadJson("exercises.json");
+    const arr = data.exercises;
+    if(!Array.isArray(arr)) throw new Error("exercises.json must be {exercises:[...]}");
+    exercises = arr;
+
+    localStorage.setItem("exercises_cache", JSON.stringify(exercises));
+    resetExerciseFlow();
+    return {ok:true,count:exercises.length};
+  }catch(e){
+    exercises = JSON.parse(localStorage.getItem("exercises_cache") || "[]");
+    resetExerciseFlow();
+    return {ok:false,count:exercises.length,err:e.message};
+  }
+}
+
+function resetExerciseFlow(){
+  const level = (document.getElementById("exLevel").value || "ALL").toUpperCase();
+  const type = (document.getElementById("exType").value || "ALL").toLowerCase();
+  const order = document.getElementById("exOrder").value || "random";
+
+  exList = exercises.slice();
+
+  if(level !== "ALL") exList = exList.filter(x => String(x.level||"").toUpperCase() === level);
+  if(type !== "ALL") exList = exList.filter(x => String(x.type||"").toLowerCase() === type);
+
+  if(order === "random") exList = shuffle(exList);
+
+  exPos = 0;
+  renderExercise();
+}
+
+function renderExercise(){
+  const prog = document.getElementById("exProg");
+  const exMode = document.getElementById("exMode");
+  const exQ = document.getElementById("exQ");
+  const exHint = document.getElementById("exHint");
+  const exMCQ = document.getElementById("exMCQ");
+  const exTypingWrap = document.getElementById("exTypingWrap");
+  const exTyping = document.getElementById("exTyping");
+  const exFeedback = document.getElementById("exFeedback");
+
+  prog.textContent = `${exList.length ? (exPos+1) : 0}/${exList.length}`;
+
+  exFeedback.textContent = "";
+  exMCQ.innerHTML = "";
+  exTyping.value = "";
+  exTypingWrap.classList.add("hidden");
+
+  if(!exList.length){
+    exMode.textContent = "-";
+    exQ.textContent = "No exercises loaded (or filter has none).";
+    exHint.textContent = "";
+    return;
+  }
+
+  const ex = exList[exPos];
+  exMode.textContent = ex.mode || "-";
+  exQ.textContent = ex.question || "";
+  exHint.textContent = ex.type ? `Type: ${ex.type} • Level: ${ex.level}` : "";
+
+  if(ex.mode === "mcq"){
+    (ex.options || []).forEach(opt=>{
+      const b = document.createElement("button");
+      b.textContent = opt;
+      b.onclick = ()=>checkExerciseMCQ(opt);
+      exMCQ.appendChild(b);
+    });
+  }else{
+    exTypingWrap.classList.remove("hidden");
+  }
+}
+
+function checkExerciseMCQ(choice){
+  const exFeedback = document.getElementById("exFeedback");
+  const ex = exList[exPos];
+  if(!ex) return;
+
+  if(String(choice).trim() === String(ex.answer).trim()){
+    exFeedback.textContent = "✅ Correct!";
+  }else{
+    exFeedback.textContent = `❌ Wrong. Correct: ${ex.answer}`;
+  }
+}
+
+function checkExerciseTyping(){
+  const exFeedback = document.getElementById("exFeedback");
+  const ex = exList[exPos];
+  const val = (document.getElementById("exTyping").value || "").trim();
+  if(!ex) return;
+
+  if(val === String(ex.answer).trim()){
+    exFeedback.textContent = "✅ Correct!";
+  }else{
+    exFeedback.textContent = `❌ Wrong. Correct: ${ex.answer}`;
+  }
+}
+
+function nextExercise(){
+  if(!exList.length) return;
+  exPos = (exPos + 1) % exList.length;
+  renderExercise();
+}
+
+/* =========================
+   CONJUGATIONS (conjugations.json)
+========================= */
+let conjugations = []; // {verb, english, type, present:{...}}
+
+async function loadConjugations(){
+  try{
+    const data = await loadJson("conjugations.json");
+    const arr = data.verbs;
+    if(!Array.isArray(arr)) throw new Error("conjugations.json must be {verbs:[...]}");
+    conjugations = arr;
+    localStorage.setItem("conjugations_cache", JSON.stringify(conjugations));
+    renderVerbList();
+    renderVerb();
+    return {ok:true,count:conjugations.length};
+  }catch(e){
+    conjugations = JSON.parse(localStorage.getItem("conjugations_cache") || "[]");
+    renderVerbList();
+    renderVerb();
+    return {ok:false,count:conjugations.length,err:e.message};
+  }
+}
+
+function clearVerbTable(){
+  ["v_ich","v_du","v_er","v_wir","v_ihr","v_sie"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = "";
+  });
+  const en = document.getElementById("verbEnglish"); if(en) en.textContent = "—";
+  const ty = document.getElementById("verbType"); if(ty) ty.textContent = "—";
+}
+
+function renderVerbList(){
+  const sel = document.getElementById("verbSelect");
+  if(!sel) return;
+
+  const type = (document.getElementById("verbTypeFilter")?.value || "ALL").toLowerCase();
+  const q = (document.getElementById("verbSearch")?.value || "").trim().toLowerCase();
+
+  let list = conjugations.slice();
+  if(type !== "all") list = list.filter(v => String(v.type||"").toLowerCase() === type);
+  if(q){
+    list = list.filter(v =>
+      String(v.verb||"").toLowerCase().includes(q) ||
+      String(v.english||"").toLowerCase().includes(q)
+    );
+  }
+
+  sel.innerHTML = "";
+  if(!list.length){
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "No verbs found";
+    sel.appendChild(opt);
+    clearVerbTable();
+    return;
+  }
+
+  list.sort((a,b)=>String(a.verb).localeCompare(String(b.verb))).forEach(v=>{
+    const opt = document.createElement("option");
+    opt.value = v.verb;
+    opt.textContent = `${v.verb} — ${v.english||""}`.trim();
+    sel.appendChild(opt);
+  });
+
+  sel.value = sel.options[0].value;
+  renderVerb();
+}
+
+function getSelectedVerb(){
+  const key = document.getElementById("verbSelect")?.value || "";
+  return conjugations.find(v => String(v.verb) === String(key));
+}
+
+function renderVerb(){
+  const sel = document.getElementById("verbSelect");
+  if(!sel) return;
+
+  const v = getSelectedVerb();
+  if(!v){ clearVerbTable(); return; }
+
+  document.getElementById("verbEnglish").textContent = v.english || "—";
+  document.getElementById("verbType").textContent = v.type || "—";
+
+  const p = v.present || {};
+  document.getElementById("v_ich").textContent = p.ich || "";
+  document.getElementById("v_du").textContent = p.du || "";
+  document.getElementById("v_er").textContent = p.er_sie_es || "";
+  document.getElementById("v_wir").textContent = p.wir || "";
+  document.getElementById("v_ihr").textContent = p.ihr || "";
+  document.getElementById("v_sie").textContent = p.sie_Sie || "";
+}
+
+/* =========================
+   TRANSLATOR + DICTIONARY
+========================= */
+function swapLangs(){
+  const from = document.getElementById("langFrom");
+  const to = document.getElementById("langTo");
+  const tmp = from.value;
+  from.value = to.value;
+  to.value = tmp;
+
+  const inp = document.getElementById("translateInput");
+  const out = document.getElementById("translateOutput");
+  const t = inp.value;
+  inp.value = out.value;
+  out.value = t;
+}
+
+function clearTranslate(){
+  document.getElementById("translateInput").value = "";
+  document.getElementById("translateOutput").value = "";
+}
 
 async function translateText(){
+  const text = (document.getElementById("translateInput").value || "").trim();
+  if(!text) return;
 
-let txt=document.getElementById("translateInput").value
+  const sl = document.getElementById("langFrom").value;
+  const tl = document.getElementById("langTo").value;
 
-let sl=document.getElementById("langFrom").value
-let tl=document.getElementById("langTo").value
+  const url =
+    "https://translate.googleapis.com/translate_a/single?client=gtx" +
+    `&sl=${encodeURIComponent(sl)}` +
+    `&tl=${encodeURIComponent(tl)}` +
+    "&dt=t&q=" + encodeURIComponent(text);
 
-let url=
-"https://translate.googleapis.com/translate_a/single?client=gtx&sl="+sl+"&tl="+tl+"&dt=t&q="+encodeURIComponent(txt)
-
-let r=await fetch(url)
-
-let d=await r.json()
-
-document.getElementById("translateOutput").value=d[0].map(x=>x[0]).join("")
-
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    document.getElementById("translateOutput").value = (data[0] || []).map(x => x[0]).join("");
+  }catch{
+    document.getElementById("translateOutput").value = "Translation failed (network/rate-limit). Try again.";
+  }
 }
 
-/* ================= DICTIONARY ================= */
+function clearDict(){
+  document.getElementById("dictWord").value = "";
+  document.getElementById("dictResult").textContent = "";
+}
 
 async function lookupWord(){
+  const w = (document.getElementById("dictWord").value || "").trim();
+  const out = document.getElementById("dictResult");
+  out.textContent = "";
+  if(!w) return;
 
-let w=document.getElementById("dictWord").value
+  // Full extract (NOT intro-only)
+  const url =
+    "https://de.wiktionary.org/w/api.php" +
+    "?action=query&format=json&prop=extracts&explaintext=1&redirects=1" +
+    "&titles=" + encodeURIComponent(w) +
+    "&origin=*";
 
-let url="https://de.wiktionary.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1&titles="+w+"&origin=*"
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    const pages = data?.query?.pages;
+    const pageId = pages ? Object.keys(pages)[0] : null;
+    const page = pageId ? pages[pageId] : null;
 
-let r=await fetch(url)
+    if(!page || page.missing){
+      out.textContent = "Not found on Wiktionary. Try the base form (Infinitiv / singular).";
+      return;
+    }
 
-let d=await r.json()
+    const title = page.title || w;
+    const extract = (page.extract || "").trim();
 
-let page=Object.values(d.query.pages)[0]
+    if(!extract){
+      out.textContent = `${title}\n\n(Found, but the extract is empty.)`;
+      return;
+    }
 
-document.getElementById("dictResult").innerText=page.extract||"Not found"
-
+    // Show long details; if extremely long, clip to keep UI usable
+    const clipped = extract.length > 6000 ? (extract.slice(0,6000) + "\n\n…(clipped)") : extract;
+    out.textContent = `${title}\n\n${clipped}`;
+  }catch{
+    out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
+  }
 }
 
-/* ================= PERSONAL NOTES ================= */
-
-function savePersonalNotes(){
-
-localStorage.setItem(
-"personalNotes",
-document.getElementById("personalNotesArea").value
-)
-
+/* =========================
+   HELPERS
+========================= */
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
 }
 
-(function(){
+/* =========================
+   RELOAD ALL
+========================= */
+async function reloadAll(){
+  setStatus("Loading…");
 
-let p=localStorage.getItem("personalNotes")
+  const parts = [];
 
-if(p)document.getElementById("personalNotesArea").value=p
+  const p = await loadPassages();
+  parts.push(p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`);
 
-})()
+  const n = await loadNotes();
+  parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
 
-loadFlashcards()
+  const ex = await loadExercises();
+  parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
 
+  const fc = await loadFlashcards();
+  parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
+
+  const cj = await loadConjugations();
+  parts.push(cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`);
+
+  setStatus(parts.join(" | "));
+
+  renderLibrary();
+  renderPassageDropdown();
+
+  // restore personal notes
+  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
+}
+
+/* =========================
+   INIT
+========================= */
+(function init(){
+  // Personal notes load
+  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
+
+  // Default subtabs
+  showPracticeSub("typing");
+  showNotesSub("study");
+  showTab("practiceTab");
+
+  // Load all data
+  reloadAll();
+})();
 </script>
 
 </body>
