@@ -33,22 +33,6 @@ body.theme-light{
   --btn:#1e293b;
   --btnText:#ffffff;
   --accent:#2563eb;
-  --good:#16a34a;
-  --bad:#dc2626;
-}
-
-body.theme-dark{
-  --bg:#0b0f14;
-  --card:#121824;
-  --text:#e6eaf2;
-  --muted:#98a2b3;
-  --line:#263042;
-  --panel:#0f1520;
-  --btn:#1e293b;
-  --btnText:#ffffff;
-  --accent:#60a5fa;
-  --good:#22c55e;
-  --bad:#ef4444;
 }
 
 body.theme-vibrant{
@@ -65,31 +49,10 @@ body.theme-vibrant{
   --bad:#dc2626;
 }
 
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-header{
-  padding:16px;
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  background:var(--bg);
-  z-index:50;
-}
-
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:50}
 h2{margin:0 0 10px 0}
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  padding:16px;
-  margin:16px;
-  border-radius:12px;
-}
-
+.card{background:var(--card);border:1px solid var(--line);padding:16px;margin:16px;border-radius:12px}
 textarea,input,select{
   width:100%;
   background:var(--panel);
@@ -100,7 +63,6 @@ textarea,input,select{
   margin-top:8px;
   box-sizing:border-box;
 }
-
 button{
   padding:8px 12px;
   border-radius:8px;
@@ -119,7 +81,6 @@ button.danger{
   border-color:#c0392b;
   color:#fff;
 }
-
 .tabs button{margin-right:8px}
 .hidden{display:none}
 .small{font-size:13px;color:var(--muted)}
@@ -127,14 +88,9 @@ button.danger{
 .row > *{flex:0 0 auto}
 hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 
-.badge{
-  display:inline-block;
-  padding:2px 8px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  font-size:12px;
-  color:var(--muted);
-}
+.badge{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+.pill{border-radius:999px}
+a{color:var(--accent)}
 
 .subtabs{display:flex;gap:8px;flex-wrap:wrap}
 .subtabs button{
@@ -147,20 +103,23 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
   border-color:transparent;
 }
 
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+pre{white-space:pre-wrap}
+
+/* typing diff */
 .diffBox{
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:10px;
   padding:10px;
   margin-top:10px;
-  overflow:auto;
-  max-height:240px;
 }
 .okChar{color:var(--good)}
 .badChar{color:var(--bad);text-decoration:underline}
 .missChar{background:rgba(239,68,68,.18);color:var(--bad)}
 .insChar{background:rgba(34,197,94,.18);color:var(--good)}
 
+/* flashcards */
 .flashwrap{display:grid;gap:12px}
 .flashcard{
   background:var(--panel);
@@ -179,6 +138,7 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 .flashBack{font-size:16px;color:var(--muted)}
 .flashHint{margin-top:10px;color:var(--muted);font-size:12px}
 
+/* tables */
 .table{
   width:100%;
   border-collapse:collapse;
@@ -189,7 +149,9 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
   padding:8px;
   vertical-align:top;
 }
-.table th{background:rgba(99,102,241,.08)}
+.table th{
+  background:rgba(99,102,241,.08);
+}
 .hl{background:rgba(236,72,153,.10)}
 </style>
 </head>
@@ -231,18 +193,18 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 <div id="practiceTab" class="card">
   <div class="row" style="justify-content:space-between">
     <h3 style="margin:0">Practice</h3>
-    <span class="badge">Typing • Exercises • Conjugation</span>
+    <span class="badge">Typing • Exercises • (More soon)</span>
   </div>
 
   <div class="subtabs" style="margin-top:10px">
     <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
     <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
-    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation</button>
+    <button id="sub_conjugation" onclick="showPracticeSub('conjugation')">Conjugation (soon)</button>
   </div>
 
   <!-- ===== Typing ===== -->
   <div id="practice_typing" style="margin-top:14px">
-    <div class="small">Select a passage → type it. You’ll see WPM, accuracy, and red highlights for mistakes.</div>
+    <div class="small">Select a passage → read reference → type it. You’ll see WPM, accuracy, and red highlights for mistakes.</div>
 
     <div class="row" style="margin-top:10px">
       <div style="min-width:210px;flex:1">
@@ -365,50 +327,11 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
     </div>
   </div>
 
-  <!-- ===== Conjugation ===== -->
+  <!-- ===== Conjugation placeholder ===== -->
   <div id="practice_conjugation" class="hidden" style="margin-top:14px">
-    <div class="small">Verb conjugation trainer (Präsens). Loaded from <b>conjugations.json</b>.</div>
-
-    <div class="row" style="margin-top:10px">
-      <div style="min-width:220px">
-        <div class="small">Type</div>
-        <select id="verbTypeFilter" onchange="renderVerbList()">
-          <option value="ALL">All</option>
-          <option value="regular">regular</option>
-          <option value="irregular">irregular</option>
-          <option value="modal">modal</option>
-          <option value="separable">separable</option>
-          <option value="reflexive">reflexive</option>
-        </select>
-      </div>
-
-      <div style="min-width:360px;flex:1">
-        <div class="small">Verb</div>
-        <select id="verbSelect" onchange="renderVerb()"></select>
-      </div>
-
-      <div style="min-width:220px">
-        <div class="small">Search</div>
-        <input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()">
-      </div>
-    </div>
-
-    <div class="small" style="margin-top:10px">
-      <span class="badge">English: <span id="verbEnglish">—</span></span>
-      <span class="badge">Type: <span id="verbType">—</span></span>
-    </div>
-
-    <table class="table" style="margin-top:10px">
-      <tr><th>Pronoun</th><th>Form</th></tr>
-      <tr><td>ich</td><td id="v_ich"></td></tr>
-      <tr><td>du</td><td id="v_du"></td></tr>
-      <tr><td>er/sie/es</td><td id="v_er"></td></tr>
-      <tr><td>wir</td><td id="v_wir"></td></tr>
-      <tr><td>ihr</td><td id="v_ihr"></td></tr>
-      <tr><td>sie/Sie</td><td id="v_sie"></td></tr>
-    </table>
+    <div class="small">Coming next: verb conjugation trainer (Präsens/Perfekt/Präteritum) + modal verbs + separable verbs.</div>
   </div>
-</div><!-- ✅ IMPORTANT: closes practiceTab properly -->
+</div>
 
 <!-- =========================
      LIBRARY
@@ -416,7 +339,7 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 <div id="libraryTab" class="card hidden">
   <h3 style="margin-top:0">Library (local only)</h3>
   <div class="small">
-    Passages are loaded from <b>passages.json</b>. Permanent changes must be made in GitHub.
+    Passages are loaded from <b>passages.json</b>. If you want to permanently add passages, edit <b>passages.json</b> in GitHub.
     Anything you add here is saved only in this browser (localStorage).
   </div>
 
@@ -548,7 +471,9 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
   <hr>
 
   <h3 style="margin-top:0">Dictionary</h3>
-  <div class="small">Uses Wiktionary (German). Shows long output (not just intro). Best with base form (Infinitiv / singular).</div>
+  <div class="small">
+    Uses Wiktionary (German). It can be long — that’s fine. Best with base form (Infinitiv / singular).
+  </div>
   <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
   <div class="row">
     <button onclick="lookupWord()">Lookup</button>
@@ -600,85 +525,82 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 
 <script>
 /* =========================
-   BASIC UTILS
+   GLOBAL STATE
 ========================= */
+let passages = [];   // {g, e, level}
+let notesObj = {};   // { key: value }
+let exercises = [];  // {id, level, type, mode, question, options?, answer}
+let flashcards = []; // {category, front, back}
+
 const statusEl = document.getElementById("status");
-function setStatus(msg){ statusEl.textContent = msg || ""; }
-
-function esc(s){
-  return (s||"").replace(/[&<>"']/g, c => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  }[c]));
-}
-
-async function loadJson(file){
-  const url = "./" + file + "?v=" + Date.now();
-  const res = await fetch(url, { cache:"no-store" });
-  if(!res.ok) throw new Error(`${file} not reachable (${res.status})`);
-  return await res.json();
-}
 
 /* =========================
-   THEME
-========================= */
-function setTheme(themeClass){
-  document.body.classList.remove("theme-vibrant","theme-dark","theme-light");
-  document.body.classList.add(themeClass);
-  localStorage.setItem("theme", themeClass);
-  const sel = document.getElementById("themeSelect");
-  if(sel) sel.value = themeClass;
-}
-(function initTheme(){
-  const saved = localStorage.getItem("theme") || "theme-vibrant";
-  setTheme(saved);
-})();
-
-/* =========================
-   TABS
+   NAV + THEME
 ========================= */
 function showTab(id){
   const ids = ["practiceTab","libraryTab","notesTab","flashcardsTab","translatorTab","tablesTab"];
-  ids.forEach(x => document.getElementById(x)?.classList.add("hidden"));
-  document.getElementById(id)?.classList.remove("hidden");
+  ids.forEach(x => document.getElementById(x).classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
 }
 function goHome(){ showTab("practiceTab"); }
+function setStatus(msg){ statusEl.textContent = msg || ""; }
+
+function setTheme(themeClass){
+  document.body.classList.remove("theme-dark","theme-light","theme-vibrant");
+  document.body.classList.add(themeClass);
+  localStorage.setItem("theme", themeClass);
+}
 
 /* =========================
    PRACTICE SUBTABS
 ========================= */
-function showPracticeSub(which){
-  const subIds = ["typing","exercises","conjugation"];
-  subIds.forEach(s=>{
-    document.getElementById("practice_"+s)?.classList.add("hidden");
-    document.getElementById("sub_"+s)?.classList.remove("active");
+function setSubActive(which){
+  ["typing","exercises","conjugation"].forEach(s=>{
+    document.getElementById("sub_"+s).classList.toggle("active", s===which);
   });
-  document.getElementById("practice_"+which)?.classList.remove("hidden");
-  document.getElementById("sub_"+which)?.classList.add("active");
+}
+function showPracticeSub(which){
+  setSubActive(which);
+  document.getElementById("practice_typing").classList.toggle("hidden", which!=="typing");
+  document.getElementById("practice_exercises").classList.toggle("hidden", which!=="exercises");
+  document.getElementById("practice_conjugation").classList.toggle("hidden", which!=="conjugation");
 }
 
 /* =========================
    NOTES SUBTABS
 ========================= */
+function setNotesSubActive(which){
+  document.getElementById("notes_sub_study").classList.toggle("active", which==="study");
+  document.getElementById("notes_sub_personal").classList.toggle("active", which==="personal");
+}
 function showNotesSub(which){
-  const subIds = ["study","personal"];
-  subIds.forEach(s=>{
-    document.getElementById("notes_"+s)?.classList.add("hidden");
-    document.getElementById("notes_sub_"+s)?.classList.remove("active");
-  });
-  document.getElementById("notes_"+which)?.classList.remove("hidden");
-  document.getElementById("notes_sub_"+which)?.classList.add("active");
+  setNotesSubActive(which);
+  document.getElementById("notes_study").classList.toggle("hidden", which!=="study");
+  document.getElementById("notes_personal").classList.toggle("hidden", which!=="personal");
 }
 
 /* =========================
-   PASSAGES (passages.json)
+   HELPERS
 ========================= */
-let passages = []; // {g,e,level}
-let visiblePassages = [];
-const practiceSelect = document.getElementById("practiceSelect");
-const referenceArea = document.getElementById("referenceArea");
-const referenceEnglishWrap = document.getElementById("referenceEnglishWrap");
-const referenceEnglishArea = document.getElementById("referenceEnglishArea");
-const practiceArea = document.getElementById("practiceArea");
+function esc(s){ return (s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+function normAnswer(s){
+  return (s||"")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g," ")
+    .replace(/[“”„]/g,'"')
+    .replace(/[’]/g,"'");
+}
+
+/* =========================
+   LOAD JSON (GitHub root)
+========================= */
+async function loadJson(path){
+  const url = `./${path}?v=${Date.now()}`;
+  const res = await fetch(url, { cache:"no-store" });
+  if(!res.ok) throw new Error(`${path} not reachable (404 or not in root).`);
+  return await res.json();
+}
 
 async function loadPassages(){
   try{
@@ -687,23 +609,112 @@ async function loadPassages(){
     passages = raw.map(p => ({
       g: p.german ?? p.g ?? "",
       e: p.english ?? p.e ?? "",
-      level: (p.level ?? "").toString().trim().toUpperCase()
-    })).filter(p => p.g.trim().length);
+      level: (p.level ?? "").toString().toUpperCase()
+    })).filter(p => (p.g||"").trim().length);
+
+    // merge local additions (browser)
+    const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+    if(Array.isArray(local) && local.length){
+      passages = passages.concat(local);
+    }
 
     localStorage.setItem("passages_cache", JSON.stringify(passages));
-    return {ok:true,count:passages.length};
+    return { ok:true, count: passages.length };
   }catch(e){
+    // fallback cache
     passages = JSON.parse(localStorage.getItem("passages_cache") || "[]");
-    return {ok:false,count:passages.length,err:e.message};
+    return { ok:false, count: passages.length, err: e.message };
   }
 }
 
-function renderPassageDropdown(){
-  const level = (document.getElementById("passageLevelFilter").value || "ALL").toUpperCase();
-  visiblePassages = (level==="ALL") ? passages.slice() : passages.filter(p => (p.level||"")===level);
+async function loadNotes(){
+  try{
+    const obj = await loadJson("notes.json");
+    if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object");
+    notesObj = obj;
+    localStorage.setItem("notes_obj_cache", JSON.stringify(notesObj));
+    return { ok:true, count: Object.keys(notesObj).length };
+  }catch(e){
+    notesObj = JSON.parse(localStorage.getItem("notes_obj_cache") || "{}");
+    return { ok:false, count: Object.keys(notesObj).length, err: e.message };
+  }
+}
 
+async function loadExercises(){
+  try{
+    const obj = await loadJson("exercises.json");
+    const arr = obj?.exercises;
+    if(!Array.isArray(arr)) throw new Error("exercises.json must be { exercises: [...] }");
+    exercises = arr;
+    localStorage.setItem("exercises_cache", JSON.stringify(exercises));
+    return { ok:true, count: exercises.length };
+  }catch(e){
+    exercises = JSON.parse(localStorage.getItem("exercises_cache") || "[]");
+    return { ok:false, count: exercises.length, err: e.message };
+  }
+}
+
+async function loadFlashcards(){
+  try{
+    const obj = await loadJson("flashcards.json");
+    const arr = obj?.flashcards;
+    if(!Array.isArray(arr)) throw new Error("flashcards.json must be { flashcards: [...] }");
+    flashcards = arr;
+    localStorage.setItem("flashcards_cache", JSON.stringify(flashcards));
+    return { ok:true, count: flashcards.length };
+  }catch(e){
+    flashcards = JSON.parse(localStorage.getItem("flashcards_cache") || "[]");
+    return { ok:false, count: flashcards.length, err: e.message };
+  }
+}
+
+async function reloadAll(){
+  setStatus("Loading…");
+
+  const p = await loadPassages();
+  const n = await loadNotes();
+  const ex = await loadExercises();
+  const fc = await loadFlashcards();
+
+  // status message
+  const parts = [];
+  parts.push(p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`);
+  parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
+  parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
+  parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
+  setStatus(parts.join(" • "));
+
+  renderPassageDropdown();
+  renderLibrary();
+  renderNotesTopics();
+  resetExerciseFlow();
+  renderFlashcardCategories();
+  startFlashcards();
+}
+
+/* =========================
+   TYPING PRACTICE
+========================= */
+const practiceSelect = document.getElementById("practiceSelect");
+const referenceArea = document.getElementById("referenceArea");
+const referenceEnglishArea = document.getElementById("referenceEnglishArea");
+const referenceEnglishWrap = document.getElementById("referenceEnglishWrap");
+const practiceArea = document.getElementById("practiceArea");
+const diffOutput = document.getElementById("diffOutput");
+
+let typingStartMs = null;
+let typingStarted = false;
+
+function getFilteredPassages(){
+  const lvl = document.getElementById("passageLevelFilter").value;
+  if(lvl === "ALL") return passages;
+  return passages.filter(p => (p.level||"").toUpperCase() === lvl);
+}
+
+function renderPassageDropdown(){
+  const list = getFilteredPassages();
   practiceSelect.innerHTML = "";
-  if(!visiblePassages.length){
+  if(!list.length){
     const opt = document.createElement("option");
     opt.value = "";
     opt.textContent = "No passages loaded";
@@ -713,10 +724,10 @@ function renderPassageDropdown(){
     return;
   }
 
-  visiblePassages.forEach((p,i)=>{
+  list.forEach((p, idx) => {
+    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,60).replace(/\n/g," ");
     const opt = document.createElement("option");
-    opt.value = String(i);
-    const label = (p.level ? `[${p.level}] ` : "") + p.g.slice(0,70).replace(/\n/g," ");
+    opt.value = String(idx);
     opt.textContent = label;
     practiceSelect.appendChild(opt);
   });
@@ -728,122 +739,107 @@ function renderPassageDropdown(){
 practiceSelect.addEventListener("change", updateReference);
 
 function updateReference(){
-  const idx = Number(practiceSelect.value);
-  const p = visiblePassages[idx];
-  referenceArea.value = p ? p.g : "";
-  referenceEnglishArea.value = p ? (p.e||"") : "";
-
   const showEn = document.getElementById("showEnglishToggle").value === "1";
   referenceEnglishWrap.classList.toggle("hidden", !showEn);
 
-  resetTypingSession();
-}
+  const list = getFilteredPassages();
+  const idx = Number(practiceSelect.value);
+  const p = list[idx];
 
-/* =========================
-   TYPING METRICS + DIFF
-========================= */
-let typingStartMs = null;
+  referenceArea.value = p ? p.g : "";
+  referenceEnglishArea.value = p ? (p.e || "") : "";
 
-function resetTypingSession(){
-  typingStartMs = null;
-  practiceArea.value = "";
-  document.getElementById("wpm").textContent = "0";
-  document.getElementById("acc").textContent = "0";
-  document.getElementById("chars").textContent = "0";
-  document.getElementById("typingFeedback").textContent = "";
-  const diff = document.getElementById("diffOutput");
-  diff.classList.add("hidden");
-  diff.innerHTML = "";
+  clearTyping();
 }
 
 function onTypingInput(){
-  if(typingStartMs === null) typingStartMs = Date.now();
-
-  const typed = practiceArea.value;
-  document.getElementById("chars").textContent = String(typed.length);
-
-  const ref = referenceArea.value || "";
-  const acc = calcAccuracy(ref, typed);
-  document.getElementById("acc").textContent = String(acc);
-
-  const wpm = calcWpm(typed, typingStartMs);
-  document.getElementById("wpm").textContent = String(wpm);
-}
-
-function calcWpm(typed, startMs){
-  if(!startMs) return 0;
-  const minutes = (Date.now() - startMs) / 60000;
-  if(minutes <= 0) return 0;
-  const words = typed.length / 5;
-  return Math.max(0, Math.round(words / minutes));
-}
-
-function calcAccuracy(ref, typed){
-  if(!ref.length && !typed.length) return 100;
-  const maxLen = Math.max(ref.length, typed.length);
-  if(maxLen === 0) return 100;
-
-  let correct = 0;
-  const n = Math.min(ref.length, typed.length);
-  for(let i=0;i<n;i++){
-    if(ref[i] === typed[i]) correct++;
+  if(!typingStarted){
+    typingStarted = true;
+    typingStartMs = Date.now();
   }
-  // missing/extra chars count as wrong automatically
-  return Math.max(0, Math.round((correct / maxLen) * 100));
+  document.getElementById("chars").textContent = String(practiceArea.value.length);
 }
 
-function buildCharDiff(ref, typed){
-  // Simple index-based diff (fast, clear)
+function clearTyping(){
+  practiceArea.value = "";
+  document.getElementById("typingFeedback").textContent = "";
+  diffOutput.classList.add("hidden");
+  diffOutput.innerHTML = "";
+  typingStarted = false;
+  typingStartMs = null;
+  document.getElementById("wpm").textContent = "0";
+  document.getElementById("acc").textContent = "0";
+  document.getElementById("chars").textContent = "0";
+  practiceArea.focus();
+}
+
+function computeWpm(typedText, startMs){
+  if(!startMs) return 0;
+  const mins = (Date.now() - startMs) / 60000;
+  if(mins <= 0) return 0;
+  const words = typedText.trim().length ? typedText.trim().split(/\s+/).length : 0;
+  return Math.round(words / mins);
+}
+
+function diffStrings(ref, typed){
+  // Simple char-by-char alignment (good enough for personal practice)
   const maxLen = Math.max(ref.length, typed.length);
-  let html = "";
+  let correct = 0;
+  let out = "";
   for(let i=0;i<maxLen;i++){
     const r = ref[i];
     const t = typed[i];
 
     if(r === undefined && t !== undefined){
-      html += `<span class="insChar">${esc(t)}</span>`;
-    }else if(t === undefined && r !== undefined){
-      html += `<span class="missChar">${esc(r)}</span>`;
-    }else if(r === t){
-      html += `<span class="okChar">${esc(t)}</span>`;
+      out += `<span class="insChar">${esc(t)}</span>`;
+      continue;
+    }
+    if(t === undefined && r !== undefined){
+      out += `<span class="missChar">${esc(r)}</span>`;
+      continue;
+    }
+    if(r === t){
+      correct++;
+      out += `<span class="okChar">${esc(t)}</span>`;
     }else{
-      html += `<span class="badChar">${esc(t ?? "")}</span>`;
+      out += `<span class="badChar">${esc(t)}</span>`;
     }
   }
-  return html || "";
+  const acc = ref.length ? Math.round((correct / ref.length) * 100) : 0;
+  return { html: out, accuracy: acc, correctChars: correct };
 }
 
 function checkTyping(){
-  const ref = referenceArea.value || "";
-  const typed = practiceArea.value || "";
-  const acc = calcAccuracy(ref, typed);
-
-  const feedback = document.getElementById("typingFeedback");
-  const diff = document.getElementById("diffOutput");
-
-  if(!ref.trim()){
-    feedback.textContent = "No passage loaded.";
+  const list = getFilteredPassages();
+  const idx = Number(practiceSelect.value);
+  const p = list[idx];
+  if(!p){
+    document.getElementById("typingFeedback").textContent = "No passage selected.";
     return;
   }
 
+  const ref = p.g || "";
+  const typed = practiceArea.value || "";
+
+  const wpm = computeWpm(typed, typingStartMs);
+  document.getElementById("wpm").textContent = String(wpm);
+
+  const d = diffStrings(ref, typed);
+  document.getElementById("acc").textContent = String(d.accuracy);
+
   if(typed === ref){
-    feedback.textContent = "✅ Perfect! Exact match.";
-    diff.classList.add("hidden");
-    diff.innerHTML = "";
+    document.getElementById("typingFeedback").innerHTML = `<span style="color:var(--good)">✅ Perfect! Exact match.</span>`;
+    diffOutput.classList.add("hidden");
   }else{
-    feedback.textContent = `❌ Not exact. Accuracy: ${acc}% (check spaces, commas, umlauts, and line breaks).`;
-    diff.classList.remove("hidden");
-    diff.innerHTML = buildCharDiff(ref, typed);
+    document.getElementById("typingFeedback").innerHTML =
+      `<span style="color:var(--bad)">❌ Not exact.</span> Tip: check commas, umlauts, spaces, and line breaks.`;
+    diffOutput.classList.remove("hidden");
+    diffOutput.innerHTML = `<div class="small" style="margin-bottom:6px">Highlight view (red = wrong/missing, green = extra):</div><div class="mono">${d.html}</div>`;
   }
 }
 
-function clearTyping(){
-  resetTypingSession();
-  practiceArea.focus();
-}
-
 /* =========================
-   LIBRARY (LOCAL PASSAGES)
+   LIBRARY (LOCAL ONLY)
 ========================= */
 function saveParagraphLocal(){
   const g = (document.getElementById("germanInput").value || "").trim();
@@ -852,15 +848,15 @@ function saveParagraphLocal(){
 
   if(!g){ alert("German text required."); return; }
 
-  passages.push({g, e, level});
-  localStorage.setItem("passages_cache", JSON.stringify(passages));
+  const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+  local.push({ g, e, level });
+  localStorage.setItem("passages_local", JSON.stringify(local));
 
   document.getElementById("germanInput").value = "";
   document.getElementById("englishInput").value = "";
 
-  renderLibrary();
-  renderPassageDropdown();
-  alert("Saved locally. For permanent saving, add it to passages.json in GitHub.");
+  reloadAll();
+  alert("Saved locally (this browser). For permanent saving, add it to passages.json on GitHub.");
 }
 
 function renderLibrary(){
@@ -872,387 +868,301 @@ function renderLibrary(){
     return;
   }
 
-  passages.forEach((p,i)=>{
+  // show all (including local)
+  passages.forEach((p,i) => {
     const box = document.createElement("div");
     box.style.border = "1px solid var(--line)";
     box.style.borderRadius = "10px";
     box.style.padding = "10px";
     box.style.marginTop = "10px";
 
+    const isLocal = (p.level || "").toUpperCase() === "LOCAL";
+
     box.innerHTML = `
-      <div class="small"><b>${esc((p.level||"").toString())}</b></div>
-      <div style="white-space:pre-wrap;margin-top:6px;">${esc(p.g)}</div>
-      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px;">EN: ${esc(p.e)}</div>` : ""}
-      <button class="danger" onclick="deleteLocalPassage(${i})">Delete (local)</button>
+      <div class="small"><b>${esc(p.level || "")}</b> ${isLocal ? `<span class="badge pill">local</span>` : ``}</div>
+      <div style="white-space:pre-wrap;margin-top:6px">${esc(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px">EN: ${esc(p.e)}</div>` : ""}
+      ${isLocal ? `<button class="danger" onclick="deleteLocalPassageByText(${JSON.stringify(p.g)})">Delete (local)</button>` : `<div class="small">Edit in GitHub to change.</div>`}
     `;
     list.appendChild(box);
   });
 }
 
-function deleteLocalPassage(i){
-  passages.splice(i,1);
-  localStorage.setItem("passages_cache", JSON.stringify(passages));
-  renderLibrary();
-  renderPassageDropdown();
+function deleteLocalPassageByText(gText){
+  const local = JSON.parse(localStorage.getItem("passages_local") || "[]");
+  const filtered = local.filter(p => p.g !== gText);
+  localStorage.setItem("passages_local", JSON.stringify(filtered));
+  reloadAll();
 }
 
 /* =========================
-   NOTES (notes.json)
+   NOTES
 ========================= */
-let notesObj = {};
-async function loadNotes(){
+function renderNotesTopics(){
   const notesTopic = document.getElementById("notesTopic");
   const notesArea = document.getElementById("notesArea");
-  try{
-    const obj = await loadJson("notes.json");
-    if(!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("notes.json must be an object");
-    notesObj = obj;
+  const keys = Object.keys(notesObj || {});
+  notesTopic.innerHTML = "";
 
-    localStorage.setItem("notes_cache", JSON.stringify(notesObj));
-    fillNotesTopics();
-    return {ok:true,count:Object.keys(notesObj).length};
-  }catch(e){
-    notesObj = JSON.parse(localStorage.getItem("notes_cache") || "{}");
-    fillNotesTopics();
-    return {ok:false,count:Object.keys(notesObj).length,err:e.message};
+  if(!keys.length){
+    notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
+    notesArea.value = "";
+    return;
   }
 
-  function fillNotesTopics(){
-    notesTopic.innerHTML = "";
-    const keys = Object.keys(notesObj || {});
-    if(!keys.length){
-      notesTopic.innerHTML = `<option value="">No notes loaded</option>`;
-      notesArea.value = "";
-      return;
-    }
+  // friendly labels (optional)
+  const labelMap = {
+    articles_table: "DER / DIE / DAS",
+    cases_overview: "Cases overview",
+    personal_pronouns: "Personal pronouns",
+    modal_verbs: "Modal verbs",
+    important_conjunctions: "Conjunctions",
+    sentence_structure: "Sentence structure",
+    perfect_tense: "Perfect tense",
+    separable_verbs: "Separable verbs",
+    accusative_prepositions: "Prepositions (Akk)",
+    dative_prepositions: "Prepositions (Dat)",
+    two_way_prepositions: "Two-way prepositions",
+    adjective_rule: "Adjectives",
+    question_words: "Question words",
+    time_words: "Time words",
+    daily_verbs: "Daily verbs",
+    b1_connectors: "B1 connectors",
+    b1_passive_intro: "B1 passive (intro)",
+    b1_reflexive_verbs: "B1 reflexive verbs",
+    b1_subordinate_clauses: "B1 subordinate clauses",
+    vocab_work: "Vocab: work",
+    vocab_home: "Vocab: home",
+    vocab_verbs: "Vocab: verbs",
+    vocab_nouns: "Vocab: nouns",
+    vocab_adjectives: "Vocab: adjectives",
+    vocab_phrases: "Vocab: writing phrases"
+  };
 
-    keys.forEach(k=>{
-      const opt = document.createElement("option");
-      opt.value = k;
-      opt.textContent = k.replaceAll("_"," ");
-      notesTopic.appendChild(opt);
-    });
+  keys.forEach(k=>{
+    const opt = document.createElement("option");
+    opt.value = k;
+    opt.textContent = labelMap[k] || k.replaceAll("_"," ");
+    notesTopic.appendChild(opt);
+  });
 
-    const last = localStorage.getItem("notes_topic");
-    const chosen = (last && keys.includes(last)) ? last : keys[0];
-    notesTopic.value = chosen;
-    notesArea.value = String(notesObj[chosen] ?? "");
+  const last = localStorage.getItem("notes_topic");
+  const chosen = (last && keys.includes(last)) ? last : keys[0];
+  notesTopic.value = chosen;
+  notesArea.value = String(notesObj[chosen] ?? "");
 
-    notesTopic.onchange = () => {
-      const k = notesTopic.value;
-      localStorage.setItem("notes_topic", k);
-      notesArea.value = String(notesObj[k] ?? "");
-    };
-  }
+  notesTopic.onchange = () => {
+    const k = notesTopic.value;
+    localStorage.setItem("notes_topic", k);
+    notesArea.value = String(notesObj[k] ?? "");
+  };
+
+  // personal notes
+  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
+  document.getElementById("personalNotesStatus").textContent = "";
 }
 
-/* =========================
-   PERSONAL NOTES (LOCAL)
-========================= */
 function savePersonalNotes(){
   const t = document.getElementById("personalNotesArea").value || "";
   localStorage.setItem("personal_notes", t);
-  const s = document.getElementById("personalNotesStatus");
-  s.textContent = "Saved ✅";
-  setTimeout(()=>{ s.textContent=""; }, 1200);
+  document.getElementById("personalNotesStatus").textContent = "✅ Saved locally.";
 }
 function clearPersonalNotes(){
   document.getElementById("personalNotesArea").value = "";
-  localStorage.setItem("personal_notes", "");
+  localStorage.removeItem("personal_notes");
   document.getElementById("personalNotesStatus").textContent = "Cleared.";
 }
 
 /* =========================
-   FLASHCARDS (flashcards.json)
+   EXERCISES
 ========================= */
-let allCards = []; // {front,back,category,level}
-let deck = [];
-let fcPos = 0;
-let fcFlipped = false;
+let exPool = [];
+let exIndex = 0;
+let exCurrent = null;
 
-async function loadFlashcards(){
-  try{
-    const data = await loadJson("flashcards.json");
-    const cards = data.cards;
-    if(!Array.isArray(cards)) throw new Error("flashcards.json must be {cards:[...]}");
-    allCards = cards;
+function buildExercisePool(){
+  const lvl = document.getElementById("exLevel").value;
+  const type = document.getElementById("exType").value;
+  const order = document.getElementById("exOrder").value;
 
-    localStorage.setItem("flashcards_cache", JSON.stringify(allCards));
-    renderFlashcardCategories();
-    startFlashcards();
-    return {ok:true,count:allCards.length};
-  }catch(e){
-    allCards = JSON.parse(localStorage.getItem("flashcards_cache") || "[]");
-    renderFlashcardCategories();
-    startFlashcards();
-    return {ok:false,count:allCards.length,err:e.message};
+  exPool = (exercises || []).filter(e=>{
+    const okLvl = (lvl==="ALL") || ((e.level||"").toUpperCase()===lvl);
+    const okType = (type==="ALL") || ((e.type||"")===type);
+    return okLvl && okType;
+  });
+
+  if(order === "shuffle" || order === "random"){
+    exPool = exPool.slice().sort(()=>Math.random()-0.5);
+  }else{
+    exPool = exPool.slice().sort((a,b)=> (a.id||0)-(b.id||0));
+  }
+
+  exIndex = 0;
+}
+
+function resetExerciseFlow(){
+  buildExercisePool();
+  document.getElementById("exFeedback").textContent = "";
+  nextExercise(true);
+}
+
+function renderExercise(e){
+  const exQ = document.getElementById("exQ");
+  const exHint = document.getElementById("exHint");
+  const exMCQ = document.getElementById("exMCQ");
+  const exTypingWrap = document.getElementById("exTypingWrap");
+  const exTyping = document.getElementById("exTyping");
+  const exProg = document.getElementById("exProg");
+  const exMode = document.getElementById("exMode");
+
+  exMCQ.innerHTML = "";
+  exTypingWrap.classList.add("hidden");
+  exTyping.value = "";
+
+  if(!e){
+    exQ.textContent = "No exercises found for this filter.";
+    exHint.textContent = "Change filters above.";
+    exProg.textContent = `0/0`;
+    exMode.textContent = "-";
+    return;
+  }
+
+  exQ.textContent = e.question || "";
+  exHint.textContent = `${(e.level||"")} • ${(e.type||"")} • id:${e.id ?? "-"}`;
+  exProg.textContent = `${Math.min(exIndex+1, exPool.length)}/${exPool.length}`;
+  exMode.textContent = e.mode || "-";
+
+  if(e.mode === "mcq" && Array.isArray(e.options)){
+    e.options.forEach(opt=>{
+      const b = document.createElement("button");
+      b.textContent = opt;
+      b.onclick = ()=> checkExerciseMCQ(opt);
+      exMCQ.appendChild(b);
+    });
+  }else{
+    exTypingWrap.classList.remove("hidden");
+    setTimeout(()=> exTyping.focus(), 0);
   }
 }
 
+function nextExercise(isFirst=false){
+  if(!exPool.length){
+    renderExercise(null);
+    return;
+  }
+  if(!isFirst){
+    exIndex++;
+    if(exIndex >= exPool.length) exIndex = 0;
+  }
+  exCurrent = exPool[exIndex];
+  document.getElementById("exFeedback").textContent = "";
+  renderExercise(exCurrent);
+}
+
+function checkExerciseMCQ(chosen){
+  if(!exCurrent) return;
+  const right = String(exCurrent.answer ?? "");
+  const ok = normAnswer(chosen) === normAnswer(right);
+
+  document.getElementById("exFeedback").innerHTML = ok
+    ? `<span style="color:var(--good)">✅ Correct!</span>`
+    : `<span style="color:var(--bad)">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+function checkExerciseTyping(){
+  if(!exCurrent) return;
+  const inp = document.getElementById("exTyping").value || "";
+  const right = String(exCurrent.answer ?? "");
+
+  const ok = normAnswer(inp) === normAnswer(right);
+
+  document.getElementById("exFeedback").innerHTML = ok
+    ? `<span style="color:var(--good)">✅ Correct!</span>`
+    : `<span style="color:var(--bad)">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+/* =========================
+   FLASHCARDS
+========================= */
+let fcPool = [];
+let fcIdx = 0;
+let fcFlipped = false;
+
 function renderFlashcardCategories(){
   const sel = document.getElementById("fcCategory");
+  const cats = Array.from(new Set((flashcards||[]).map(c => (c.category||"").toString()))).filter(Boolean).sort();
+  const current = sel.value || "ALL";
+
   sel.innerHTML = `<option value="ALL">All</option>`;
-  const cats = Array.from(new Set(allCards.map(c => (c.category||"").trim()).filter(Boolean))).sort();
   cats.forEach(c=>{
     const opt = document.createElement("option");
     opt.value = c;
     opt.textContent = c;
     sel.appendChild(opt);
   });
+
+  if(cats.includes(current)) sel.value = current;
 }
 
 function startFlashcards(){
   const cat = document.getElementById("fcCategory").value;
   const order = document.getElementById("fcOrder").value;
 
-  deck = (cat==="ALL") ? allCards.slice() : allCards.filter(c => (c.category||"")===cat);
+  fcPool = (flashcards||[]).filter(c => (cat==="ALL") || (String(c.category)===cat));
+  if(order === "shuffle") fcPool = fcPool.slice().sort(()=>Math.random()-0.5);
 
-  if(order === "shuffle") deck = shuffle(deck);
-
-  fcPos = 0;
+  fcIdx = 0;
   fcFlipped = false;
-  renderFlashcard();
+
+  document.getElementById("fcTotal").textContent = String(fcPool.length);
+  showFlashCard();
 }
 
-function renderFlashcard(){
-  const total = deck.length;
-  document.getElementById("fcTotal").textContent = String(total);
-  document.getElementById("fcIndex").textContent = total ? String(fcPos+1) : "0";
+function showFlashCard(){
+  const fcText = document.getElementById("fcText");
+  const fcHint = document.getElementById("fcHint");
 
-  if(!total){
-    document.getElementById("fcText").textContent = "No cards loaded";
+  if(!fcPool.length){
+    fcText.textContent = "No cards loaded";
+    fcHint.textContent = "Check flashcards.json";
+    document.getElementById("fcIndex").textContent = "0";
     return;
   }
 
-  const c = deck[fcPos];
-  document.getElementById("fcText").textContent = fcFlipped ? (c.back||"") : (c.front||"");
+  const c = fcPool[fcIdx];
+  document.getElementById("fcIndex").textContent = String(fcIdx+1);
+
+  if(!fcFlipped){
+    fcText.className = "flashFront";
+    fcText.textContent = c.front ?? "";
+    fcHint.textContent = "Click to flip (show meaning)";
+  }else{
+    fcText.className = "flashBack";
+    fcText.textContent = c.back ?? "";
+    fcHint.textContent = "Click to flip (show word)";
+  }
 }
 
 function flipCard(){
-  if(!deck.length) return;
+  if(!fcPool.length) return;
   fcFlipped = !fcFlipped;
-  renderFlashcard();
+  showFlashCard();
 }
 function flipToFront(){
   fcFlipped = false;
-  renderFlashcard();
+  showFlashCard();
 }
 function nextCard(){
-  if(!deck.length) return;
-  fcPos = (fcPos + 1) % deck.length;
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx + 1) % fcPool.length;
   fcFlipped = false;
-  renderFlashcard();
+  showFlashCard();
 }
 function prevCard(){
-  if(!deck.length) return;
-  fcPos = (fcPos - 1 + deck.length) % deck.length;
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx - 1 + fcPool.length) % fcPool.length;
   fcFlipped = false;
-  renderFlashcard();
-}
-
-/* =========================
-   EXERCISES (exercises.json)
-========================= */
-let exercises = []; // array
-let exList = [];
-let exPos = 0;
-
-async function loadExercises(){
-  try{
-    const data = await loadJson("exercises.json");
-    const arr = data.exercises;
-    if(!Array.isArray(arr)) throw new Error("exercises.json must be {exercises:[...]}");
-    exercises = arr;
-
-    localStorage.setItem("exercises_cache", JSON.stringify(exercises));
-    resetExerciseFlow();
-    return {ok:true,count:exercises.length};
-  }catch(e){
-    exercises = JSON.parse(localStorage.getItem("exercises_cache") || "[]");
-    resetExerciseFlow();
-    return {ok:false,count:exercises.length,err:e.message};
-  }
-}
-
-function resetExerciseFlow(){
-  const level = (document.getElementById("exLevel").value || "ALL").toUpperCase();
-  const type = (document.getElementById("exType").value || "ALL").toLowerCase();
-  const order = document.getElementById("exOrder").value || "random";
-
-  exList = exercises.slice();
-
-  if(level !== "ALL") exList = exList.filter(x => String(x.level||"").toUpperCase() === level);
-  if(type !== "ALL") exList = exList.filter(x => String(x.type||"").toLowerCase() === type);
-
-  if(order === "random") exList = shuffle(exList);
-
-  exPos = 0;
-  renderExercise();
-}
-
-function renderExercise(){
-  const prog = document.getElementById("exProg");
-  const exMode = document.getElementById("exMode");
-  const exQ = document.getElementById("exQ");
-  const exHint = document.getElementById("exHint");
-  const exMCQ = document.getElementById("exMCQ");
-  const exTypingWrap = document.getElementById("exTypingWrap");
-  const exTyping = document.getElementById("exTyping");
-  const exFeedback = document.getElementById("exFeedback");
-
-  prog.textContent = `${exList.length ? (exPos+1) : 0}/${exList.length}`;
-
-  exFeedback.textContent = "";
-  exMCQ.innerHTML = "";
-  exTyping.value = "";
-  exTypingWrap.classList.add("hidden");
-
-  if(!exList.length){
-    exMode.textContent = "-";
-    exQ.textContent = "No exercises loaded (or filter has none).";
-    exHint.textContent = "";
-    return;
-  }
-
-  const ex = exList[exPos];
-  exMode.textContent = ex.mode || "-";
-  exQ.textContent = ex.question || "";
-  exHint.textContent = ex.type ? `Type: ${ex.type} • Level: ${ex.level}` : "";
-
-  if(ex.mode === "mcq"){
-    (ex.options || []).forEach(opt=>{
-      const b = document.createElement("button");
-      b.textContent = opt;
-      b.onclick = ()=>checkExerciseMCQ(opt);
-      exMCQ.appendChild(b);
-    });
-  }else{
-    exTypingWrap.classList.remove("hidden");
-  }
-}
-
-function checkExerciseMCQ(choice){
-  const exFeedback = document.getElementById("exFeedback");
-  const ex = exList[exPos];
-  if(!ex) return;
-
-  if(String(choice).trim() === String(ex.answer).trim()){
-    exFeedback.textContent = "✅ Correct!";
-  }else{
-    exFeedback.textContent = `❌ Wrong. Correct: ${ex.answer}`;
-  }
-}
-
-function checkExerciseTyping(){
-  const exFeedback = document.getElementById("exFeedback");
-  const ex = exList[exPos];
-  const val = (document.getElementById("exTyping").value || "").trim();
-  if(!ex) return;
-
-  if(val === String(ex.answer).trim()){
-    exFeedback.textContent = "✅ Correct!";
-  }else{
-    exFeedback.textContent = `❌ Wrong. Correct: ${ex.answer}`;
-  }
-}
-
-function nextExercise(){
-  if(!exList.length) return;
-  exPos = (exPos + 1) % exList.length;
-  renderExercise();
-}
-
-/* =========================
-   CONJUGATIONS (conjugations.json)
-========================= */
-let conjugations = []; // {verb, english, type, present:{...}}
-
-async function loadConjugations(){
-  try{
-    const data = await loadJson("conjugations.json");
-    const arr = data.verbs;
-    if(!Array.isArray(arr)) throw new Error("conjugations.json must be {verbs:[...]}");
-    conjugations = arr;
-    localStorage.setItem("conjugations_cache", JSON.stringify(conjugations));
-    renderVerbList();
-    renderVerb();
-    return {ok:true,count:conjugations.length};
-  }catch(e){
-    conjugations = JSON.parse(localStorage.getItem("conjugations_cache") || "[]");
-    renderVerbList();
-    renderVerb();
-    return {ok:false,count:conjugations.length,err:e.message};
-  }
-}
-
-function clearVerbTable(){
-  ["v_ich","v_du","v_er","v_wir","v_ihr","v_sie"].forEach(id=>{
-    const el = document.getElementById(id);
-    if(el) el.textContent = "";
-  });
-  const en = document.getElementById("verbEnglish"); if(en) en.textContent = "—";
-  const ty = document.getElementById("verbType"); if(ty) ty.textContent = "—";
-}
-
-function renderVerbList(){
-  const sel = document.getElementById("verbSelect");
-  if(!sel) return;
-
-  const type = (document.getElementById("verbTypeFilter")?.value || "ALL").toLowerCase();
-  const q = (document.getElementById("verbSearch")?.value || "").trim().toLowerCase();
-
-  let list = conjugations.slice();
-  if(type !== "all") list = list.filter(v => String(v.type||"").toLowerCase() === type);
-  if(q){
-    list = list.filter(v =>
-      String(v.verb||"").toLowerCase().includes(q) ||
-      String(v.english||"").toLowerCase().includes(q)
-    );
-  }
-
-  sel.innerHTML = "";
-  if(!list.length){
-    const opt = document.createElement("option");
-    opt.value = "";
-    opt.textContent = "No verbs found";
-    sel.appendChild(opt);
-    clearVerbTable();
-    return;
-  }
-
-  list.sort((a,b)=>String(a.verb).localeCompare(String(b.verb))).forEach(v=>{
-    const opt = document.createElement("option");
-    opt.value = v.verb;
-    opt.textContent = `${v.verb} — ${v.english||""}`.trim();
-    sel.appendChild(opt);
-  });
-
-  sel.value = sel.options[0].value;
-  renderVerb();
-}
-
-function getSelectedVerb(){
-  const key = document.getElementById("verbSelect")?.value || "";
-  return conjugations.find(v => String(v.verb) === String(key));
-}
-
-function renderVerb(){
-  const sel = document.getElementById("verbSelect");
-  if(!sel) return;
-
-  const v = getSelectedVerb();
-  if(!v){ clearVerbTable(); return; }
-
-  document.getElementById("verbEnglish").textContent = v.english || "—";
-  document.getElementById("verbType").textContent = v.type || "—";
-
-  const p = v.present || {};
-  document.getElementById("v_ich").textContent = p.ich || "";
-  document.getElementById("v_du").textContent = p.du || "";
-  document.getElementById("v_er").textContent = p.er_sie_es || "";
-  document.getElementById("v_wir").textContent = p.wir || "";
-  document.getElementById("v_ihr").textContent = p.ihr || "";
-  document.getElementById("v_sie").textContent = p.sie_Sie || "";
+  showFlashCard();
 }
 
 /* =========================
@@ -1261,15 +1171,11 @@ function renderVerb(){
 function swapLangs(){
   const from = document.getElementById("langFrom");
   const to = document.getElementById("langTo");
-  const tmp = from.value;
-  from.value = to.value;
-  to.value = tmp;
+  const tmp = from.value; from.value = to.value; to.value = tmp;
 
   const inp = document.getElementById("translateInput");
   const out = document.getElementById("translateOutput");
-  const t = inp.value;
-  inp.value = out.value;
-  out.value = t;
+  const t = inp.value; inp.value = out.value; out.value = t;
 }
 
 function clearTranslate(){
@@ -1310,7 +1216,7 @@ async function lookupWord(){
   out.textContent = "";
   if(!w) return;
 
-  // Full extract (NOT intro-only)
+  // Full extract (not just intro) so you don't get "no short extract"
   const url =
     "https://de.wiktionary.org/w/api.php" +
     "?action=query&format=json&prop=extracts&explaintext=1&redirects=1" +
@@ -1333,75 +1239,33 @@ async function lookupWord(){
     const extract = (page.extract || "").trim();
 
     if(!extract){
-      out.textContent = `${title}\n\n(Found, but the extract is empty.)`;
+      out.textContent = `${title}\n\n(Found, but no extract available. Try another form.)`;
       return;
     }
 
-    // Show long details; if extremely long, clip to keep UI usable
-    const clipped = extract.length > 6000 ? (extract.slice(0,6000) + "\n\n…(clipped)") : extract;
-    out.textContent = `${title}\n\n${clipped}`;
+    out.textContent = `${title}\n\n${extract}`;
   }catch{
     out.textContent = "Dictionary lookup failed (network/CORS). Try again.";
   }
 }
 
 /* =========================
-   HELPERS
-========================= */
-function shuffle(arr){
-  const a = arr.slice();
-  for(let i=a.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i],a[j]] = [a[j],a[i]];
-  }
-  return a;
-}
-
-/* =========================
-   RELOAD ALL
-========================= */
-async function reloadAll(){
-  setStatus("Loading…");
-
-  const parts = [];
-
-  const p = await loadPassages();
-  parts.push(p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`);
-
-  const n = await loadNotes();
-  parts.push(n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`);
-
-  const ex = await loadExercises();
-  parts.push(ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`);
-
-  const fc = await loadFlashcards();
-  parts.push(fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`);
-
-  const cj = await loadConjugations();
-  parts.push(cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`);
-
-  setStatus(parts.join(" | "));
-
-  renderLibrary();
-  renderPassageDropdown();
-
-  // restore personal notes
-  document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
-}
-
-/* =========================
    INIT
 ========================= */
 (function init(){
-  // Personal notes load
+  // theme restore
+  const savedTheme = localStorage.getItem("theme") || "theme-vibrant";
+  setTheme(savedTheme);
+  document.getElementById("themeSelect").value = savedTheme;
+
+  // personal notes quick load
   document.getElementById("personalNotesArea").value = localStorage.getItem("personal_notes") || "";
 
-  // Default subtabs
+  // set default view
+  showTab("practiceTab");
   showPracticeSub("typing");
   showNotesSub("study");
-  showTab("practiceTab");
 
-  // Load all data
   reloadAll();
 })();
 </script>
