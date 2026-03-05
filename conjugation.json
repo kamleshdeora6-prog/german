@@ -1,53 +1,823 @@
 {
-  "articles_table": "DER / DIE / DAS\n\nMasculine → der\nFeminine → die\nNeuter → das\nPlural → die\n\nExamples:\nder Mann – the man\ndie Frau – the woman\ndas Kind – the child",
-
-  "cases_overview": "GERMAN CASES OVERVIEW\n\nNominativ → subject (who?)\nAkkusativ → direct object (whom?)\nDativ → indirect object (to whom?)\nGenitiv → possession (whose?)",
-
-  "personal_pronouns": "ich – I\ndu – you (informal)\ner – he\nsie – she\nes – it\nwir – we\nihr – you plural\nSie – you formal",
-
-  "modal_verbs": "MODAL VERBS\n\nkönnen – can\nmüssen – must\nwollen – want\ndürfen – may\nsollen – should\nmöchten – would like\n\nExamples:\nIch kann heute nicht.\nWir müssen morgen früh aufstehen.\nIch möchte einen Kaffee, bitte.",
-
-  "important_conjunctions": "CONJUNCTIONS\n\nund – and\noder – or\naber – but\ndenn – because (normal order)\nweil – because (verb at end)\ndass – that\nobwohl – although\nwenn – if/when\ndamit – so that",
-
-  "sentence_structure": "SENTENCE STRUCTURE\n\nMAIN SENTENCE:\nSubject + Verb + Object\nIch gehe heute ins Büro.\n\nTIME–MANNER–PLACE:\nIch gehe heute mit dem Bus zur Arbeit.\n\nSUBORDINATE CLAUSE:\nVerb goes to END\nIch bleibe zu Hause, weil ich krank bin.",
-
-  "perfect_tense": "PERFECT TENSE (A1–A2)\n\nhaben/sein + Partizip II\nIch habe gearbeitet.\nIch bin gegangen.\n\nTypical:\nsein → gehen, kommen, fahren (movement)\nhaben → most other verbs",
-
-  "separable_verbs": "SEPARABLE VERBS\n\naufstehen → Ich stehe um 7 Uhr auf.\neinkaufen → Ich kaufe ein.\n\nTip: The prefix goes to the END in main sentences.",
-
-  "accusative_prepositions": "AKKUSATIV PREPOSITIONS\n\ndurch – through\nfür – for\nohne – without\ngegen – against\num – around",
-
-  "dative_prepositions": "DATIV PREPOSITIONS\n\nmit – with\nnach – after/to\nvon – from\nzu – to\nbei – at",
-
-  "two_way_prepositions": "TWO-WAY PREPOSITIONS (Wechselpräpositionen)\n\nin, an, auf, über, unter, vor, hinter, neben, zwischen\n\nMovement (Wohin?) → Akk\nLocation (Wo?) → Dat\n\nExamples:\nIch gehe in die Küche. (Akk)\nIch bin in der Küche. (Dat)",
-
-  "adjective_rule": "ADJECTIVES (basic idea)\n\nAdjective before noun gets ending:\nEin guter Mann\nEine schöne Frau\nEin kleines Kind\n\nCommon endings to notice:\n• ein + masculine Akk → einen guten Mann\n• ein + dative → einem/ einer/ einem\n\nTip: Start with A2 tables later (this is enough for writing A1–A2).",
-
-  "question_words": "W-QUESTIONS\n\nwer – who\nwas – what\nwann – when\nwarum – why\nwo – where\nwoher – where from\nwohin – where to\nwie – how\nwie viel – how much\nwie lange – how long",
-
-  "time_words": "TIME WORDS\n\nheute – today\nmorgen – tomorrow\ngestern – yesterday\njetzt – now\nspäter – later\nabends – in the evening\nnächste Woche – next week\nam Ende – in the end\nim Voraus – in advance",
-
-  "daily_verbs": "DAILY VERBS (basic)\n\ngehen – go\nkommen – come\nsehen – see/watch\nmachen – do/make\nlernen – learn",
-
-  "b1_connectors": "B1 CONNECTORS\n\ndeshalb – therefore\ntrotzdem – nevertheless\naußerdem – besides\nzuerst – first\ndanach – after that",
-
-  "b1_passive_intro": "B1 PASSIVE (intro)\n\nDas Auto wird repariert.\nThe car is being repaired.",
-
-  "b1_reflexive_verbs": "REFLEXIVE VERBS (B1 intro)\n\nsich erinnern – remember\nsich freuen – be happy\nsich fühlen – feel\n\nExamples:\nIch erinnere mich an den Termin.\nIch freue mich auf das Wochenende.",
-
-  "b1_subordinate_clauses": "SUBORDINATE CLAUSES (B1)\n\nVerb goes to END:\nIch bleibe zu Hause, weil ich krank bin.\nIch glaube, dass er morgen kommt.\nIch lerne viel, damit ich die Prüfung bestehe.",
-
-  "vocab_work": "VOCAB: WORK (basic)\n\nder Job – job\ndie Firma – company\nder Kollege – colleague",
-
-  "vocab_home": "VOCAB: HOME (basic)\n\ndie Wohnung – apartment\ndie Küche – kitchen\ndas Schlafzimmer – bedroom",
-
-  "verbs": "VERBS (A2–B1 useful)\n\nvereinbaren – to arrange\nbeginnen – to begin\nmögen – to like\nmachen – to do/make\nerledigen – to complete\nsprechen – to speak\nhoffen – to hope\nkaufen – to buy\nfunktionieren – to function/work\ntun – to do\nreparieren – to repair\naustauschen – to replace\nfeiern – to celebrate\nkommen – to come\ndekorieren – to decorate\nessen – to eat\nbesuchen – to visit\nschicken – to send\nschreiben – to write\narbeiten – to work\nanalysieren – to analyse\nerzählen – to tell\nbenötigen – to need\nwarten – to wait\nbekommen – to receive/get\nwünschen – to wish\neinladen – to invite\ndiskutieren – to discuss\nlösen – to solve\nbleiben – to stay/remain\nlesen – to read\nentspannen – to relax\nlernen – to learn\ntreffen – to meet\nkochen – to cook\nsehen – to see/watch\nspazieren gehen – to go for a walk\nstudieren – to study\nsammeln – to collect/gain\nverdienen – to earn\nhelfen – to help\nverstehen – to understand\nklären – to clarify/resolve\nteilen – to share/inform\nfehlen – to be missing\ngehen – to go\nkonzentrieren – to concentrate",
-
-  "nouns": "NOUNS (A2–B1 useful)\n\nSchool & family:\nder Elternsprechtag – parent-teacher meeting\ndie Schule – school\ndas Fach / die Fächer – subject(s)\ndie Hausaufgaben – homework\nder Test – test\ndie Pause – break\ndie Schüler – students\ndie Tochter – daughter\n\nHome & living:\ndie Wohnung – apartment\ndie Nachbarn – neighbours\nder Mitbewohner – flatmate\ndie Hausarbeit – housework\nder Plan – plan\n\nTechnology & media:\ndas Smartphone – smartphone\ndie Kamera – camera\nder Laptop – laptop\ndas Gerät – device\ndie sozialen Medien – social media\ndie Informationen – information\ndie Zeit – time\n\nCelebrations & social life:\nder Geburtstag – birthday\ndie Party – party\ndas Fest – festival\ndie Familie – family\ndie Atmosphäre – atmosphere\nder Weihnachtsbaum – Christmas tree\nder Weihnachtsmarkt – Christmas market\nder Film – movie\n\nWork & career:\ndie Stelle – job position\nder Praktikant – intern\nder Finanzbereich – finance sector\ndie Zahlen – numbers\ndie Daten – data\ndie Entwicklungsmöglichkeiten – development opportunities\ndas Unternehmen – company\ndas Praktikum – internship\ndie Erfahrung – experience\ndie Ausbildung – vocational training\nder Beruf – profession\ndie Jobsuche – job search\n\nFriendship & people:\nder Freund – friend\ndie Hilfe – help\ndas Missverständnis – misunderstanding\ndie Antwort – answer\n\nGovernment & office:\ndie Verlängerung – extension\nder Aufenthaltstitel – residence permit\ndie Unterlagen – documents\ndas Bürgeramt – citizens’ office\ndie Mitarbeiter – employees\ndas Dokument – document\ndie Unterschrift – signature\ndas Amt – office\nder Termin – appointment\ndas Firmenjubiläum – company anniversary\nder Konferenzraum – conference room\n\nFood & free time:\nder Kaffee – coffee\nder Kuchen – cake\ndas Wochenende – weekend\ndas Wetter – weather\ndie Freizeit – free time\ndas Buch / die Bücher – book(s)\ndie Wörter – words",
-
-  "adjectives": "ADJECTIVES (A2–B1 useful)\n\nlaut – loud\nleise – quiet\nfalsch – wrong\nneu – new\nschnell – fast\ngut – good\nteuer – expensive\nzufrieden – satisfied\ntraditionell – traditional\nschön – beautiful\nwichtig – important\nfreundlich – friendly\nhilfsbereit – helpful\nnett – nice\nmüde – tired\nlänger – longer\npraktisch – practical\nkrank – sick\ngleich – equal\nrichtig – correct\nviele – many\nzuverlässig – reliable\nsozial – social\nonline – online",
-
-  "adverbs_time_expressions": "ADVERBS & TIME EXPRESSIONS\n\nleider – unfortunately\nabends – in the evening\ngestern – yesterday\ninsgesamt – overall\nzusammen – together\nmanchmal – sometimes\nschnell – quickly\nspäter – later\njetzt – now\nwieder – again\nmorgen – tomorrow\nnächste Woche – next week\nam Ende – in the end\nim Voraus – in advance",
-
-  "writing_phrases": "WRITING PHRASES (super useful)\n\nVielen Dank im Voraus — Many thanks in advance\nMit freundlichen Grüßen — Kind regards\nLiebe Grüße — Best wishes\nEs tut mir leid — I’m sorry\nIch würde mich sehr freuen — I would be very happy\nHaben Sie Zeit? — Do you have time?\nKönnten Sie bitte… — Could you please…\nIch hoffe, wir können… — I hope we can…\nWir freuen uns auf Ihr Kommen — We look forward to your coming\nBitte teilen Sie mir mit — Please let me know\nIch interessiere mich für… — I am interested in…"
+  "verbs": [
+    {
+      "infinitive": "gehen",
+      "english": "to go",
+      "type": "irregular",
+      "forms": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie": "gehen"
+      }
+    },
+    {
+      "infinitive": "kommen",
+      "english": "to come",
+      "type": "irregular",
+      "forms": {
+        "ich": "komme",
+        "du": "kommst",
+        "er": "kommt",
+        "wir": "kommen",
+        "ihr": "kommt",
+        "sie": "kommen"
+      }
+    },
+    {
+      "infinitive": "sehen",
+      "english": "to see/watch",
+      "type": "irregular",
+      "forms": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er": "sieht",
+        "wir": "sehen",
+        "ihr": "seht",
+        "sie": "sehen"
+      }
+    },
+    {
+      "infinitive": "lesen",
+      "english": "to read",
+      "type": "irregular",
+      "forms": {
+        "ich": "lese",
+        "du": "liest",
+        "er": "liest",
+        "wir": "lesen",
+        "ihr": "lest",
+        "sie": "lesen"
+      }
+    },
+    {
+      "infinitive": "sprechen",
+      "english": "to speak",
+      "type": "irregular",
+      "forms": {
+        "ich": "spreche",
+        "du": "sprichst",
+        "er": "spricht",
+        "wir": "sprechen",
+        "ihr": "sprecht",
+        "sie": "sprechen"
+      }
+    },
+    {
+      "infinitive": "essen",
+      "english": "to eat",
+      "type": "irregular",
+      "forms": {
+        "ich": "esse",
+        "du": "isst",
+        "er": "isst",
+        "wir": "essen",
+        "ihr": "esst",
+        "sie": "essen"
+      }
+    },
+    {
+      "infinitive": "helfen",
+      "english": "to help",
+      "type": "irregular",
+      "forms": {
+        "ich": "helfe",
+        "du": "hilfst",
+        "er": "hilft",
+        "wir": "helfen",
+        "ihr": "helft",
+        "sie": "helfen"
+      }
+    },
+    {
+      "infinitive": "treffen",
+      "english": "to meet",
+      "type": "irregular",
+      "forms": {
+        "ich": "treffe",
+        "du": "triffst",
+        "er": "trifft",
+        "wir": "treffen",
+        "ihr": "trefft",
+        "sie": "treffen"
+      }
+    },
+    {
+      "infinitive": "verstehen",
+      "english": "to understand",
+      "type": "irregular",
+      "forms": {
+        "ich": "verstehe",
+        "du": "verstehst",
+        "er": "versteht",
+        "wir": "verstehen",
+        "ihr": "versteht",
+        "sie": "verstehen"
+      }
+    },
+    {
+      "infinitive": "bleiben",
+      "english": "to stay/remain",
+      "type": "irregular",
+      "forms": {
+        "ich": "bleibe",
+        "du": "bleibst",
+        "er": "bleibt",
+        "wir": "bleiben",
+        "ihr": "bleibt",
+        "sie": "bleiben"
+      }
+    },
+    {
+      "infinitive": "beginnen",
+      "english": "to begin",
+      "type": "irregular",
+      "forms": {
+        "ich": "beginne",
+        "du": "beginnst",
+        "er": "beginnt",
+        "wir": "beginnen",
+        "ihr": "beginnt",
+        "sie": "beginnen"
+      }
+    },
+    {
+      "infinitive": "nehmen",
+      "english": "to take",
+      "type": "irregular",
+      "forms": {
+        "ich": "nehme",
+        "du": "nimmst",
+        "er": "nimmt",
+        "wir": "nehmen",
+        "ihr": "nehmt",
+        "sie": "nehmen"
+      }
+    },
+    {
+      "infinitive": "fahren",
+      "english": "to drive/go (by vehicle)",
+      "type": "irregular",
+      "forms": {
+        "ich": "fahre",
+        "du": "fährst",
+        "er": "fährt",
+        "wir": "fahren",
+        "ihr": "fahrt",
+        "sie": "fahren"
+      }
+    },
+    {
+      "infinitive": "laufen",
+      "english": "to run/walk",
+      "type": "irregular",
+      "forms": {
+        "ich": "laufe",
+        "du": "läufst",
+        "er": "läuft",
+        "wir": "laufen",
+        "ihr": "lauft",
+        "sie": "laufen"
+      }
+    },
+    {
+      "infinitive": "trinken",
+      "english": "to drink",
+      "type": "irregular",
+      "forms": {
+        "ich": "trinke",
+        "du": "trinkst",
+        "er": "trinkt",
+        "wir": "trinken",
+        "ihr": "trinkt",
+        "sie": "trinken"
+      }
+    },
+    {
+      "infinitive": "machen",
+      "english": "to do/make",
+      "type": "regular",
+      "forms": {
+        "ich": "mache",
+        "du": "machst",
+        "er": "macht",
+        "wir": "machen",
+        "ihr": "macht",
+        "sie": "machen"
+      }
+    },
+    {
+      "infinitive": "lernen",
+      "english": "to learn",
+      "type": "regular",
+      "forms": {
+        "ich": "lerne",
+        "du": "lernst",
+        "er": "lernt",
+        "wir": "lernen",
+        "ihr": "lernt",
+        "sie": "lernen"
+      }
+    },
+    {
+      "infinitive": "arbeiten",
+      "english": "to work",
+      "type": "regular",
+      "forms": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sie": "arbeiten"
+      }
+    },
+    {
+      "infinitive": "kaufen",
+      "english": "to buy",
+      "type": "regular",
+      "forms": {
+        "ich": "kaufe",
+        "du": "kaufst",
+        "er": "kauft",
+        "wir": "kaufen",
+        "ihr": "kauft",
+        "sie": "kaufen"
+      }
+    },
+    {
+      "infinitive": "kochen",
+      "english": "to cook",
+      "type": "regular",
+      "forms": {
+        "ich": "koche",
+        "du": "kochst",
+        "er": "kocht",
+        "wir": "kochen",
+        "ihr": "kocht",
+        "sie": "kochen"
+      }
+    },
+    {
+      "infinitive": "besuchen",
+      "english": "to visit",
+      "type": "regular",
+      "forms": {
+        "ich": "besuche",
+        "du": "besuchst",
+        "er": "besucht",
+        "wir": "besuchen",
+        "ihr": "besucht",
+        "sie": "besuchen"
+      }
+    },
+    {
+      "infinitive": "schicken",
+      "english": "to send",
+      "type": "regular",
+      "forms": {
+        "ich": "schicke",
+        "du": "schickst",
+        "er": "schickt",
+        "wir": "schicken",
+        "ihr": "schickt",
+        "sie": "schicken"
+      }
+    },
+    {
+      "infinitive": "schreiben",
+      "english": "to write",
+      "type": "irregular",
+      "forms": {
+        "ich": "schreibe",
+        "du": "schreibst",
+        "er": "schreibt",
+        "wir": "schreiben",
+        "ihr": "schreibt",
+        "sie": "schreiben"
+      }
+    },
+    {
+      "infinitive": "warten",
+      "english": "to wait",
+      "type": "regular",
+      "forms": {
+        "ich": "warte",
+        "du": "wartest",
+        "er": "wartet",
+        "wir": "warten",
+        "ihr": "wartet",
+        "sie": "warten"
+      }
+    },
+    {
+      "infinitive": "wünschen",
+      "english": "to wish",
+      "type": "regular",
+      "forms": {
+        "ich": "wünsche",
+        "du": "wünschst",
+        "er": "wünscht",
+        "wir": "wünschen",
+        "ihr": "wünscht",
+        "sie": "wünschen"
+      }
+    },
+    {
+      "infinitive": "feiern",
+      "english": "to celebrate",
+      "type": "regular",
+      "forms": {
+        "ich": "feiere",
+        "du": "feierst",
+        "er": "feiert",
+        "wir": "feiern",
+        "ihr": "feiert",
+        "sie": "feiern"
+      }
+    },
+    {
+      "infinitive": "erzählen",
+      "english": "to tell",
+      "type": "regular",
+      "forms": {
+        "ich": "erzähle",
+        "du": "erzählst",
+        "er": "erzählt",
+        "wir": "erzählen",
+        "ihr": "erzählt",
+        "sie": "erzählen"
+      }
+    },
+    {
+      "infinitive": "lösen",
+      "english": "to solve",
+      "type": "regular",
+      "forms": {
+        "ich": "löse",
+        "du": "löst",
+        "er": "löst",
+        "wir": "lösen",
+        "ihr": "löst",
+        "sie": "lösen"
+      }
+    },
+    {
+      "infinitive": "teilen",
+      "english": "to share",
+      "type": "regular",
+      "forms": {
+        "ich": "teile",
+        "du": "teilst",
+        "er": "teilt",
+        "wir": "teilen",
+        "ihr": "teilt",
+        "sie": "teilen"
+      }
+    },
+    {
+      "infinitive": "fehlen",
+      "english": "to be missing",
+      "type": "regular",
+      "forms": {
+        "ich": "fehle",
+        "du": "fehlst",
+        "er": "fehlt",
+        "wir": "fehlen",
+        "ihr": "fehlt",
+        "sie": "fehlen"
+      }
+    },
+    {
+      "infinitive": "verdienen",
+      "english": "to earn",
+      "type": "regular",
+      "forms": {
+        "ich": "verdiene",
+        "du": "verdienst",
+        "er": "verdient",
+        "wir": "verdienen",
+        "ihr": "verdient",
+        "sie": "verdienen"
+      }
+    },
+    {
+      "infinitive": "sammeln",
+      "english": "to collect/gain",
+      "type": "regular",
+      "forms": {
+        "ich": "sammle",
+        "du": "sammelst",
+        "er": "sammelt",
+        "wir": "sammeln",
+        "ihr": "sammelt",
+        "sie": "sammeln"
+      }
+    },
+    {
+      "infinitive": "studieren",
+      "english": "to study",
+      "type": "regular",
+      "forms": {
+        "ich": "studiere",
+        "du": "studierst",
+        "er": "studiert",
+        "wir": "studieren",
+        "ihr": "studiert",
+        "sie": "studieren"
+      }
+    },
+    {
+      "infinitive": "entspannen",
+      "english": "to relax",
+      "type": "regular",
+      "forms": {
+        "ich": "entspanne",
+        "du": "entspannst",
+        "er": "entspannt",
+        "wir": "entspannen",
+        "ihr": "entspannt",
+        "sie": "entspannen"
+      }
+    },
+    {
+      "infinitive": "diskutieren",
+      "english": "to discuss",
+      "type": "regular",
+      "forms": {
+        "ich": "diskutiere",
+        "du": "diskutierst",
+        "er": "diskutiert",
+        "wir": "diskutieren",
+        "ihr": "diskutiert",
+        "sie": "diskutieren"
+      }
+    },
+    {
+      "infinitive": "analysieren",
+      "english": "to analyse",
+      "type": "regular",
+      "forms": {
+        "ich": "analysiere",
+        "du": "analysierst",
+        "er": "analysiert",
+        "wir": "analysieren",
+        "ihr": "analysiert",
+        "sie": "analysieren"
+      }
+    },
+    {
+      "infinitive": "benötigen",
+      "english": "to need (formal)",
+      "type": "regular",
+      "forms": {
+        "ich": "benötige",
+        "du": "benötigst",
+        "er": "benötigt",
+        "wir": "benötigen",
+        "ihr": "benötigt",
+        "sie": "benötigen"
+      }
+    },
+    {
+      "infinitive": "klären",
+      "english": "to clarify/resolve",
+      "type": "regular",
+      "forms": {
+        "ich": "kläre",
+        "du": "klärst",
+        "er": "klärt",
+        "wir": "klären",
+        "ihr": "klärt",
+        "sie": "klären"
+      }
+    },
+    {
+      "infinitive": "hoffen",
+      "english": "to hope",
+      "type": "regular",
+      "forms": {
+        "ich": "hoffe",
+        "du": "hoffst",
+        "er": "hofft",
+        "wir": "hoffen",
+        "ihr": "hofft",
+        "sie": "hoffen"
+      }
+    },
+    {
+      "infinitive": "funktionieren",
+      "english": "to function/work",
+      "type": "regular",
+      "forms": {
+        "ich": "funktioniere",
+        "du": "funktionierst",
+        "er": "funktioniert",
+        "wir": "funktionieren",
+        "ihr": "funktioniert",
+        "sie": "funktionieren"
+      }
+    },
+    {
+      "infinitive": "reparieren",
+      "english": "to repair",
+      "type": "regular",
+      "forms": {
+        "ich": "repariere",
+        "du": "reparierst",
+        "er": "repariert",
+        "wir": "reparieren",
+        "ihr": "repariert",
+        "sie": "reparieren"
+      }
+    },
+    {
+      "infinitive": "dekorieren",
+      "english": "to decorate",
+      "type": "regular",
+      "forms": {
+        "ich": "dekoriere",
+        "du": "dekorierst",
+        "er": "dekoriert",
+        "wir": "dekorieren",
+        "ihr": "dekoriert",
+        "sie": "dekorieren"
+      }
+    },
+    {
+      "infinitive": "tun",
+      "english": "to do",
+      "type": "irregular",
+      "forms": {
+        "ich": "tue",
+        "du": "tust",
+        "er": "tut",
+        "wir": "tun",
+        "ihr": "tut",
+        "sie": "tun"
+      }
+    },
+    {
+      "infinitive": "bekommen",
+      "english": "to receive/get",
+      "type": "regular",
+      "forms": {
+        "ich": "bekomme",
+        "du": "bekommst",
+        "er": "bekommt",
+        "wir": "bekommen",
+        "ihr": "bekommt",
+        "sie": "bekommen"
+      }
+    },
+    {
+      "infinitive": "vereinbaren",
+      "english": "to arrange (an appointment)",
+      "type": "regular",
+      "forms": {
+        "ich": "vereinbare",
+        "du": "vereinbarst",
+        "er": "vereinbart",
+        "wir": "vereinbaren",
+        "ihr": "vereinbart",
+        "sie": "vereinbaren"
+      }
+    },
+    {
+      "infinitive": "erledigen",
+      "english": "to complete/get done",
+      "type": "regular",
+      "forms": {
+        "ich": "erledige",
+        "du": "erledigst",
+        "er": "erledigt",
+        "wir": "erledigen",
+        "ihr": "erledigt",
+        "sie": "erledigen"
+      }
+    },
+    {
+      "infinitive": "austauschen",
+      "english": "to replace/exchange",
+      "type": "separable",
+      "forms": {
+        "ich": "tausche aus",
+        "du": "tauschst aus",
+        "er": "tauscht aus",
+        "wir": "tauschen aus",
+        "ihr": "tauscht aus",
+        "sie": "tauschen aus"
+      }
+    },
+    {
+      "infinitive": "einladen",
+      "english": "to invite",
+      "type": "separable",
+      "forms": {
+        "ich": "lade ein",
+        "du": "lädst ein",
+        "er": "lädt ein",
+        "wir": "laden ein",
+        "ihr": "ladet ein",
+        "sie": "laden ein"
+      }
+    },
+    {
+      "infinitive": "aufstehen",
+      "english": "to get up",
+      "type": "separable",
+      "forms": {
+        "ich": "stehe auf",
+        "du": "stehst auf",
+        "er": "steht auf",
+        "wir": "stehen auf",
+        "ihr": "steht auf",
+        "sie": "stehen auf"
+      }
+    },
+    {
+      "infinitive": "einkaufen",
+      "english": "to shop (groceries)",
+      "type": "separable",
+      "forms": {
+        "ich": "kaufe ein",
+        "du": "kaufst ein",
+        "er": "kauft ein",
+        "wir": "kaufen ein",
+        "ihr": "kauft ein",
+        "sie": "kaufen ein"
+      }
+    },
+    {
+      "infinitive": "spazieren gehen",
+      "english": "to go for a walk",
+      "type": "regular",
+      "forms": {
+        "ich": "gehe spazieren",
+        "du": "gehst spazieren",
+        "er": "geht spazieren",
+        "wir": "gehen spazieren",
+        "ihr": "geht spazieren",
+        "sie": "gehen spazieren"
+      }
+    },
+    {
+      "infinitive": "sich erinnern",
+      "english": "to remember",
+      "type": "reflexive",
+      "forms": {
+        "ich": "erinnere mich",
+        "du": "erinnerst dich",
+        "er": "erinnert sich",
+        "wir": "erinnern uns",
+        "ihr": "erinnert euch",
+        "sie": "erinnern sich"
+      }
+    },
+    {
+      "infinitive": "sich freuen",
+      "english": "to be happy / to look forward",
+      "type": "reflexive",
+      "forms": {
+        "ich": "freue mich",
+        "du": "freust dich",
+        "er": "freut sich",
+        "wir": "freuen uns",
+        "ihr": "freut euch",
+        "sie": "freuen sich"
+      }
+    },
+    {
+      "infinitive": "sich fühlen",
+      "english": "to feel",
+      "type": "reflexive",
+      "forms": {
+        "ich": "fühle mich",
+        "du": "fühlst dich",
+        "er": "fühlt sich",
+        "wir": "fühlen uns",
+        "ihr": "fühlt euch",
+        "sie": "fühlen sich"
+      }
+    },
+    {
+      "infinitive": "konzentrieren",
+      "english": "to concentrate",
+      "type": "regular",
+      "forms": {
+        "ich": "konzentriere",
+        "du": "konzentrierst",
+        "er": "konzentriert",
+        "wir": "konzentrieren",
+        "ihr": "konzentriert",
+        "sie": "konzentrieren"
+      }
+    },
+    {
+      "infinitive": "sich konzentrieren",
+      "english": "to concentrate (reflexive, common)",
+      "type": "reflexive",
+      "forms": {
+        "ich": "konzentriere mich",
+        "du": "konzentrierst dich",
+        "er": "konzentriert sich",
+        "wir": "konzentrieren uns",
+        "ihr": "konzentriert euch",
+        "sie": "konzentrieren sich"
+      }
+    },
+    {
+      "infinitive": "mögen",
+      "english": "to like",
+      "type": "irregular",
+      "forms": {
+        "ich": "mag",
+        "du": "magst",
+        "er": "mag",
+        "wir": "mögen",
+        "ihr": "mögt",
+        "sie": "mögen"
+      }
+    },
+    {
+      "infinitive": "möchten",
+      "english": "would like",
+      "type": "modal",
+      "forms": {
+        "ich": "möchte",
+        "du": "möchtest",
+        "er": "möchte",
+        "wir": "möchten",
+        "ihr": "möchtet",
+        "sie": "möchten"
+      }
+    },
+    {
+      "infinitive": "können",
+      "english": "can",
+      "type": "modal",
+      "forms": {
+        "ich": "kann",
+        "du": "kannst",
+        "er": "kann",
+        "wir": "können",
+        "ihr": "könnt",
+        "sie": "können"
+      }
+    },
+    {
+      "infinitive": "müssen",
+      "english": "must / to have to",
+      "type": "modal",
+      "forms": {
+        "ich": "muss",
+        "du": "musst",
+        "er": "muss",
+        "wir": "müssen",
+        "ihr": "müsst",
+        "sie": "müssen"
+      }
+    },
+    {
+      "infinitive": "wollen",
+      "english": "to want",
+      "type": "modal",
+      "forms": {
+        "ich": "will",
+        "du": "willst",
+        "er": "will",
+        "wir": "wollen",
+        "ihr": "wollt",
+        "sie": "wollen"
+      }
+    },
+    {
+      "infinitive": "dürfen",
+      "english": "may / to be allowed to",
+      "type": "modal",
+      "forms": {
+        "ich": "darf",
+        "du": "darfst",
+        "er": "darf",
+        "wir": "dürfen",
+        "ihr": "dürft",
+        "sie": "dürfen"
+      }
+    },
+    {
+      "infinitive": "sollen",
+      "english": "should / supposed to",
+      "type": "modal",
+      "forms": {
+        "ich": "soll",
+        "du": "sollst",
+        "er": "soll",
+        "wir": "sollen",
+        "ihr": "sollt",
+        "sie": "sollen"
+      }
+    }
+  ]
 }
