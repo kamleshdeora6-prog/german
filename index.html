@@ -7,43 +7,216 @@
 
 <style>
 :root{
-  --bg:#0b0f14; --card:#121824; --text:#e6eaf2; --muted:#98a2b3; --line:#263042;
-  --panel:#0f1520; --btn:#1e293b; --btnText:#ffffff; --accent:#60a5fa; --good:#22c55e; --bad:#ef4444;
+  --bg:#0b0f14;
+  --card:#121824;
+  --text:#e6eaf2;
+  --muted:#98a2b3;
+  --line:#263042;
+  --panel:#0f1520;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#60a5fa;
+  --good:#22c55e;
+  --bad:#ef4444;
 }
-body.theme-dark{--bg:#0b0f14;--card:#121824;--text:#e6eaf2;--muted:#98a2b3;--line:#263042;--panel:#0f1520;--btn:#1e293b;--btnText:#ffffff;--accent:#60a5fa;--good:#22c55e;--bad:#ef4444}
-body.theme-light{--bg:#f5f7fb;--card:#ffffff;--text:#111111;--muted:#5b6470;--line:#d7dde6;--panel:#f1f3f7;--btn:#1e293b;--btnText:#ffffff;--accent:#2563eb;--good:#16a34a;--bad:#dc2626}
-body.theme-vibrant{--bg:#f6f8ff;--card:#ffffff;--text:#0b1020;--muted:#55607a;--line:#dfe6ff;--panel:#f0f4ff;--btn:#0ea5e9;--btnText:#07111c;--accent:#ec4899;--good:#16a34a;--bad:#dc2626}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-header{padding:16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:50}
-h2{margin:0 0 10px 0}.card{background:var(--card);border:1px solid var(--line);padding:16px;margin:16px;border-radius:12px}
-textarea,input,select{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:10px;border-radius:8px;margin-top:8px;box-sizing:border-box}
-button{padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--btn);color:var(--btnText);cursor:pointer;margin-top:8px}
-button.ghost{background:transparent;color:var(--text)} button.danger{background:#4b1a1a;border-color:#c0392b;color:#fff}
-.tabs button{margin-right:8px}.hidden{display:none}.small{font-size:13px;color:var(--muted)}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:0 0 auto}hr{border:none;border-top:1px solid var(--line);margin:14px 0}
-.badge{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}.pill{border-radius:999px}a{color:var(--accent)}
-.subtabs{display:flex;gap:8px;flex-wrap:wrap}.subtabs button{margin:0;padding:7px 10px;border-radius:999px}.subtabs button.active{outline:2px solid var(--accent);border-color:transparent}
-.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace} pre{white-space:pre-wrap}
-.diffBox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:10px}.okChar{color:var(--good)}.badChar{color:var(--bad);text-decoration:underline}.missChar{background:rgba(239,68,68,.18);color:var(--bad)}.insChar{background:rgba(34,197,94,.18);color:var(--good)}
-.flashwrap{display:grid;gap:12px}.flashcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-height:140px;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;user-select:none}.flashFront{font-size:22px;font-weight:700}.flashBack{font-size:18px}.flashHint{margin-top:10px;color:var(--muted);font-size:12px}
-.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{border:1px solid var(--line);padding:8px;vertical-align:top}.table th{background:rgba(99,102,241,.08)}.hl{background:rgba(236,72,153,.10)}
-.sentencePrompt{background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:10px;margin-top:10px}
-.scoreGood{color:var(--good)} .scoreBad{color:var(--bad)}
+
+body.theme-dark{
+  --bg:#0b0f14;
+  --card:#121824;
+  --text:#e6eaf2;
+  --muted:#98a2b3;
+  --line:#263042;
+  --panel:#0f1520;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#60a5fa;
+  --good:#22c55e;
+  --bad:#ef4444;
+}
+
+body.theme-light{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#5b6470;
+  --line:#d7dde6;
+  --panel:#f1f3f7;
+  --btn:#1e293b;
+  --btnText:#ffffff;
+  --accent:#2563eb;
+  --good:#16a34a;
+  --bad:#dc2626;
+}
+
+body.theme-vibrant{
+  --bg:#f6f8ff;
+  --card:#ffffff;
+  --text:#0b1020;
+  --muted:#55607a;
+  --line:#dfe6ff;
+  --panel:#f0f4ff;
+  --btn:#0ea5e9;
+  --btnText:#07111c;
+  --accent:#ec4899;
+  --good:#16a34a;
+  --bad:#dc2626;
+}
+
+body.theme-duolingo{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#dbe3f0;
+  --panel:#f3f7ff;
+  --btn:#58cc02;
+  --btnText:#ffffff;
+  --accent:#1cb0f6;
+  --good:#58cc02;
+  --bad:#ff4b4b;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  padding:16px;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  z-index:50;
+}
+
+h2{margin:0 0 10px 0}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:16px;
+  margin:16px;
+  border-radius:12px;
+}
+
+textarea,input,select{
+  width:100%;
+  background:var(--panel);
+  border:1px solid var(--line);
+  color:var(--text);
+  padding:10px;
+  border-radius:8px;
+  margin-top:8px;
+  box-sizing:border-box;
+}
+
+button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:var(--btn);
+  color:var(--btnText);
+  cursor:pointer;
+  margin-top:8px;
+}
+
+button.ghost{background:transparent;color:var(--text)}
+button.danger{background:#4b1a1a;border-color:#c0392b;color:#fff}
+.tabs button{margin-right:8px}
+.hidden{display:none}
+.small{font-size:13px;color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row>*{flex:0 0 auto}
+hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+.badge{
+  display:inline-block;
+  padding:2px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+  color:var(--muted);
+}
+.pill{border-radius:999px}
+a{color:var(--accent)}
+.subtabs{display:flex;gap:8px;flex-wrap:wrap}
+.subtabs button{margin:0;padding:7px 10px;border-radius:999px}
+.subtabs button.active{outline:2px solid var(--accent);border-color:transparent}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+pre{white-space:pre-wrap}
+.diffBox{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px;
+  margin-top:10px;
+}
+.okChar{color:var(--good)}
+.badChar{color:var(--bad);text-decoration:underline}
+.missChar{background:rgba(239,68,68,.18);color:var(--bad)}
+.insChar{background:rgba(34,197,94,.18);color:var(--good)}
+
+.flashwrap{display:grid;gap:12px}
+.flashcard{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  min-height:140px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  user-select:none;
+}
+.flashFront{font-size:22px;font-weight:700}
+.flashBack{font-size:18px}
+.flashHint{margin-top:10px;color:var(--muted);font-size:12px}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+.table th,.table td{
+  border:1px solid var(--line);
+  padding:8px;
+  vertical-align:top;
+}
+.table th{background:rgba(99,102,241,.08)}
+.hl{background:rgba(236,72,153,.10)}
+
+.sentencePrompt{
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:12px;
+  border-radius:10px;
+  margin-top:10px;
+}
+.scoreGood{color:var(--good)}
+.scoreBad{color:var(--bad)}
 </style>
 </head>
-<body class="theme-vibrant">
+
+<body class="theme-duolingo">
 <header>
   <h2>German Study App</h2>
   <div class="row">
     <button onclick="goHome()">🏠 Home</button>
     <button onclick="reloadAll()">🔄 Reload Data</button>
+
     <div style="min-width:190px">
       <div class="small">Theme</div>
       <select id="themeSelect" onchange="setTheme(this.value)">
-        <option value="theme-vibrant">Vibrant (default)</option>
+        <option value="theme-duolingo">Duolingo</option>
+        <option value="theme-vibrant">Vibrant</option>
         <option value="theme-dark">Dark</option>
         <option value="theme-light">Light</option>
       </select>
     </div>
+
     <span id="status" class="small"></span>
   </div>
 </header>
@@ -59,7 +232,11 @@ button.ghost{background:transparent;color:var(--text)} button.danger{background:
 </div>
 
 <div id="practiceTab" class="card" role="tabpanel">
-  <div class="row" style="justify-content:space-between"><h3 style="margin:0">Practice</h3><span class="badge">Typing • Exercises • Conjugation</span></div>
+  <div class="row" style="justify-content:space-between">
+    <h3 style="margin:0">Practice</h3>
+    <span class="badge">Typing • Exercises • Conjugation</span>
+  </div>
+
   <div class="subtabs" style="margin-top:10px">
     <button id="sub_typing" class="active" onclick="showPracticeSub('typing')">Typing</button>
     <button id="sub_exercises" onclick="showPracticeSub('exercises')">Exercises</button>
@@ -68,72 +245,247 @@ button.ghost{background:transparent;color:var(--text)} button.danger{background:
 
   <div id="practice_typing" style="margin-top:14px">
     <div class="small">Select a passage → read reference → type it. You’ll see WPM, accuracy, and red highlights for mistakes.</div>
+
     <div class="row" style="margin-top:10px">
-      <div style="min-width:210px;flex:1"><div class="small">Difficulty</div><select id="passageLevelFilter" onchange="renderPassageDropdown()"><option value="ALL">All</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></div>
-      <div style="min-width:330px;flex:2"><div class="small">Passage</div><select id="practiceSelect"></select></div>
-      <div style="min-width:210px;flex:1"><div class="small">Show English</div><select id="showEnglishToggle" onchange="updateReference()"><option value="0">Off</option><option value="1">On</option></select></div>
+      <div style="min-width:210px;flex:1">
+        <div class="small">Difficulty</div>
+        <select id="passageLevelFilter" onchange="renderPassageDropdown()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+        </select>
+      </div>
+
+      <div style="min-width:330px;flex:2">
+        <div class="small">Passage</div>
+        <select id="practiceSelect"></select>
+      </div>
+
+      <div style="min-width:210px;flex:1">
+        <div class="small">Show English</div>
+        <select id="showEnglishToggle" onchange="updateReference()">
+          <option value="0">Off</option>
+          <option value="1">On</option>
+        </select>
+      </div>
     </div>
-    <div style="margin-top:12px" class="small">Reference (German)</div><textarea id="referenceArea" readonly style="min-height:120px"></textarea>
-    <div id="referenceEnglishWrap" class="hidden"><div style="margin-top:12px" class="small">Reference (English)</div><textarea id="referenceEnglishArea" readonly style="min-height:110px"></textarea></div>
-    <div style="margin-top:12px" class="small">Type here</div><textarea id="practiceArea" placeholder="Type here..." style="min-height:130px" oninput="onTypingInput()"></textarea>
-    <div class="row"><button onclick="checkTyping()">Check</button><button class="ghost" onclick="clearTyping()">Clear</button></div>
-    <div class="row" style="margin-top:6px"><span class="badge">WPM: <span id="wpm">0</span></span><span class="badge">Accuracy: <span id="acc">0</span>%</span><span class="badge">Chars: <span id="chars">0</span></span></div>
-    <div id="typingFeedback" class="small" style="margin-top:10px"></div><div id="diffOutput" class="diffBox hidden"></div>
+
+    <div style="margin-top:12px" class="small">Reference (German)</div>
+    <textarea id="referenceArea" readonly style="min-height:120px"></textarea>
+
+    <div id="referenceEnglishWrap" class="hidden">
+      <div style="margin-top:12px" class="small">Reference (English)</div>
+      <textarea id="referenceEnglishArea" readonly style="min-height:110px"></textarea>
+    </div>
+
+    <div style="margin-top:12px" class="small">Type here</div>
+    <textarea id="practiceArea" placeholder="Type here..." style="min-height:130px" oninput="onTypingInput()"></textarea>
+
+    <div class="row">
+      <button onclick="checkTyping()">Check</button>
+      <button class="ghost" onclick="clearTyping()">Clear</button>
+    </div>
+
+    <div class="row" style="margin-top:6px">
+      <span class="badge">WPM: <span id="wpm">0</span></span>
+      <span class="badge">Accuracy: <span id="acc">0</span>%</span>
+      <span class="badge">Chars: <span id="chars">0</span></span>
+    </div>
+
+    <div id="typingFeedback" class="small" style="margin-top:10px"></div>
+    <div id="diffOutput" class="diffBox hidden"></div>
   </div>
 
   <div id="practice_exercises" class="hidden" style="margin-top:14px">
     <div class="small">Exercises are loaded from <b>exercises.json</b>. Filter by level/type, then practice MCQ or typing.</div>
+
     <div class="row" style="margin-top:10px">
-      <div style="min-width:210px"><div class="small">Level</div><select id="exLevel" onchange="resetExerciseFlow()"><option value="ALL">All</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></div>
-      <div style="min-width:260px"><div class="small">Type</div><select id="exType" onchange="resetExerciseFlow()"><option value="ALL">All</option><option value="articles">articles</option><option value="cases">cases</option><option value="prepositions">prepositions</option><option value="adjectives">adjectives</option><option value="conjunctions">conjunctions</option><option value="modal_verbs">modal_verbs</option><option value="verbs">verbs</option><option value="w_questions">w_questions</option><option value="sentence_order">sentence_order</option><option value="connectors">connectors</option><option value="phrases">phrases</option><option value="vocab">vocab</option></select></div>
-      <div style="min-width:190px"><div class="small">Order</div><select id="exOrder" onchange="resetExerciseFlow()"><option value="random">Random</option><option value="sequential">Sequential</option></select></div>
+      <div style="min-width:210px">
+        <div class="small">Level</div>
+        <select id="exLevel" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+        </select>
+      </div>
+
+      <div style="min-width:260px">
+        <div class="small">Type</div>
+        <select id="exType" onchange="resetExerciseFlow()">
+          <option value="ALL">All</option>
+          <option value="articles">articles</option>
+          <option value="cases">cases</option>
+          <option value="prepositions">prepositions</option>
+          <option value="adjectives">adjectives</option>
+          <option value="conjunctions">conjunctions</option>
+          <option value="modal_verbs">modal_verbs</option>
+          <option value="verbs">verbs</option>
+          <option value="w_questions">w_questions</option>
+          <option value="sentence_order">sentence_order</option>
+          <option value="connectors">connectors</option>
+          <option value="phrases">phrases</option>
+          <option value="vocab">vocab</option>
+        </select>
+      </div>
+
+      <div style="min-width:190px">
+        <div class="small">Order</div>
+        <select id="exOrder" onchange="resetExerciseFlow()">
+          <option value="random">Random</option>
+          <option value="sequential">Sequential</option>
+        </select>
+      </div>
     </div>
+
     <hr>
-    <div class="row" style="justify-content:space-between"><div class="badge">Progress: <span id="exProg">0/0</span></div><div class="badge">Mode: <span id="exMode">-</span></div></div>
-    <div style="margin-top:10px"><div id="exQ" style="font-size:18px;font-weight:700"></div><div id="exHint" class="small" style="margin-top:6px"></div></div>
+
+    <div class="row" style="justify-content:space-between">
+      <div class="badge">Progress: <span id="exProg">0/0</span></div>
+      <div class="badge">Mode: <span id="exMode">-</span></div>
+    </div>
+
+    <div style="margin-top:10px">
+      <div id="exQ" style="font-size:18px;font-weight:700"></div>
+      <div id="exHint" class="small" style="margin-top:6px"></div>
+    </div>
+
     <div id="exMCQ" class="row" style="margin-top:10px"></div>
-    <div id="exTypingWrap" class="hidden" style="margin-top:10px"><input id="exTyping" placeholder="Type your answer…" onkeydown="if(event.key==='Enter'){checkExerciseTyping()}"><button onclick="checkExerciseTyping()">Check</button></div>
+
+    <div id="exTypingWrap" class="hidden" style="margin-top:10px">
+      <input id="exTyping" placeholder="Type your answer…" onkeydown="if(event.key==='Enter'){checkExerciseTyping()}">
+      <button onclick="checkExerciseTyping()">Check</button>
+    </div>
+
     <div id="exFeedback" class="small" style="margin-top:10px"></div>
-    <div class="row"><button onclick="nextExercise()">Next</button><button class="ghost" onclick="resetExerciseFlow()">Restart</button></div>
+
+    <div class="row">
+      <button onclick="nextExercise()">Next</button>
+      <button class="ghost" onclick="resetExerciseFlow()">Restart</button>
+    </div>
   </div>
 
   <div id="practice_conjugation" class="hidden" style="margin-top:14px">
-    <div class="small">Conjugation trainer (Präsens). Loaded from <b>conjugations.json</b>. This version accepts several file shapes, including level-grouped data.</div>
+    <div class="small">Conjugation trainer (Präsens). Loaded from <b>conjugation.json</b>.</div>
+
     <div class="row" style="margin-top:10px">
-      <div style="min-width:220px"><div class="small">Type</div><select id="verbTypeFilter" onchange="renderVerbList()"><option value="ALL">All</option><option value="regular">regular</option><option value="irregular">irregular</option><option value="modal">modal</option><option value="separable">separable</option><option value="reflexive">reflexive</option></select></div>
-      <div style="min-width:220px"><div class="small">Level</div><select id="verbLevelFilter" onchange="renderVerbList()"><option value="ALL">All</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></div>
-      <div style="min-width:360px;flex:1"><div class="small">Verb</div><select id="verbSelect" onchange="renderVerb()"></select></div>
-      <div style="min-width:220px"><div class="small">Search</div><input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()"></div>
+      <div style="min-width:220px">
+        <div class="small">Type</div>
+        <select id="verbTypeFilter" onchange="renderVerbList()">
+          <option value="ALL">All</option>
+          <option value="regular">regular</option>
+          <option value="irregular">irregular</option>
+          <option value="modal">modal</option>
+          <option value="separable">separable</option>
+          <option value="reflexive">reflexive</option>
+        </select>
+      </div>
+
+      <div style="min-width:220px">
+        <div class="small">Level</div>
+        <select id="verbLevelFilter" onchange="renderVerbList()">
+          <option value="ALL">All</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+        </select>
+      </div>
+
+      <div style="min-width:360px;flex:1">
+        <div class="small">Verb</div>
+        <select id="verbSelect" onchange="renderVerb()"></select>
+      </div>
+
+      <div style="min-width:220px">
+        <div class="small">Search</div>
+        <input id="verbSearch" placeholder="e.g., gehen, sprechen…" oninput="renderVerbList()">
+      </div>
     </div>
-    <div class="small" style="margin-top:10px"><span class="badge">English: <span id="verbEnglish">—</span></span><span class="badge">Type: <span id="verbType">—</span></span><span class="badge">Level: <span id="verbLevel">—</span></span><span class="badge">Total verbs: <span id="verbCount">0</span></span></div>
-    <table class="table" style="margin-top:10px"><tr><th>Pronoun</th><th>Form</th></tr><tr><td>ich</td><td id="v_ich"></td></tr><tr><td>du</td><td id="v_du"></td></tr><tr><td>er/sie/es</td><td id="v_er"></td></tr><tr><td>wir</td><td id="v_wir"></td></tr><tr><td>ihr</td><td id="v_ihr"></td></tr><tr><td>sie/Sie</td><td id="v_sie"></td></tr></table>
+
+    <div class="small" style="margin-top:10px">
+      <span class="badge">English: <span id="verbEnglish">—</span></span>
+      <span class="badge">Type: <span id="verbType">—</span></span>
+      <span class="badge">Level: <span id="verbLevel">—</span></span>
+      <span class="badge">Total verbs: <span id="verbCount">0</span></span>
+    </div>
+
+    <table class="table" style="margin-top:10px">
+      <tr><th>Pronoun</th><th>Form</th></tr>
+      <tr><td>ich</td><td id="v_ich"></td></tr>
+      <tr><td>du</td><td id="v_du"></td></tr>
+      <tr><td>er/sie/es</td><td id="v_er"></td></tr>
+      <tr><td>wir</td><td id="v_wir"></td></tr>
+      <tr><td>ihr</td><td id="v_ihr"></td></tr>
+      <tr><td>sie/Sie</td><td id="v_sie"></td></tr>
+    </table>
+
     <div id="conjDebug" class="small" style="margin-top:8px"></div>
   </div>
 </div>
 
 <div id="sentenceTab" class="card hidden" role="tabpanel">
-  <div class="row" style="justify-content:space-between"><h3 style="margin:0">Sentence Writing Practice</h3><span class="badge">Structure • Word order • Patterns</span></div>
-  <div class="small" style="margin-top:8px">Loaded from <b>sentences.json</b>. Practice sentence patterns like verb-second, questions, subordinate clauses, modal verbs, Perfekt, separable verbs, reflexive verbs, TMP order, and more.</div>
-  <div class="row" style="margin-top:10px">
-    <div style="min-width:200px"><div class="small">Level</div><select id="sentLevel" onchange="resetSentencePractice()"><option value="ALL">All</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></div>
-    <div style="min-width:260px"><div class="small">Type</div><select id="sentType" onchange="resetSentencePractice()"><option value="ALL">All</option></select></div>
-    <div style="min-width:190px"><div class="small">Order</div><select id="sentOrder" onchange="resetSentencePractice()"><option value="random">Random</option><option value="sequential">Sequential</option></select></div>
+  <div class="row" style="justify-content:space-between">
+    <h3 style="margin:0">Sentence Writing Practice</h3>
+    <span class="badge">Structure • Word order • Patterns</span>
   </div>
+
+  <div class="small" style="margin-top:8px">Loaded from <b>sentences.json</b>. The app shows the English sentence. You write the German sentence.</div>
+
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:200px">
+      <div class="small">Level</div>
+      <select id="sentLevel" onchange="resetSentencePractice()">
+        <option value="ALL">All</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+      </select>
+    </div>
+
+    <div style="min-width:260px">
+      <div class="small">Type</div>
+      <select id="sentType" onchange="resetSentencePractice()">
+        <option value="ALL">All</option>
+      </select>
+    </div>
+
+    <div style="min-width:190px">
+      <div class="small">Order</div>
+      <select id="sentOrder" onchange="resetSentencePractice()">
+        <option value="random">Random</option>
+        <option value="sequential">Sequential</option>
+      </select>
+    </div>
+  </div>
+
   <hr>
-  <div class="row" style="justify-content:space-between"><div class="badge">Progress: <span id="sentProg">0/0</span></div><div class="badge">Mode: <span id="sentMode">-</span></div></div>
+
+  <div class="row" style="justify-content:space-between">
+    <div class="badge">Progress: <span id="sentProg">0/0</span></div>
+    <div class="badge">Mode: <span id="sentMode">-</span></div>
+  </div>
+
   <div id="sentPrompt" class="sentencePrompt">
-    <div id="sentTitle" style="font-weight:700;font-size:18px">No sentence tasks loaded</div>
+    <div id="sentTitle" style="font-weight:700;font-size:22px">No sentence tasks loaded</div>
     <div id="sentHint" class="small" style="margin-top:6px"></div>
     <div id="sentSupport" class="small" style="margin-top:8px;white-space:pre-wrap"></div>
   </div>
-  <div style="margin-top:12px" class="small">Write your sentence in German</div>
-  <textarea id="sentAnswer" placeholder="Write your sentence here..." style="min-height:120px"></textarea>
+
+  <div style="margin-top:12px" class="small">Translate the English sentence into German</div>
+  <textarea id="sentAnswer" placeholder="Write your German sentence here..." style="min-height:120px"></textarea>
+
   <div class="row">
     <button onclick="checkSentencePractice()">Check</button>
     <button class="ghost" onclick="showSentenceSample()">Show sample answer</button>
     <button onclick="nextSentenceTask()">Next</button>
     <button class="ghost" onclick="resetSentencePractice()">Restart</button>
   </div>
+
   <div id="sentFeedback" class="small" style="margin-top:10px"></div>
   <div id="sentSamples" class="small" style="margin-top:8px;white-space:pre-wrap"></div>
 </div>
@@ -141,60 +493,245 @@ button.ghost{background:transparent;color:var(--text)} button.danger{background:
 <div id="libraryTab" class="card hidden" role="tabpanel">
   <h3 style="margin-top:0">Library (local only)</h3>
   <div class="small">Passages are loaded from <b>passages.json</b>. If you want to permanently add passages, edit <b>passages.json</b> in GitHub. Anything you add here is saved only in this browser (localStorage).</div>
-  <div class="row" style="margin-top:10px"><div style="flex:1;min-width:260px"><div class="small">Level (for your local entry)</div><select id="localLevel"><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="local">local</option></select></div></div>
-  <textarea id="germanInput" placeholder="German text (local)"></textarea><textarea id="englishInput" placeholder="English translation (local)"></textarea><button onclick="saveParagraphLocal()">Save locally</button>
+
+  <div class="row" style="margin-top:10px">
+    <div style="flex:1;min-width:260px">
+      <div class="small">Level (for your local entry)</div>
+      <select id="localLevel">
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="local">local</option>
+      </select>
+    </div>
+  </div>
+
+  <textarea id="germanInput" placeholder="German text (local)"></textarea>
+  <textarea id="englishInput" placeholder="English translation (local)"></textarea>
+  <button onclick="saveParagraphLocal()">Save locally</button>
+
   <div id="libraryList" style="margin-top:12px"></div>
 </div>
 
 <div id="notesTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Notes</h3><div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
-  <div class="subtabs" style="margin-top:10px"><button id="notes_sub_study" class="active" onclick="showNotesSub('study')">Study Notes</button><button id="notes_sub_personal" onclick="showNotesSub('personal')">Personal Notes</button></div>
-  <div id="notes_study" style="margin-top:14px"><div class="small">Select a topic</div><select id="notesTopic"></select><textarea id="notesArea" style="min-height:320px" readonly></textarea></div>
-  <div id="notes_personal" class="hidden" style="margin-top:14px"><div class="small">This is your private note pad (saved locally).</div><textarea id="personalNotesArea" style="min-height:320px" placeholder="Write your own notes here…"></textarea><div class="row"><button onclick="savePersonalNotes()">Save</button><button class="ghost" onclick="clearPersonalNotes()">Clear</button></div><div id="personalNotesStatus" class="small" style="margin-top:8px"></div></div>
+  <h3 style="margin-top:0">Notes</h3>
+  <div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
+
+  <div class="subtabs" style="margin-top:10px">
+    <button id="notes_sub_study" class="active" onclick="showNotesSub('study')">Study Notes</button>
+    <button id="notes_sub_personal" onclick="showNotesSub('personal')">Personal Notes</button>
+  </div>
+
+  <div id="notes_study" style="margin-top:14px">
+    <div class="small">Select a topic</div>
+    <select id="notesTopic"></select>
+    <textarea id="notesArea" style="min-height:320px" readonly></textarea>
+  </div>
+
+  <div id="notes_personal" class="hidden" style="margin-top:14px">
+    <div class="small">This is your private note pad (saved locally).</div>
+    <textarea id="personalNotesArea" style="min-height:320px" placeholder="Write your own notes here…"></textarea>
+    <div class="row">
+      <button onclick="savePersonalNotes()">Save</button>
+      <button class="ghost" onclick="clearPersonalNotes()">Clear</button>
+    </div>
+    <div id="personalNotesStatus" class="small" style="margin-top:8px"></div>
+  </div>
 </div>
 
 <div id="flashcardsTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Flashcards</h3><div class="small">Loaded from <b>flashcards.json</b>. English is shown first. Click the card to reveal the German side.</div>
-  <div class="row" style="margin-top:10px"><div style="min-width:260px"><div class="small">Category</div><select id="fcCategory" onchange="startFlashcards()"><option value="ALL">All</option></select></div><div style="min-width:190px"><div class="small">Order</div><select id="fcOrder" onchange="startFlashcards()"><option value="shuffle">Shuffle</option><option value="sequential">Sequential</option></select></div><div class="badge">Card: <span id="fcIndex">0</span>/<span id="fcTotal">0</span></div></div>
-  <div class="flashwrap" style="margin-top:12px"><div id="flashcard" class="flashcard" onclick="flipCard()"><div><div id="fcText" class="flashFront">No cards loaded</div><div id="fcHint" class="flashHint">Click to flip</div></div></div><div class="row"><button onclick="prevCard()">← Prev</button><button onclick="nextCard()">Next →</button><button class="ghost" onclick="flipToFront()">Front</button></div></div>
+  <h3 style="margin-top:0">Flashcards</h3>
+  <div class="small">Loaded from <b>flashcards.json</b>. English is shown first. Click the card to reveal the German side.</div>
+
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:260px">
+      <div class="small">Category</div>
+      <select id="fcCategory" onchange="startFlashcards()">
+        <option value="ALL">All</option>
+      </select>
+    </div>
+
+    <div style="min-width:190px">
+      <div class="small">Order</div>
+      <select id="fcOrder" onchange="startFlashcards()">
+        <option value="shuffle">Shuffle</option>
+        <option value="sequential">Sequential</option>
+      </select>
+    </div>
+
+    <div class="badge">Card: <span id="fcIndex">0</span>/<span id="fcTotal">0</span></div>
+  </div>
+
+  <div class="flashwrap" style="margin-top:12px">
+    <div id="flashcard" class="flashcard" onclick="flipCard()">
+      <div>
+        <div id="fcText" class="flashFront">No cards loaded</div>
+        <div id="fcHint" class="flashHint">Click to flip</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <button onclick="prevCard()">← Prev</button>
+      <button onclick="nextCard()">Next →</button>
+      <button class="ghost" onclick="flipToFront()">Front</button>
+    </div>
+  </div>
 </div>
 
 <div id="translatorTab" class="card hidden" role="tabpanel">
   <h3 style="margin-top:0">Translator</h3>
-  <div class="row" style="margin-top:8px;"><div style="min-width:180px;"><div class="small">From</div><select id="langFrom"><option value="de">German (DE)</option><option value="en">English (EN)</option></select></div><div style="min-width:180px;"><div class="small">To</div><select id="langTo"><option value="en">English (EN)</option><option value="de">German (DE)</option></select></div><div style="margin-top:22px;"><button onclick="swapLangs()">⇄ Swap</button></div></div>
-  <textarea id="translateInput" placeholder="Type/paste text here..."></textarea><div class="row"><button onclick="translateText()">Translate</button><button class="ghost" onclick="clearTranslate()">Clear</button></div><textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
+
+  <div class="row" style="margin-top:8px;">
+    <div style="min-width:180px;">
+      <div class="small">From</div>
+      <select id="langFrom">
+        <option value="de">German (DE)</option>
+        <option value="en">English (EN)</option>
+      </select>
+    </div>
+
+    <div style="min-width:180px;">
+      <div class="small">To</div>
+      <select id="langTo">
+        <option value="en">English (EN)</option>
+        <option value="de">German (DE)</option>
+      </select>
+    </div>
+
+    <div style="margin-top:22px;">
+      <button onclick="swapLangs()">⇄ Swap</button>
+    </div>
+  </div>
+
+  <textarea id="translateInput" placeholder="Type/paste text here..."></textarea>
+
+  <div class="row">
+    <button onclick="translateText()">Translate</button>
+    <button class="ghost" onclick="clearTranslate()">Clear</button>
+  </div>
+
+  <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
+
   <hr>
-  <h3 style="margin-top:0">Dictionary</h3><div class="small">Uses Wiktionary (German). Best with base form (Infinitiv / singular). This version trims very long extracts.</div>
-  <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)"><div class="row"><button onclick="lookupWord()">Lookup</button><button class="ghost" onclick="clearDict()">Clear</button></div><div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
+
+  <h3 style="margin-top:0">Dictionary</h3>
+  <div class="small">Uses Wiktionary (German). Best with base form (Infinitiv / singular). This version trims very long extracts.</div>
+
+  <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
+
+  <div class="row">
+    <button onclick="lookupWord()">Lookup</button>
+    <button class="ghost" onclick="clearDict()">Clear</button>
+  </div>
+
+  <div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
 </div>
 
 <div id="tablesTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Grammar Tables</h3><div class="small">Quick reference tables (definite/indefinite/negative articles). Pink highlight shows changes across cases.</div>
+  <h3 style="margin-top:0">Grammar Tables</h3>
+  <div class="small">Quick reference tables (definite/indefinite/negative articles). Pink highlight shows changes across cases.</div>
+
   <h4>Definite articles (der/die/das)</h4>
-  <table class="table"><tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr><tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Akkusativ</td><td class="hl">den</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Dativ</td><td class="hl">dem</td><td class="hl">der</td><td class="hl">dem</td><td class="hl">den (+n)</td></tr><tr><td>Genitiv</td><td class="hl">des (+s)</td><td class="hl">der</td><td class="hl">des (+s)</td><td class="hl">der</td></tr></table>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">den</td><td>die</td><td>das</td><td>die</td></tr>
+    <tr><td>Dativ</td><td class="hl">dem</td><td class="hl">der</td><td class="hl">dem</td><td class="hl">den (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">des (+s)</td><td class="hl">der</td><td class="hl">des (+s)</td><td class="hl">der</td></tr>
+  </table>
+
   <h4 style="margin-top:18px">Indefinite articles (ein/eine)</h4>
-  <table class="table"><tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr><tr><td>Nominativ</td><td>ein</td><td>eine</td><td>ein</td></tr><tr><td>Akkusativ</td><td class="hl">einen</td><td>eine</td><td>ein</td></tr><tr><td>Dativ</td><td class="hl">einem</td><td class="hl">einer</td><td class="hl">einem</td></tr><tr><td>Genitiv</td><td class="hl">eines</td><td class="hl">einer</td><td class="hl">eines</td></tr></table>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
+    <tr><td>Nominativ</td><td>ein</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">einen</td><td>eine</td><td>ein</td></tr>
+    <tr><td>Dativ</td><td class="hl">einem</td><td class="hl">einer</td><td class="hl">einem</td></tr>
+    <tr><td>Genitiv</td><td class="hl">eines</td><td class="hl">einer</td><td class="hl">eines</td></tr>
+  </table>
+
   <h4 style="margin-top:18px">Negative articles (kein/keine)</h4>
-  <table class="table"><tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr><tr><td>Nominativ</td><td>kein</td><td>keine</td><td>kein</td><td>keine</td></tr><tr><td>Akkusativ</td><td class="hl">keinen</td><td>keine</td><td>kein</td><td>keine</td></tr><tr><td>Dativ</td><td class="hl">keinem</td><td class="hl">keiner</td><td class="hl">keinem</td><td class="hl">keinen (+n)</td></tr><tr><td>Genitiv</td><td class="hl">keines</td><td class="hl">keiner</td><td class="hl">keines</td><td class="hl">keiner</td></tr></table>
+  <table class="table">
+    <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+    <tr><td>Nominativ</td><td>kein</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Akkusativ</td><td class="hl">keinen</td><td>keine</td><td>kein</td><td>keine</td></tr>
+    <tr><td>Dativ</td><td class="hl">keinem</td><td class="hl">keiner</td><td class="hl">keinem</td><td class="hl">keinen (+n)</td></tr>
+    <tr><td>Genitiv</td><td class="hl">keines</td><td class="hl">keiner</td><td class="hl">keines</td><td class="hl">keiner</td></tr>
+  </table>
+
   <h4 style="margin-top:18px">Verb conjugation endings (Präsens)</h4>
-  <table class="table"><tr><th>Pronoun</th><th>Regular ending</th><th>Example with <i>lernen</i></th></tr><tr><td>ich</td><td class="hl">-e</td><td>ich lerne</td></tr><tr><td>du</td><td class="hl">-st</td><td>du lernst</td></tr><tr><td>er/sie/es</td><td class="hl">-t</td><td>er lernt</td></tr><tr><td>wir</td><td>-en</td><td>wir lernen</td></tr><tr><td>ihr</td><td class="hl">-t</td><td>ihr lernt</td></tr><tr><td>sie/Sie</td><td>-en</td><td>sie lernen / Sie lernen</td></tr></table>
+  <table class="table">
+    <tr><th>Pronoun</th><th>Regular ending</th><th>Example with <i>lernen</i></th></tr>
+    <tr><td>ich</td><td class="hl">-e</td><td>ich lerne</td></tr>
+    <tr><td>du</td><td class="hl">-st</td><td>du lernst</td></tr>
+    <tr><td>er/sie/es</td><td class="hl">-t</td><td>er lernt</td></tr>
+    <tr><td>wir</td><td>-en</td><td>wir lernen</td></tr>
+    <tr><td>ihr</td><td class="hl">-t</td><td>ihr lernt</td></tr>
+    <tr><td>sie/Sie</td><td>-en</td><td>sie lernen / Sie lernen</td></tr>
+  </table>
+
   <div class="small" style="margin-top:6px">Common irregular changes: <b>e → i/ie</b> (geben → du gibst), <b>a/o/u → ä/ö/ü</b> (fahren → du fährst). Modal verbs are also irregular.</div>
+
   <h4 style="margin-top:18px">Two-way prepositions (Wechselpräpositionen)</h4>
   <div class="small">in, an, auf, über, unter, vor, hinter, neben, zwischen</div>
   <div class="small" style="margin-top:6px"><b>Movement</b> (Wohin?) → Akkusativ • <b>Location</b> (Wo?) → Dativ</div>
 </div>
 
 <script>
-let passages = [], notesObj = {}, exercises = [], flashcards = [], conjugations = [], sentenceTasks = [];
+let passages = [];
+let notesObj = {};
+let exercises = [];
+let flashcards = [];
+let conjugations = [];
+let sentenceTasks = [];
+
 const statusEl = document.getElementById('status');
 
-function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-function normAnswer(s){ return (s||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[“”„]/g,'"').replace(/[’]/g,"'"); }
-function setStatus(msg){ statusEl.textContent = msg || ''; }
-function setTheme(themeClass){ document.body.classList.remove('theme-dark','theme-light','theme-vibrant'); document.body.classList.add(themeClass); localStorage.setItem('theme', themeClass); }
-function goHome(){ showTab('practiceTab'); }
-function shuffleArray(arr){ const a = arr.slice(); for(let i=a.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
-function makeId(){ return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8); }
+function esc(s){
+  return (s || '').replace(/[&<>"']/g, c => ({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#39;'
+  }[c]));
+}
+
+function normAnswer(s){
+  return (s || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g,' ')
+    .replace(/[“”„]/g,'"')
+    .replace(/[’]/g,"'");
+}
+
+function setStatus(msg){
+  statusEl.textContent = msg || '';
+}
+
+function setTheme(themeClass){
+  document.body.classList.remove('theme-dark','theme-light','theme-vibrant','theme-duolingo');
+  document.body.classList.add(themeClass);
+  localStorage.setItem('theme', themeClass);
+}
+
+function goHome(){
+  showTab('practiceTab', document.querySelector('#tabBar button'));
+}
+
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function makeId(){
+  return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8);
+}
 
 function showTab(id, btn){
   const ids = ['practiceTab','sentenceTab','libraryTab','notesTab','flashcardsTab','translatorTab','tablesTab'];
@@ -204,25 +741,58 @@ function showTab(id, btn){
   if(btn) btn.setAttribute('aria-selected', 'true');
 }
 
-function setSubActive(which){ ['typing','exercises','conjugation'].forEach(s => document.getElementById('sub_'+s).classList.toggle('active', s===which)); }
-function showPracticeSub(which){ setSubActive(which); document.getElementById('practice_typing').classList.toggle('hidden', which!=='typing'); document.getElementById('practice_exercises').classList.toggle('hidden', which!=='exercises'); document.getElementById('practice_conjugation').classList.toggle('hidden', which!=='conjugation'); }
-function setNotesSubActive(which){ document.getElementById('notes_sub_study').classList.toggle('active', which==='study'); document.getElementById('notes_sub_personal').classList.toggle('active', which==='personal'); }
-function showNotesSub(which){ setNotesSubActive(which); document.getElementById('notes_study').classList.toggle('hidden', which!=='study'); document.getElementById('notes_personal').classList.toggle('hidden', which!=='personal'); }
+function setSubActive(which){
+  ['typing','exercises','conjugation'].forEach(s => {
+    document.getElementById('sub_' + s).classList.toggle('active', s === which);
+  });
+}
 
-async function loadJson(path){ const res = await fetch(`./${path}?v=${Date.now()}`, {cache:'no-store'}); if(!res.ok) throw new Error(`${path} not reachable (404 or not in root).`); return await res.json(); }
+function showPracticeSub(which){
+  setSubActive(which);
+  document.getElementById('practice_typing').classList.toggle('hidden', which !== 'typing');
+  document.getElementById('practice_exercises').classList.toggle('hidden', which !== 'exercises');
+  document.getElementById('practice_conjugation').classList.toggle('hidden', which !== 'conjugation');
+}
+
+function setNotesSubActive(which){
+  document.getElementById('notes_sub_study').classList.toggle('active', which === 'study');
+  document.getElementById('notes_sub_personal').classList.toggle('active', which === 'personal');
+}
+
+function showNotesSub(which){
+  setNotesSubActive(which);
+  document.getElementById('notes_study').classList.toggle('hidden', which !== 'study');
+  document.getElementById('notes_personal').classList.toggle('hidden', which !== 'personal');
+}
+
+async function loadJson(path){
+  const res = await fetch(`./${path}?v=${Date.now()}`, { cache:'no-store' });
+  if(!res.ok) throw new Error(`${path} not reachable (404 or not in root).`);
+  return await res.json();
+}
 
 function flattenByLevelObject(raw, keyName){
   const out = [];
   const levels = ['a1','a2','b1','b2','A1','A2','B1','B2'];
+
   levels.forEach(lv => {
     const block = raw?.[lv];
-    if(Array.isArray(block)) block.forEach(item => out.push({...item, level: lv.toUpperCase()}));
-    else if(block && typeof block === 'object'){
+
+    if(Array.isArray(block)){
+      block.forEach(item => out.push({ ...item, level: lv.toUpperCase() }));
+    }else if(block && typeof block === 'object'){
       Object.entries(block).forEach(([type, arr]) => {
-        if(Array.isArray(arr)) arr.forEach(item => out.push({...item, [keyName]: item[keyName] || type, level: lv.toUpperCase()}));
+        if(Array.isArray(arr)){
+          arr.forEach(item => out.push({
+            ...item,
+            [keyName]: item[keyName] || type,
+            level: lv.toUpperCase()
+          }));
+        }
       });
     }
   });
+
   return out;
 }
 
@@ -230,38 +800,108 @@ async function loadPassages(){
   try{
     const raw = await loadJson('passages.json');
     if(!Array.isArray(raw)) throw new Error('passages.json must be an array');
-    passages = raw.map(p => ({ id: p.id || makeId(), g: p.german ?? p.g ?? '', e: p.english ?? p.e ?? '', level: (p.level ?? '').toString().toUpperCase(), localOnly:false })).filter(p => (p.g||'').trim().length);
+
+    passages = raw.map(p => ({
+      id: p.id || makeId(),
+      g: p.german ?? p.g ?? '',
+      e: p.english ?? p.e ?? '',
+      level: (p.level ?? '').toString().toUpperCase(),
+      localOnly: false
+    })).filter(p => (p.g || '').trim().length);
+
     const local = JSON.parse(localStorage.getItem('passages_local') || '[]');
-    if(Array.isArray(local) && local.length){ passages = passages.concat(local.map(p => ({ id: p.id || makeId(), g: p.german ?? p.g ?? '', e: p.english ?? p.e ?? '', level: (p.level ?? 'LOCAL').toString().toUpperCase(), localOnly:true }))); }
+    if(Array.isArray(local) && local.length){
+      passages = passages.concat(local.map(p => ({
+        id: p.id || makeId(),
+        g: p.german ?? p.g ?? '',
+        e: p.english ?? p.e ?? '',
+        level: (p.level ?? 'LOCAL').toString().toUpperCase(),
+        localOnly: true
+      })));
+    }
+
     localStorage.setItem('passages_cache', JSON.stringify(passages));
     return { ok:true, count: passages.length };
-  }catch(e){ passages = JSON.parse(localStorage.getItem('passages_cache') || '[]'); return { ok:false, count: passages.length, err: e.message }; }
+  }catch(e){
+    passages = JSON.parse(localStorage.getItem('passages_cache') || '[]');
+    return { ok:false, count: passages.length, err:e.message };
+  }
 }
 
-async function loadNotes(){ try{ const obj = await loadJson('notes.json'); if(!obj || typeof obj !== 'object' || Array.isArray(obj)) throw new Error('notes.json must be an object'); notesObj = obj; localStorage.setItem('notes_obj_cache', JSON.stringify(notesObj)); return {ok:true,count:Object.keys(notesObj).length}; }catch(e){ notesObj = JSON.parse(localStorage.getItem('notes_obj_cache') || '{}'); return {ok:false,count:Object.keys(notesObj).length,err:e.message}; } }
-async function loadExercises(){ try{ const obj = await loadJson('exercises.json'); const arr = obj?.exercises; if(!Array.isArray(arr)) throw new Error('exercises.json must be { exercises: [...] }'); exercises = arr; localStorage.setItem('exercises_cache', JSON.stringify(exercises)); return {ok:true,count:exercises.length}; }catch(e){ exercises = JSON.parse(localStorage.getItem('exercises_cache') || '[]'); return {ok:false,count:exercises.length,err:e.message}; } }
-async function loadFlashcards(){ try{ const obj = await loadJson('flashcards.json'); const arr = obj?.flashcards; if(!Array.isArray(arr)) throw new Error('flashcards.json must be { flashcards: [...] }'); flashcards = arr; localStorage.setItem('flashcards_cache', JSON.stringify(flashcards)); return {ok:true,count:flashcards.length}; }catch(e){ flashcards = JSON.parse(localStorage.getItem('flashcards_cache') || '[]'); return {ok:false,count:flashcards.length,err:e.message}; } }
+async function loadNotes(){
+  try{
+    const obj = await loadJson('notes.json');
+    if(!obj || typeof obj !== 'object' || Array.isArray(obj)) throw new Error('notes.json must be an object');
+    notesObj = obj;
+    localStorage.setItem('notes_obj_cache', JSON.stringify(notesObj));
+    return { ok:true, count:Object.keys(notesObj).length };
+  }catch(e){
+    notesObj = JSON.parse(localStorage.getItem('notes_obj_cache') || '{}');
+    return { ok:false, count:Object.keys(notesObj).length, err:e.message };
+  }
+}
+
+async function loadExercises(){
+  try{
+    const obj = await loadJson('exercises.json');
+    const arr = obj?.exercises;
+    if(!Array.isArray(arr)) throw new Error('exercises.json must be { exercises: [...] }');
+    exercises = arr;
+    localStorage.setItem('exercises_cache', JSON.stringify(exercises));
+    return { ok:true, count:exercises.length };
+  }catch(e){
+    exercises = JSON.parse(localStorage.getItem('exercises_cache') || '[]');
+    return { ok:false, count:exercises.length, err:e.message };
+  }
+}
+
+async function loadFlashcards(){
+  try{
+    const obj = await loadJson('flashcards.json');
+    const arr = obj?.flashcards;
+    if(!Array.isArray(arr)) throw new Error('flashcards.json must be { flashcards: [...] }');
+    flashcards = arr;
+    localStorage.setItem('flashcards_cache', JSON.stringify(flashcards));
+    return { ok:true, count:flashcards.length };
+  }catch(e){
+    flashcards = JSON.parse(localStorage.getItem('flashcards_cache') || '[]');
+    return { ok:false, count:flashcards.length, err:e.message };
+  }
+}
 
 async function loadSentenceTasks(){
   try{
     const raw = await loadJson('sentences.json');
     let arr = [];
-    if(Array.isArray(raw)) arr = raw;
-    else if(Array.isArray(raw?.sentences)) arr = raw.sentences;
-    else arr = flattenByLevelObject(raw, 'type');
+
+    if(Array.isArray(raw)){
+      arr = raw;
+    }else if(Array.isArray(raw?.sentences)){
+      arr = raw.sentences;
+    }else{
+      arr = flattenByLevelObject(raw, 'type');
+    }
+
     sentenceTasks = arr.map((x, i) => ({
-      id: x.id ?? i+1,
+      id: x.id ?? i + 1,
       level: (x.level ?? '').toString().toUpperCase(),
       type: (x.type ?? x.category ?? x.topic ?? 'general').toString(),
-      mode: (x.mode ?? 'sentence').toString(),
-      title: x.title ?? x.prompt ?? x.question ?? 'Write a sentence',
-      hint: x.hint ?? x.rule ?? '',
-      support: x.support ?? x.words ?? x.wordsToUse ?? x.instructions ?? '',
-      answers: Array.isArray(x.answers) ? x.answers : [x.answer, x.sample, x.example].filter(Boolean)
+      mode: 'sentence',
+      title: x.en ?? x.title ?? x.prompt ?? x.question ?? 'Write the German sentence',
+      hint: x.hint ?? '',
+      support: x.support ?? '',
+      answers: Array.isArray(x.answers)
+        ? x.answers
+        : [x.de, x.answer, x.sample, x.example].filter(Boolean)
     })).filter(x => x.title);
+
     localStorage.setItem('sentences_cache', JSON.stringify(sentenceTasks));
-    return {ok:true,count:sentenceTasks.length};
-  }catch(e){ sentenceTasks = JSON.parse(localStorage.getItem('sentences_cache') || '[]'); return {ok:false,count:sentenceTasks.length,err:e.message}; }
+    return { ok:true, count:sentenceTasks.length };
+  }catch(e){
+    console.error('Sentence load error:', e);
+    sentenceTasks = JSON.parse(localStorage.getItem('sentences_cache') || '[]');
+    return { ok:false, count:sentenceTasks.length, err:e.message };
+  }
 }
 
 function extractForms(item){
@@ -287,85 +927,769 @@ function normalizeConjugationItem(v, forcedLevel=''){
 
 async function loadConjugations(){
   try{
-    const raw = await loadJson('conjugations.json');
+    const raw = await loadJson('conjugation.json');
     let arr = [];
-    if(Array.isArray(raw)) arr = raw.map(v => normalizeConjugationItem(v));
-    else if(Array.isArray(raw?.verbs)) arr = raw.verbs.map(v => normalizeConjugationItem(v));
-    else {
+
+    if(Array.isArray(raw)){
+      arr = raw.map(v => normalizeConjugationItem(v));
+    }else if(Array.isArray(raw?.verbs)){
+      arr = raw.verbs.map(v => normalizeConjugationItem(v));
+    }else{
       const flat = flattenByLevelObject(raw, 'type');
       arr = flat.map(v => normalizeConjugationItem(v, v.level));
     }
-    conjugations = arr.filter(v => v.verb && (v.forms.ich || v.forms.du || v.forms.er || v.forms.wir || v.forms.ihr || v.forms.sie));
+
+    conjugations = arr.filter(v =>
+      v.verb &&
+      (v.forms.ich || v.forms.du || v.forms.er || v.forms.wir || v.forms.ihr || v.forms.sie)
+    );
+
     localStorage.setItem('conjugations_cache', JSON.stringify(conjugations));
-    return {ok:true,count:conjugations.length};
-  }catch(e){ conjugations = JSON.parse(localStorage.getItem('conjugations_cache') || '[]'); return {ok:false,count:conjugations.length,err:e.message}; }
+    return { ok:true, count:conjugations.length };
+  }catch(e){
+    console.error('Conjugations load error:', e);
+    conjugations = JSON.parse(localStorage.getItem('conjugations_cache') || '[]');
+    return { ok:false, count:conjugations.length, err:e.message };
+  }
 }
 
 async function reloadAll(){
   setStatus('Loading…');
-  const p = await loadPassages(), n = await loadNotes(), ex = await loadExercises(), fc = await loadFlashcards(), cj = await loadConjugations(), st = await loadSentenceTasks();
-  setStatus([p.ok?`✅ passages:${p.count}`:`⚠️ passages:${p.count}`, n.ok?`✅ notes:${n.count}`:`⚠️ notes:${n.count}`, ex.ok?`✅ exercises:${ex.count}`:`⚠️ exercises:${ex.count}`, fc.ok?`✅ flashcards:${fc.count}`:`⚠️ flashcards:${fc.count}`, cj.ok?`✅ conjugations:${cj.count}`:`⚠️ conjugations:${cj.count}`, st.ok?`✅ sentences:${st.count}`:`⚠️ sentences:${st.count}`].join(' • '));
-  renderPassageDropdown(); renderLibrary(); renderNotesTopics(); resetExerciseFlow(); renderFlashcardCategories(); startFlashcards(); renderVerbList(); renderVerb(); renderSentenceTypes(); resetSentencePractice();
-  document.getElementById('conjDebug').textContent = conjugations.length ? '' : 'No conjugations detected. Supported formats: array, { verbs:[...] }, or level-grouped objects like { a1:{ regular:[...] } }.';
+
+  const p = await loadPassages();
+  const n = await loadNotes();
+  const ex = await loadExercises();
+  const fc = await loadFlashcards();
+  const cj = await loadConjugations();
+  const st = await loadSentenceTasks();
+
+  setStatus([
+    p.ok  ? `✅ passages:${p.count}`      : `⚠️ passages:${p.count}`,
+    n.ok  ? `✅ notes:${n.count}`         : `⚠️ notes:${n.count}`,
+    ex.ok ? `✅ exercises:${ex.count}`    : `⚠️ exercises:${ex.count}`,
+    fc.ok ? `✅ flashcards:${fc.count}`   : `⚠️ flashcards:${fc.count}`,
+    cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`,
+    st.ok ? `✅ sentences:${st.count}`    : `⚠️ sentences:${st.count}`
+  ].join(' • '));
+
+  renderPassageDropdown();
+  renderLibrary();
+  renderNotesTopics();
+  resetExerciseFlow();
+  renderFlashcardCategories();
+  startFlashcards();
+  renderVerbList();
+  renderVerb();
+  renderSentenceTypes();
+  resetSentencePractice();
+
+  document.getElementById('conjDebug').textContent = conjugations.length
+    ? ''
+    : 'No conjugations detected. Check that conjugation.json is in the repo root and has { "verbs":[...] }.';
 }
 
-const practiceSelect = document.getElementById('practiceSelect'); const referenceArea = document.getElementById('referenceArea'); const referenceEnglishArea = document.getElementById('referenceEnglishArea'); const referenceEnglishWrap = document.getElementById('referenceEnglishWrap'); const practiceArea = document.getElementById('practiceArea'); const diffOutput = document.getElementById('diffOutput');
-let typingStartMs = null, typingStarted = false;
-function getFilteredPassages(){ const lvl = document.getElementById('passageLevelFilter').value; return lvl==='ALL' ? passages : passages.filter(p => (p.level||'').toUpperCase()===lvl); }
-function renderPassageDropdown(){ const list = getFilteredPassages(); practiceSelect.innerHTML=''; if(!list.length){ practiceSelect.innerHTML='<option value="">No passages loaded</option>'; referenceArea.value=''; referenceEnglishArea.value=''; return; } list.forEach((p,idx)=>{ const opt=document.createElement('option'); opt.value=String(idx); opt.textContent=((p.level?`[${p.level}] `:'') + p.g.slice(0,60).replace(/\n/g,' ')); practiceSelect.appendChild(opt); }); practiceSelect.value='0'; updateReference(); }
+const practiceSelect = document.getElementById('practiceSelect');
+const referenceArea = document.getElementById('referenceArea');
+const referenceEnglishArea = document.getElementById('referenceEnglishArea');
+const referenceEnglishWrap = document.getElementById('referenceEnglishWrap');
+const practiceArea = document.getElementById('practiceArea');
+const diffOutput = document.getElementById('diffOutput');
+
+let typingStartMs = null;
+let typingStarted = false;
+
+function getFilteredPassages(){
+  const lvl = document.getElementById('passageLevelFilter').value;
+  return lvl === 'ALL' ? passages : passages.filter(p => (p.level || '').toUpperCase() === lvl);
+}
+
+function renderPassageDropdown(){
+  const list = getFilteredPassages();
+  practiceSelect.innerHTML = '';
+
+  if(!list.length){
+    practiceSelect.innerHTML = '<option value="">No passages loaded</option>';
+    referenceArea.value = '';
+    referenceEnglishArea.value = '';
+    return;
+  }
+
+  list.forEach((p, idx) => {
+    const opt = document.createElement('option');
+    opt.value = String(idx);
+    opt.textContent = ((p.level ? `[${p.level}] ` : '') + p.g.slice(0,60).replace(/\n/g,' '));
+    practiceSelect.appendChild(opt);
+  });
+
+  practiceSelect.value = '0';
+  updateReference();
+}
+
 practiceSelect.addEventListener('change', updateReference);
-function updateReference(){ const showEn = document.getElementById('showEnglishToggle').value==='1'; referenceEnglishWrap.classList.toggle('hidden', !showEn); const list = getFilteredPassages(); const p = list[Number(practiceSelect.value)]; referenceArea.value = p ? p.g : ''; referenceEnglishArea.value = p ? (p.e || '') : ''; clearTyping(); }
-function onTypingInput(){ if(!typingStarted){ typingStarted=true; typingStartMs=Date.now(); } document.getElementById('chars').textContent=String(practiceArea.value.length); }
-function clearTyping(){ practiceArea.value=''; document.getElementById('typingFeedback').textContent=''; diffOutput.classList.add('hidden'); diffOutput.innerHTML=''; typingStarted=false; typingStartMs=null; document.getElementById('wpm').textContent='0'; document.getElementById('acc').textContent='0'; document.getElementById('chars').textContent='0'; }
-function computeWpm(typedText, startMs){ if(!startMs) return 0; const mins=(Date.now()-startMs)/60000; if(mins<=0) return 0; const words=typedText.trim().length ? typedText.trim().split(/\s+/).length : 0; return Math.round(words/mins); }
-function diffStrings(ref, typed){ const maxLen=Math.max(ref.length, typed.length); let correct=0, out=''; for(let i=0;i<maxLen;i++){ const r=ref[i], t=typed[i]; if(r===undefined && t!==undefined){ out += `<span class="insChar">${esc(t)}</span>`; continue; } if(t===undefined && r!==undefined){ out += `<span class="missChar">${esc(r)}</span>`; continue; } if(r===t){ correct++; out += `<span class="okChar">${esc(t)}</span>`; } else out += `<span class="badChar">${esc(t)}</span>`; } const acc = ref.length ? Math.round((correct/ref.length)*100) : 0; return {html:out, accuracy:acc}; }
-function checkTyping(){ const p=getFilteredPassages()[Number(practiceSelect.value)]; if(!p){ document.getElementById('typingFeedback').textContent='No passage selected.'; return; } const ref=p.g||'', typed=practiceArea.value||'', wpm=computeWpm(typed, typingStartMs), d=diffStrings(ref, typed); document.getElementById('wpm').textContent=String(wpm); document.getElementById('acc').textContent=String(d.accuracy); if(typed===ref){ document.getElementById('typingFeedback').innerHTML='<span class="scoreGood">✅ Perfect! Exact match.</span>'; diffOutput.classList.add('hidden'); } else { document.getElementById('typingFeedback').innerHTML='<span class="scoreBad">❌ Not exact.</span> Tip: check commas, umlauts, spaces, and line breaks.'; diffOutput.classList.remove('hidden'); diffOutput.innerHTML=`<div class="small" style="margin-bottom:6px">Highlight view (red = wrong/missing, green = extra):</div><div class="mono">${d.html}</div>`; } }
 
-function saveParagraphLocal(){ const g=(document.getElementById('germanInput').value||'').trim(), e=(document.getElementById('englishInput').value||'').trim(), level=(document.getElementById('localLevel').value||'local').toUpperCase(); if(!g){ alert('German text required.'); return; } const local=JSON.parse(localStorage.getItem('passages_local') || '[]'); local.push({ id: makeId(), g, e, level, localOnly:true }); localStorage.setItem('passages_local', JSON.stringify(local)); document.getElementById('germanInput').value=''; document.getElementById('englishInput').value=''; reloadAll(); alert('Saved locally.'); }
-function renderLibrary(){ const list = document.getElementById('libraryList'); list.innerHTML=''; if(!passages.length){ list.innerHTML='<div class="small">No passages.</div>'; return; } passages.forEach(p => { const box=document.createElement('div'); box.style.border='1px solid var(--line)'; box.style.borderRadius='10px'; box.style.padding='10px'; box.style.marginTop='10px'; box.innerHTML=`<div class="small"><b>${esc(p.level||'')}</b> ${p.localOnly?'<span class="badge pill">local</span>':''}</div><div style="white-space:pre-wrap;margin-top:6px">${esc(p.g)}</div>${p.e?`<div class="small" style="white-space:pre-wrap;margin-top:6px">EN: ${esc(p.e)}</div>`:''}${p.localOnly?`<button class="danger" onclick="deleteLocalPassageById('${esc(p.id)}')">Delete (local)</button>`:'<div class="small">Edit in GitHub to change.</div>'}`; list.appendChild(box); }); }
-function deleteLocalPassageById(id){ const local=JSON.parse(localStorage.getItem('passages_local') || '[]'); localStorage.setItem('passages_local', JSON.stringify(local.filter(p => p.id !== id))); reloadAll(); }
+function updateReference(){
+  const showEn = document.getElementById('showEnglishToggle').value === '1';
+  referenceEnglishWrap.classList.toggle('hidden', !showEn);
 
-function renderNotesTopics(){ const notesTopic=document.getElementById('notesTopic'), notesArea=document.getElementById('notesArea'), keys=Object.keys(notesObj||{}); notesTopic.innerHTML=''; if(!keys.length){ notesTopic.innerHTML='<option value="">No notes loaded</option>'; notesArea.value=''; return; } keys.forEach(k=>{ const opt=document.createElement('option'); opt.value=k; opt.textContent=k.replaceAll('_',' '); notesTopic.appendChild(opt); }); const last=localStorage.getItem('notes_topic'); const chosen=(last && keys.includes(last)) ? last : keys[0]; notesTopic.value=chosen; notesArea.value=String(notesObj[chosen] ?? ''); notesTopic.onchange = () => { localStorage.setItem('notes_topic', notesTopic.value); notesArea.value=String(notesObj[notesTopic.value] ?? ''); }; document.getElementById('personalNotesArea').value=localStorage.getItem('personal_notes') || ''; document.getElementById('personalNotesStatus').textContent=''; }
-function savePersonalNotes(){ localStorage.setItem('personal_notes', document.getElementById('personalNotesArea').value || ''); document.getElementById('personalNotesStatus').textContent='✅ Saved locally.'; }
-function clearPersonalNotes(){ document.getElementById('personalNotesArea').value=''; localStorage.removeItem('personal_notes'); document.getElementById('personalNotesStatus').textContent='Cleared.'; }
+  const list = getFilteredPassages();
+  const p = list[Number(practiceSelect.value)];
 
-let exPool=[], exIndex=0, exCurrent=null;
-function buildExercisePool(){ const lvl=document.getElementById('exLevel').value, type=document.getElementById('exType').value, order=document.getElementById('exOrder').value; exPool=(exercises||[]).filter(e => (lvl==='ALL'||(e.level||'').toUpperCase()===lvl) && (type==='ALL'||(e.type||'')===type)); exPool = order==='random' ? shuffleArray(exPool) : exPool.slice().sort((a,b)=>(a.id||0)-(b.id||0)); exIndex=0; }
-function resetExerciseFlow(){ buildExercisePool(); document.getElementById('exFeedback').textContent=''; nextExercise(true); }
-function renderExercise(e){ const exQ=document.getElementById('exQ'), exHint=document.getElementById('exHint'), exMCQ=document.getElementById('exMCQ'), exTypingWrap=document.getElementById('exTypingWrap'), exTyping=document.getElementById('exTyping'), exProg=document.getElementById('exProg'), exMode=document.getElementById('exMode'); exMCQ.innerHTML=''; exTypingWrap.classList.add('hidden'); exTyping.value=''; if(!e){ exQ.textContent='No exercises found for this filter.'; exHint.textContent='Change filters above.'; exProg.textContent='0/0'; exMode.textContent='-'; return; } exQ.textContent=e.question || ''; exHint.textContent=`${e.level||''} • ${e.type||''} • id:${e.id ?? '-'}`; exProg.textContent=`${Math.min(exIndex+1, exPool.length)}/${exPool.length}`; exMode.textContent=e.mode || '-'; if(e.mode==='mcq' && Array.isArray(e.options)){ e.options.forEach(opt => { const b=document.createElement('button'); b.textContent=opt; b.onclick=()=>checkExerciseMCQ(opt); exMCQ.appendChild(b); }); } else { exTypingWrap.classList.remove('hidden'); setTimeout(()=>exTyping.focus(),0); } }
-function nextExercise(isFirst=false){ if(!exPool.length){ renderExercise(null); return; } if(!isFirst){ exIndex++; if(exIndex>=exPool.length) exIndex=0; } exCurrent=exPool[exIndex]; document.getElementById('exFeedback').textContent=''; renderExercise(exCurrent); }
-function checkExerciseMCQ(chosen){ if(!exCurrent) return; const right=String(exCurrent.answer ?? ''); const ok=normAnswer(chosen)===normAnswer(right); document.getElementById('exFeedback').innerHTML = ok ? '<span class="scoreGood">✅ Correct!</span>' : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`; }
-function checkExerciseTyping(){ if(!exCurrent) return; const inp=document.getElementById('exTyping').value||'', right=String(exCurrent.answer ?? ''), ok=normAnswer(inp)===normAnswer(right); document.getElementById('exFeedback').innerHTML = ok ? '<span class="scoreGood">✅ Correct!</span>' : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`; }
+  referenceArea.value = p ? p.g : '';
+  referenceEnglishArea.value = p ? (p.e || '') : '';
+  clearTyping();
+}
 
-let fcPool=[], fcIdx=0, fcFlipped=false;
-function renderFlashcardCategories(){ const sel=document.getElementById('fcCategory'); const cats=Array.from(new Set((flashcards||[]).map(c => (c.category||'').toString()))).filter(Boolean).sort(); const current=sel.value || 'ALL'; sel.innerHTML='<option value="ALL">All</option>'; cats.forEach(c => { const opt=document.createElement('option'); opt.value=c; opt.textContent=c; sel.appendChild(opt); }); if(cats.includes(current)) sel.value=current; }
-function startFlashcards(){ const cat=document.getElementById('fcCategory').value, order=document.getElementById('fcOrder').value; fcPool=(flashcards||[]).filter(c => cat==='ALL' || String(c.category)===cat); if(order==='shuffle') fcPool=shuffleArray(fcPool); fcIdx=0; fcFlipped=false; document.getElementById('fcTotal').textContent=String(fcPool.length); showFlashCard(); }
-function showFlashCard(){ const fcText=document.getElementById('fcText'), fcHint=document.getElementById('fcHint'); if(!fcPool.length){ fcText.textContent='No cards loaded'; fcHint.textContent='Check flashcards.json'; document.getElementById('fcIndex').textContent='0'; return; } const c=fcPool[fcIdx]; document.getElementById('fcIndex').textContent=String(fcIdx+1); if(!fcFlipped){ fcText.className='flashFront'; fcText.textContent=c.back ?? c.english ?? ''; fcHint.textContent='Click to flip (show German)'; } else { fcText.className='flashBack'; fcText.textContent=c.front ?? c.german ?? ''; fcHint.textContent='Click to flip (show English)'; } }
-function flipCard(){ if(!fcPool.length) return; fcFlipped=!fcFlipped; showFlashCard(); }
-function flipToFront(){ fcFlipped=false; showFlashCard(); }
-function nextCard(){ if(!fcPool.length) return; fcIdx=(fcIdx+1)%fcPool.length; fcFlipped=false; showFlashCard(); }
-function prevCard(){ if(!fcPool.length) return; fcIdx=(fcIdx-1+fcPool.length)%fcPool.length; fcFlipped=false; showFlashCard(); }
+function onTypingInput(){
+  if(!typingStarted){
+    typingStarted = true;
+    typingStartMs = Date.now();
+  }
+  document.getElementById('chars').textContent = String(practiceArea.value.length);
+}
 
-function getFilteredVerbs(){ const type=document.getElementById('verbTypeFilter').value, level=document.getElementById('verbLevelFilter').value, q=(document.getElementById('verbSearch').value || '').trim().toLowerCase(); let list=conjugations||[]; if(type!=='ALL') list=list.filter(v => (v.type||'')===type); if(level!=='ALL') list=list.filter(v => (v.level||'')===level); if(q) list=list.filter(v => (v.verb||'').toLowerCase().includes(q) || (v.english||'').toLowerCase().includes(q)); return list; }
-function renderVerbList(){ const sel=document.getElementById('verbSelect'), list=getFilteredVerbs(); document.getElementById('verbCount').textContent=String(list.length); const current=sel.value || ''; sel.innerHTML=''; if(!list.length){ sel.innerHTML='<option value="">No verbs loaded</option>'; renderVerb(null); return; } list.slice().sort((a,b)=>(a.verb||'').localeCompare(b.verb||'')).forEach(v => { const opt=document.createElement('option'); opt.value=v.verb; opt.textContent=`${v.verb}${v.type ? ' • '+v.type : ''}${v.level ? ' • '+v.level : ''}${v.english ? ' • '+v.english : ''}`; sel.appendChild(opt); }); if(current && [...sel.options].some(o => o.value===current)) sel.value=current; else sel.value=sel.options[0].value; renderVerb(); }
-function renderVerb(passed){ const sel=document.getElementById('verbSelect'), list=getFilteredVerbs(); let v=passed; if(!v){ const chosen=sel.value; v=list.find(x => x.verb===chosen) || list[0] || null; } const setCell=(id,val)=>{ const el=document.getElementById(id); if(el) el.textContent=val || '—'; }; if(!v){ document.getElementById('verbEnglish').textContent='—'; document.getElementById('verbType').textContent='—'; document.getElementById('verbLevel').textContent='—'; ['v_ich','v_du','v_er','v_wir','v_ihr','v_sie'].forEach(id=>setCell(id,'—')); return; } document.getElementById('verbEnglish').textContent=v.english || '—'; document.getElementById('verbType').textContent=v.type || '—'; document.getElementById('verbLevel').textContent=v.level || '—'; setCell('v_ich', v.forms?.ich); setCell('v_du', v.forms?.du); setCell('v_er', v.forms?.er); setCell('v_wir', v.forms?.wir); setCell('v_ihr', v.forms?.ihr); setCell('v_sie', v.forms?.sie); }
+function clearTyping(){
+  practiceArea.value = '';
+  document.getElementById('typingFeedback').textContent = '';
+  diffOutput.classList.add('hidden');
+  diffOutput.innerHTML = '';
+  typingStarted = false;
+  typingStartMs = null;
+  document.getElementById('wpm').textContent = '0';
+  document.getElementById('acc').textContent = '0';
+  document.getElementById('chars').textContent = '0';
+}
 
-let sentPool=[], sentIdx=0, sentCurrent=null;
-function renderSentenceTypes(){ const sel=document.getElementById('sentType'); const current=sel.value || 'ALL'; const types=Array.from(new Set((sentenceTasks||[]).map(x => x.type).filter(Boolean))).sort(); sel.innerHTML='<option value="ALL">All</option>'; types.forEach(t=>{ const opt=document.createElement('option'); opt.value=t; opt.textContent=t; sel.appendChild(opt); }); if(types.includes(current)) sel.value=current; }
-function buildSentencePool(){ const lvl=document.getElementById('sentLevel').value, type=document.getElementById('sentType').value, order=document.getElementById('sentOrder').value; sentPool=(sentenceTasks||[]).filter(x => (lvl==='ALL'||(x.level||'')===lvl) && (type==='ALL'||(x.type||'')===type)); sentPool = order==='random' ? shuffleArray(sentPool) : sentPool.slice().sort((a,b)=>(a.id||0)-(b.id||0)); sentIdx=0; }
-function resetSentencePractice(){ buildSentencePool(); document.getElementById('sentAnswer').value=''; document.getElementById('sentFeedback').textContent=''; document.getElementById('sentSamples').textContent=''; nextSentenceTask(true); }
-function renderSentenceTask(task){ const title=document.getElementById('sentTitle'), hint=document.getElementById('sentHint'), support=document.getElementById('sentSupport'); if(!task){ title.textContent='No sentence tasks loaded'; hint.textContent='Check sentences.json or change filters.'; support.textContent=''; document.getElementById('sentProg').textContent='0/0'; document.getElementById('sentMode').textContent='-'; return; } title.textContent=task.title; hint.textContent=`${task.level || ''} • ${task.type || ''}`; support.textContent=typeof task.support==='string' ? task.support : JSON.stringify(task.support, null, 2); document.getElementById('sentProg').textContent=`${Math.min(sentIdx+1, sentPool.length)}/${sentPool.length}`; document.getElementById('sentMode').textContent=task.mode || 'sentence'; }
-function nextSentenceTask(isFirst=false){ if(!sentPool.length){ renderSentenceTask(null); return; } if(!isFirst){ sentIdx++; if(sentIdx>=sentPool.length) sentIdx=0; } sentCurrent=sentPool[sentIdx]; document.getElementById('sentAnswer').value=''; document.getElementById('sentFeedback').textContent=''; document.getElementById('sentSamples').textContent=''; renderSentenceTask(sentCurrent); }
-function checkSentencePractice(){ if(!sentCurrent) return; const ans=(document.getElementById('sentAnswer').value||'').trim(); if(!ans){ document.getElementById('sentFeedback').innerHTML='<span class="scoreBad">Write a sentence first.</span>'; return; } const possible=(sentCurrent.answers||[]).filter(Boolean); const ok=possible.some(a => normAnswer(a)===normAnswer(ans)); if(ok){ document.getElementById('sentFeedback').innerHTML='<span class="scoreGood">✅ Great. Your answer matches one of the sample answers.</span>'; } else if(possible.length){ document.getElementById('sentFeedback').innerHTML='<span class="scoreBad">Not an exact sample match.</span> Your sentence may still be correct. Compare it with the sample answer and check verb position, subject, and word order.'; } else { document.getElementById('sentFeedback').innerHTML='Checked. Use the structure hint to self-review: verb position, clause type, and final verbs.'; } }
-function showSentenceSample(){ if(!sentCurrent){ return; } const samples=(sentCurrent.answers||[]).filter(Boolean); document.getElementById('sentSamples').textContent = samples.length ? 'Sample answer(s):\n- ' + samples.join('\n- ') : 'No sample answer available in sentences.json yet.'; }
+function computeWpm(typedText, startMs){
+  if(!startMs) return 0;
+  const mins = (Date.now() - startMs) / 60000;
+  if(mins <= 0) return 0;
+  const words = typedText.trim().length ? typedText.trim().split(/\s+/).length : 0;
+  return Math.round(words / mins);
+}
 
-function swapLangs(){ const from=document.getElementById('langFrom'), to=document.getElementById('langTo'); const tmp=from.value; from.value=to.value; to.value=tmp; const inp=document.getElementById('translateInput'), out=document.getElementById('translateOutput'); const t=inp.value; inp.value=out.value; out.value=t; }
-function clearTranslate(){ document.getElementById('translateInput').value=''; document.getElementById('translateOutput').value=''; }
-async function translateText(){ const text=(document.getElementById('translateInput').value||'').trim(); if(!text) return; const sl=document.getElementById('langFrom').value, tl=document.getElementById('langTo').value; const url='https://translate.googleapis.com/translate_a/single?client=gtx' + `&sl=${encodeURIComponent(sl)}` + `&tl=${encodeURIComponent(tl)}` + '&dt=t&q=' + encodeURIComponent(text); try{ const res=await fetch(url); const data=await res.json(); document.getElementById('translateOutput').value=(data[0] || []).map(x => x[0]).join(''); }catch{ document.getElementById('translateOutput').value='Translation failed (network/rate-limit). Try again.'; } }
-function clearDict(){ document.getElementById('dictWord').value=''; document.getElementById('dictResult').textContent=''; }
-async function lookupWord(){ const w=(document.getElementById('dictWord').value||'').trim(); const out=document.getElementById('dictResult'); out.textContent=''; if(!w) return; const url='https://de.wiktionary.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1&redirects=1&titles=' + encodeURIComponent(w) + '&origin=*'; try{ const res=await fetch(url); const data=await res.json(); const pages=data?.query?.pages; const pageId=pages ? Object.keys(pages)[0] : null; const page=pageId ? pages[pageId] : null; if(!page || page.missing){ out.textContent='Not found on Wiktionary. Try the base form (Infinitiv / singular).'; return; } const title=page.title || w; let extract=(page.extract || '').trim(); if(extract.length > 1800) extract = extract.slice(0,1800).trim() + '\n\n[truncated]'; out.textContent = extract ? `${title}\n\n${extract}` : `${title}\n\n(Found, but no extract available. Try another form.)`; }catch{ out.textContent='Dictionary lookup failed (network/CORS). Try again.'; } }
+function diffStrings(ref, typed){
+  const maxLen = Math.max(ref.length, typed.length);
+  let correct = 0;
+  let out = '';
 
-(function init(){ const savedTheme=localStorage.getItem('theme') || 'theme-vibrant'; setTheme(savedTheme); document.getElementById('themeSelect').value=savedTheme; document.getElementById('personalNotesArea').value=localStorage.getItem('personal_notes') || ''; showTab('practiceTab', document.querySelector('#tabBar button')); showPracticeSub('typing'); showNotesSub('study'); reloadAll(); })();
+  for(let i = 0; i < maxLen; i++){
+    const r = ref[i];
+    const t = typed[i];
+
+    if(r === undefined && t !== undefined){
+      out += `<span class="insChar">${esc(t)}</span>`;
+      continue;
+    }
+    if(t === undefined && r !== undefined){
+      out += `<span class="missChar">${esc(r)}</span>`;
+      continue;
+    }
+    if(r === t){
+      correct++;
+      out += `<span class="okChar">${esc(t)}</span>`;
+    }else{
+      out += `<span class="badChar">${esc(t)}</span>`;
+    }
+  }
+
+  const acc = ref.length ? Math.round((correct / ref.length) * 100) : 0;
+  return { html:out, accuracy:acc };
+}
+
+function checkTyping(){
+  const p = getFilteredPassages()[Number(practiceSelect.value)];
+  if(!p){
+    document.getElementById('typingFeedback').textContent = 'No passage selected.';
+    return;
+  }
+
+  const ref = p.g || '';
+  const typed = practiceArea.value || '';
+  const wpm = computeWpm(typed, typingStartMs);
+  const d = diffStrings(ref, typed);
+
+  document.getElementById('wpm').textContent = String(wpm);
+  document.getElementById('acc').textContent = String(d.accuracy);
+
+  if(typed === ref){
+    document.getElementById('typingFeedback').innerHTML = '<span class="scoreGood">✅ Perfect! Exact match.</span>';
+    diffOutput.classList.add('hidden');
+  }else{
+    document.getElementById('typingFeedback').innerHTML = '<span class="scoreBad">❌ Not exact.</span> Tip: check commas, umlauts, spaces, and line breaks.';
+    diffOutput.classList.remove('hidden');
+    diffOutput.innerHTML = `<div class="small" style="margin-bottom:6px">Highlight view (red = wrong/missing, green = extra):</div><div class="mono">${d.html}</div>`;
+  }
+}
+
+function saveParagraphLocal(){
+  const g = (document.getElementById('germanInput').value || '').trim();
+  const e = (document.getElementById('englishInput').value || '').trim();
+  const level = (document.getElementById('localLevel').value || 'local').toUpperCase();
+
+  if(!g){
+    alert('German text required.');
+    return;
+  }
+
+  const local = JSON.parse(localStorage.getItem('passages_local') || '[]');
+  local.push({ id:makeId(), g, e, level, localOnly:true });
+  localStorage.setItem('passages_local', JSON.stringify(local));
+
+  document.getElementById('germanInput').value = '';
+  document.getElementById('englishInput').value = '';
+  reloadAll();
+  alert('Saved locally.');
+}
+
+function renderLibrary(){
+  const list = document.getElementById('libraryList');
+  list.innerHTML = '';
+
+  if(!passages.length){
+    list.innerHTML = '<div class="small">No passages.</div>';
+    return;
+  }
+
+  passages.forEach(p => {
+    const box = document.createElement('div');
+    box.style.border = '1px solid var(--line)';
+    box.style.borderRadius = '10px';
+    box.style.padding = '10px';
+    box.style.marginTop = '10px';
+
+    box.innerHTML = `
+      <div class="small"><b>${esc(p.level || '')}</b> ${p.localOnly ? '<span class="badge pill">local</span>' : ''}</div>
+      <div style="white-space:pre-wrap;margin-top:6px">${esc(p.g)}</div>
+      ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px">EN: ${esc(p.e)}</div>` : ''}
+      ${p.localOnly ? `<button class="danger" onclick="deleteLocalPassageById('${esc(p.id)}')">Delete (local)</button>` : '<div class="small">Edit in GitHub to change.</div>'}
+    `;
+
+    list.appendChild(box);
+  });
+}
+
+function deleteLocalPassageById(id){
+  const local = JSON.parse(localStorage.getItem('passages_local') || '[]');
+  localStorage.setItem('passages_local', JSON.stringify(local.filter(p => p.id !== id)));
+  reloadAll();
+}
+
+function renderNotesTopics(){
+  const notesTopic = document.getElementById('notesTopic');
+  const notesArea = document.getElementById('notesArea');
+  const keys = Object.keys(notesObj || {});
+  notesTopic.innerHTML = '';
+
+  if(!keys.length){
+    notesTopic.innerHTML = '<option value="">No notes loaded</option>';
+    notesArea.value = '';
+    return;
+  }
+
+  keys.forEach(k => {
+    const opt = document.createElement('option');
+    opt.value = k;
+    opt.textContent = k.replaceAll('_', ' ');
+    notesTopic.appendChild(opt);
+  });
+
+  const last = localStorage.getItem('notes_topic');
+  const chosen = (last && keys.includes(last)) ? last : keys[0];
+
+  notesTopic.value = chosen;
+  notesArea.value = String(notesObj[chosen] ?? '');
+
+  notesTopic.onchange = () => {
+    localStorage.setItem('notes_topic', notesTopic.value);
+    notesArea.value = String(notesObj[notesTopic.value] ?? '');
+  };
+
+  document.getElementById('personalNotesArea').value = localStorage.getItem('personal_notes') || '';
+  document.getElementById('personalNotesStatus').textContent = '';
+}
+
+function savePersonalNotes(){
+  localStorage.setItem('personal_notes', document.getElementById('personalNotesArea').value || '');
+  document.getElementById('personalNotesStatus').textContent = '✅ Saved locally.';
+}
+
+function clearPersonalNotes(){
+  document.getElementById('personalNotesArea').value = '';
+  localStorage.removeItem('personal_notes');
+  document.getElementById('personalNotesStatus').textContent = 'Cleared.';
+}
+
+let exPool = [];
+let exIndex = 0;
+let exCurrent = null;
+
+function buildExercisePool(){
+  const lvl = document.getElementById('exLevel').value;
+  const type = document.getElementById('exType').value;
+  const order = document.getElementById('exOrder').value;
+
+  exPool = (exercises || []).filter(e =>
+    (lvl === 'ALL' || (e.level || '').toUpperCase() === lvl) &&
+    (type === 'ALL' || (e.type || '') === type)
+  );
+
+  exPool = order === 'random'
+    ? shuffleArray(exPool)
+    : exPool.slice().sort((a,b) => (a.id || 0) - (b.id || 0));
+
+  exIndex = 0;
+}
+
+function resetExerciseFlow(){
+  buildExercisePool();
+  document.getElementById('exFeedback').textContent = '';
+  nextExercise(true);
+}
+
+function renderExercise(e){
+  const exQ = document.getElementById('exQ');
+  const exHint = document.getElementById('exHint');
+  const exMCQ = document.getElementById('exMCQ');
+  const exTypingWrap = document.getElementById('exTypingWrap');
+  const exTyping = document.getElementById('exTyping');
+  const exProg = document.getElementById('exProg');
+  const exMode = document.getElementById('exMode');
+
+  exMCQ.innerHTML = '';
+  exTypingWrap.classList.add('hidden');
+  exTyping.value = '';
+
+  if(!e){
+    exQ.textContent = 'No exercises found for this filter.';
+    exHint.textContent = 'Change filters above.';
+    exProg.textContent = '0/0';
+    exMode.textContent = '-';
+    return;
+  }
+
+  exQ.textContent = e.question || '';
+  exHint.textContent = `${e.level || ''} • ${e.type || ''} • id:${e.id ?? '-'}`;
+  exProg.textContent = `${Math.min(exIndex + 1, exPool.length)}/${exPool.length}`;
+  exMode.textContent = e.mode || '-';
+
+  if(e.mode === 'mcq' && Array.isArray(e.options)){
+    e.options.forEach(opt => {
+      const b = document.createElement('button');
+      b.textContent = opt;
+      b.onclick = () => checkExerciseMCQ(opt);
+      exMCQ.appendChild(b);
+    });
+  }else{
+    exTypingWrap.classList.remove('hidden');
+    setTimeout(() => exTyping.focus(), 0);
+  }
+}
+
+function nextExercise(isFirst=false){
+  if(!exPool.length){
+    renderExercise(null);
+    return;
+  }
+
+  if(!isFirst){
+    exIndex++;
+    if(exIndex >= exPool.length) exIndex = 0;
+  }
+
+  exCurrent = exPool[exIndex];
+  document.getElementById('exFeedback').textContent = '';
+  renderExercise(exCurrent);
+}
+
+function checkExerciseMCQ(chosen){
+  if(!exCurrent) return;
+  const right = String(exCurrent.answer ?? '');
+  const ok = normAnswer(chosen) === normAnswer(right);
+  document.getElementById('exFeedback').innerHTML = ok
+    ? '<span class="scoreGood">✅ Correct!</span>'
+    : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+function checkExerciseTyping(){
+  if(!exCurrent) return;
+  const inp = document.getElementById('exTyping').value || '';
+  const right = String(exCurrent.answer ?? '');
+  const ok = normAnswer(inp) === normAnswer(right);
+  document.getElementById('exFeedback').innerHTML = ok
+    ? '<span class="scoreGood">✅ Correct!</span>'
+    : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+}
+
+let fcPool = [];
+let fcIdx = 0;
+let fcFlipped = false;
+
+function renderFlashcardCategories(){
+  const sel = document.getElementById('fcCategory');
+  const cats = Array.from(new Set((flashcards || []).map(c => (c.category || '').toString()))).filter(Boolean).sort();
+  const current = sel.value || 'ALL';
+
+  sel.innerHTML = '<option value="ALL">All</option>';
+  cats.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+
+  if(cats.includes(current)) sel.value = current;
+}
+
+function startFlashcards(){
+  const cat = document.getElementById('fcCategory').value;
+  const order = document.getElementById('fcOrder').value;
+
+  fcPool = (flashcards || []).filter(c => cat === 'ALL' || String(c.category) === cat);
+  if(order === 'shuffle') fcPool = shuffleArray(fcPool);
+
+  fcIdx = 0;
+  fcFlipped = false;
+  document.getElementById('fcTotal').textContent = String(fcPool.length);
+  showFlashCard();
+}
+
+function showFlashCard(){
+  const fcText = document.getElementById('fcText');
+  const fcHint = document.getElementById('fcHint');
+
+  if(!fcPool.length){
+    fcText.textContent = 'No cards loaded';
+    fcHint.textContent = 'Check flashcards.json';
+    document.getElementById('fcIndex').textContent = '0';
+    return;
+  }
+
+  const c = fcPool[fcIdx];
+  document.getElementById('fcIndex').textContent = String(fcIdx + 1);
+
+  if(!fcFlipped){
+    fcText.className = 'flashFront';
+    fcText.textContent = c.back ?? c.english ?? '';
+    fcHint.textContent = 'Click to flip (show German)';
+  }else{
+    fcText.className = 'flashBack';
+    fcText.textContent = c.front ?? c.german ?? '';
+    fcHint.textContent = 'Click to flip (show English)';
+  }
+}
+
+function flipCard(){
+  if(!fcPool.length) return;
+  fcFlipped = !fcFlipped;
+  showFlashCard();
+}
+
+function flipToFront(){
+  fcFlipped = false;
+  showFlashCard();
+}
+
+function nextCard(){
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx + 1) % fcPool.length;
+  fcFlipped = false;
+  showFlashCard();
+}
+
+function prevCard(){
+  if(!fcPool.length) return;
+  fcIdx = (fcIdx - 1 + fcPool.length) % fcPool.length;
+  fcFlipped = false;
+  showFlashCard();
+}
+
+function getFilteredVerbs(){
+  const type = document.getElementById('verbTypeFilter').value;
+  const level = document.getElementById('verbLevelFilter').value;
+  const q = (document.getElementById('verbSearch').value || '').trim().toLowerCase();
+
+  let list = conjugations || [];
+
+  if(type !== 'ALL') list = list.filter(v => (v.type || '') === type);
+  if(level !== 'ALL') list = list.filter(v => (v.level || '') === level);
+  if(q) list = list.filter(v =>
+    (v.verb || '').toLowerCase().includes(q) ||
+    (v.english || '').toLowerCase().includes(q)
+  );
+
+  return list;
+}
+
+function renderVerbList(){
+  const sel = document.getElementById('verbSelect');
+  const list = getFilteredVerbs();
+
+  document.getElementById('verbCount').textContent = String(list.length);
+  const current = sel.value || '';
+  sel.innerHTML = '';
+
+  if(!list.length){
+    sel.innerHTML = '<option value="">No verbs loaded</option>';
+    renderVerb(null);
+    return;
+  }
+
+  list.slice()
+    .sort((a,b) => (a.verb || '').localeCompare(b.verb || ''))
+    .forEach(v => {
+      const opt = document.createElement('option');
+      opt.value = v.verb;
+      opt.textContent = `${v.verb}${v.type ? ' • ' + v.type : ''}${v.level ? ' • ' + v.level : ''}${v.english ? ' • ' + v.english : ''}`;
+      sel.appendChild(opt);
+    });
+
+  if(current && [...sel.options].some(o => o.value === current)){
+    sel.value = current;
+  }else{
+    sel.value = sel.options[0].value;
+  }
+
+  renderVerb();
+}
+
+function renderVerb(passed){
+  const sel = document.getElementById('verbSelect');
+  const list = getFilteredVerbs();
+  let v = passed;
+
+  if(!v){
+    const chosen = sel.value;
+    v = list.find(x => x.verb === chosen) || list[0] || null;
+  }
+
+  const setCell = (id, val) => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = val || '—';
+  };
+
+  if(!v){
+    document.getElementById('verbEnglish').textContent = '—';
+    document.getElementById('verbType').textContent = '—';
+    document.getElementById('verbLevel').textContent = '—';
+    ['v_ich','v_du','v_er','v_wir','v_ihr','v_sie'].forEach(id => setCell(id,'—'));
+    return;
+  }
+
+  document.getElementById('verbEnglish').textContent = v.english || '—';
+  document.getElementById('verbType').textContent = v.type || '—';
+  document.getElementById('verbLevel').textContent = v.level || '—';
+  setCell('v_ich', v.forms?.ich);
+  setCell('v_du', v.forms?.du);
+  setCell('v_er', v.forms?.er);
+  setCell('v_wir', v.forms?.wir);
+  setCell('v_ihr', v.forms?.ihr);
+  setCell('v_sie', v.forms?.sie);
+}
+
+let sentPool = [];
+let sentIdx = 0;
+let sentCurrent = null;
+
+function renderSentenceTypes(){
+  const sel = document.getElementById('sentType');
+  const current = sel.value || 'ALL';
+  const types = Array.from(new Set((sentenceTasks || []).map(x => x.type).filter(Boolean))).sort();
+
+  sel.innerHTML = '<option value="ALL">All</option>';
+  types.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t;
+    sel.appendChild(opt);
+  });
+
+  if(types.includes(current)) sel.value = current;
+}
+
+function buildSentencePool(){
+  const lvl = document.getElementById('sentLevel').value;
+  const type = document.getElementById('sentType').value;
+  const order = document.getElementById('sentOrder').value;
+
+  sentPool = (sentenceTasks || []).filter(x =>
+    (lvl === 'ALL' || (x.level || '') === lvl) &&
+    (type === 'ALL' || (x.type || '') === type)
+  );
+
+  sentPool = order === 'random'
+    ? shuffleArray(sentPool)
+    : sentPool.slice().sort((a,b) => (a.id || 0) - (b.id || 0));
+
+  sentIdx = 0;
+}
+
+function resetSentencePractice(){
+  buildSentencePool();
+  document.getElementById('sentAnswer').value = '';
+  document.getElementById('sentFeedback').textContent = '';
+  document.getElementById('sentSamples').textContent = '';
+  nextSentenceTask(true);
+}
+
+function renderSentenceTask(task){
+  const title = document.getElementById('sentTitle');
+  const hint = document.getElementById('sentHint');
+  const support = document.getElementById('sentSupport');
+
+  if(!task){
+    title.textContent = 'No sentence tasks loaded';
+    hint.textContent = 'Check sentences.json or change filters.';
+    support.textContent = '';
+    document.getElementById('sentProg').textContent = '0/0';
+    document.getElementById('sentMode').textContent = '-';
+    return;
+  }
+
+  title.textContent = task.title;
+  hint.textContent = `${task.level || ''} • ${task.type || ''}`;
+  support.textContent = task.support || '';
+  document.getElementById('sentProg').textContent = `${Math.min(sentIdx + 1, sentPool.length)}/${sentPool.length}`;
+  document.getElementById('sentMode').textContent = task.mode || 'sentence';
+}
+
+function nextSentenceTask(isFirst=false){
+  if(!sentPool.length){
+    renderSentenceTask(null);
+    return;
+  }
+
+  if(!isFirst){
+    sentIdx++;
+    if(sentIdx >= sentPool.length) sentIdx = 0;
+  }
+
+  sentCurrent = sentPool[sentIdx];
+  document.getElementById('sentAnswer').value = '';
+  document.getElementById('sentFeedback').textContent = '';
+  document.getElementById('sentSamples').textContent = '';
+  renderSentenceTask(sentCurrent);
+}
+
+function checkSentencePractice(){
+  if(!sentCurrent) return;
+
+  const ans = (document.getElementById('sentAnswer').value || '').trim();
+  if(!ans){
+    document.getElementById('sentFeedback').innerHTML = '<span class="scoreBad">Write a sentence first.</span>';
+    return;
+  }
+
+  const possible = (sentCurrent.answers || []).filter(Boolean);
+  const ok = possible.some(a => normAnswer(a) === normAnswer(ans));
+
+  if(ok){
+    document.getElementById('sentFeedback').innerHTML = '<span class="scoreGood">✅ Great. Your answer matches one of the sample answers.</span>';
+  }else if(possible.length){
+    document.getElementById('sentFeedback').innerHTML = '<span class="scoreBad">Not an exact sample match.</span> Your sentence may still be correct. Compare it with the sample answer and check verb position, subject, and word order.';
+  }else{
+    document.getElementById('sentFeedback').innerHTML = 'Checked. Use the structure hint to self-review: verb position, clause type, and final verbs.';
+  }
+}
+
+function showSentenceSample(){
+  if(!sentCurrent) return;
+  const samples = (sentCurrent.answers || []).filter(Boolean);
+  document.getElementById('sentSamples').textContent = samples.length
+    ? 'Sample answer(s):\n- ' + samples.join('\n- ')
+    : 'No sample answer available in sentences.json yet.';
+}
+
+function swapLangs(){
+  const from = document.getElementById('langFrom');
+  const to = document.getElementById('langTo');
+  const tmp = from.value;
+  from.value = to.value;
+  to.value = tmp;
+
+  const inp = document.getElementById('translateInput');
+  const out = document.getElementById('translateOutput');
+  const t = inp.value;
+  inp.value = out.value;
+  out.value = t;
+}
+
+function clearTranslate(){
+  document.getElementById('translateInput').value = '';
+  document.getElementById('translateOutput').value = '';
+}
+
+async function translateText(){
+  const text = (document.getElementById('translateInput').value || '').trim();
+  if(!text) return;
+
+  const sl = document.getElementById('langFrom').value;
+  const tl = document.getElementById('langTo').value;
+
+  const url =
+    'https://translate.googleapis.com/translate_a/single?client=gtx' +
+    `&sl=${encodeURIComponent(sl)}` +
+    `&tl=${encodeURIComponent(tl)}` +
+    '&dt=t&q=' + encodeURIComponent(text);
+
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    document.getElementById('translateOutput').value = (data[0] || []).map(x => x[0]).join('');
+  }catch{
+    document.getElementById('translateOutput').value = 'Translation failed (network/rate-limit). Try again.';
+  }
+}
+
+function clearDict(){
+  document.getElementById('dictWord').value = '';
+  document.getElementById('dictResult').textContent = '';
+}
+
+async function lookupWord(){
+  const w = (document.getElementById('dictWord').value || '').trim();
+  const out = document.getElementById('dictResult');
+  out.textContent = '';
+  if(!w) return;
+
+  const url =
+    'https://de.wiktionary.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1&redirects=1&titles=' +
+    encodeURIComponent(w) +
+    '&origin=*';
+
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    const pages = data?.query?.pages;
+    const pageId = pages ? Object.keys(pages)[0] : null;
+    const page = pageId ? pages[pageId] : null;
+
+    if(!page || page.missing){
+      out.textContent = 'Not found on Wiktionary. Try the base form (Infinitiv / singular).';
+      return;
+    }
+
+    const title = page.title || w;
+    let extract = (page.extract || '').trim();
+    if(extract.length > 1800) extract = extract.slice(0,1800).trim() + '\n\n[truncated]';
+
+    out.textContent = extract
+      ? `${title}\n\n${extract}`
+      : `${title}\n\n(Found, but no extract available. Try another form.)`;
+  }catch{
+    out.textContent = 'Dictionary lookup failed (network/CORS). Try again.';
+  }
+}
+
+(function init(){
+  const savedTheme = localStorage.getItem('theme') || 'theme-duolingo';
+  setTheme(savedTheme);
+  document.getElementById('themeSelect').value = savedTheme;
+  document.getElementById('personalNotesArea').value = localStorage.getItem('personal_notes') || '';
+  showTab('practiceTab', document.querySelector('#tabBar button'));
+  showPracticeSub('typing');
+  showNotesSub('study');
+  reloadAll();
+})();
 </script>
 </body>
 </html>
