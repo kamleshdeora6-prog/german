@@ -18,112 +18,101 @@
   --accent:#60a5fa;
   --good:#22c55e;
   --bad:#ef4444;
+  --shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 body.theme-dark{
-  --bg:#0b0f14;
-  --card:#121824;
-  --text:#e6eaf2;
-  --muted:#98a2b3;
-  --line:#263042;
-  --panel:#0f1520;
-  --btn:#1e293b;
-  --btnText:#ffffff;
-  --accent:#60a5fa;
-  --good:#22c55e;
-  --bad:#ef4444;
+  --bg:#0b0f14; --card:#121824; --text:#e6eaf2; --muted:#98a2b3; --line:#263042;
+  --panel:#0f1520; --btn:#1e293b; --btnText:#ffffff; --accent:#60a5fa; --good:#22c55e; --bad:#ef4444;
+  --shadow:0 10px 20px rgba(0,0,0,.18);
 }
 
 body.theme-light{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#111111;
-  --muted:#5b6470;
-  --line:#d7dde6;
-  --panel:#f1f3f7;
-  --btn:#1e293b;
-  --btnText:#ffffff;
-  --accent:#2563eb;
-  --good:#16a34a;
-  --bad:#dc2626;
+  --bg:#f5f7fb; --card:#ffffff; --text:#111111; --muted:#5b6470; --line:#d7dde6;
+  --panel:#f1f3f7; --btn:#1e293b; --btnText:#ffffff; --accent:#2563eb; --good:#16a34a; --bad:#dc2626;
+  --shadow:0 6px 18px rgba(0,0,0,.06);
 }
 
 body.theme-vibrant{
-  --bg:#f6f8ff;
-  --card:#ffffff;
-  --text:#0b1020;
-  --muted:#55607a;
-  --line:#dfe6ff;
-  --panel:#f0f4ff;
-  --btn:#0ea5e9;
-  --btnText:#07111c;
-  --accent:#ec4899;
-  --good:#16a34a;
-  --bad:#dc2626;
+  --bg:#f6f8ff; --card:#ffffff; --text:#0b1020; --muted:#55607a; --line:#dfe6ff;
+  --panel:#f0f4ff; --btn:#0ea5e9; --btnText:#07111c; --accent:#ec4899; --good:#16a34a; --bad:#dc2626;
+  --shadow:0 8px 22px rgba(51,65,85,.08);
 }
 
 body.theme-duolingo{
-  --bg:#f7f7fb;
+  --bg:#dff1ff;
   --card:#ffffff;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --line:#dbe3f0;
-  --panel:#f3f7ff;
-  --btn:#58cc02;
+  --text:#17324d;
+  --muted:#5e7a96;
+  --line:#c8ddf7;
+  --panel:#f5fbff;
+  --btn:#2a8cff;
   --btnText:#ffffff;
-  --accent:#1cb0f6;
+  --accent:#5bb7ff;
   --good:#58cc02;
   --bad:#ff4b4b;
+  --shadow:0 10px 22px rgba(42,140,255,.12);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(255,255,255,.65) 0%, transparent 26%),
+    radial-gradient(circle at 88% 85%, rgba(124,192,255,.25) 0%, transparent 28%),
+    radial-gradient(circle at 75% 20%, rgba(91,183,255,.20) 0%, transparent 30%),
+    linear-gradient(180deg,#cfeaff 0%, #eaf7ff 35%, #dff1ff 100%);
 }
 
+*{box-sizing:border-box}
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
-
 header{
   padding:16px;
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
-  background:var(--bg);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
   z-index:50;
 }
-
-h2{margin:0 0 10px 0}
+body.theme-duolingo header{
+  background:linear-gradient(90deg, rgba(42,140,255,.16), rgba(91,183,255,.10));
+}
+h2{margin:0}
+h3{margin:0}
 .card{
   background:var(--card);
   border:1px solid var(--line);
   padding:16px;
   margin:16px;
-  border-radius:12px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
 }
-
 textarea,input,select{
   width:100%;
   background:var(--panel);
   border:1px solid var(--line);
   color:var(--text);
   padding:10px;
-  border-radius:8px;
+  border-radius:12px;
   margin-top:8px;
   box-sizing:border-box;
 }
-
 button{
-  padding:8px 12px;
-  border-radius:8px;
+  padding:10px 14px;
+  border-radius:999px;
   border:1px solid var(--line);
   background:var(--btn);
   color:var(--btnText);
   cursor:pointer;
   margin-top:8px;
+  font-weight:700;
+  box-shadow:0 3px 0 rgba(0,0,0,.08);
 }
-
+button:hover{filter:brightness(.98)}
+button:active{transform:translateY(1px)}
 button.ghost{background:transparent;color:var(--text)}
-button.danger{background:#4b1a1a;border-color:#c0392b;color:#fff}
+button.danger{background:#7f1d1d;border-color:#c0392b;color:#fff}
 .tabs button{margin-right:8px}
 .hidden{display:none}
 .small{font-size:13px;color:var(--muted)}
@@ -131,24 +120,23 @@ button.danger{background:#4b1a1a;border-color:#c0392b;color:#fff}
 .row>*{flex:0 0 auto}
 hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 .badge{
-  display:inline-block;
-  padding:2px 8px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  font-size:12px;
-  color:var(--muted);
+  display:inline-block;padding:4px 10px;border:1px solid var(--line);
+  border-radius:999px;font-size:12px;color:var(--muted);background:rgba(255,255,255,.35)
 }
 .pill{border-radius:999px}
 a{color:var(--accent)}
 .subtabs{display:flex;gap:8px;flex-wrap:wrap}
-.subtabs button{margin:0;padding:7px 10px;border-radius:999px}
-.subtabs button.active{outline:2px solid var(--accent);border-color:transparent}
+.subtabs button{margin:0;padding:8px 12px;border-radius:999px}
+.subtabs button.active{
+  outline:2px solid var(--accent);
+  border-color:transparent;
+}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
 pre{white-space:pre-wrap}
 .diffBox{
   background:var(--panel);
   border:1px solid var(--line);
-  border-radius:10px;
+  border-radius:12px;
   padding:10px;
   margin-top:10px;
 }
@@ -161,9 +149,9 @@ pre{white-space:pre-wrap}
 .flashcard{
   background:var(--panel);
   border:1px solid var(--line);
-  border-radius:14px;
+  border-radius:18px;
   padding:16px;
-  min-height:140px;
+  min-height:160px;
   cursor:pointer;
   display:flex;
   align-items:center;
@@ -171,53 +159,71 @@ pre{white-space:pre-wrap}
   text-align:center;
   user-select:none;
 }
-.flashFront{font-size:22px;font-weight:700}
-.flashBack{font-size:18px}
+.flashFront{font-size:24px;font-weight:800}
+.flashBack{font-size:19px}
 .flashHint{margin-top:10px;color:var(--muted);font-size:12px}
 
-.table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:10px;
-}
-.table th,.table td{
-  border:1px solid var(--line);
-  padding:8px;
-  vertical-align:top;
-}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{border:1px solid var(--line);padding:8px;vertical-align:top}
 .table th{background:rgba(99,102,241,.08)}
 .hl{background:rgba(236,72,153,.10)}
-
 .sentencePrompt{
   background:var(--panel);
   border:1px solid var(--line);
-  padding:12px;
-  border-radius:10px;
+  padding:14px;
+  border-radius:14px;
   margin-top:10px;
 }
 .scoreGood{color:var(--good)}
 .scoreBad{color:var(--bad)}
+#mascot{
+  font-size:28px;
+  animation:floatButterfly 4s ease-in-out infinite;
+  filter:hue-rotate(180deg) saturate(1.1);
+}
+@keyframes floatButterfly{
+  0%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-6px) rotate(6deg)}
+  100%{transform:translateY(0) rotate(0deg)}
+}
+.headerTitle{
+  display:flex;align-items:center;gap:10px;min-width:260px
+}
+.headerTop{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap
+}
+.softBox{
+  padding:10px 12px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  border-radius:12px;
+}
 </style>
 </head>
-
 <body class="theme-duolingo">
 <header>
-  <h2>German Study App</h2>
-  <div class="row">
-    <button onclick="goHome()">🏠 Home</button>
-    <button onclick="reloadAll()">🔄 Reload Data</button>
-
-    <div style="min-width:190px">
-      <div class="small">Theme</div>
-      <select id="themeSelect" onchange="setTheme(this.value)">
-        <option value="theme-duolingo">Duolingo</option>
-        <option value="theme-vibrant">Vibrant</option>
-        <option value="theme-dark">Dark</option>
-        <option value="theme-light">Light</option>
-      </select>
+  <div class="headerTop">
+    <div class="headerTitle">
+      <div id="mascot">🦋</div>
+      <h2>German Study App</h2>
     </div>
 
-    <span id="status" class="small"></span>
+    <div class="row">
+      <button onclick="goHome()">🏠 Home</button>
+      <button onclick="reloadAll()">🔄 Reload Data</button>
+
+      <div style="min-width:190px">
+        <div class="small">Theme</div>
+        <select id="themeSelect" onchange="setTheme(this.value)">
+          <option value="theme-duolingo">Blue Duolingo</option>
+          <option value="theme-vibrant">Vibrant</option>
+          <option value="theme-dark">Dark</option>
+          <option value="theme-light">Light</option>
+        </select>
+      </div>
+
+      <span id="status" class="small"></span>
+    </div>
   </div>
 </header>
 
@@ -233,7 +239,7 @@ pre{white-space:pre-wrap}
 
 <div id="practiceTab" class="card" role="tabpanel">
   <div class="row" style="justify-content:space-between">
-    <h3 style="margin:0">Practice</h3>
+    <h3>Practice</h3>
     <span class="badge">Typing • Exercises • Conjugation</span>
   </div>
 
@@ -429,14 +435,14 @@ pre{white-space:pre-wrap}
 
 <div id="sentenceTab" class="card hidden" role="tabpanel">
   <div class="row" style="justify-content:space-between">
-    <h3 style="margin:0">Sentence Writing Practice</h3>
-    <span class="badge">Structure • Word order • Patterns</span>
+    <h3>Sentence Writing Practice</h3>
+    <span class="badge">English → German</span>
   </div>
 
   <div class="small" style="margin-top:8px">Loaded from <b>sentences.json</b>. The app shows the English sentence. You write the German sentence.</div>
 
   <div class="row" style="margin-top:10px">
-    <div style="min-width:200px">
+    <div style="min-width:190px">
       <div class="small">Level</div>
       <select id="sentLevel" onchange="resetSentencePractice()">
         <option value="ALL">All</option>
@@ -447,7 +453,7 @@ pre{white-space:pre-wrap}
       </select>
     </div>
 
-    <div style="min-width:260px">
+    <div style="min-width:250px">
       <div class="small">Type</div>
       <select id="sentType" onchange="resetSentencePractice()">
         <option value="ALL">All</option>
@@ -467,11 +473,11 @@ pre{white-space:pre-wrap}
 
   <div class="row" style="justify-content:space-between">
     <div class="badge">Progress: <span id="sentProg">0/0</span></div>
-    <div class="badge">Mode: <span id="sentMode">-</span></div>
+    <div class="badge">Mode: <span id="sentMode">sentence</span></div>
   </div>
 
   <div id="sentPrompt" class="sentencePrompt">
-    <div id="sentTitle" style="font-weight:700;font-size:22px">No sentence tasks loaded</div>
+    <div id="sentTitle" style="font-weight:800;font-size:22px">No sentence tasks loaded</div>
     <div id="sentHint" class="small" style="margin-top:6px"></div>
     <div id="sentSupport" class="small" style="margin-top:8px;white-space:pre-wrap"></div>
   </div>
@@ -491,8 +497,8 @@ pre{white-space:pre-wrap}
 </div>
 
 <div id="libraryTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Library (local only)</h3>
-  <div class="small">Passages are loaded from <b>passages.json</b>. If you want to permanently add passages, edit <b>passages.json</b> in GitHub. Anything you add here is saved only in this browser (localStorage).</div>
+  <h3>Library (local only)</h3>
+  <div class="small">Passages are loaded from <b>passages.json</b>. If you want to permanently add passages, edit <b>passages.json</b> in GitHub. Anything you add here is saved only in this browser.</div>
 
   <div class="row" style="margin-top:10px">
     <div style="flex:1;min-width:260px">
@@ -515,7 +521,7 @@ pre{white-space:pre-wrap}
 </div>
 
 <div id="notesTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Notes</h3>
+  <h3>Notes</h3>
   <div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
 
   <div class="subtabs" style="margin-top:10px">
@@ -541,7 +547,7 @@ pre{white-space:pre-wrap}
 </div>
 
 <div id="flashcardsTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Flashcards</h3>
+  <h3>Flashcards</h3>
   <div class="small">Loaded from <b>flashcards.json</b>. English is shown first. Click the card to reveal the German side.</div>
 
   <div class="row" style="margin-top:10px">
@@ -580,7 +586,7 @@ pre{white-space:pre-wrap}
 </div>
 
 <div id="translatorTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Translator</h3>
+  <h3>Translator</h3>
 
   <div class="row" style="margin-top:8px;">
     <div style="min-width:180px;">
@@ -605,31 +611,26 @@ pre{white-space:pre-wrap}
   </div>
 
   <textarea id="translateInput" placeholder="Type/paste text here..."></textarea>
-
   <div class="row">
     <button onclick="translateText()">Translate</button>
     <button class="ghost" onclick="clearTranslate()">Clear</button>
   </div>
-
   <textarea id="translateOutput" placeholder="Translation..." readonly></textarea>
 
   <hr>
 
-  <h3 style="margin-top:0">Dictionary</h3>
-  <div class="small">Uses Wiktionary (German). Best with base form (Infinitiv / singular). This version trims very long extracts.</div>
-
+  <h3>Dictionary</h3>
+  <div class="small">Uses Wiktionary online. For a fully offline Android version, replace this with local dictionary data.</div>
   <input id="dictWord" placeholder="German word (e.g., wollen, trotzdem, Wohnung)">
-
   <div class="row">
     <button onclick="lookupWord()">Lookup</button>
     <button class="ghost" onclick="clearDict()">Clear</button>
   </div>
-
   <div id="dictResult" class="small" style="margin-top:10px; white-space:pre-wrap;"></div>
 </div>
 
 <div id="tablesTab" class="card hidden" role="tabpanel">
-  <h3 style="margin-top:0">Grammar Tables</h3>
+  <h3>Grammar Tables</h3>
   <div class="small">Quick reference tables (definite/indefinite/negative articles). Pink highlight shows changes across cases.</div>
 
   <h4>Definite articles (der/die/das)</h4>
@@ -701,14 +702,12 @@ function normAnswer(s){
   return (s || '')
     .trim()
     .toLowerCase()
-    .replace(/\s+/g,' ')
-    .replace(/[“”„]/g,'"')
-    .replace(/[’]/g,"'");
+    .replace(/\s+/g, ' ')
+    .replace(/[“”„]/g, '"')
+    .replace(/[’]/g, "'");
 }
 
-function setStatus(msg){
-  statusEl.textContent = msg || '';
-}
+function setStatus(msg){ statusEl.textContent = msg || ''; }
 
 function setTheme(themeClass){
   document.body.classList.remove('theme-dark','theme-light','theme-vibrant','theme-duolingo');
@@ -716,9 +715,7 @@ function setTheme(themeClass){
   localStorage.setItem('theme', themeClass);
 }
 
-function goHome(){
-  showTab('practiceTab', document.querySelector('#tabBar button'));
-}
+function goHome(){ showTab('practiceTab', document.querySelector('#tabBar button')); }
 
 function shuffleArray(arr){
   const a = arr.slice();
@@ -729,9 +726,7 @@ function shuffleArray(arr){
   return a;
 }
 
-function makeId(){
-  return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8);
-}
+function makeId(){ return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8); }
 
 function showTab(id, btn){
   const ids = ['practiceTab','sentenceTab','libraryTab','notesTab','flashcardsTab','translatorTab','tablesTab'];
@@ -777,7 +772,6 @@ function flattenByLevelObject(raw, keyName){
 
   levels.forEach(lv => {
     const block = raw?.[lv];
-
     if(Array.isArray(block)){
       block.forEach(item => out.push({ ...item, level: lv.toUpperCase() }));
     }else if(block && typeof block === 'object'){
@@ -806,7 +800,7 @@ async function loadPassages(){
       g: p.german ?? p.g ?? '',
       e: p.english ?? p.e ?? '',
       level: (p.level ?? '').toString().toUpperCase(),
-      localOnly: false
+      localOnly:false
     })).filter(p => (p.g || '').trim().length);
 
     const local = JSON.parse(localStorage.getItem('passages_local') || '[]');
@@ -816,7 +810,7 @@ async function loadPassages(){
         g: p.german ?? p.g ?? '',
         e: p.english ?? p.e ?? '',
         level: (p.level ?? 'LOCAL').toString().toUpperCase(),
-        localOnly: true
+        localOnly:true
       })));
     }
 
@@ -859,7 +853,7 @@ async function loadFlashcards(){
   try{
     const obj = await loadJson('flashcards.json');
     const arr = obj?.flashcards;
-    if(!Array.isArray(arr)) throw new Error('flashcards.json must be { flashcards: [...] }');
+    if(!Array.isArray(arr)) throw new Error('flashcards.json must be { flashcards:[...] }');
     flashcards = arr;
     localStorage.setItem('flashcards_cache', JSON.stringify(flashcards));
     return { ok:true, count:flashcards.length };
@@ -867,6 +861,30 @@ async function loadFlashcards(){
     flashcards = JSON.parse(localStorage.getItem('flashcards_cache') || '[]');
     return { ok:false, count:flashcards.length, err:e.message };
   }
+}
+
+function guessSentenceType(de){
+  const s = (de || '').trim();
+  const lower = s.toLowerCase();
+
+  const isQuestion = /\?$/.test(s);
+  const firstWord = lower.split(/\s+/)[0] || '';
+
+  const subordinators = ['weil','dass','wenn','obwohl','damit','ob','nachdem','bevor','während','sobald','falls'];
+  const modals = ['kann','kannst','können','könnt','muss','musst','müssen','müsst','will','willst','wollen','wollt','möchte','möchtest','möchten','möchtet','soll','sollst','sollen','sollt','darf','darfst','dürfen','dürft'];
+  const aux = ['habe','hast','hat','haben','habt','bin','bist','ist','sind','seid','war','waren','wurde','wurden','werde','wirst','wird','werden'];
+  const reflexiveBits = [' mich ',' dich ',' sich ',' uns ',' euch '];
+
+  if(isQuestion) return 'questions';
+  if(['komm','kommen','geh','gehen','hör','hört','lies','lest','schreib','schreibt','öffne','öffnet'].includes(firstWord)) return 'verb 1st position';
+  if(subordinators.includes(firstWord)) return 'verb-final clauses';
+  if(modals.some(m => lower.includes(' ' + m + ' '))) return '2-3 verbs';
+  if(lower.includes(' um ') && lower.includes(' zu ')) return '2-3 verbs';
+  if(lower.includes(' zu ') && /(versuche|beginne|beginnt|plan(e|t|en)|hoffe|vergiss|vergisst|vergessen)/.test(lower)) return '2-3 verbs';
+  if(aux.some(a => lower.includes(' ' + a + ' ')) && /(ge\w+|iert|en|t)\.?$/.test(lower)) return '2-3 verbs';
+  if(reflexiveBits.some(x => lower.includes(x))) return 'reflexive';
+  if(/\b(auf|ein|an|mit|aus|vor|zurück)\.?$/.test(lower)) return 'separable verbs';
+  return 'verb 2nd position';
 }
 
 async function loadSentenceTasks(){
@@ -882,18 +900,22 @@ async function loadSentenceTasks(){
       arr = flattenByLevelObject(raw, 'type');
     }
 
-    sentenceTasks = arr.map((x, i) => ({
-      id: x.id ?? i + 1,
-      level: (x.level ?? '').toString().toUpperCase(),
-      type: (x.type ?? x.category ?? x.topic ?? 'general').toString(),
-      mode: 'sentence',
-      title: x.en ?? x.title ?? x.prompt ?? x.question ?? 'Write the German sentence',
-      hint: x.hint ?? '',
-      support: x.support ?? '',
-      answers: Array.isArray(x.answers)
-        ? x.answers
-        : [x.de, x.answer, x.sample, x.example].filter(Boolean)
-    })).filter(x => x.title);
+    sentenceTasks = arr.map((x, i) => {
+      const englishPrompt = x.en ?? x.english ?? x.title ?? x.prompt ?? x.question ?? 'Write the German sentence';
+      const germanAnswer = x.de ?? x.german ?? x.answer ?? x.sample ?? x.example ?? '';
+      const autoType = x.type ?? x.category ?? x.topic ?? guessSentenceType(germanAnswer);
+
+      return {
+        id: x.id ?? i + 1,
+        level: (x.level ?? '').toString().toUpperCase(),
+        type: String(autoType),
+        mode: 'sentence',
+        title: englishPrompt,
+        hint: x.hint ?? '',
+        support: x.support ?? '',
+        answers: Array.isArray(x.answers) ? x.answers : [germanAnswer].filter(Boolean)
+      };
+    }).filter(x => x.title);
 
     localStorage.setItem('sentences_cache', JSON.stringify(sentenceTasks));
     return { ok:true, count:sentenceTasks.length };
@@ -907,12 +929,12 @@ async function loadSentenceTasks(){
 function extractForms(item){
   const f = item.forms ?? item.conjugation ?? item.prasens ?? item.present ?? item.praesens ?? {};
   return {
-    ich: (f.ich ?? f.Ich ?? item.ich ?? '').toString(),
-    du: (f.du ?? f.Du ?? item.du ?? '').toString(),
-    er: (f.er ?? f['er/sie/es'] ?? f.ersiees ?? item.er ?? item['er/sie/es'] ?? '').toString(),
-    wir: (f.wir ?? f.Wir ?? item.wir ?? '').toString(),
-    ihr: (f.ihr ?? f.Ihr ?? item.ihr ?? '').toString(),
-    sie: (f.sie ?? f['sie/Sie'] ?? f.sieSie ?? item.sie ?? item['sie/Sie'] ?? '').toString()
+    ich:(f.ich ?? f.Ich ?? item.ich ?? '').toString(),
+    du:(f.du ?? f.Du ?? item.du ?? '').toString(),
+    er:(f.er ?? f['er/sie/es'] ?? f.ersiees ?? item.er ?? item['er/sie/es'] ?? '').toString(),
+    wir:(f.wir ?? f.Wir ?? item.wir ?? '').toString(),
+    ihr:(f.ihr ?? f.Ihr ?? item.ihr ?? '').toString(),
+    sie:(f.sie ?? f['sie/Sie'] ?? f.sieSie ?? item.sie ?? item['sie/Sie'] ?? '').toString()
   };
 }
 
@@ -964,12 +986,12 @@ async function reloadAll(){
   const st = await loadSentenceTasks();
 
   setStatus([
-    p.ok  ? `✅ passages:${p.count}`      : `⚠️ passages:${p.count}`,
-    n.ok  ? `✅ notes:${n.count}`         : `⚠️ notes:${n.count}`,
-    ex.ok ? `✅ exercises:${ex.count}`    : `⚠️ exercises:${ex.count}`,
-    fc.ok ? `✅ flashcards:${fc.count}`   : `⚠️ flashcards:${fc.count}`,
+    p.ok ? `✅ passages:${p.count}` : `⚠️ passages:${p.count}`,
+    n.ok ? `✅ notes:${n.count}` : `⚠️ notes:${n.count}`,
+    ex.ok ? `✅ exercises:${ex.count}` : `⚠️ exercises:${ex.count}`,
+    fc.ok ? `✅ flashcards:${fc.count}` : `⚠️ flashcards:${fc.count}`,
     cj.ok ? `✅ conjugations:${cj.count}` : `⚠️ conjugations:${cj.count}`,
-    st.ok ? `✅ sentences:${st.count}`    : `⚠️ sentences:${st.count}`
+    st.ok ? `✅ sentences:${st.count}` : `⚠️ sentences:${st.count}`
   ].join(' • '));
 
   renderPassageDropdown();
@@ -985,7 +1007,7 @@ async function reloadAll(){
 
   document.getElementById('conjDebug').textContent = conjugations.length
     ? ''
-    : 'No conjugations detected. Check that conjugation.json is in the repo root and has { "verbs":[...] }.';
+    : 'No conjugations detected. Check that conjugation.json is in the repo root.';
 }
 
 const practiceSelect = document.getElementById('practiceSelect');
@@ -1017,7 +1039,7 @@ function renderPassageDropdown(){
   list.forEach((p, idx) => {
     const opt = document.createElement('option');
     opt.value = String(idx);
-    opt.textContent = ((p.level ? `[${p.level}] ` : '') + p.g.slice(0,60).replace(/\n/g,' '));
+    opt.textContent = (p.level ? `[${p.level}] ` : '') + p.g.slice(0,60).replace(/\n/g, ' ');
     practiceSelect.appendChild(opt);
   });
 
@@ -1153,7 +1175,7 @@ function renderLibrary(){
   passages.forEach(p => {
     const box = document.createElement('div');
     box.style.border = '1px solid var(--line)';
-    box.style.borderRadius = '10px';
+    box.style.borderRadius = '12px';
     box.style.padding = '10px';
     box.style.marginTop = '10px';
 
@@ -1378,30 +1400,10 @@ function showFlashCard(){
   }
 }
 
-function flipCard(){
-  if(!fcPool.length) return;
-  fcFlipped = !fcFlipped;
-  showFlashCard();
-}
-
-function flipToFront(){
-  fcFlipped = false;
-  showFlashCard();
-}
-
-function nextCard(){
-  if(!fcPool.length) return;
-  fcIdx = (fcIdx + 1) % fcPool.length;
-  fcFlipped = false;
-  showFlashCard();
-}
-
-function prevCard(){
-  if(!fcPool.length) return;
-  fcIdx = (fcIdx - 1 + fcPool.length) % fcPool.length;
-  fcFlipped = false;
-  showFlashCard();
-}
+function flipCard(){ if(!fcPool.length) return; fcFlipped = !fcFlipped; showFlashCard(); }
+function flipToFront(){ fcFlipped = false; showFlashCard(); }
+function nextCard(){ if(!fcPool.length) return; fcIdx = (fcIdx + 1) % fcPool.length; fcFlipped = false; showFlashCard(); }
+function prevCard(){ if(!fcPool.length) return; fcIdx = (fcIdx - 1 + fcPool.length) % fcPool.length; fcFlipped = false; showFlashCard(); }
 
 function getFilteredVerbs(){
   const type = document.getElementById('verbTypeFilter').value;
@@ -1423,8 +1425,8 @@ function getFilteredVerbs(){
 function renderVerbList(){
   const sel = document.getElementById('verbSelect');
   const list = getFilteredVerbs();
-
   document.getElementById('verbCount').textContent = String(list.length);
+
   const current = sel.value || '';
   sel.innerHTML = '';
 
@@ -1443,11 +1445,8 @@ function renderVerbList(){
       sel.appendChild(opt);
     });
 
-  if(current && [...sel.options].some(o => o.value === current)){
-    sel.value = current;
-  }else{
-    sel.value = sel.options[0].value;
-  }
+  if(current && [...sel.options].some(o => o.value === current)) sel.value = current;
+  else sel.value = sel.options[0].value;
 
   renderVerb();
 }
@@ -1493,17 +1492,36 @@ let sentCurrent = null;
 function renderSentenceTypes(){
   const sel = document.getElementById('sentType');
   const current = sel.value || 'ALL';
-  const types = Array.from(new Set((sentenceTasks || []).map(x => x.type).filter(Boolean))).sort();
+
+  const preferredOrder = [
+    'questions',
+    'verb 1st position',
+    'verb 2nd position',
+    '2-3 verbs',
+    'verb-final clauses',
+    'separable verbs',
+    'reflexive'
+  ];
+
+  const found = Array.from(new Set((sentenceTasks || []).map(x => x.type).filter(Boolean)));
+  found.sort((a,b) => {
+    const ai = preferredOrder.indexOf(a);
+    const bi = preferredOrder.indexOf(b);
+    if(ai === -1 && bi === -1) return a.localeCompare(b);
+    if(ai === -1) return 1;
+    if(bi === -1) return -1;
+    return ai - bi;
+  });
 
   sel.innerHTML = '<option value="ALL">All</option>';
-  types.forEach(t => {
+  found.forEach(t => {
     const opt = document.createElement('option');
     opt.value = t;
     opt.textContent = t;
     sel.appendChild(opt);
   });
 
-  if(types.includes(current)) sel.value = current;
+  if(found.includes(current)) sel.value = current;
 }
 
 function buildSentencePool(){
@@ -1585,9 +1603,9 @@ function checkSentencePractice(){
   if(ok){
     document.getElementById('sentFeedback').innerHTML = '<span class="scoreGood">✅ Great. Your answer matches one of the sample answers.</span>';
   }else if(possible.length){
-    document.getElementById('sentFeedback').innerHTML = '<span class="scoreBad">Not an exact sample match.</span> Your sentence may still be correct. Compare it with the sample answer and check verb position, subject, and word order.';
+    document.getElementById('sentFeedback').innerHTML = '<span class="scoreBad">Not an exact sample match.</span> Your sentence may still be correct. Compare it with the sample answer and check the verb position and word order.';
   }else{
-    document.getElementById('sentFeedback').innerHTML = 'Checked. Use the structure hint to self-review: verb position, clause type, and final verbs.';
+    document.getElementById('sentFeedback').innerHTML = 'Checked. Use the structure hint to self-review.';
   }
 }
 
