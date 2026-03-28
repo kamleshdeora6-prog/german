@@ -1,0 +1,2564 @@
+{
+  "items": [
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "die Nachbarschaft",
+      "en": "neighbourhood",
+      "example_de": "Beispiel: die Nachbarschaft ist in diesem Thema wichtig.",
+      "example_en": "Example: neighbourhood is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "der Hausflur",
+      "en": "hallway",
+      "example_de": "Beispiel: der Hausflur ist in diesem Thema wichtig.",
+      "example_en": "Example: hallway is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "die Hausordnung",
+      "en": "house rules",
+      "example_de": "Beispiel: die Hausordnung ist in diesem Thema wichtig.",
+      "example_en": "Example: house rules is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "der Lärm",
+      "en": "noise",
+      "example_de": "Beispiel: der Lärm ist in diesem Thema wichtig.",
+      "example_en": "Example: noise is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "sich beschweren",
+      "en": "to complain",
+      "example_de": "Beispiel: sich beschweren ist in diesem Thema wichtig.",
+      "example_en": "Example: to complain is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "rücksichtsvoll",
+      "en": "considerate",
+      "example_de": "Beispiel: rücksichtsvoll ist in diesem Thema wichtig.",
+      "example_en": "Example: considerate is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "grüßen",
+      "en": "to greet",
+      "example_de": "Beispiel: grüßen ist in diesem Thema wichtig.",
+      "example_en": "Example: to greet is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "das Treppenhaus",
+      "en": "stairwell",
+      "example_de": "Beispiel: das Treppenhaus ist in diesem Thema wichtig.",
+      "example_en": "Example: stairwell is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "der Innenhof",
+      "en": "inner courtyard",
+      "example_de": "Beispiel: der Innenhof ist in diesem Thema wichtig.",
+      "example_en": "Example: inner courtyard is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "der Bewohner",
+      "en": "resident",
+      "example_de": "Beispiel: der Bewohner ist in diesem Thema wichtig.",
+      "example_en": "Example: resident is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "der Vermieter",
+      "en": "landlord",
+      "example_de": "Beispiel: der Vermieter ist in diesem Thema wichtig.",
+      "example_en": "Example: landlord is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "die Bitte",
+      "en": "request",
+      "example_de": "Beispiel: die Bitte ist in diesem Thema wichtig.",
+      "example_en": "Example: request is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "annehmen",
+      "en": "to accept",
+      "example_de": "Beispiel: annehmen ist in diesem Thema wichtig.",
+      "example_en": "Example: to accept is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "sich bedanken",
+      "en": "to thank",
+      "example_de": "Beispiel: sich bedanken ist in diesem Thema wichtig.",
+      "example_en": "Example: to thank is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Neue Nachbarn",
+      "de": "verboten",
+      "en": "forbidden",
+      "example_de": "Beispiel: verboten ist in diesem Thema wichtig.",
+      "example_en": "Example: forbidden is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Bestellung",
+      "en": "order",
+      "example_de": "Beispiel: die Bestellung ist in diesem Thema wichtig.",
+      "example_en": "Example: order is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Rückgabe",
+      "en": "return",
+      "example_de": "Beispiel: die Rückgabe ist in diesem Thema wichtig.",
+      "example_en": "Example: return is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "der Umtausch",
+      "en": "exchange",
+      "example_de": "Beispiel: der Umtausch ist in diesem Thema wichtig.",
+      "example_en": "Example: exchange is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Kasse",
+      "en": "checkout",
+      "example_de": "Beispiel: die Kasse ist in diesem Thema wichtig.",
+      "example_en": "Example: checkout is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "günstig",
+      "en": "cheap",
+      "example_de": "Beispiel: günstig ist in diesem Thema wichtig.",
+      "example_en": "Example: cheap is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "teuer",
+      "en": "expensive",
+      "example_de": "Beispiel: teuer ist in diesem Thema wichtig.",
+      "example_en": "Example: expensive is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Sonderangebote",
+      "en": "special offers",
+      "example_de": "Beispiel: die Sonderangebote ist in diesem Thema wichtig.",
+      "example_en": "Example: special offers is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "vergleichen",
+      "en": "to compare",
+      "example_de": "Beispiel: vergleichen ist in diesem Thema wichtig.",
+      "example_en": "Example: to compare is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "bar bezahlen",
+      "en": "to pay in cash",
+      "example_de": "Beispiel: bar bezahlen ist in diesem Thema wichtig.",
+      "example_en": "Example: to pay in cash is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "mit Karte bezahlen",
+      "en": "to pay by card",
+      "example_de": "Beispiel: mit Karte bezahlen ist in diesem Thema wichtig.",
+      "example_en": "Example: to pay by card is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Quittung",
+      "en": "receipt",
+      "example_de": "Beispiel: die Quittung ist in diesem Thema wichtig.",
+      "example_en": "Example: receipt is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "die Lieferung",
+      "en": "delivery",
+      "example_de": "Beispiel: die Lieferung ist in diesem Thema wichtig.",
+      "example_en": "Example: delivery is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "der Kundenservice",
+      "en": "customer service",
+      "example_de": "Beispiel: der Kundenservice ist in diesem Thema wichtig.",
+      "example_en": "Example: customer service is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "beschädigt",
+      "en": "damaged",
+      "example_de": "Beispiel: beschädigt ist in diesem Thema wichtig.",
+      "example_en": "Example: damaged is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Hier kaufe ich ein",
+      "de": "das Einkaufszentrum",
+      "en": "shopping centre",
+      "example_de": "Beispiel: das Einkaufszentrum ist in diesem Thema wichtig.",
+      "example_en": "Example: shopping centre is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "das Angebot",
+      "en": "offer",
+      "example_de": "Beispiel: das Angebot ist in diesem Thema wichtig.",
+      "example_en": "Example: offer is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Versicherung",
+      "en": "insurance",
+      "example_de": "Beispiel: die Versicherung ist in diesem Thema wichtig.",
+      "example_en": "Example: insurance is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Bankkarte",
+      "en": "bank card",
+      "example_de": "Beispiel: die Bankkarte ist in diesem Thema wichtig.",
+      "example_en": "Example: bank card is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Sperrnummer",
+      "en": "emergency blocking number",
+      "example_de": "Beispiel: die Sperrnummer ist in diesem Thema wichtig.",
+      "example_en": "Example: emergency blocking number is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "der Vertrag",
+      "en": "contract",
+      "example_de": "Beispiel: der Vertrag ist in diesem Thema wichtig.",
+      "example_en": "Example: contract is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Gebühr",
+      "en": "fee",
+      "example_de": "Beispiel: die Gebühr ist in diesem Thema wichtig.",
+      "example_en": "Example: fee is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "zuverlässig",
+      "en": "reliable",
+      "example_de": "Beispiel: zuverlässig ist in diesem Thema wichtig.",
+      "example_en": "Example: reliable is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Beratung",
+      "en": "consultation",
+      "example_de": "Beispiel: die Beratung ist in diesem Thema wichtig.",
+      "example_en": "Example: consultation is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Leistung",
+      "en": "service / benefit",
+      "example_de": "Beispiel: die Leistung ist in diesem Thema wichtig.",
+      "example_en": "Example: service / benefit is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "der Schaden",
+      "en": "damage",
+      "example_de": "Beispiel: der Schaden ist in diesem Thema wichtig.",
+      "example_en": "Example: damage is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "überweisen",
+      "en": "to transfer money",
+      "example_de": "Beispiel: überweisen ist in diesem Thema wichtig.",
+      "example_en": "Example: to transfer money is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "beantragen",
+      "en": "to apply for",
+      "example_de": "Beispiel: beantragen ist in diesem Thema wichtig.",
+      "example_en": "Example: to apply for is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Kündigung",
+      "en": "termination",
+      "example_de": "Beispiel: die Kündigung ist in diesem Thema wichtig.",
+      "example_en": "Example: termination is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "verlängern",
+      "en": "to extend",
+      "example_de": "Beispiel: verlängern ist in diesem Thema wichtig.",
+      "example_en": "Example: to extend is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Wir sind für Sie da",
+      "de": "die Sicherheit",
+      "en": "security",
+      "example_de": "Beispiel: die Sicherheit ist in diesem Thema wichtig.",
+      "example_en": "Example: security is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "das Rezept",
+      "en": "recipe",
+      "example_de": "Beispiel: das Rezept ist in diesem Thema wichtig.",
+      "example_en": "Example: recipe is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "das Gericht",
+      "en": "dish",
+      "example_de": "Beispiel: das Gericht ist in diesem Thema wichtig.",
+      "example_en": "Example: dish is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "würzen",
+      "en": "to season",
+      "example_de": "Beispiel: würzen ist in diesem Thema wichtig.",
+      "example_en": "Example: to season is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "kochen",
+      "en": "to cook",
+      "example_de": "Beispiel: kochen ist in diesem Thema wichtig.",
+      "example_en": "Example: to cook is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "braten",
+      "en": "to fry",
+      "example_de": "Beispiel: braten ist in diesem Thema wichtig.",
+      "example_en": "Example: to fry is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "gesund",
+      "en": "healthy",
+      "example_de": "Beispiel: gesund ist in diesem Thema wichtig.",
+      "example_en": "Example: healthy is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "die Umfrage",
+      "en": "survey",
+      "example_de": "Beispiel: die Umfrage ist in diesem Thema wichtig.",
+      "example_en": "Example: survey is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "die Gewohnheit",
+      "en": "habit",
+      "example_de": "Beispiel: die Gewohnheit ist in diesem Thema wichtig.",
+      "example_en": "Example: habit is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "die Zutat",
+      "en": "ingredient",
+      "example_de": "Beispiel: die Zutat ist in diesem Thema wichtig.",
+      "example_en": "Example: ingredient is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "schneiden",
+      "en": "to cut",
+      "example_de": "Beispiel: schneiden ist in diesem Thema wichtig.",
+      "example_en": "Example: to cut is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "abschmecken",
+      "en": "to taste / season",
+      "example_de": "Beispiel: abschmecken ist in diesem Thema wichtig.",
+      "example_en": "Example: to taste / season is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "satt",
+      "en": "full",
+      "example_de": "Beispiel: satt ist in diesem Thema wichtig.",
+      "example_en": "Example: full is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "vegetarisch",
+      "en": "vegetarian",
+      "example_de": "Beispiel: vegetarisch ist in diesem Thema wichtig.",
+      "example_en": "Example: vegetarian is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "ausgewogen",
+      "en": "balanced",
+      "example_de": "Beispiel: ausgewogen ist in diesem Thema wichtig.",
+      "example_en": "Example: balanced is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Schmeckt’s?",
+      "de": "das Frühstück",
+      "en": "breakfast",
+      "example_de": "Beispiel: das Frühstück ist in diesem Thema wichtig.",
+      "example_en": "Example: breakfast is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "die Erfahrung",
+      "en": "experience",
+      "example_de": "Beispiel: die Erfahrung ist in diesem Thema wichtig.",
+      "example_en": "Example: experience is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "die Gewohnheit",
+      "en": "custom / habit",
+      "example_de": "Beispiel: die Gewohnheit ist in diesem Thema wichtig.",
+      "example_en": "Example: custom / habit is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "zurückhaltend",
+      "en": "reserved",
+      "example_de": "Beispiel: zurückhaltend ist in diesem Thema wichtig.",
+      "example_en": "Example: reserved is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "offen",
+      "en": "open",
+      "example_de": "Beispiel: offen ist in diesem Thema wichtig.",
+      "example_en": "Example: open is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "der Unterschied",
+      "en": "difference",
+      "example_de": "Beispiel: der Unterschied ist in diesem Thema wichtig.",
+      "example_en": "Example: difference is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "die Kultur",
+      "en": "culture",
+      "example_de": "Beispiel: die Kultur ist in diesem Thema wichtig.",
+      "example_en": "Example: culture is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "der Eindruck",
+      "en": "impression",
+      "example_de": "Beispiel: der Eindruck ist in diesem Thema wichtig.",
+      "example_en": "Example: impression is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "sich wundern",
+      "en": "to be surprised",
+      "example_de": "Beispiel: sich wundern ist in diesem Thema wichtig.",
+      "example_en": "Example: to be surprised is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "die Sprache",
+      "en": "language",
+      "example_de": "Beispiel: die Sprache ist in diesem Thema wichtig.",
+      "example_en": "Example: language is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "mehrsprachig",
+      "en": "multilingual",
+      "example_de": "Beispiel: mehrsprachig ist in diesem Thema wichtig.",
+      "example_en": "Example: multilingual is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "missverstehen",
+      "en": "to misunderstand",
+      "example_de": "Beispiel: missverstehen ist in diesem Thema wichtig.",
+      "example_en": "Example: to misunderstand is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "die Perspektive",
+      "en": "perspective",
+      "example_de": "Beispiel: die Perspektive ist in diesem Thema wichtig.",
+      "example_en": "Example: perspective is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "vergleichen",
+      "en": "to compare",
+      "example_de": "Beispiel: vergleichen ist in diesem Thema wichtig.",
+      "example_en": "Example: to compare is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "sich anpassen",
+      "en": "to adapt",
+      "example_de": "Beispiel: sich anpassen ist in diesem Thema wichtig.",
+      "example_en": "Example: to adapt is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Ah, so ist das!",
+      "de": "typisch",
+      "en": "typical",
+      "example_de": "Beispiel: typisch ist in diesem Thema wichtig.",
+      "example_en": "Example: typical is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "das Krankenhaus",
+      "en": "hospital",
+      "example_de": "Beispiel: das Krankenhaus ist in diesem Thema wichtig.",
+      "example_en": "Example: hospital is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Untersuchung",
+      "en": "examination",
+      "example_de": "Beispiel: die Untersuchung ist in diesem Thema wichtig.",
+      "example_en": "Example: examination is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Ärztin",
+      "en": "female doctor",
+      "example_de": "Beispiel: die Ärztin ist in diesem Thema wichtig.",
+      "example_en": "Example: female doctor is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "das Rezept",
+      "en": "prescription",
+      "example_de": "Beispiel: das Rezept ist in diesem Thema wichtig.",
+      "example_en": "Example: prescription is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Behandlung",
+      "en": "treatment",
+      "example_de": "Beispiel: die Behandlung ist in diesem Thema wichtig.",
+      "example_en": "Example: treatment is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Schmerzen",
+      "en": "pain",
+      "example_de": "Beispiel: die Schmerzen ist in diesem Thema wichtig.",
+      "example_en": "Example: pain is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "sich ausruhen",
+      "en": "to rest",
+      "example_de": "Beispiel: sich ausruhen ist in diesem Thema wichtig.",
+      "example_en": "Example: to rest is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "ernst",
+      "en": "serious",
+      "example_de": "Beispiel: ernst ist in diesem Thema wichtig.",
+      "example_en": "Example: serious is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Klinik",
+      "en": "clinic",
+      "example_de": "Beispiel: die Klinik ist in diesem Thema wichtig.",
+      "example_en": "Example: clinic is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "der Termin",
+      "en": "appointment",
+      "example_de": "Beispiel: der Termin ist in diesem Thema wichtig.",
+      "example_en": "Example: appointment is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Station",
+      "en": "ward",
+      "example_de": "Beispiel: die Station ist in diesem Thema wichtig.",
+      "example_en": "Example: ward is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "das Wartezimmer",
+      "en": "waiting room",
+      "example_de": "Beispiel: das Wartezimmer ist in diesem Thema wichtig.",
+      "example_en": "Example: waiting room is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "der Notfall",
+      "en": "emergency",
+      "example_de": "Beispiel: der Notfall ist in diesem Thema wichtig.",
+      "example_en": "Example: emergency is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "gesund werden",
+      "en": "to get well",
+      "example_de": "Beispiel: gesund werden ist in diesem Thema wichtig.",
+      "example_en": "Example: to get well is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Im Krankenhaus",
+      "de": "die Krankmeldung",
+      "en": "sick note",
+      "example_de": "Beispiel: die Krankmeldung ist in diesem Thema wichtig.",
+      "example_en": "Example: sick note is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Umwelt",
+      "en": "environment",
+      "example_de": "Beispiel: die Umwelt ist in diesem Thema wichtig.",
+      "example_en": "Example: environment is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "nachhaltig",
+      "en": "sustainable",
+      "example_de": "Beispiel: nachhaltig ist in diesem Thema wichtig.",
+      "example_en": "Example: sustainable is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "der Klimawandel",
+      "en": "climate change",
+      "example_de": "Beispiel: der Klimawandel ist in diesem Thema wichtig.",
+      "example_en": "Example: climate change is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Klimakrise",
+      "en": "climate crisis",
+      "example_de": "Beispiel: die Klimakrise ist in diesem Thema wichtig.",
+      "example_en": "Example: climate crisis is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "Energie sparen",
+      "en": "to save energy",
+      "example_de": "Beispiel: Energie sparen ist in diesem Thema wichtig.",
+      "example_en": "Example: to save energy is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "wiederverwenden",
+      "en": "to reuse",
+      "example_de": "Beispiel: wiederverwenden ist in diesem Thema wichtig.",
+      "example_en": "Example: to reuse is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "recyceln",
+      "en": "to recycle",
+      "example_de": "Beispiel: recyceln ist in diesem Thema wichtig.",
+      "example_en": "Example: to recycle is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "der Fahrradweg",
+      "en": "cycle path",
+      "example_de": "Beispiel: der Fahrradweg ist in diesem Thema wichtig.",
+      "example_en": "Example: cycle path is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Verantwortung",
+      "en": "responsibility",
+      "example_de": "Beispiel: die Verantwortung ist in diesem Thema wichtig.",
+      "example_en": "Example: responsibility is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "der Verbrauch",
+      "en": "consumption",
+      "example_de": "Beispiel: der Verbrauch ist in diesem Thema wichtig.",
+      "example_en": "Example: consumption is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Verschwendung",
+      "en": "waste",
+      "example_de": "Beispiel: die Verschwendung ist in diesem Thema wichtig.",
+      "example_en": "Example: waste is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Maßnahme",
+      "en": "measure",
+      "example_de": "Beispiel: die Maßnahme ist in diesem Thema wichtig.",
+      "example_en": "Example: measure is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "die Diskussion",
+      "en": "discussion",
+      "example_de": "Beispiel: die Diskussion ist in diesem Thema wichtig.",
+      "example_en": "Example: discussion is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "vermeiden",
+      "en": "to avoid",
+      "example_de": "Beispiel: vermeiden ist in diesem Thema wichtig.",
+      "example_en": "Example: to avoid is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Alle für die Umwelt",
+      "de": "regional",
+      "en": "regional / local",
+      "example_de": "Beispiel: regional ist in diesem Thema wichtig.",
+      "example_en": "Example: regional / local is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Veranstaltung",
+      "en": "event",
+      "example_de": "Beispiel: die Veranstaltung ist in diesem Thema wichtig.",
+      "example_en": "Example: event is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Ausstellung",
+      "en": "exhibition",
+      "example_de": "Beispiel: die Ausstellung ist in diesem Thema wichtig.",
+      "example_en": "Example: exhibition is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "das Konzert",
+      "en": "concert",
+      "example_de": "Beispiel: das Konzert ist in diesem Thema wichtig.",
+      "example_en": "Example: concert is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Lesung",
+      "en": "reading",
+      "example_de": "Beispiel: die Lesung ist in diesem Thema wichtig.",
+      "example_en": "Example: reading is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Bibliothek",
+      "en": "library",
+      "example_de": "Beispiel: die Bibliothek ist in diesem Thema wichtig.",
+      "example_en": "Example: library is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "das Graffiti",
+      "en": "graffiti",
+      "example_de": "Beispiel: das Graffiti ist in diesem Thema wichtig.",
+      "example_en": "Example: graffiti is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "künstlerisch",
+      "en": "artistic",
+      "example_de": "Beispiel: künstlerisch ist in diesem Thema wichtig.",
+      "example_en": "Example: artistic is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Bühne",
+      "en": "stage",
+      "example_de": "Beispiel: die Bühne ist in diesem Thema wichtig.",
+      "example_en": "Example: stage is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "öffentlich",
+      "en": "public",
+      "example_de": "Beispiel: öffentlich ist in diesem Thema wichtig.",
+      "example_en": "Example: public is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "abwechslungsreich",
+      "en": "varied",
+      "example_de": "Beispiel: abwechslungsreich ist in diesem Thema wichtig.",
+      "example_en": "Example: varied is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "verschönern",
+      "en": "to beautify",
+      "example_de": "Beispiel: verschönern ist in diesem Thema wichtig.",
+      "example_en": "Example: to beautify is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "kreativ",
+      "en": "creative",
+      "example_de": "Beispiel: kreativ ist in diesem Thema wichtig.",
+      "example_en": "Example: creative is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "das Publikum",
+      "en": "audience",
+      "example_de": "Beispiel: das Publikum ist in diesem Thema wichtig.",
+      "example_en": "Example: audience is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "teilnehmen",
+      "en": "to take part",
+      "example_de": "Beispiel: teilnehmen ist in diesem Thema wichtig.",
+      "example_en": "Example: to take part is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Laut auf Kultur?",
+      "de": "die Kulturangebote",
+      "en": "cultural offers",
+      "example_de": "Beispiel: die Kulturangebote ist in diesem Thema wichtig.",
+      "example_en": "Example: cultural offers is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Bewerbung",
+      "en": "application",
+      "example_de": "Beispiel: die Bewerbung ist in diesem Thema wichtig.",
+      "example_en": "Example: application is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "der Lebenslauf",
+      "en": "CV",
+      "example_de": "Beispiel: der Lebenslauf ist in diesem Thema wichtig.",
+      "example_en": "Example: CV is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Stellenanzeige",
+      "en": "job advertisement",
+      "example_de": "Beispiel: die Stellenanzeige ist in diesem Thema wichtig.",
+      "example_en": "Example: job advertisement is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "das Vorstellungsgespräch",
+      "en": "job interview",
+      "example_de": "Beispiel: das Vorstellungsgespräch ist in diesem Thema wichtig.",
+      "example_en": "Example: job interview is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Qualifikation",
+      "en": "qualification",
+      "example_de": "Beispiel: die Qualifikation ist in diesem Thema wichtig.",
+      "example_en": "Example: qualification is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "das Gehalt",
+      "en": "salary",
+      "example_de": "Beispiel: das Gehalt ist in diesem Thema wichtig.",
+      "example_en": "Example: salary is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Tätigkeit",
+      "en": "activity / role",
+      "example_de": "Beispiel: die Tätigkeit ist in diesem Thema wichtig.",
+      "example_en": "Example: activity / role is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "der Arbeitsplatz",
+      "en": "workplace",
+      "example_de": "Beispiel: der Arbeitsplatz ist in diesem Thema wichtig.",
+      "example_en": "Example: workplace is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Erfahrung",
+      "en": "work experience",
+      "example_de": "Beispiel: die Erfahrung ist in diesem Thema wichtig.",
+      "example_en": "Example: work experience is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "zuverlässig",
+      "en": "reliable",
+      "example_de": "Beispiel: zuverlässig ist in diesem Thema wichtig.",
+      "example_en": "Example: reliable is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "teamfähig",
+      "en": "team-oriented",
+      "example_de": "Beispiel: teamfähig ist in diesem Thema wichtig.",
+      "example_en": "Example: team-oriented is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "sich bewerben",
+      "en": "to apply",
+      "example_de": "Beispiel: sich bewerben ist in diesem Thema wichtig.",
+      "example_en": "Example: to apply is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "einstellen",
+      "en": "to hire",
+      "example_de": "Beispiel: einstellen ist in diesem Thema wichtig.",
+      "example_en": "Example: to hire is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "kündigen",
+      "en": "to resign / terminate",
+      "example_de": "Beispiel: kündigen ist in diesem Thema wichtig.",
+      "example_en": "Example: to resign / terminate is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Eine neue Arbeit!",
+      "de": "die Fortbildung",
+      "en": "further training",
+      "example_de": "Beispiel: die Fortbildung ist in diesem Thema wichtig.",
+      "example_en": "Example: further training is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Bewegung",
+      "en": "movement",
+      "example_de": "Beispiel: die Bewegung ist in diesem Thema wichtig.",
+      "example_en": "Example: movement is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "fit bleiben",
+      "en": "to stay fit",
+      "example_de": "Beispiel: fit bleiben ist in diesem Thema wichtig.",
+      "example_en": "Example: to stay fit is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "das Training",
+      "en": "training",
+      "example_de": "Beispiel: das Training ist in diesem Thema wichtig.",
+      "example_en": "Example: training is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "schwimmen",
+      "en": "to swim",
+      "example_de": "Beispiel: schwimmen ist in diesem Thema wichtig.",
+      "example_en": "Example: to swim is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "laufen",
+      "en": "to run",
+      "example_de": "Beispiel: laufen ist in diesem Thema wichtig.",
+      "example_en": "Example: to run is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "der Verein",
+      "en": "club",
+      "example_de": "Beispiel: der Verein ist in diesem Thema wichtig.",
+      "example_en": "Example: club is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Mannschaft",
+      "en": "team",
+      "example_de": "Beispiel: die Mannschaft ist in diesem Thema wichtig.",
+      "example_en": "Example: team is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "anstrengend",
+      "en": "exhausting",
+      "example_de": "Beispiel: anstrengend ist in diesem Thema wichtig.",
+      "example_en": "Example: exhausting is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Strecke",
+      "en": "route",
+      "example_de": "Beispiel: die Strecke ist in diesem Thema wichtig.",
+      "example_en": "Example: route is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "das Turnier",
+      "en": "tournament",
+      "example_de": "Beispiel: das Turnier ist in diesem Thema wichtig.",
+      "example_en": "Example: tournament is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Spende",
+      "en": "donation",
+      "example_de": "Beispiel: die Spende ist in diesem Thema wichtig.",
+      "example_en": "Example: donation is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "mitmachen",
+      "en": "to join in",
+      "example_de": "Beispiel: mitmachen ist in diesem Thema wichtig.",
+      "example_en": "Example: to join in is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Gesundheit",
+      "en": "health",
+      "example_de": "Beispiel: die Gesundheit ist in diesem Thema wichtig.",
+      "example_en": "Example: health is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "regelmäßig",
+      "en": "regularly",
+      "example_de": "Beispiel: regelmäßig ist in diesem Thema wichtig.",
+      "example_en": "Example: regularly is important in this topic."
+    },
+    {
+      "level": "B1",
+      "topic": "Sport und Bewegung",
+      "de": "die Ausdauer",
+      "en": "endurance",
+      "example_de": "Beispiel: die Ausdauer ist in diesem Thema wichtig.",
+      "example_en": "Example: endurance is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "einerseits",
+      "en": "on the one hand",
+      "example_de": "Beispiel: einerseits ist in diesem Thema wichtig.",
+      "example_en": "Example: on the one hand is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "andererseits",
+      "en": "on the other hand",
+      "example_de": "Beispiel: andererseits ist in diesem Thema wichtig.",
+      "example_en": "Example: on the other hand is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "meiner Ansicht nach",
+      "en": "in my opinion",
+      "example_de": "Beispiel: meiner Ansicht nach ist in diesem Thema wichtig.",
+      "example_en": "Example: in my opinion is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "es hängt davon ab",
+      "en": "it depends on",
+      "example_de": "Beispiel: es hängt davon ab ist in diesem Thema wichtig.",
+      "example_en": "Example: it depends on is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "der Vorteil",
+      "en": "advantage",
+      "example_de": "Beispiel: der Vorteil ist in diesem Thema wichtig.",
+      "example_en": "Example: advantage is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "der Nachteil",
+      "en": "disadvantage",
+      "example_de": "Beispiel: der Nachteil ist in diesem Thema wichtig.",
+      "example_en": "Example: disadvantage is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "die Folge",
+      "en": "consequence",
+      "example_de": "Beispiel: die Folge ist in diesem Thema wichtig.",
+      "example_en": "Example: consequence is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "langfristig",
+      "en": "in the long term",
+      "example_de": "Beispiel: langfristig ist in diesem Thema wichtig.",
+      "example_en": "Example: in the long term is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "nachvollziehbar",
+      "en": "understandable",
+      "example_de": "Beispiel: nachvollziehbar ist in diesem Thema wichtig.",
+      "example_en": "Example: understandable is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "umstritten",
+      "en": "controversial",
+      "example_de": "Beispiel: umstritten ist in diesem Thema wichtig.",
+      "example_en": "Example: controversial is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "die Maßnahme",
+      "en": "measure",
+      "example_de": "Beispiel: die Maßnahme ist in diesem Thema wichtig.",
+      "example_en": "Example: measure is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "die Rahmenbedingungen",
+      "en": "framework conditions",
+      "example_de": "Beispiel: die Rahmenbedingungen ist in diesem Thema wichtig.",
+      "example_en": "Example: framework conditions is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "die Teilhabe",
+      "en": "participation",
+      "example_de": "Beispiel: die Teilhabe ist in diesem Thema wichtig.",
+      "example_en": "Example: participation is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "berücksichtigen",
+      "en": "to take into account",
+      "example_de": "Beispiel: berücksichtigen ist in diesem Thema wichtig.",
+      "example_en": "Example: to take into account is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Opinion and Argumentation",
+      "de": "ausschlaggebend",
+      "en": "decisive",
+      "example_de": "Beispiel: ausschlaggebend ist in diesem Thema wichtig.",
+      "example_en": "Example: decisive is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Medienkompetenz",
+      "en": "media literacy",
+      "example_de": "Beispiel: die Medienkompetenz ist in diesem Thema wichtig.",
+      "example_en": "Example: media literacy is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "verlässlich",
+      "en": "reliable",
+      "example_de": "Beispiel: verlässlich ist in diesem Thema wichtig.",
+      "example_en": "Example: reliable is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Quelle",
+      "en": "source",
+      "example_de": "Beispiel: die Quelle ist in diesem Thema wichtig.",
+      "example_en": "Example: source is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "bewerten",
+      "en": "to assess",
+      "example_de": "Beispiel: bewerten ist in diesem Thema wichtig.",
+      "example_en": "Example: to assess is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Abhängigkeit",
+      "en": "dependency",
+      "example_de": "Beispiel: die Abhängigkeit ist in diesem Thema wichtig.",
+      "example_en": "Example: dependency is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "erreichbar",
+      "en": "reachable",
+      "example_de": "Beispiel: erreichbar ist in diesem Thema wichtig.",
+      "example_en": "Example: reachable is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Gesellschaft",
+      "en": "society",
+      "example_de": "Beispiel: die Gesellschaft ist in diesem Thema wichtig.",
+      "example_en": "Example: society is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "der Zusammenhalt",
+      "en": "cohesion",
+      "example_de": "Beispiel: der Zusammenhalt ist in diesem Thema wichtig.",
+      "example_en": "Example: cohesion is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Debatte",
+      "en": "debate",
+      "example_de": "Beispiel: die Debatte ist in diesem Thema wichtig.",
+      "example_en": "Example: debate is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Unsicherheit",
+      "en": "uncertainty",
+      "example_de": "Beispiel: die Unsicherheit ist in diesem Thema wichtig.",
+      "example_en": "Example: uncertainty is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Reform",
+      "en": "reform",
+      "example_de": "Beispiel: die Reform ist in diesem Thema wichtig.",
+      "example_en": "Example: reform is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Institution",
+      "en": "institution",
+      "example_de": "Beispiel: die Institution ist in diesem Thema wichtig.",
+      "example_en": "Example: institution is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "flexibel",
+      "en": "flexible",
+      "example_de": "Beispiel: flexibel ist in diesem Thema wichtig.",
+      "example_en": "Example: flexible is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "die Erwartung",
+      "en": "expectation",
+      "example_de": "Beispiel: die Erwartung ist in diesem Thema wichtig.",
+      "example_en": "Example: expectation is important in this topic."
+    },
+    {
+      "level": "B2",
+      "topic": "Society and Media",
+      "de": "gestalten",
+      "en": "to shape",
+      "example_de": "Beispiel: gestalten ist in diesem Thema wichtig.",
+      "example_en": "Example: to shape is important in this topic."
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "aufräumen",
+      "en": "to tidy up",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "die Rechnung",
+      "en": "bill",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "pünktlich",
+      "en": "on time",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "verschieben",
+      "en": "to postpone",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "der Terminplan",
+      "en": "schedule",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "die Nachricht",
+      "en": "message",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "antworten",
+      "en": "to answer",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "vergessen",
+      "en": "to forget",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "sich vorbereiten",
+      "en": "to prepare oneself",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "der Alltag",
+      "en": "daily life",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "erledigen",
+      "en": "to complete",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "sparen",
+      "en": "to save",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "die Reise",
+      "en": "trip",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "packen",
+      "en": "to pack",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "ankommen",
+      "en": "to arrive",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "abholen",
+      "en": "to pick up",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "einladen",
+      "en": "to invite",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "besuchen",
+      "en": "to visit",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "der Haushalt",
+      "en": "household",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Daily Life",
+      "de": "putzen",
+      "en": "to clean",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "das Wörterbuch",
+      "en": "dictionary",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Übung",
+      "en": "exercise",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "der Satz",
+      "en": "sentence",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Grammatik",
+      "en": "grammar",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "der Fehler",
+      "en": "mistake",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "verbessern",
+      "en": "to improve",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "wiederholen",
+      "en": "to repeat",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "verstehen",
+      "en": "to understand",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "erklären",
+      "en": "to explain",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "merken",
+      "en": "to notice / remember",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Aussprache",
+      "en": "pronunciation",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Bedeutung",
+      "en": "meaning",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "übersetzen",
+      "en": "to translate",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Frage",
+      "en": "question",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "antworten",
+      "en": "to answer",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Lösung",
+      "en": "solution",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "das Beispiel",
+      "en": "example",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "die Prüfung",
+      "en": "exam",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "bestehen",
+      "en": "to pass",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "A2",
+      "topic": "Learning German",
+      "de": "lernen",
+      "en": "to learn",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Aufgabe",
+      "en": "task",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "zuständig",
+      "en": "responsible",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "besprechen",
+      "en": "to discuss",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "vereinbaren",
+      "en": "to arrange",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "der Bericht",
+      "en": "report",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Frist",
+      "en": "deadline",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "verschicken",
+      "en": "to send out",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Abteilung",
+      "en": "department",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Leitung",
+      "en": "management",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Rückmeldung",
+      "en": "feedback",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "sich bewerben um",
+      "en": "to apply for",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "das Praktikum",
+      "en": "internship",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "übernehmen",
+      "en": "to take over",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Erfahrung",
+      "en": "experience",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Verantwortung",
+      "en": "responsibility",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Zusammenarbeit",
+      "en": "cooperation",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Besprechung",
+      "en": "meeting",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "der Kollege",
+      "en": "colleague",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Kollegin",
+      "en": "female colleague",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Work and Office",
+      "de": "die Pause",
+      "en": "break",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Miete",
+      "en": "rent",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "steigen",
+      "en": "to rise",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "bezahlbar",
+      "en": "affordable",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "das Viertel",
+      "en": "district",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Verkehrsanbindung",
+      "en": "transport connection",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "der Stadtrand",
+      "en": "edge of the city",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Innenstadt",
+      "en": "city centre",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "umziehen",
+      "en": "to move home",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "einziehen",
+      "en": "to move in",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "renovieren",
+      "en": "to renovate",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "ruhig gelegen",
+      "en": "quietly located",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Umgebung",
+      "en": "surroundings",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "der Spielplatz",
+      "en": "playground",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Bushaltestelle",
+      "en": "bus stop",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Nachtruhe",
+      "en": "night quiet hours",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "der Müll",
+      "en": "rubbish",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "entsorgen",
+      "en": "to dispose of",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "die Garage",
+      "en": "garage",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "der Balkon",
+      "en": "balcony",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Housing and City",
+      "de": "das Mehrfamilienhaus",
+      "en": "apartment building",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Vorsorge",
+      "en": "prevention",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Ernährung",
+      "en": "nutrition",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "ausgewogen",
+      "en": "balanced",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Beschwerde",
+      "en": "complaint / symptom",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "schonen",
+      "en": "to take it easy",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "das Medikament",
+      "en": "medicine",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "verschreiben",
+      "en": "to prescribe",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "untersuchen",
+      "en": "to examine",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Genesung",
+      "en": "recovery",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "der Husten",
+      "en": "cough",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "das Fieber",
+      "en": "fever",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "sich verletzen",
+      "en": "to injure oneself",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "das Symptom",
+      "en": "symptom",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Therapie",
+      "en": "therapy",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "der Arzttermin",
+      "en": "doctor appointment",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "der Befund",
+      "en": "diagnosis/report",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "sich besser fühlen",
+      "en": "to feel better",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "die Hausarztpraxis",
+      "en": "general practice",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "das Rezeptformular",
+      "en": "prescription form",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B1",
+      "topic": "Health and Advice",
+      "de": "krankschreiben",
+      "en": "to sign off sick",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "sich beziehen auf",
+      "en": "to refer to",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "in Bezug auf",
+      "en": "with regard to",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "darlegen",
+      "en": "to present / set out",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "erläutern",
+      "en": "to explain",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "begründen",
+      "en": "to justify",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "abschließend",
+      "en": "in conclusion",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "zusammenfassend",
+      "en": "in summary",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "der Gesichtspunkt",
+      "en": "aspect",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Voraussetzung",
+      "en": "precondition",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Entwicklung",
+      "en": "development",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Herausforderung",
+      "en": "challenge",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Einschätzung",
+      "en": "assessment",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Umsetzung",
+      "en": "implementation",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "wirksam",
+      "en": "effective",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "der Schwerpunkt",
+      "en": "focus",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Argumentation",
+      "en": "argumentation",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "überzeugen",
+      "en": "to convince",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "einwenden",
+      "en": "to object",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "die Position",
+      "en": "position",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Formal Writing",
+      "de": "differenziert",
+      "en": "nuanced",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Nachfrage",
+      "en": "demand",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "das Angebot",
+      "en": "supply / offer",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Kosten",
+      "en": "costs",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Investition",
+      "en": "investment",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "sinken",
+      "en": "to sink",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "steigen",
+      "en": "to increase",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "der Arbeitsmarkt",
+      "en": "labour market",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Vereinbarkeit",
+      "en": "compatibility",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Betreuung",
+      "en": "care / childcare",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Lebensqualität",
+      "en": "quality of life",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "gerecht",
+      "en": "fair",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "benachteiligt",
+      "en": "disadvantaged",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "fördern",
+      "en": "to promote",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "der Zugang",
+      "en": "access",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Beteiligung",
+      "en": "participation",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Vielfalt",
+      "en": "diversity",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Herkunft",
+      "en": "background / origin",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Chancengleichheit",
+      "en": "equal opportunity",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "die Belastung",
+      "en": "strain",
+      "example_de": "",
+      "example_en": ""
+    },
+    {
+      "level": "B2",
+      "topic": "Economy and Society",
+      "de": "entlasten",
+      "en": "to relieve",
+      "example_de": "",
+      "example_en": ""
+    }
+  ]
+}

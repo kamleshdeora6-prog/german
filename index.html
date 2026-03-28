@@ -198,6 +198,17 @@ pre{white-space:pre-wrap}
   background:var(--panel);
   border-radius:12px;
 }
+
+.statGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.statCard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px}
+.progressBar{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden}
+.progressBar>span{display:block;height:100%;background:var(--accent);border-radius:999px}
+.vocabItem{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--panel);margin-top:10px}
+.levelBadge{display:inline-block;padding:3px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px;margin-right:8px}
+.pathLevel{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--panel);margin-top:12px}
+.pathLevel h4{margin:0 0 8px 0}
+.actionRow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
 </style>
 </head>
 <body class="theme-duolingo">
@@ -231,6 +242,9 @@ pre{white-space:pre-wrap}
   <button role="tab" onclick="showTab('practiceTab', this)">Practice</button>
   <button role="tab" onclick="showTab('sentenceTab', this)">Sentence Writing</button>
   <button role="tab" onclick="showTab('libraryTab', this)">Library</button>
+  <button role="tab" onclick="showTab('vocabTab', this)">Vocabulary</button>
+  <button role="tab" onclick="showTab('pathTab', this)">Learning Path</button>
+  <button role="tab" onclick="showTab('progressTab', this)">Progress</button>
   <button role="tab" onclick="showTab('notesTab', this)">Notes</button>
   <button role="tab" onclick="showTab('flashcardsTab', this)">Flashcards</button>
   <button role="tab" onclick="showTab('translatorTab', this)">Translator</button>
@@ -292,6 +306,7 @@ pre{white-space:pre-wrap}
     <div class="row">
       <button onclick="checkTyping()">Check</button>
       <button class="ghost" onclick="clearTyping()">Clear</button>
+      <button class="ghost" onclick="speakText(document.getElementById('referenceArea').value)">🔊 Listen</button>
     </div>
 
     <div class="row" style="margin-top:6px">
@@ -520,6 +535,65 @@ pre{white-space:pre-wrap}
   <div id="libraryList" style="margin-top:12px"></div>
 </div>
 
+
+<div id="vocabTab" class="card hidden" role="tabpanel">
+  <div class="row" style="justify-content:space-between">
+    <h3>Vocabulary</h3>
+    <span class="badge">Word lists • Meanings • Examples</span>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <div style="min-width:160px">
+      <div class="small">Level</div>
+      <select id="vocabLevel" onchange="renderVocabList()">
+        <option value="ALL">All</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+      </select>
+    </div>
+    <div style="min-width:220px">
+      <div class="small">Topic</div>
+      <select id="vocabTopic" onchange="renderVocabList()">
+        <option value="ALL">All</option>
+      </select>
+    </div>
+    <div style="min-width:260px;flex:1">
+      <div class="small">Search</div>
+      <input id="vocabSearch" placeholder="Search German or English" oninput="renderVocabList()">
+    </div>
+  </div>
+  <div class="small" style="margin-top:10px">Loaded from <b>vocab.json</b>. Built around A2–B2 themes, including topics from <i>Die neue Linie 1 B1.1</i> and <i>B1.2</i>.</div>
+  <div id="vocabCount" class="small" style="margin-top:8px"></div>
+  <div id="vocabList" style="margin-top:8px"></div>
+</div>
+
+<div id="pathTab" class="card hidden" role="tabpanel">
+  <div class="row" style="justify-content:space-between">
+    <h3>Learning Path</h3>
+    <span class="badge">A1 → A2 → B1 → B2</span>
+  </div>
+  <div class="small" style="margin-top:8px">Use this roadmap as your study order. Read passages, do exercises, write sentences, review notes, then repeat weak topics.</div>
+  <div id="pathContent" style="margin-top:8px"></div>
+</div>
+
+<div id="progressTab" class="card hidden" role="tabpanel">
+  <div class="row" style="justify-content:space-between">
+    <h3>Progress</h3>
+    <span class="badge">Practice stats • Streak ideas • Weak spots</span>
+  </div>
+  <div id="progressSummary" class="statGrid" style="margin-top:12px"></div>
+  <div class="statGrid" style="margin-top:12px">
+    <div class="statCard">
+      <h4 style="margin:0 0 10px 0">Suggested daily plan</h4>
+      <div class="small">• 1 passage typing check<br>• 10 vocabulary reviews<br>• 5 exercises<br>• 2 sentence-writing tasks<br>• 1 grammar note revision</div>
+    </div>
+    <div class="statCard">
+      <h4 style="margin:0 0 10px 0">What to improve next</h4>
+      <div id="progressTips" class="small">Practice a few tasks to generate suggestions.</div>
+    </div>
+  </div>
+</div>
+
 <div id="notesTab" class="card hidden" role="tabpanel">
   <h3>Notes</h3>
   <div class="small">Study notes are loaded from <b>notes.json</b>. Personal notes are saved locally in your browser.</div>
@@ -685,6 +759,7 @@ let exercises = [];
 let flashcards = [];
 let conjugations = [];
 let sentenceTasks = [];
+let vocabItems = [];
 
 const statusEl = document.getElementById('status');
 
@@ -709,6 +784,33 @@ function normAnswer(s){
 
 function setStatus(msg){ statusEl.textContent = msg || ''; }
 
+function getProgress(){
+  return JSON.parse(localStorage.getItem('study_progress') || '{"typingChecks":0,"typingPerfect":0,"exercisesCorrect":0,"exercisesTotal":0,"sentencesChecked":0,"sentencesMatched":0,"flashcardsViewed":0,"lastStudyDay":"","daysStudied":0}');
+}
+function saveProgress(p){ localStorage.setItem('study_progress', JSON.stringify(p)); }
+function trackProgress(update){
+  const p = getProgress();
+  Object.entries(update || {}).forEach(([k,v]) => {
+    p[k] = (p[k] || 0) + v;
+  });
+  const today = new Date().toISOString().slice(0,10);
+  if(p.lastStudyDay !== today){
+    p.lastStudyDay = today;
+    p.daysStudied = (p.daysStudied || 0) + 1;
+  }
+  saveProgress(p);
+  renderProgress();
+}
+function pct(a,b){ return b ? Math.round((a/b)*100) : 0; }
+function speakText(text){
+  const t = (text || '').trim();
+  if(!t || !('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(t);
+  u.lang = 'de-DE';
+  window.speechSynthesis.speak(u);
+}
+
 function setTheme(themeClass){
   document.body.classList.remove('theme-dark','theme-light','theme-vibrant','theme-duolingo');
   document.body.classList.add(themeClass);
@@ -729,7 +831,7 @@ function shuffleArray(arr){
 function makeId(){ return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8); }
 
 function showTab(id, btn){
-  const ids = ['practiceTab','sentenceTab','libraryTab','notesTab','flashcardsTab','translatorTab','tablesTab'];
+  const ids = ['practiceTab','sentenceTab','libraryTab','vocabTab','pathTab','progressTab','notesTab','flashcardsTab','translatorTab','tablesTab'];
   ids.forEach(x => document.getElementById(x).classList.add('hidden'));
   document.getElementById(id).classList.remove('hidden');
   [...document.querySelectorAll('#tabBar button[role="tab"]')].forEach(b => b.setAttribute('aria-selected', 'false'));
@@ -800,6 +902,8 @@ async function loadPassages(){
       g: p.german ?? p.g ?? '',
       e: p.english ?? p.e ?? '',
       level: (p.level ?? '').toString().toUpperCase(),
+      chapter: p.chapter || '',
+      title: p.title || '',
       localOnly:false
     })).filter(p => (p.g || '').trim().length);
 
@@ -810,6 +914,8 @@ async function loadPassages(){
         g: p.german ?? p.g ?? '',
         e: p.english ?? p.e ?? '',
         level: (p.level ?? 'LOCAL').toString().toUpperCase(),
+        chapter: p.chapter || 'Local',
+        title: p.title || 'Local passage',
         localOnly:true
       })));
     }
@@ -885,6 +991,21 @@ function guessSentenceType(de){
   if(reflexiveBits.some(x => lower.includes(x))) return 'reflexive';
   if(/\b(auf|ein|an|mit|aus|vor|zurück)\.?$/.test(lower)) return 'separable verbs';
   return 'verb 2nd position';
+}
+
+
+async function loadVocab(){
+  try{
+    const obj = await loadJson('vocab.json');
+    const arr = obj?.items;
+    if(!Array.isArray(arr)) throw new Error('vocab.json must be { items: [...] }');
+    vocabItems = arr;
+    localStorage.setItem('vocab_cache', JSON.stringify(vocabItems));
+    return { ok:true, count:vocabItems.length };
+  }catch(e){
+    vocabItems = JSON.parse(localStorage.getItem('vocab_cache') || '[]');
+    return { ok:false, count:vocabItems.length, err:e.message };
+  }
 }
 
 async function loadSentenceTasks(){
@@ -1039,7 +1160,9 @@ function renderPassageDropdown(){
   list.forEach((p, idx) => {
     const opt = document.createElement('option');
     opt.value = String(idx);
-    opt.textContent = (p.level ? `[${p.level}] ` : '') + p.g.slice(0,60).replace(/\n/g, ' ');
+    const labelCore = p.title || p.g.slice(0,60).replace(/\\n/g, ' ');
+    const labelMeta = p.chapter ? ` — ${p.chapter}` : '';
+    opt.textContent = `${p.level ? '[' + p.level + '] ' : ''}${labelCore}${labelMeta}`;
     practiceSelect.appendChild(opt);
   });
 
@@ -1136,10 +1259,12 @@ function checkTyping(){
   if(typed === ref){
     document.getElementById('typingFeedback').innerHTML = '<span class="scoreGood">✅ Perfect! Exact match.</span>';
     diffOutput.classList.add('hidden');
+    trackProgress({ typingChecks:1, typingPerfect:1 });
   }else{
     document.getElementById('typingFeedback').innerHTML = '<span class="scoreBad">❌ Not exact.</span> Tip: check commas, umlauts, spaces, and line breaks.';
     diffOutput.classList.remove('hidden');
     diffOutput.innerHTML = `<div class="small" style="margin-bottom:6px">Highlight view (red = wrong/missing, green = extra):</div><div class="mono">${d.html}</div>`;
+    trackProgress({ typingChecks:1 });
   }
 }
 
@@ -1179,11 +1304,19 @@ function renderLibrary(){
     box.style.padding = '10px';
     box.style.marginTop = '10px';
 
+    const action = p.localOnly
+      ? `<button class="danger" onclick="deleteLocalPassageById('${esc(p.id)}')">Delete (local)</button>`
+      : '<div class="small">Study passage from JSON file.</div>';
+
     box.innerHTML = `
-      <div class="small"><b>${esc(p.level || '')}</b> ${p.localOnly ? '<span class="badge pill">local</span>' : ''}</div>
-      <div style="white-space:pre-wrap;margin-top:6px">${esc(p.g)}</div>
+      <div class="small"><span class="levelBadge">${esc(p.level || '')}</span><b>${esc(p.title || 'Untitled passage')}</b>${p.localOnly ? ' <span class="badge pill">local</span>' : ''}</div>
+      ${p.chapter ? `<div class="small" style="margin-top:4px">${esc(p.chapter)}</div>` : ''}
+      <div style="white-space:pre-wrap;margin-top:8px">${esc(p.g)}</div>
       ${p.e ? `<div class="small" style="white-space:pre-wrap;margin-top:6px">EN: ${esc(p.e)}</div>` : ''}
-      ${p.localOnly ? `<button class="danger" onclick="deleteLocalPassageById('${esc(p.id)}')">Delete (local)</button>` : '<div class="small">Edit in GitHub to change.</div>'}
+      <div class="actionRow" style="margin-top:8px">
+        <button class="ghost" onclick='speakText(${JSON.stringify(p.g)})'>🔊 Listen</button>
+        ${action}
+      </div>
     `;
 
     list.appendChild(box);
@@ -1195,6 +1328,115 @@ function deleteLocalPassageById(id){
   localStorage.setItem('passages_local', JSON.stringify(local.filter(p => p.id !== id)));
   reloadAll();
 }
+
+
+function renderVocabTopics(){
+  const sel = document.getElementById('vocabTopic');
+  if(!sel) return;
+  const current = sel.value || 'ALL';
+  const topics = Array.from(new Set((vocabItems || []).map(v => v.topic).filter(Boolean))).sort();
+  sel.innerHTML = '<option value="ALL">All</option>';
+  topics.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t;
+    sel.appendChild(opt);
+  });
+  if(topics.includes(current)) sel.value = current;
+}
+
+function renderVocabList(){
+  const list = document.getElementById('vocabList');
+  const count = document.getElementById('vocabCount');
+  if(!list || !count) return;
+  const level = document.getElementById('vocabLevel').value;
+  const topic = document.getElementById('vocabTopic').value;
+  const q = (document.getElementById('vocabSearch').value || '').trim().toLowerCase();
+  const filtered = (vocabItems || []).filter(v =>
+    (level === 'ALL' || (v.level || '') === level) &&
+    (topic === 'ALL' || (v.topic || '') === topic) &&
+    (!q || (v.de || '').toLowerCase().includes(q) || (v.en || '').toLowerCase().includes(q))
+  );
+  count.textContent = `${filtered.length} vocabulary items shown`;
+  list.innerHTML = filtered.map(v => `
+    <div class="vocabItem">
+      <div><span class="levelBadge">${esc(v.level || '')}</span><b>${esc(v.de || '')}</b> — ${esc(v.en || '')}</div>
+      <div class="small" style="margin-top:4px">${esc(v.topic || '')}</div>
+      ${v.example_de ? `<div style="margin-top:8px">${esc(v.example_de)}</div>` : ''}
+      ${v.example_en ? `<div class="small" style="margin-top:4px">EN: ${esc(v.example_en)}</div>` : ''}
+    </div>
+  `).join('') || '<div class="small">No vocabulary found for this filter.</div>';
+}
+
+function renderLearningPath(){
+  const box = document.getElementById('pathContent');
+  if(!box) return;
+  const data = [
+    {
+      level:'A1',
+      progress:25,
+      goals:['present tense','articles and cases basics','simple questions','daily routines'],
+      tasks:['read short A1 passages','write 5 simple sentences','practice modal verbs'],
+      exam:['introduce yourself','describe family, city, work']
+    },
+    {
+      level:'A2',
+      progress:50,
+      goals:['Perfekt','weil / dass / wenn','reflexive verbs','requests and daily communication'],
+      tasks:['type A2 passages','do infinitive with zu exercises','write formal and informal messages'],
+      exam:['complaints, appointments, simple opinions']
+    },
+    {
+      level:'B1',
+      progress:75,
+      goals:['relative clauses','verbs with prepositions','genitive basics','passive and Futur I','work / health / environment / culture'],
+      tasks:['study chapters from Neue Nachbarn to Sport und Bewegung','write structured emails and short opinion texts','review B1 vocabulary lists'],
+      exam:['express opinions, compare options, understand longer texts']
+    },
+    {
+      level:'B2',
+      progress:100,
+      goals:['Konjunktiv II','complex connectors','nominalization','formal discussion language','abstract topics'],
+      tasks:['write pros/cons texts','practise translation and error correction','build topic vocabulary for society, media, work, housing'],
+      exam:['argue clearly, react precisely, write cohesive texts']
+    }
+  ];
+  box.innerHTML = data.map(item => `
+    <div class="pathLevel">
+      <div class="row" style="justify-content:space-between">
+        <h4>${item.level}</h4>
+        <span class="badge">Target path</span>
+      </div>
+      <div class="progressBar"><span style="width:${item.progress}%"></span></div>
+      <div class="small" style="margin-top:8px"><b>Grammar & skills:</b> ${item.goals.join(' • ')}</div>
+      <div class="small" style="margin-top:8px"><b>What to do in this app:</b> ${item.tasks.join(' • ')}</div>
+      <div class="small" style="margin-top:8px"><b>Output goals:</b> ${item.exam.join(' • ')}</div>
+    </div>
+  `).join('');
+}
+
+function renderProgress(){
+  const box = document.getElementById('progressSummary');
+  const tips = document.getElementById('progressTips');
+  if(!box || !tips) return;
+  const p = getProgress();
+  const exAcc = pct(p.exercisesCorrect, p.exercisesTotal);
+  const sentAcc = pct(p.sentencesMatched, p.sentencesChecked);
+  const typeAcc = pct(p.typingPerfect, p.typingChecks);
+  box.innerHTML = `
+    <div class="statCard"><div class="small">Typing checks</div><div style="font-size:28px;font-weight:800">${p.typingChecks || 0}</div><div class="small">Perfect matches: ${typeAcc}%</div></div>
+    <div class="statCard"><div class="small">Exercises</div><div style="font-size:28px;font-weight:800">${p.exercisesTotal || 0}</div><div class="small">Accuracy: ${exAcc}%</div></div>
+    <div class="statCard"><div class="small">Sentence writing</div><div style="font-size:28px;font-weight:800">${p.sentencesChecked || 0}</div><div class="small">Sample match: ${sentAcc}%</div></div>
+    <div class="statCard"><div class="small">Days studied</div><div style="font-size:28px;font-weight:800">${p.daysStudied || 0}</div><div class="small">Keep your streak idea simple: 1 task every day.</div></div>
+  `;
+  const suggestions = [];
+  if((p.typingChecks || 0) < 5) suggestions.push('Do more typing practice with A2/B1 passages.');
+  if(exAcc < 75 && (p.exercisesTotal || 0) >= 4) suggestions.push('Review grammar notes, then repeat exercises slowly.');
+  if(sentAcc < 60 && (p.sentencesChecked || 0) >= 4) suggestions.push('Use sentence-writing with sample answers to improve word order.');
+  if(!suggestions.length) suggestions.push('Good balance so far. Move to B1 passages and B2 opinion vocabulary next.');
+  tips.innerHTML = suggestions.map(s => `• ${esc(s)}`).join('<br>');
+}
+
 
 function renderNotesTopics(){
   const notesTopic = document.getElementById('notesTopic');
@@ -1330,6 +1572,7 @@ function checkExerciseMCQ(chosen){
   document.getElementById('exFeedback').innerHTML = ok
     ? '<span class="scoreGood">✅ Correct!</span>'
     : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+  trackProgress(ok ? { exercisesCorrect:1, exercisesTotal:1 } : { exercisesTotal:1 });
 }
 
 function checkExerciseTyping(){
@@ -1340,6 +1583,7 @@ function checkExerciseTyping(){
   document.getElementById('exFeedback').innerHTML = ok
     ? '<span class="scoreGood">✅ Correct!</span>'
     : `<span class="scoreBad">❌ Wrong.</span> Correct: <b>${esc(right)}</b>`;
+  trackProgress(ok ? { exercisesCorrect:1, exercisesTotal:1 } : { exercisesTotal:1 });
 }
 
 let fcPool = [];
@@ -1602,10 +1846,13 @@ function checkSentencePractice(){
 
   if(ok){
     document.getElementById('sentFeedback').innerHTML = '<span class="scoreGood">✅ Great. Your answer matches one of the sample answers.</span>';
+    trackProgress({ sentencesChecked:1, sentencesMatched:1 });
   }else if(possible.length){
     document.getElementById('sentFeedback').innerHTML = '<span class="scoreBad">Not an exact sample match.</span> Your sentence may still be correct. Compare it with the sample answer and check the verb position and word order.';
+    trackProgress({ sentencesChecked:1 });
   }else{
     document.getElementById('sentFeedback').innerHTML = 'Checked. Use the structure hint to self-review.';
+    trackProgress({ sentencesChecked:1 });
   }
 }
 

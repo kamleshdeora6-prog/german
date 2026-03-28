@@ -48,3557 +48,1101 @@
     {
       "id": 6,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "infinitiv_ohne_zu",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich kann Deutsch ___ sprechen.",
+      "answer": "",
+      "hint": "Leave the gap empty when no 'zu' is needed."
     },
     {
       "id": 7,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "infinitiv_ohne_zu",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich muss heute lange ___ arbeiten.",
+      "answer": "",
+      "hint": "Leave the gap empty when no 'zu' is needed."
     },
     {
       "id": 8,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "infinitiv_ohne_zu",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich will morgen früh ___ aufstehen.",
+      "answer": "",
+      "hint": "Leave the gap empty when no 'zu' is needed."
     },
     {
       "id": 9,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "infinitiv_ohne_zu",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich gehe heute ___ einkaufen.",
+      "answer": "",
+      "hint": "Leave the gap empty when no 'zu' is needed."
     },
     {
       "id": 10,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "infinitiv_ohne_zu",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Wir fahren morgen ___ schwimmen.",
+      "answer": "",
+      "hint": "Leave the gap empty when no 'zu' is needed."
     },
     {
       "id": 11,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_akkusativ",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich ziehe ___ an.",
+      "answer": "mich",
+      "hint": "Use the correct Akkusativ reflexive pronoun."
     },
     {
       "id": 12,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_akkusativ",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Du wäschst ___.",
+      "answer": "dich",
+      "hint": "Use the correct Akkusativ reflexive pronoun."
     },
     {
       "id": 13,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_akkusativ",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Er rasiert ___.",
+      "answer": "sich",
+      "hint": "Use the correct Akkusativ reflexive pronoun."
     },
     {
       "id": 14,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_akkusativ",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Wir beeilen ___.",
+      "answer": "uns",
+      "hint": "Use the correct Akkusativ reflexive pronoun."
     },
     {
       "id": 15,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_akkusativ",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ihr setzt ___.",
+      "answer": "euch",
+      "hint": "Use the correct Akkusativ reflexive pronoun."
     },
     {
       "id": 16,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_dativ",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich wasche ___ die Hände.",
+      "answer": "mir",
+      "hint": "Use the correct Dativ reflexive pronoun."
     },
     {
       "id": 17,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_dativ",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Du putzt ___ die Zähne.",
+      "answer": "dir",
+      "hint": "Use the correct Dativ reflexive pronoun."
     },
     {
       "id": 18,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_dativ",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Ich ziehe ___ eine Jacke an.",
+      "answer": "mir",
+      "hint": "Use the correct Dativ reflexive pronoun."
     },
     {
       "id": 19,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_dativ",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Wir kaufen ___ neue Schuhe.",
+      "answer": "uns",
+      "hint": "Use the correct Dativ reflexive pronoun."
     },
     {
       "id": 20,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "reflexive_dativ",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Du kaufst ___ eine Hose.",
+      "answer": "dir",
+      "hint": "Use the correct Dativ reflexive pronoun."
     },
     {
       "id": 21,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sowohl_als_auch",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
+      "answer": "sowohl ... als auch",
+      "hint": "Answer format: sowohl ... als auch"
     },
     {
       "id": 22,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sowohl_als_auch",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
+      "answer": "sowohl ... als auch",
+      "hint": "Answer format: sowohl ... als auch"
     },
     {
       "id": 23,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sowohl_als_auch",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
+      "answer": "sowohl ... als auch",
+      "hint": "Answer format: sowohl ... als auch"
     },
     {
       "id": 24,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sowohl_als_auch",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
+      "answer": "sowohl ... als auch",
+      "hint": "Answer format: sowohl ... als auch"
     },
     {
       "id": 25,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sowohl_als_auch",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
+      "answer": "sowohl ... als auch",
+      "hint": "Answer format: sowohl ... als auch"
     },
     {
       "id": 26,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "weder_noch",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
+      "answer": "weder ... noch",
+      "hint": "Answer format: weder ... noch"
     },
     {
       "id": 27,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "weder_noch",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
+      "answer": "weder ... noch",
+      "hint": "Answer format: weder ... noch"
     },
     {
       "id": 28,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "weder_noch",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
+      "answer": "weder ... noch",
+      "hint": "Answer format: weder ... noch"
     },
     {
       "id": 29,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "weder_noch",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
+      "answer": "weder ... noch",
+      "hint": "Answer format: weder ... noch"
     },
     {
       "id": 30,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "weder_noch",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
+      "answer": "weder ... noch",
+      "hint": "Answer format: weder ... noch"
     },
     {
       "id": 31,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "relative_pronouns",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
+      "answer": "Die Jacke, die ich kaufe, ist schön.",
+      "hint": "Use the correct Akkusativ relative pronoun."
     },
     {
       "id": 32,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "relative_pronouns",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
+      "answer": "Der Mantel, den ich sehe, ist teuer.",
+      "hint": "Use the correct Akkusativ relative pronoun."
     },
     {
       "id": 33,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "relative_pronouns",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
+      "answer": "Das Hemd, das ich trage, ist blau.",
+      "hint": "Use the correct Akkusativ relative pronoun."
     },
     {
       "id": 34,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "relative_pronouns",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
+      "answer": "Die Schuhe, die ich kaufe, sind neu.",
+      "hint": "Use the correct Akkusativ relative pronoun."
     },
     {
       "id": 35,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "relative_pronouns",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
+      "answer": "Der Pullover, den ich trage, ist warm.",
+      "hint": "Use the correct Akkusativ relative pronoun."
     },
     {
       "id": 36,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "zu_vs_dass",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
+      "answer": "dass",
+      "hint": "Same subject → zu. Different subject → dass."
     },
     {
       "id": 37,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "zu_vs_dass",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
+      "answer": "zu",
+      "hint": "Same subject → zu. Different subject → dass."
     },
     {
       "id": 38,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "zu_vs_dass",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
+      "answer": "dass",
+      "hint": "Same subject → zu. Different subject → dass."
     },
     {
       "id": 39,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "zu_vs_dass",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
+      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
       "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "hint": "Same subject → zu. Different subject → dass."
     },
     {
       "id": 40,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "zu_vs_dass",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
+      "answer": "dass",
+      "hint": "Same subject → zu. Different subject → dass."
     },
     {
       "id": 41,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(heute / ich / früher / aufstehen / muss)",
+      "answer": "Ich muss heute früher aufstehen.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 42,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(weil / ich / krank / bin / zu Hause / bleibe / ich)",
+      "answer": "Ich bleibe zu Hause, weil ich krank bin.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 43,
       "level": "A2",
-      "type": "infinitiv_zu",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(mit dem Kollegen / ich / spreche / über das Problem)",
+      "answer": "Ich spreche mit dem Kollegen über das Problem.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 44,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(obwohl / es regnet / gehen / wir / spazieren)",
+      "answer": "Obwohl es regnet, gehen wir spazieren.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 45,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(der Film / den / ich / gestern / gesehen habe / war / spannend)",
+      "answer": "Der Film, den ich gestern gesehen habe, war spannend.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 46,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich versuche, Deutsch ___ lernen.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(damit / ich / die Prüfung / bestehe / lerne / ich / jeden Tag)",
+      "answer": "Ich lerne jeden Tag, damit ich die Prüfung bestehe.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 47,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich hoffe, morgen früh ___ aufstehen.",
-      "answer": "aufzustehen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(wenn / ich / mehr Zeit / hätte / würde / ich / mehr lesen)",
+      "answer": "Wenn ich mehr Zeit hätte, würde ich mehr lesen.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 48,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B1",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Ich habe vergessen, dich ___ anrufen.",
-      "answer": "anzurufen",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(die Straße / wird / morgen / repariert)",
+      "answer": "Die Straße wird morgen repariert.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 49,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B2",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Es ist wichtig, genug Wasser ___ trinken.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(einerseits / spart / Homeoffice / Zeit / andererseits / fehlt / oft / der Austausch)",
+      "answer": "Einerseits spart Homeoffice Zeit, andererseits fehlt oft der Austausch.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 50,
-      "level": "A2",
-      "type": "infinitiv_zu",
+      "level": "B2",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Es macht Spaß, Musik ___ hören.",
-      "answer": "zu",
-      "hint": "Use 'zu' or the correct combined infinitive form."
+      "question": "(hätte / die Stadt / früher investiert / wäre / die Lage / besser)",
+      "answer": "Hätte die Stadt früher investiert, wäre die Lage besser.",
+      "hint": "Build a correct German sentence."
     },
     {
       "id": 51,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich bleibe zu Hause weil ich bin krank.",
+      "answer": "Ich bleibe zu Hause, weil ich krank bin.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 52,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Der Mann, den dort steht, ist mein Nachbar.",
+      "answer": "Der Mann, der dort steht, ist mein Nachbar.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 53,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich interessiere mich an Kunst.",
+      "answer": "Ich interessiere mich für Kunst.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 54,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Obwohl ich war müde, habe ich gelernt.",
+      "answer": "Obwohl ich müde war, habe ich gelernt.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 55,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Die Aufgabe wird morgen erledigen.",
+      "answer": "Die Aufgabe wird morgen erledigt.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 56,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Wenn ich mehr Zeit hätte, ich würde mehr Sport machen.",
+      "answer": "Wenn ich mehr Zeit hätte, würde ich mehr Sport machen.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 57,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Meiner Meinung nach ist wichtig, dass öffentliche Verkehrsmittel zuverlässiger werden.",
+      "answer": "Meiner Meinung nach ist es wichtig, dass öffentliche Verkehrsmittel zuverlässiger werden.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 58,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Das ist der Kollege, mit dem ich arbeite zusammen.",
+      "answer": "Das ist der Kollege, mit dem ich zusammenarbeite.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 59,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "type": "modal_or_zu",
+      "mode": "mcq",
+      "question": "Ich habe vergessen, das Fenster ___ schließen.",
+      "answer": "zu",
+      "hint": "Choose the correct form.",
+      "options": [
+        "zu",
+        "zum",
+        "zuen",
+        ""
+      ]
     },
     {
       "id": 60,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "type": "question_word",
+      "mode": "mcq",
+      "question": "___ wohnst du jetzt?",
+      "answer": "Wo",
+      "hint": "Choose the correct question word.",
+      "options": [
+        "Wo",
+        "Wann",
+        "Warum",
+        "Wie"
+      ]
     },
     {
       "id": 61,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "type": "preposition_case",
+      "mode": "mcq",
+      "question": "Ich gehe ___ Arzt.",
+      "answer": "zum",
+      "hint": "Choose the correct form.",
+      "options": [
+        "zum",
+        "beim",
+        "im",
+        "vom"
+      ]
     },
     {
       "id": 62,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "connector",
+      "mode": "mcq",
+      "question": "Ich lerne viel, ___ ich die Prüfung bestehen will.",
+      "answer": "weil",
+      "hint": "Choose the best connector.",
+      "options": [
+        "weil",
+        "deshalb",
+        "trotzdem",
+        "oder"
+      ]
     },
     {
       "id": 63,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "relative_pronoun",
+      "mode": "mcq",
+      "question": "Das ist die Frau, ___ im Büro arbeitet.",
+      "answer": "die",
+      "hint": "Choose the correct relative pronoun.",
+      "options": [
+        "die",
+        "den",
+        "dem",
+        "deren"
+      ]
     },
     {
       "id": 64,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "verb_prep",
+      "mode": "mcq",
+      "question": "Wir warten ___ den Bus.",
+      "answer": "auf",
+      "hint": "Choose the correct preposition.",
+      "options": [
+        "auf",
+        "für",
+        "mit",
+        "bei"
+      ]
     },
     {
       "id": 65,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "konnektor",
+      "mode": "mcq",
+      "question": "Es regnet. ___ gehen wir spazieren.",
+      "answer": "Trotzdem",
+      "hint": "Choose the correct connector.",
+      "options": [
+        "Trotzdem",
+        "Weil",
+        "Damit",
+        "Obwohl"
+      ]
     },
     {
       "id": 66,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "passive",
+      "mode": "mcq",
+      "question": "Die E-Mail ___ morgen geschickt.",
+      "answer": "wird",
+      "hint": "Choose the auxiliary for passive.",
+      "options": [
+        "wird",
+        "hat",
+        "ist",
+        "war"
+      ]
     },
     {
       "id": 67,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B2",
+      "type": "konjunktiv_ii",
+      "mode": "mcq",
+      "question": "An deiner Stelle ___ ich früher anfangen.",
+      "answer": "würde",
+      "hint": "Choose the correct Konjunktiv II form.",
+      "options": [
+        "würde",
+        "werde",
+        "wurde",
+        "würdest"
+      ]
     },
     {
       "id": 68,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B2",
+      "type": "nominalization",
+      "mode": "mcq",
+      "question": "___ Lesen hilft beim Lernen.",
+      "answer": "Regelmäßiges",
+      "hint": "Choose the correct form.",
+      "options": [
+        "Regelmäßiges",
+        "Regelmäßig",
+        "Regelmäßigen",
+        "Regelmäßigem"
+      ]
     },
     {
       "id": 69,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "I am looking forward to the weekend.",
+      "answer": "Ich freue mich auf das Wochenende.",
+      "hint": "Translate into German."
     },
     {
       "id": 70,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "translation",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Could you please help me?",
+      "answer": "Könnten Sie mir bitte helfen?",
+      "hint": "Translate into German."
     },
     {
       "id": 71,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "We are saving money to buy a car.",
+      "answer": "Wir sparen Geld, um ein Auto zu kaufen.",
+      "hint": "Translate into German."
     },
     {
       "id": 72,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Although the apartment is small, it is very bright.",
+      "answer": "Obwohl die Wohnung klein ist, ist sie sehr hell.",
+      "hint": "Translate into German."
     },
     {
       "id": 73,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "The colleague with whom I work is very friendly.",
+      "answer": "Der Kollege, mit dem ich arbeite, ist sehr freundlich.",
+      "hint": "Translate into German."
     },
     {
       "id": 74,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "The city is trying to become more environmentally friendly.",
+      "answer": "Die Stadt versucht, umweltfreundlicher zu werden.",
+      "hint": "Translate into German."
     },
     {
       "id": 75,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "translation",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "I write down new words so that I do not forget them.",
+      "answer": "Ich schreibe neue Wörter auf, damit ich sie nicht vergesse.",
+      "hint": "Translate into German."
     },
     {
       "id": 76,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "In my opinion, affordable housing is a social issue.",
+      "answer": "Meiner Meinung nach ist bezahlbarer Wohnraum eine soziale Frage.",
+      "hint": "Translate into German."
     },
     {
       "id": 77,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "If I had known that, I would have prepared better.",
+      "answer": "Wenn ich das gewusst hätte, hätte ich mich besser vorbereitet.",
+      "hint": "Translate into German."
     },
     {
       "id": 78,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "The proposal sounds convincing, but important questions remain open.",
+      "answer": "Der Vorschlag klingt überzeugend, aber wichtige Fragen bleiben offen.",
+      "hint": "Translate into German."
     },
     {
       "id": 79,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "cases",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich warte ___ den Bus.",
+      "answer": "auf",
+      "hint": "Verb + preposition"
     },
     {
       "id": 80,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "perfekt",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich ___ gestern lange gearbeitet.",
+      "answer": "habe",
+      "hint": "Choose the correct auxiliary."
     },
     {
       "id": 81,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "subordinate",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich bleibe zu Hause, weil es ___ .",
+      "answer": "regnet",
+      "hint": "Verb goes to the end."
     },
     {
       "id": 82,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "relative",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Das ist das Buch, ___ ich suche.",
+      "answer": "das",
+      "hint": "Relative pronoun"
     },
     {
       "id": 83,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "genitive",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Wegen ___ Wetters bleiben wir drinnen.",
+      "answer": "des",
+      "hint": "Use the genitive article."
     },
     {
       "id": 84,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "future",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Morgen ___ ich früher kommen.",
+      "answer": "werde",
+      "hint": "Futur I"
     },
     {
       "id": 85,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "damit",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich spreche langsam, damit du mich ___ .",
+      "answer": "verstehst",
+      "hint": "Subordinate clause"
     },
     {
       "id": 86,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B1",
+      "type": "not_only",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Er ist nicht nur freundlich, ___ auch geduldig.",
+      "answer": "sondern",
+      "hint": "Fixed structure"
     },
     {
       "id": 87,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "konjunktiv2",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich ___ gern im Ausland arbeiten.",
+      "answer": "würde",
+      "hint": "Konjunktiv II"
     },
     {
       "id": 88,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "comparison",
       "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Je genauer du lernst, ___ leichter verstehst du den Text.",
+      "answer": "desto",
+      "hint": "Correlative structure"
     },
     {
       "id": 89,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "passive",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Die Ergebnisse ___ morgen veröffentlicht.",
+      "answer": "werden",
+      "hint": "Passive future/present"
     },
     {
       "id": 90,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "level": "B2",
+      "type": "reported_speech",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Er sagt, dass er später ___ .",
+      "answer": "kommt",
+      "hint": "Reported speech with dass"
     },
     {
       "id": 91,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welches Wort passt zu 'application' im Job-Kontext?",
+      "answer": "die Bewerbung",
+      "hint": "Choose the correct word.",
+      "options": [
+        "die Bewerbung",
+        "die Bewegung",
+        "die Besprechung",
+        "die Bezahlung"
+      ]
     },
     {
       "id": 92,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welches Wort bedeutet 'neighbourhood'?",
+      "answer": "die Nachbarschaft",
+      "hint": "Choose the correct word.",
+      "options": [
+        "die Nachbarschaft",
+        "die Nachricht",
+        "die Landschaft",
+        "die Wirtschaft"
+      ]
     },
     {
       "id": 93,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B1",
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welches Wort bedeutet 'sustainable'?",
+      "answer": "nachhaltig",
+      "hint": "Choose the correct word.",
+      "options": [
+        "nachhaltig",
+        "neugierig",
+        "nervös",
+        "notwendig"
+      ]
     },
     {
       "id": 94,
-      "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "level": "B2",
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welcher Ausdruck passt für eine Diskussion?",
+      "answer": "einerseits ... andererseits",
+      "hint": "Choose the correct word.",
+      "options": [
+        "einerseits ... andererseits",
+        "weder ... noch",
+        "mit freundlichen Grüßen",
+        "guten Appetit"
+      ]
     },
     {
       "id": 95,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "sentence_build",
       "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "(morgen / wir / Freunde / besuchen)",
+      "answer": "Wir besuchen morgen Freunde.",
+      "hint": "Build the sentence."
     },
     {
       "id": 96,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich kann Deutsch ___ sprechen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "The children are playing in the courtyard.",
+      "answer": "Die Kinder spielen im Hof.",
+      "hint": "Translate into German."
     },
     {
       "id": 97,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Ich muss heute lange ___ arbeiten.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich weiß nicht, ob das Geschäft ist offen.",
+      "answer": "Ich weiß nicht, ob das Geschäft offen ist.",
+      "hint": "Correct the sentence."
     },
     {
       "id": 98,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Ich will morgen früh ___ aufstehen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welches Wort bedeutet 'receipt'?",
+      "answer": "die Quittung",
+      "hint": "Choose the correct word.",
+      "options": [
+        "die Quittung",
+        "die Kündigung",
+        "die Leitung",
+        "die Lieferung"
+      ]
     },
     {
       "id": 99,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
+      "type": "subordinate",
       "mode": "typing",
-      "question": "Ich gehe heute ___ einkaufen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "question": "Ich rufe an, um einen Termin ___ vereinbaren.",
+      "answer": "zu",
+      "hint": "Use infinitive with zu."
     },
     {
       "id": 100,
       "level": "A2",
-      "type": "infinitiv_ohne_zu",
-      "mode": "typing",
-      "question": "Wir fahren morgen ___ schwimmen.",
-      "answer": "",
-      "hint": "Leave the gap empty when no 'zu' is needed."
+      "type": "preposition_case",
+      "mode": "mcq",
+      "question": "Wir treffen uns ___ Bahnhof.",
+      "answer": "am",
+      "hint": "Choose the correct preposition.",
+      "options": [
+        "am",
+        "an den",
+        "beim",
+        "zu"
+      ]
     },
     {
       "id": 101,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B1",
+      "type": "translation",
       "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "The patient was examined immediately.",
+      "answer": "Der Patient wurde sofort untersucht.",
+      "hint": "Translate into German."
     },
     {
       "id": 102,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B1",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Ich freue mich, dich zu sehen morgen.",
+      "answer": "Ich freue mich, dich morgen zu sehen.",
+      "hint": "Correct word order."
     },
     {
       "id": 103,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "level": "B1",
+      "type": "mcq_collocation",
+      "mode": "mcq",
+      "question": "Was passt? 'eine Versicherung ...'",
+      "answer": "abschließen",
+      "hint": "Choose the best verb.",
+      "options": [
+        "abschließen",
+        "kochen",
+        "parken",
+        "malen"
+      ]
     },
     {
       "id": 104,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B1",
+      "type": "verb_prep",
       "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Ich interessiere mich ___ Kultur.",
+      "answer": "für",
+      "hint": "Use the correct preposition."
     },
     {
       "id": 105,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B1",
+      "type": "relative",
       "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Das ist die Kollegin, mit ___ ich arbeite.",
+      "answer": "der",
+      "hint": "Use the correct relative pronoun."
     },
     {
       "id": 106,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "level": "B1",
+      "type": "mcq_passive",
+      "mode": "mcq",
+      "question": "Aktiv oder Passiv? 'Die Straße wird repariert.'",
+      "answer": "Passiv",
+      "hint": "Choose the correct answer.",
+      "options": [
+        "Aktiv",
+        "Passiv"
+      ]
     },
     {
       "id": 107,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B1",
+      "type": "connector",
       "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Es war spät. ___ bin ich nach Hause gegangen.",
+      "answer": "Deshalb",
+      "hint": "Choose a suitable connector."
     },
     {
       "id": 108,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B2",
+      "type": "translation",
       "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Broad agreement exists that change is necessary.",
+      "answer": "Breite Einigkeit besteht darin, dass Veränderungen notwendig sind.",
+      "hint": "Translate into German."
     },
     {
       "id": 109,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B2",
+      "type": "error_fix",
       "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Nicht nur der Preis ist wichtig sondern auch die Qualität.",
+      "answer": "Nicht nur der Preis ist wichtig, sondern auch die Qualität.",
+      "hint": "Correct punctuation and structure."
     },
     {
       "id": 110,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B2",
+      "type": "konjunktiv_ii",
       "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Wenn ich mehr Zeit hätte, ___ ich mehr lesen.",
+      "answer": "würde",
+      "hint": "Complete the Konjunktiv II sentence."
     },
     {
       "id": 111,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "level": "B2",
+      "type": "discussion_phrase",
+      "mode": "mcq",
+      "question": "Welcher Ausdruck passt zu einer Schlussfolgerung?",
+      "answer": "Zusammenfassend lässt sich sagen, dass ...",
+      "hint": "Choose the best phrase.",
+      "options": [
+        "Zusammenfassend lässt sich sagen, dass ...",
+        "Guten Morgen",
+        "Wie heißt du?",
+        "Ich bin müde"
+      ]
     },
     {
       "id": 112,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B2",
+      "type": "nominalization",
       "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "___ Lesen verbessert den Wortschatz.",
+      "answer": "Regelmäßiges",
+      "hint": "Nominalize the adjective."
     },
     {
       "id": 113,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
+      "level": "B2",
+      "type": "comparison",
       "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
+      "question": "Je öfter du sprichst, ___ sicherer wirst du.",
+      "answer": "desto",
+      "hint": "Complete the comparison."
     },
     {
       "id": 114,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 115,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 116,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 117,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 118,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 119,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 120,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 121,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 122,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 123,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 124,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 125,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 126,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 127,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 128,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 129,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 130,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 131,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 132,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 133,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 134,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 135,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 136,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 137,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 138,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 139,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 140,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 141,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 142,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 143,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 144,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 145,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 146,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ an.",
-      "answer": "mich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 147,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Du wäschst ___.",
-      "answer": "dich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 148,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Er rasiert ___.",
-      "answer": "sich",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 149,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Wir beeilen ___.",
-      "answer": "uns",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 150,
-      "level": "A2",
-      "type": "reflexive_akkusativ",
-      "mode": "typing",
-      "question": "Ihr setzt ___.",
-      "answer": "euch",
-      "hint": "Use the correct Akkusativ reflexive pronoun."
-    },
-    {
-      "id": 151,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 152,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 153,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 154,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 155,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 156,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 157,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 158,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 159,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 160,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 161,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 162,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 163,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 164,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 165,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 166,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 167,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 168,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 169,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 170,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 171,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 172,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 173,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 174,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 175,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 176,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 177,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 178,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 179,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 180,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 181,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 182,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 183,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 184,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 185,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 186,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 187,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 188,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 189,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 190,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 191,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 192,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 193,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 194,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 195,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 196,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich wasche ___ die Hände.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 197,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du putzt ___ die Zähne.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 198,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Ich ziehe ___ eine Jacke an.",
-      "answer": "mir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 199,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Wir kaufen ___ neue Schuhe.",
-      "answer": "uns",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 200,
-      "level": "A2",
-      "type": "reflexive_dativ",
-      "mode": "typing",
-      "question": "Du kaufst ___ eine Hose.",
-      "answer": "dir",
-      "hint": "Use the correct Dativ reflexive pronoun."
-    },
-    {
-      "id": 201,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 202,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 203,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 204,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 205,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 206,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 207,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 208,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 209,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 210,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 211,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 212,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 213,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 214,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 215,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 216,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 217,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 218,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 219,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 220,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 221,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 222,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 223,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 224,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 225,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 226,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 227,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 228,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 229,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 230,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 231,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 232,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 233,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 234,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 235,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 236,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 237,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 238,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 239,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 240,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 241,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 242,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 243,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 244,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 245,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 246,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ Schuhe.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 247,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ einen Mantel ___ einen Schal.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 248,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 249,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 250,
-      "level": "B1",
-      "type": "sowohl_als_auch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir kaufen ___ Jeans ___ T-Shirts.",
-      "answer": "sowohl ... als auch",
-      "hint": "Answer format: sowohl ... als auch"
-    },
-    {
-      "id": 251,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 252,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 253,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 254,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 255,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 256,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 257,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 258,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 259,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 260,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 261,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 262,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 263,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 264,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 265,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 266,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 267,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 268,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 269,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 270,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 271,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 272,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 273,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 274,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 275,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 276,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 277,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 278,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 279,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 280,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 281,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 282,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 283,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 284,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 285,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 286,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 287,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 288,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 289,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 290,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 291,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 292,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 293,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 294,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 295,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 296,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich kaufe ___ eine Jacke ___ einen Mantel.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 297,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Er trägt ___ Schuhe ___ Sandalen.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 298,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Ich habe ___ Zeit ___ Geld.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 299,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Sie spricht ___ Deutsch ___ Englisch.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 300,
-      "level": "B1",
-      "type": "weder_noch",
-      "mode": "typing",
-      "question": "Fill in both connectors: Wir essen ___ Pizza ___ Pasta.",
-      "answer": "weder ... noch",
-      "hint": "Answer format: weder ... noch"
-    },
-    {
-      "id": 301,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 302,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 303,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 304,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 305,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 306,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 307,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 308,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 309,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 310,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 311,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 312,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 313,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 314,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 315,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 316,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 317,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 318,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 319,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 320,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 321,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 322,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 323,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 324,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 325,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 326,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 327,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 328,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 329,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 330,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 331,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 332,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 333,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 334,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 335,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 336,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 337,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 338,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 339,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 340,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 341,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 342,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 343,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 344,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 345,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 346,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Jacke ist schön. Ich kaufe die Jacke.",
-      "answer": "Die Jacke, die ich kaufe, ist schön.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 347,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Mantel ist teuer. Ich sehe den Mantel.",
-      "answer": "Der Mantel, den ich sehe, ist teuer.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 348,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Das Hemd ist blau. Ich trage das Hemd.",
-      "answer": "Das Hemd, das ich trage, ist blau.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 349,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Die Schuhe sind neu. Ich kaufe die Schuhe.",
-      "answer": "Die Schuhe, die ich kaufe, sind neu.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 350,
-      "level": "B1",
-      "type": "relative_pronouns",
-      "mode": "typing",
-      "question": "Combine with a relative pronoun: Der Pullover ist warm. Ich trage den Pullover.",
-      "answer": "Der Pullover, den ich trage, ist warm.",
-      "hint": "Use the correct Akkusativ relative pronoun."
-    },
-    {
-      "id": 351,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 352,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 353,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 354,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 355,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 356,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 357,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 358,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 359,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 360,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 361,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 362,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 363,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 364,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 365,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 366,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 367,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 368,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 369,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 370,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 371,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 372,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 373,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 374,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 375,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 376,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 377,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 378,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 379,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 380,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 381,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 382,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 383,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 384,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 385,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 386,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 387,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 388,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 389,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 390,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 391,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 392,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 393,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 394,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 395,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 396,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, ___ ich eine Jacke finde.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 397,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich hoffe, eine Jacke ___ kaufen.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 398,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich denke, ___ diese Jacke teuer ist.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 399,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich versuche, eine Hose ___ finden.",
-      "answer": "zu",
-      "hint": "Same subject → zu. Different subject → dass."
-    },
-    {
-      "id": 400,
-      "level": "B1",
-      "type": "zu_vs_dass",
-      "mode": "typing",
-      "question": "Fill the gap: Ich glaube, ___ du eine neue Jacke brauchst.",
-      "answer": "dass",
-      "hint": "Same subject → zu. Different subject → dass."
+      "level": "B2",
+      "type": "vocabulary",
+      "mode": "mcq",
+      "question": "Welches Wort bedeutet 'framework conditions'?",
+      "answer": "die Rahmenbedingungen",
+      "hint": "Choose the correct word.",
+      "options": [
+        "die Rahmenbedingungen",
+        "die Rechnungen",
+        "die Rückgaben",
+        "die Richtungen"
+      ]
     }
   ]
 }

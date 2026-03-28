@@ -1,174 +1,2519 @@
-
 {
-"flashcards":[
-
-{"category":"articles","front":"der Mann","back":"the man (masculine)"},
-{"category":"articles","front":"die Frau","back":"the woman (feminine)"},
-{"category":"articles","front":"das Kind","back":"the child (neuter)"},
-{"category":"articles","front":"der Tisch","back":"the table"},
-{"category":"articles","front":"die Lampe","back":"the lamp"},
-{"category":"articles","front":"das Fenster","back":"the window"},
-{"category":"articles","front":"der Hund","back":"the dog"},
-{"category":"articles","front":"die Katze","back":"the cat"},
-{"category":"articles","front":"das Auto","back":"the car"},
-{"category":"articles","front":"der Lehrer","back":"the teacher"},
-{"category":"articles","front":"die Schule","back":"the school"},
-{"category":"articles","front":"das Buch","back":"the book"},
-{"category":"articles","front":"der Freund","back":"the friend"},
-{"category":"articles","front":"die Wohnung","back":"the apartment"},
-{"category":"articles","front":"das Büro","back":"the office"},
-{"category":"articles","front":"der Termin","back":"the appointment"},
-{"category":"articles","front":"die Frage","back":"the question"},
-{"category":"articles","front":"das Problem","back":"the problem"},
-{"category":"articles","front":"der Film","back":"the movie"},
-{"category":"articles","front":"die Arbeit","back":"the work"},
-
-{"category":"modal_verbs","front":"können","back":"can / to be able to"},
-{"category":"modal_verbs","front":"müssen","back":"must / have to"},
-{"category":"modal_verbs","front":"wollen","back":"to want"},
-{"category":"modal_verbs","front":"dürfen","back":"may / allowed to"},
-{"category":"modal_verbs","front":"sollen","back":"should"},
-{"category":"modal_verbs","front":"möchten","back":"would like"},
-{"category":"modal_verbs","front":"ich kann","back":"I can"},
-{"category":"modal_verbs","front":"du kannst","back":"you can"},
-{"category":"modal_verbs","front":"er kann","back":"he can"},
-{"category":"modal_verbs","front":"wir können","back":"we can"},
-{"category":"modal_verbs","front":"ich muss","back":"I must"},
-{"category":"modal_verbs","front":"du musst","back":"you must"},
-{"category":"modal_verbs","front":"wir müssen","back":"we must"},
-{"category":"modal_verbs","front":"ich will","back":"I want"},
-{"category":"modal_verbs","front":"du willst","back":"you want"},
-{"category":"modal_verbs","front":"er will","back":"he wants"},
-{"category":"modal_verbs","front":"ich möchte","back":"I would like"},
-{"category":"modal_verbs","front":"möchten Sie","back":"would you like (formal)"},
-{"category":"modal_verbs","front":"ich darf","back":"I may"},
-{"category":"modal_verbs","front":"ich soll","back":"I should"},
-
-{"category":"prepositions","front":"für","back":"for"},
-{"category":"prepositions","front":"ohne","back":"without"},
-{"category":"prepositions","front":"durch","back":"through"},
-{"category":"prepositions","front":"gegen","back":"against"},
-{"category":"prepositions","front":"um","back":"around"},
-{"category":"prepositions","front":"mit","back":"with"},
-{"category":"prepositions","front":"nach","back":"to / after"},
-{"category":"prepositions","front":"von","back":"from"},
-{"category":"prepositions","front":"zu","back":"to"},
-{"category":"prepositions","front":"bei","back":"at"},
-{"category":"prepositions","front":"in","back":"in"},
-{"category":"prepositions","front":"auf","back":"on"},
-{"category":"prepositions","front":"an","back":"at/on"},
-{"category":"prepositions","front":"über","back":"over/about"},
-{"category":"prepositions","front":"unter","back":"under"},
-{"category":"prepositions","front":"vor","back":"before/in front of"},
-{"category":"prepositions","front":"hinter","back":"behind"},
-{"category":"prepositions","front":"zwischen","back":"between"},
-{"category":"prepositions","front":"neben","back":"next to"},
-{"category":"prepositions","front":"wegen","back":"because of"},
-
-{"category":"w_questions","front":"wer","back":"who"},
-{"category":"w_questions","front":"was","back":"what"},
-{"category":"w_questions","front":"wann","back":"when"},
-{"category":"w_questions","front":"warum","back":"why"},
-{"category":"w_questions","front":"wo","back":"where"},
-{"category":"w_questions","front":"woher","back":"where from"},
-{"category":"w_questions","front":"wohin","back":"where to"},
-{"category":"w_questions","front":"wie","back":"how"},
-{"category":"w_questions","front":"wie viel","back":"how much"},
-{"category":"w_questions","front":"wie viele","back":"how many"},
-{"category":"w_questions","front":"wie lange","back":"how long"},
-{"category":"w_questions","front":"wie spät","back":"what time"},
-{"category":"w_questions","front":"welcher","back":"which (masculine)"},
-{"category":"w_questions","front":"welche","back":"which (feminine/plural)"},
-{"category":"w_questions","front":"welches","back":"which (neuter)"},
-{"category":"w_questions","front":"wann beginnt das Meeting","back":"when does the meeting start"},
-{"category":"w_questions","front":"wo wohnst du","back":"where do you live"},
-{"category":"w_questions","front":"warum lernst du Deutsch","back":"why do you learn German"},
-{"category":"w_questions","front":"wie heißt du","back":"what is your name"},
-{"category":"w_questions","front":"wo arbeitest du","back":"where do you work"},
-
-{"category":"conjunctions","front":"und","back":"and"},
-{"category":"conjunctions","front":"oder","back":"or"},
-{"category":"conjunctions","front":"aber","back":"but"},
-{"category":"conjunctions","front":"denn","back":"because (normal order)"},
-{"category":"conjunctions","front":"weil","back":"because (verb at end)"},
-{"category":"conjunctions","front":"dass","back":"that"},
-{"category":"conjunctions","front":"obwohl","back":"although"},
-{"category":"conjunctions","front":"wenn","back":"if/when"},
-{"category":"conjunctions","front":"damit","back":"so that"},
-{"category":"conjunctions","front":"deshalb","back":"therefore"},
-{"category":"conjunctions","front":"trotzdem","back":"nevertheless"},
-{"category":"conjunctions","front":"außerdem","back":"besides"},
-{"category":"conjunctions","front":"zuerst","back":"first"},
-{"category":"conjunctions","front":"danach","back":"after that"},
-{"category":"conjunctions","front":"bevor","back":"before"},
-{"category":"conjunctions","front":"während","back":"while"},
-{"category":"conjunctions","front":"seitdem","back":"since"},
-{"category":"conjunctions","front":"sobald","back":"as soon as"},
-{"category":"conjunctions","front":"falls","back":"in case"},
-{"category":"conjunctions","front":"solange","back":"as long as"},
-
-{"category":"adjectives","front":"gut","back":"good"},
-{"category":"adjectives","front":"schlecht","back":"bad"},
-{"category":"adjectives","front":"neu","back":"new"},
-{"category":"adjectives","front":"alt","back":"old"},
-{"category":"adjectives","front":"groß","back":"big"},
-{"category":"adjectives","front":"klein","back":"small"},
-{"category":"adjectives","front":"teuer","back":"expensive"},
-{"category":"adjectives","front":"billig","back":"cheap"},
-{"category":"adjectives","front":"schnell","back":"fast"},
-{"category":"adjectives","front":"langsam","back":"slow"},
-{"category":"adjectives","front":"freundlich","back":"friendly"},
-{"category":"adjectives","front":"nett","back":"nice"},
-{"category":"adjectives","front":"laut","back":"loud"},
-{"category":"adjectives","front":"leise","back":"quiet"},
-{"category":"adjectives","front":"praktisch","back":"practical"},
-{"category":"adjectives","front":"zuverlässig","back":"reliable"},
-{"category":"adjectives","front":"traditionell","back":"traditional"},
-{"category":"adjectives","front":"schön","back":"beautiful"},
-{"category":"adjectives","front":"wichtig","back":"important"},
-{"category":"adjectives","front":"müde","back":"tired"},
-
-{"category":"verbs","front":"gehen","back":"to go"},
-{"category":"verbs","front":"kommen","back":"to come"},
-{"category":"verbs","front":"sehen","back":"to see"},
-{"category":"verbs","front":"machen","back":"to make/do"},
-{"category":"verbs","front":"lernen","back":"to learn"},
-{"category":"verbs","front":"arbeiten","back":"to work"},
-{"category":"verbs","front":"essen","back":"to eat"},
-{"category":"verbs","front":"trinken","back":"to drink"},
-{"category":"verbs","front":"lesen","back":"to read"},
-{"category":"verbs","front":"schreiben","back":"to write"},
-{"category":"verbs","front":"sprechen","back":"to speak"},
-{"category":"verbs","front":"verstehen","back":"to understand"},
-{"category":"verbs","front":"helfen","back":"to help"},
-{"category":"verbs","front":"finden","back":"to find"},
-{"category":"verbs","front":"bleiben","back":"to stay"},
-{"category":"verbs","front":"treffen","back":"to meet"},
-{"category":"verbs","front":"kochen","back":"to cook"},
-{"category":"verbs","front":"studieren","back":"to study"},
-{"category":"verbs","front":"verdienen","back":"to earn"},
-{"category":"verbs","front":"reparieren","back":"to repair"},
-
-{"category":"phrases","front":"Vielen Dank im Voraus","back":"Many thanks in advance"},
-{"category":"phrases","front":"Mit freundlichen Grüßen","back":"Kind regards"},
-{"category":"phrases","front":"Liebe Grüße","back":"Best wishes"},
-{"category":"phrases","front":"Es tut mir leid","back":"I am sorry"},
-{"category":"phrases","front":"Ich würde mich freuen","back":"I would be happy"},
-{"category":"phrases","front":"Könnten Sie bitte","back":"Could you please"},
-{"category":"phrases","front":"Bitte teilen Sie mir mit","back":"Please let me know"},
-{"category":"phrases","front":"Ich interessiere mich für","back":"I am interested in"},
-{"category":"phrases","front":"Haben Sie Zeit","back":"Do you have time"},
-{"category":"phrases","front":"Wir freuen uns auf Ihr Kommen","back":"We look forward to your coming"},
-{"category":"phrases","front":"Ich hoffe, es geht Ihnen gut","back":"I hope you are well"},
-{"category":"phrases","front":"Vielen Dank für Ihre Hilfe","back":"Thank you for your help"},
-{"category":"phrases","front":"Ich melde mich später","back":"I will contact you later"},
-{"category":"phrases","front":"Bis bald","back":"See you soon"},
-{"category":"phrases","front":"Guten Morgen","back":"Good morning"},
-{"category":"phrases","front":"Guten Tag","back":"Good day"},
-{"category":"phrases","front":"Guten Abend","back":"Good evening"},
-{"category":"phrases","front":"Wie geht es Ihnen","back":"How are you (formal)"},
-{"category":"phrases","front":"Wie geht es dir","back":"How are you (informal)"},
-{"category":"phrases","front":"Alles Gute","back":"All the best"}
-
-]
+  "flashcards": [
+    {
+      "category": "articles",
+      "front": "der Mann",
+      "back": "the man (masculine)"
+    },
+    {
+      "category": "articles",
+      "front": "die Frau",
+      "back": "the woman (feminine)"
+    },
+    {
+      "category": "articles",
+      "front": "das Kind",
+      "back": "the child (neuter)"
+    },
+    {
+      "category": "articles",
+      "front": "der Tisch",
+      "back": "the table"
+    },
+    {
+      "category": "articles",
+      "front": "die Lampe",
+      "back": "the lamp"
+    },
+    {
+      "category": "articles",
+      "front": "das Fenster",
+      "back": "the window"
+    },
+    {
+      "category": "articles",
+      "front": "der Hund",
+      "back": "the dog"
+    },
+    {
+      "category": "articles",
+      "front": "die Katze",
+      "back": "the cat"
+    },
+    {
+      "category": "articles",
+      "front": "das Auto",
+      "back": "the car"
+    },
+    {
+      "category": "articles",
+      "front": "der Lehrer",
+      "back": "the teacher"
+    },
+    {
+      "category": "articles",
+      "front": "die Schule",
+      "back": "the school"
+    },
+    {
+      "category": "articles",
+      "front": "das Buch",
+      "back": "the book"
+    },
+    {
+      "category": "articles",
+      "front": "der Freund",
+      "back": "the friend"
+    },
+    {
+      "category": "articles",
+      "front": "die Wohnung",
+      "back": "the apartment"
+    },
+    {
+      "category": "articles",
+      "front": "das Büro",
+      "back": "the office"
+    },
+    {
+      "category": "articles",
+      "front": "der Termin",
+      "back": "the appointment"
+    },
+    {
+      "category": "articles",
+      "front": "die Frage",
+      "back": "the question"
+    },
+    {
+      "category": "articles",
+      "front": "das Problem",
+      "back": "the problem"
+    },
+    {
+      "category": "articles",
+      "front": "der Film",
+      "back": "the movie"
+    },
+    {
+      "category": "articles",
+      "front": "die Arbeit",
+      "back": "the work"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "können",
+      "back": "can / to be able to"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "müssen",
+      "back": "must / have to"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "wollen",
+      "back": "to want"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "dürfen",
+      "back": "may / allowed to"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "sollen",
+      "back": "should"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "möchten",
+      "back": "would like"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich kann",
+      "back": "I can"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "du kannst",
+      "back": "you can"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "er kann",
+      "back": "he can"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "wir können",
+      "back": "we can"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich muss",
+      "back": "I must"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "du musst",
+      "back": "you must"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "wir müssen",
+      "back": "we must"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich will",
+      "back": "I want"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "du willst",
+      "back": "you want"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "er will",
+      "back": "he wants"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich möchte",
+      "back": "I would like"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "möchten Sie",
+      "back": "would you like (formal)"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich darf",
+      "back": "I may"
+    },
+    {
+      "category": "modal_verbs",
+      "front": "ich soll",
+      "back": "I should"
+    },
+    {
+      "category": "prepositions",
+      "front": "für",
+      "back": "for"
+    },
+    {
+      "category": "prepositions",
+      "front": "ohne",
+      "back": "without"
+    },
+    {
+      "category": "prepositions",
+      "front": "durch",
+      "back": "through"
+    },
+    {
+      "category": "prepositions",
+      "front": "gegen",
+      "back": "against"
+    },
+    {
+      "category": "prepositions",
+      "front": "um",
+      "back": "around"
+    },
+    {
+      "category": "prepositions",
+      "front": "mit",
+      "back": "with"
+    },
+    {
+      "category": "prepositions",
+      "front": "nach",
+      "back": "to / after"
+    },
+    {
+      "category": "prepositions",
+      "front": "von",
+      "back": "from"
+    },
+    {
+      "category": "prepositions",
+      "front": "zu",
+      "back": "to"
+    },
+    {
+      "category": "prepositions",
+      "front": "bei",
+      "back": "at"
+    },
+    {
+      "category": "prepositions",
+      "front": "in",
+      "back": "in"
+    },
+    {
+      "category": "prepositions",
+      "front": "auf",
+      "back": "on"
+    },
+    {
+      "category": "prepositions",
+      "front": "an",
+      "back": "at/on"
+    },
+    {
+      "category": "prepositions",
+      "front": "über",
+      "back": "over/about"
+    },
+    {
+      "category": "prepositions",
+      "front": "unter",
+      "back": "under"
+    },
+    {
+      "category": "prepositions",
+      "front": "vor",
+      "back": "before/in front of"
+    },
+    {
+      "category": "prepositions",
+      "front": "hinter",
+      "back": "behind"
+    },
+    {
+      "category": "prepositions",
+      "front": "zwischen",
+      "back": "between"
+    },
+    {
+      "category": "prepositions",
+      "front": "neben",
+      "back": "next to"
+    },
+    {
+      "category": "prepositions",
+      "front": "wegen",
+      "back": "because of"
+    },
+    {
+      "category": "w_questions",
+      "front": "wer",
+      "back": "who"
+    },
+    {
+      "category": "w_questions",
+      "front": "was",
+      "back": "what"
+    },
+    {
+      "category": "w_questions",
+      "front": "wann",
+      "back": "when"
+    },
+    {
+      "category": "w_questions",
+      "front": "warum",
+      "back": "why"
+    },
+    {
+      "category": "w_questions",
+      "front": "wo",
+      "back": "where"
+    },
+    {
+      "category": "w_questions",
+      "front": "woher",
+      "back": "where from"
+    },
+    {
+      "category": "w_questions",
+      "front": "wohin",
+      "back": "where to"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie",
+      "back": "how"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie viel",
+      "back": "how much"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie viele",
+      "back": "how many"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie lange",
+      "back": "how long"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie spät",
+      "back": "what time"
+    },
+    {
+      "category": "w_questions",
+      "front": "welcher",
+      "back": "which (masculine)"
+    },
+    {
+      "category": "w_questions",
+      "front": "welche",
+      "back": "which (feminine/plural)"
+    },
+    {
+      "category": "w_questions",
+      "front": "welches",
+      "back": "which (neuter)"
+    },
+    {
+      "category": "w_questions",
+      "front": "wann beginnt das Meeting",
+      "back": "when does the meeting start"
+    },
+    {
+      "category": "w_questions",
+      "front": "wo wohnst du",
+      "back": "where do you live"
+    },
+    {
+      "category": "w_questions",
+      "front": "warum lernst du Deutsch",
+      "back": "why do you learn German"
+    },
+    {
+      "category": "w_questions",
+      "front": "wie heißt du",
+      "back": "what is your name"
+    },
+    {
+      "category": "w_questions",
+      "front": "wo arbeitest du",
+      "back": "where do you work"
+    },
+    {
+      "category": "conjunctions",
+      "front": "und",
+      "back": "and"
+    },
+    {
+      "category": "conjunctions",
+      "front": "oder",
+      "back": "or"
+    },
+    {
+      "category": "conjunctions",
+      "front": "aber",
+      "back": "but"
+    },
+    {
+      "category": "conjunctions",
+      "front": "denn",
+      "back": "because (normal order)"
+    },
+    {
+      "category": "conjunctions",
+      "front": "weil",
+      "back": "because (verb at end)"
+    },
+    {
+      "category": "conjunctions",
+      "front": "dass",
+      "back": "that"
+    },
+    {
+      "category": "conjunctions",
+      "front": "obwohl",
+      "back": "although"
+    },
+    {
+      "category": "conjunctions",
+      "front": "wenn",
+      "back": "if/when"
+    },
+    {
+      "category": "conjunctions",
+      "front": "damit",
+      "back": "so that"
+    },
+    {
+      "category": "conjunctions",
+      "front": "deshalb",
+      "back": "therefore"
+    },
+    {
+      "category": "conjunctions",
+      "front": "trotzdem",
+      "back": "nevertheless"
+    },
+    {
+      "category": "conjunctions",
+      "front": "außerdem",
+      "back": "besides"
+    },
+    {
+      "category": "conjunctions",
+      "front": "zuerst",
+      "back": "first"
+    },
+    {
+      "category": "conjunctions",
+      "front": "danach",
+      "back": "after that"
+    },
+    {
+      "category": "conjunctions",
+      "front": "bevor",
+      "back": "before"
+    },
+    {
+      "category": "conjunctions",
+      "front": "während",
+      "back": "while"
+    },
+    {
+      "category": "conjunctions",
+      "front": "seitdem",
+      "back": "since"
+    },
+    {
+      "category": "conjunctions",
+      "front": "sobald",
+      "back": "as soon as"
+    },
+    {
+      "category": "conjunctions",
+      "front": "falls",
+      "back": "in case"
+    },
+    {
+      "category": "conjunctions",
+      "front": "solange",
+      "back": "as long as"
+    },
+    {
+      "category": "adjectives",
+      "front": "gut",
+      "back": "good"
+    },
+    {
+      "category": "adjectives",
+      "front": "schlecht",
+      "back": "bad"
+    },
+    {
+      "category": "adjectives",
+      "front": "neu",
+      "back": "new"
+    },
+    {
+      "category": "adjectives",
+      "front": "alt",
+      "back": "old"
+    },
+    {
+      "category": "adjectives",
+      "front": "groß",
+      "back": "big"
+    },
+    {
+      "category": "adjectives",
+      "front": "klein",
+      "back": "small"
+    },
+    {
+      "category": "adjectives",
+      "front": "teuer",
+      "back": "expensive"
+    },
+    {
+      "category": "adjectives",
+      "front": "billig",
+      "back": "cheap"
+    },
+    {
+      "category": "adjectives",
+      "front": "schnell",
+      "back": "fast"
+    },
+    {
+      "category": "adjectives",
+      "front": "langsam",
+      "back": "slow"
+    },
+    {
+      "category": "adjectives",
+      "front": "freundlich",
+      "back": "friendly"
+    },
+    {
+      "category": "adjectives",
+      "front": "nett",
+      "back": "nice"
+    },
+    {
+      "category": "adjectives",
+      "front": "laut",
+      "back": "loud"
+    },
+    {
+      "category": "adjectives",
+      "front": "leise",
+      "back": "quiet"
+    },
+    {
+      "category": "adjectives",
+      "front": "praktisch",
+      "back": "practical"
+    },
+    {
+      "category": "adjectives",
+      "front": "zuverlässig",
+      "back": "reliable"
+    },
+    {
+      "category": "adjectives",
+      "front": "traditionell",
+      "back": "traditional"
+    },
+    {
+      "category": "adjectives",
+      "front": "schön",
+      "back": "beautiful"
+    },
+    {
+      "category": "adjectives",
+      "front": "wichtig",
+      "back": "important"
+    },
+    {
+      "category": "adjectives",
+      "front": "müde",
+      "back": "tired"
+    },
+    {
+      "category": "verbs",
+      "front": "gehen",
+      "back": "to go"
+    },
+    {
+      "category": "verbs",
+      "front": "kommen",
+      "back": "to come"
+    },
+    {
+      "category": "verbs",
+      "front": "sehen",
+      "back": "to see"
+    },
+    {
+      "category": "verbs",
+      "front": "machen",
+      "back": "to make/do"
+    },
+    {
+      "category": "verbs",
+      "front": "lernen",
+      "back": "to learn"
+    },
+    {
+      "category": "verbs",
+      "front": "arbeiten",
+      "back": "to work"
+    },
+    {
+      "category": "verbs",
+      "front": "essen",
+      "back": "to eat"
+    },
+    {
+      "category": "verbs",
+      "front": "trinken",
+      "back": "to drink"
+    },
+    {
+      "category": "verbs",
+      "front": "lesen",
+      "back": "to read"
+    },
+    {
+      "category": "verbs",
+      "front": "schreiben",
+      "back": "to write"
+    },
+    {
+      "category": "verbs",
+      "front": "sprechen",
+      "back": "to speak"
+    },
+    {
+      "category": "verbs",
+      "front": "verstehen",
+      "back": "to understand"
+    },
+    {
+      "category": "verbs",
+      "front": "helfen",
+      "back": "to help"
+    },
+    {
+      "category": "verbs",
+      "front": "finden",
+      "back": "to find"
+    },
+    {
+      "category": "verbs",
+      "front": "bleiben",
+      "back": "to stay"
+    },
+    {
+      "category": "verbs",
+      "front": "treffen",
+      "back": "to meet"
+    },
+    {
+      "category": "verbs",
+      "front": "kochen",
+      "back": "to cook"
+    },
+    {
+      "category": "verbs",
+      "front": "studieren",
+      "back": "to study"
+    },
+    {
+      "category": "verbs",
+      "front": "verdienen",
+      "back": "to earn"
+    },
+    {
+      "category": "verbs",
+      "front": "reparieren",
+      "back": "to repair"
+    },
+    {
+      "category": "phrases",
+      "front": "Vielen Dank im Voraus",
+      "back": "Many thanks in advance"
+    },
+    {
+      "category": "phrases",
+      "front": "Mit freundlichen Grüßen",
+      "back": "Kind regards"
+    },
+    {
+      "category": "phrases",
+      "front": "Liebe Grüße",
+      "back": "Best wishes"
+    },
+    {
+      "category": "phrases",
+      "front": "Es tut mir leid",
+      "back": "I am sorry"
+    },
+    {
+      "category": "phrases",
+      "front": "Ich würde mich freuen",
+      "back": "I would be happy"
+    },
+    {
+      "category": "phrases",
+      "front": "Könnten Sie bitte",
+      "back": "Could you please"
+    },
+    {
+      "category": "phrases",
+      "front": "Bitte teilen Sie mir mit",
+      "back": "Please let me know"
+    },
+    {
+      "category": "phrases",
+      "front": "Ich interessiere mich für",
+      "back": "I am interested in"
+    },
+    {
+      "category": "phrases",
+      "front": "Haben Sie Zeit",
+      "back": "Do you have time"
+    },
+    {
+      "category": "phrases",
+      "front": "Wir freuen uns auf Ihr Kommen",
+      "back": "We look forward to your coming"
+    },
+    {
+      "category": "phrases",
+      "front": "Ich hoffe, es geht Ihnen gut",
+      "back": "I hope you are well"
+    },
+    {
+      "category": "phrases",
+      "front": "Vielen Dank für Ihre Hilfe",
+      "back": "Thank you for your help"
+    },
+    {
+      "category": "phrases",
+      "front": "Ich melde mich später",
+      "back": "I will contact you later"
+    },
+    {
+      "category": "phrases",
+      "front": "Bis bald",
+      "back": "See you soon"
+    },
+    {
+      "category": "phrases",
+      "front": "Guten Morgen",
+      "back": "Good morning"
+    },
+    {
+      "category": "phrases",
+      "front": "Guten Tag",
+      "back": "Good day"
+    },
+    {
+      "category": "phrases",
+      "front": "Guten Abend",
+      "back": "Good evening"
+    },
+    {
+      "category": "phrases",
+      "front": "Wie geht es Ihnen",
+      "back": "How are you (formal)"
+    },
+    {
+      "category": "phrases",
+      "front": "Wie geht es dir",
+      "back": "How are you (informal)"
+    },
+    {
+      "category": "phrases",
+      "front": "Alles Gute",
+      "back": "All the best"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "die Nachbarschaft",
+      "back": "neighbourhood"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "der Hausflur",
+      "back": "hallway"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "die Hausordnung",
+      "back": "house rules"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "der Lärm",
+      "back": "noise"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "sich beschweren",
+      "back": "to complain"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "rücksichtsvoll",
+      "back": "considerate"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "grüßen",
+      "back": "to greet"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "das Treppenhaus",
+      "back": "stairwell"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "der Innenhof",
+      "back": "inner courtyard"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "der Bewohner",
+      "back": "resident"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "der Vermieter",
+      "back": "landlord"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "die Bitte",
+      "back": "request"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "annehmen",
+      "back": "to accept"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "sich bedanken",
+      "back": "to thank"
+    },
+    {
+      "category": "neue_nachbarn",
+      "front": "verboten",
+      "back": "forbidden"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Bestellung",
+      "back": "order"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Rückgabe",
+      "back": "return"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "der Umtausch",
+      "back": "exchange"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Kasse",
+      "back": "checkout"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "günstig",
+      "back": "cheap"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "teuer",
+      "back": "expensive"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Sonderangebote",
+      "back": "special offers"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "vergleichen",
+      "back": "to compare"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "bar bezahlen",
+      "back": "to pay in cash"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "mit Karte bezahlen",
+      "back": "to pay by card"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Quittung",
+      "back": "receipt"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "die Lieferung",
+      "back": "delivery"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "der Kundenservice",
+      "back": "customer service"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "beschädigt",
+      "back": "damaged"
+    },
+    {
+      "category": "hier_kaufe_ich_ein",
+      "front": "das Einkaufszentrum",
+      "back": "shopping centre"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "das Angebot",
+      "back": "offer"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Versicherung",
+      "back": "insurance"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Bankkarte",
+      "back": "bank card"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Sperrnummer",
+      "back": "emergency blocking number"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "der Vertrag",
+      "back": "contract"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Gebühr",
+      "back": "fee"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "zuverlässig",
+      "back": "reliable"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Beratung",
+      "back": "consultation"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Leistung",
+      "back": "service / benefit"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "der Schaden",
+      "back": "damage"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "überweisen",
+      "back": "to transfer money"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "beantragen",
+      "back": "to apply for"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Kündigung",
+      "back": "termination"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "verlängern",
+      "back": "to extend"
+    },
+    {
+      "category": "wir_sind_f_r_sie_da",
+      "front": "die Sicherheit",
+      "back": "security"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "das Rezept",
+      "back": "recipe"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "das Gericht",
+      "back": "dish"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "würzen",
+      "back": "to season"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "kochen",
+      "back": "to cook"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "braten",
+      "back": "to fry"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "gesund",
+      "back": "healthy"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "die Umfrage",
+      "back": "survey"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "die Gewohnheit",
+      "back": "habit"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "die Zutat",
+      "back": "ingredient"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "schneiden",
+      "back": "to cut"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "abschmecken",
+      "back": "to taste / season"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "satt",
+      "back": "full"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "vegetarisch",
+      "back": "vegetarian"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "ausgewogen",
+      "back": "balanced"
+    },
+    {
+      "category": "schmeckt_s",
+      "front": "das Frühstück",
+      "back": "breakfast"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "die Erfahrung",
+      "back": "experience"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "die Gewohnheit",
+      "back": "custom / habit"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "zurückhaltend",
+      "back": "reserved"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "offen",
+      "back": "open"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "der Unterschied",
+      "back": "difference"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "die Kultur",
+      "back": "culture"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "der Eindruck",
+      "back": "impression"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "sich wundern",
+      "back": "to be surprised"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "die Sprache",
+      "back": "language"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "mehrsprachig",
+      "back": "multilingual"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "missverstehen",
+      "back": "to misunderstand"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "die Perspektive",
+      "back": "perspective"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "vergleichen",
+      "back": "to compare"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "sich anpassen",
+      "back": "to adapt"
+    },
+    {
+      "category": "ah_so_ist_das",
+      "front": "typisch",
+      "back": "typical"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "das Krankenhaus",
+      "back": "hospital"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Untersuchung",
+      "back": "examination"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Ärztin",
+      "back": "female doctor"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "das Rezept",
+      "back": "prescription"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Behandlung",
+      "back": "treatment"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Schmerzen",
+      "back": "pain"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "sich ausruhen",
+      "back": "to rest"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "ernst",
+      "back": "serious"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Klinik",
+      "back": "clinic"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "der Termin",
+      "back": "appointment"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Station",
+      "back": "ward"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "das Wartezimmer",
+      "back": "waiting room"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "der Notfall",
+      "back": "emergency"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "gesund werden",
+      "back": "to get well"
+    },
+    {
+      "category": "im_krankenhaus",
+      "front": "die Krankmeldung",
+      "back": "sick note"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Umwelt",
+      "back": "environment"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "nachhaltig",
+      "back": "sustainable"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "der Klimawandel",
+      "back": "climate change"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Klimakrise",
+      "back": "climate crisis"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "Energie sparen",
+      "back": "to save energy"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "wiederverwenden",
+      "back": "to reuse"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "recyceln",
+      "back": "to recycle"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "der Fahrradweg",
+      "back": "cycle path"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Verantwortung",
+      "back": "responsibility"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "der Verbrauch",
+      "back": "consumption"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Verschwendung",
+      "back": "waste"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Maßnahme",
+      "back": "measure"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "die Diskussion",
+      "back": "discussion"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "vermeiden",
+      "back": "to avoid"
+    },
+    {
+      "category": "alle_f_r_die_umwelt",
+      "front": "regional",
+      "back": "regional / local"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Veranstaltung",
+      "back": "event"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Ausstellung",
+      "back": "exhibition"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "das Konzert",
+      "back": "concert"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Lesung",
+      "back": "reading"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Bibliothek",
+      "back": "library"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "das Graffiti",
+      "back": "graffiti"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "künstlerisch",
+      "back": "artistic"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Bühne",
+      "back": "stage"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "öffentlich",
+      "back": "public"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "abwechslungsreich",
+      "back": "varied"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "verschönern",
+      "back": "to beautify"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "kreativ",
+      "back": "creative"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "das Publikum",
+      "back": "audience"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "teilnehmen",
+      "back": "to take part"
+    },
+    {
+      "category": "laut_auf_kultur",
+      "front": "die Kulturangebote",
+      "back": "cultural offers"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Bewerbung",
+      "back": "application"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "der Lebenslauf",
+      "back": "CV"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Stellenanzeige",
+      "back": "job advertisement"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "das Vorstellungsgespräch",
+      "back": "job interview"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Qualifikation",
+      "back": "qualification"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "das Gehalt",
+      "back": "salary"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Tätigkeit",
+      "back": "activity / role"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "der Arbeitsplatz",
+      "back": "workplace"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Erfahrung",
+      "back": "work experience"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "zuverlässig",
+      "back": "reliable"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "teamfähig",
+      "back": "team-oriented"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "sich bewerben",
+      "back": "to apply"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "einstellen",
+      "back": "to hire"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "kündigen",
+      "back": "to resign / terminate"
+    },
+    {
+      "category": "eine_neue_arbeit",
+      "front": "die Fortbildung",
+      "back": "further training"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Bewegung",
+      "back": "movement"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "fit bleiben",
+      "back": "to stay fit"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "das Training",
+      "back": "training"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "schwimmen",
+      "back": "to swim"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "laufen",
+      "back": "to run"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "der Verein",
+      "back": "club"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Mannschaft",
+      "back": "team"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "anstrengend",
+      "back": "exhausting"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Strecke",
+      "back": "route"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "das Turnier",
+      "back": "tournament"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Spende",
+      "back": "donation"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "mitmachen",
+      "back": "to join in"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Gesundheit",
+      "back": "health"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "regelmäßig",
+      "back": "regularly"
+    },
+    {
+      "category": "sport_und_bewegung",
+      "front": "die Ausdauer",
+      "back": "endurance"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "einerseits",
+      "back": "on the one hand"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "andererseits",
+      "back": "on the other hand"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "meiner Ansicht nach",
+      "back": "in my opinion"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "es hängt davon ab",
+      "back": "it depends on"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "der Vorteil",
+      "back": "advantage"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "der Nachteil",
+      "back": "disadvantage"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "die Folge",
+      "back": "consequence"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "langfristig",
+      "back": "in the long term"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "nachvollziehbar",
+      "back": "understandable"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "umstritten",
+      "back": "controversial"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "die Maßnahme",
+      "back": "measure"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "die Rahmenbedingungen",
+      "back": "framework conditions"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "die Teilhabe",
+      "back": "participation"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "berücksichtigen",
+      "back": "to take into account"
+    },
+    {
+      "category": "opinion_and_argumentation",
+      "front": "ausschlaggebend",
+      "back": "decisive"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Medienkompetenz",
+      "back": "media literacy"
+    },
+    {
+      "category": "society_and_media",
+      "front": "verlässlich",
+      "back": "reliable"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Quelle",
+      "back": "source"
+    },
+    {
+      "category": "society_and_media",
+      "front": "bewerten",
+      "back": "to assess"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Abhängigkeit",
+      "back": "dependency"
+    },
+    {
+      "category": "society_and_media",
+      "front": "erreichbar",
+      "back": "reachable"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Gesellschaft",
+      "back": "society"
+    },
+    {
+      "category": "society_and_media",
+      "front": "der Zusammenhalt",
+      "back": "cohesion"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Debatte",
+      "back": "debate"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Unsicherheit",
+      "back": "uncertainty"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Reform",
+      "back": "reform"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Institution",
+      "back": "institution"
+    },
+    {
+      "category": "society_and_media",
+      "front": "flexibel",
+      "back": "flexible"
+    },
+    {
+      "category": "society_and_media",
+      "front": "die Erwartung",
+      "back": "expectation"
+    },
+    {
+      "category": "society_and_media",
+      "front": "gestalten",
+      "back": "to shape"
+    },
+    {
+      "category": "daily_life",
+      "front": "aufräumen",
+      "back": "to tidy up"
+    },
+    {
+      "category": "daily_life",
+      "front": "die Rechnung",
+      "back": "bill"
+    },
+    {
+      "category": "daily_life",
+      "front": "pünktlich",
+      "back": "on time"
+    },
+    {
+      "category": "daily_life",
+      "front": "verschieben",
+      "back": "to postpone"
+    },
+    {
+      "category": "daily_life",
+      "front": "der Terminplan",
+      "back": "schedule"
+    },
+    {
+      "category": "daily_life",
+      "front": "die Nachricht",
+      "back": "message"
+    },
+    {
+      "category": "daily_life",
+      "front": "antworten",
+      "back": "to answer"
+    },
+    {
+      "category": "daily_life",
+      "front": "vergessen",
+      "back": "to forget"
+    },
+    {
+      "category": "daily_life",
+      "front": "sich vorbereiten",
+      "back": "to prepare oneself"
+    },
+    {
+      "category": "daily_life",
+      "front": "der Alltag",
+      "back": "daily life"
+    },
+    {
+      "category": "daily_life",
+      "front": "erledigen",
+      "back": "to complete"
+    },
+    {
+      "category": "daily_life",
+      "front": "sparen",
+      "back": "to save"
+    },
+    {
+      "category": "daily_life",
+      "front": "die Reise",
+      "back": "trip"
+    },
+    {
+      "category": "daily_life",
+      "front": "packen",
+      "back": "to pack"
+    },
+    {
+      "category": "daily_life",
+      "front": "ankommen",
+      "back": "to arrive"
+    },
+    {
+      "category": "daily_life",
+      "front": "abholen",
+      "back": "to pick up"
+    },
+    {
+      "category": "daily_life",
+      "front": "einladen",
+      "back": "to invite"
+    },
+    {
+      "category": "daily_life",
+      "front": "besuchen",
+      "back": "to visit"
+    },
+    {
+      "category": "daily_life",
+      "front": "der Haushalt",
+      "back": "household"
+    },
+    {
+      "category": "daily_life",
+      "front": "putzen",
+      "back": "to clean"
+    },
+    {
+      "category": "learning_german",
+      "front": "das Wörterbuch",
+      "back": "dictionary"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Übung",
+      "back": "exercise"
+    },
+    {
+      "category": "learning_german",
+      "front": "der Satz",
+      "back": "sentence"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Grammatik",
+      "back": "grammar"
+    },
+    {
+      "category": "learning_german",
+      "front": "der Fehler",
+      "back": "mistake"
+    },
+    {
+      "category": "learning_german",
+      "front": "verbessern",
+      "back": "to improve"
+    },
+    {
+      "category": "learning_german",
+      "front": "wiederholen",
+      "back": "to repeat"
+    },
+    {
+      "category": "learning_german",
+      "front": "verstehen",
+      "back": "to understand"
+    },
+    {
+      "category": "learning_german",
+      "front": "erklären",
+      "back": "to explain"
+    },
+    {
+      "category": "learning_german",
+      "front": "merken",
+      "back": "to notice / remember"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Aussprache",
+      "back": "pronunciation"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Bedeutung",
+      "back": "meaning"
+    },
+    {
+      "category": "learning_german",
+      "front": "übersetzen",
+      "back": "to translate"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Frage",
+      "back": "question"
+    },
+    {
+      "category": "learning_german",
+      "front": "antworten",
+      "back": "to answer"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Lösung",
+      "back": "solution"
+    },
+    {
+      "category": "learning_german",
+      "front": "das Beispiel",
+      "back": "example"
+    },
+    {
+      "category": "learning_german",
+      "front": "die Prüfung",
+      "back": "exam"
+    },
+    {
+      "category": "learning_german",
+      "front": "bestehen",
+      "back": "to pass"
+    },
+    {
+      "category": "learning_german",
+      "front": "lernen",
+      "back": "to learn"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Aufgabe",
+      "back": "task"
+    },
+    {
+      "category": "work_and_office",
+      "front": "zuständig",
+      "back": "responsible"
+    },
+    {
+      "category": "work_and_office",
+      "front": "besprechen",
+      "back": "to discuss"
+    },
+    {
+      "category": "work_and_office",
+      "front": "vereinbaren",
+      "back": "to arrange"
+    },
+    {
+      "category": "work_and_office",
+      "front": "der Bericht",
+      "back": "report"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Frist",
+      "back": "deadline"
+    },
+    {
+      "category": "work_and_office",
+      "front": "verschicken",
+      "back": "to send out"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Abteilung",
+      "back": "department"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Leitung",
+      "back": "management"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Rückmeldung",
+      "back": "feedback"
+    },
+    {
+      "category": "work_and_office",
+      "front": "sich bewerben um",
+      "back": "to apply for"
+    },
+    {
+      "category": "work_and_office",
+      "front": "das Praktikum",
+      "back": "internship"
+    },
+    {
+      "category": "work_and_office",
+      "front": "übernehmen",
+      "back": "to take over"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Erfahrung",
+      "back": "experience"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Verantwortung",
+      "back": "responsibility"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Zusammenarbeit",
+      "back": "cooperation"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Besprechung",
+      "back": "meeting"
+    },
+    {
+      "category": "work_and_office",
+      "front": "der Kollege",
+      "back": "colleague"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Kollegin",
+      "back": "female colleague"
+    },
+    {
+      "category": "work_and_office",
+      "front": "die Pause",
+      "back": "break"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Miete",
+      "back": "rent"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "steigen",
+      "back": "to rise"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "bezahlbar",
+      "back": "affordable"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "das Viertel",
+      "back": "district"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Verkehrsanbindung",
+      "back": "transport connection"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "der Stadtrand",
+      "back": "edge of the city"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Innenstadt",
+      "back": "city centre"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "umziehen",
+      "back": "to move home"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "einziehen",
+      "back": "to move in"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "renovieren",
+      "back": "to renovate"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "ruhig gelegen",
+      "back": "quietly located"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Umgebung",
+      "back": "surroundings"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "der Spielplatz",
+      "back": "playground"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Bushaltestelle",
+      "back": "bus stop"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Nachtruhe",
+      "back": "night quiet hours"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "der Müll",
+      "back": "rubbish"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "entsorgen",
+      "back": "to dispose of"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "die Garage",
+      "back": "garage"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "der Balkon",
+      "back": "balcony"
+    },
+    {
+      "category": "housing_and_city",
+      "front": "das Mehrfamilienhaus",
+      "back": "apartment building"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Vorsorge",
+      "back": "prevention"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Ernährung",
+      "back": "nutrition"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "ausgewogen",
+      "back": "balanced"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Beschwerde",
+      "back": "complaint / symptom"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "schonen",
+      "back": "to take it easy"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "das Medikament",
+      "back": "medicine"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "verschreiben",
+      "back": "to prescribe"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "untersuchen",
+      "back": "to examine"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Genesung",
+      "back": "recovery"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "der Husten",
+      "back": "cough"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "das Fieber",
+      "back": "fever"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "sich verletzen",
+      "back": "to injure oneself"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "das Symptom",
+      "back": "symptom"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Therapie",
+      "back": "therapy"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "der Arzttermin",
+      "back": "doctor appointment"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "der Befund",
+      "back": "diagnosis/report"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "sich besser fühlen",
+      "back": "to feel better"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "die Hausarztpraxis",
+      "back": "general practice"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "das Rezeptformular",
+      "back": "prescription form"
+    },
+    {
+      "category": "health_and_advice",
+      "front": "krankschreiben",
+      "back": "to sign off sick"
+    },
+    {
+      "category": "formal_writing",
+      "front": "sich beziehen auf",
+      "back": "to refer to"
+    },
+    {
+      "category": "formal_writing",
+      "front": "in Bezug auf",
+      "back": "with regard to"
+    },
+    {
+      "category": "formal_writing",
+      "front": "darlegen",
+      "back": "to present / set out"
+    },
+    {
+      "category": "formal_writing",
+      "front": "erläutern",
+      "back": "to explain"
+    },
+    {
+      "category": "formal_writing",
+      "front": "begründen",
+      "back": "to justify"
+    },
+    {
+      "category": "formal_writing",
+      "front": "abschließend",
+      "back": "in conclusion"
+    },
+    {
+      "category": "formal_writing",
+      "front": "zusammenfassend",
+      "back": "in summary"
+    },
+    {
+      "category": "formal_writing",
+      "front": "der Gesichtspunkt",
+      "back": "aspect"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Voraussetzung",
+      "back": "precondition"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Entwicklung",
+      "back": "development"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Herausforderung",
+      "back": "challenge"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Einschätzung",
+      "back": "assessment"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Umsetzung",
+      "back": "implementation"
+    },
+    {
+      "category": "formal_writing",
+      "front": "wirksam",
+      "back": "effective"
+    },
+    {
+      "category": "formal_writing",
+      "front": "der Schwerpunkt",
+      "back": "focus"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Argumentation",
+      "back": "argumentation"
+    },
+    {
+      "category": "formal_writing",
+      "front": "überzeugen",
+      "back": "to convince"
+    },
+    {
+      "category": "formal_writing",
+      "front": "einwenden",
+      "back": "to object"
+    },
+    {
+      "category": "formal_writing",
+      "front": "die Position",
+      "back": "position"
+    },
+    {
+      "category": "formal_writing",
+      "front": "differenziert",
+      "back": "nuanced"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Nachfrage",
+      "back": "demand"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "das Angebot",
+      "back": "supply / offer"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Kosten",
+      "back": "costs"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Investition",
+      "back": "investment"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "sinken",
+      "back": "to sink"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "steigen",
+      "back": "to increase"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "der Arbeitsmarkt",
+      "back": "labour market"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Vereinbarkeit",
+      "back": "compatibility"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Betreuung",
+      "back": "care / childcare"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Lebensqualität",
+      "back": "quality of life"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "gerecht",
+      "back": "fair"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "benachteiligt",
+      "back": "disadvantaged"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "fördern",
+      "back": "to promote"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "der Zugang",
+      "back": "access"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Beteiligung",
+      "back": "participation"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Vielfalt",
+      "back": "diversity"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Herkunft",
+      "back": "background / origin"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Chancengleichheit",
+      "back": "equal opportunity"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "die Belastung",
+      "back": "strain"
+    },
+    {
+      "category": "economy_and_society",
+      "front": "entlasten",
+      "back": "to relieve"
+    },
+    {
+      "category": "connectors",
+      "front": "einerseits ... andererseits",
+      "back": "on the one hand ... on the other hand"
+    },
+    {
+      "category": "connectors",
+      "front": "obwohl",
+      "back": "although"
+    },
+    {
+      "category": "connectors",
+      "front": "damit",
+      "back": "so that"
+    },
+    {
+      "category": "connectors",
+      "front": "seitdem",
+      "back": "since then"
+    },
+    {
+      "category": "grammar",
+      "front": "würde + Infinitiv",
+      "back": "would + infinitive"
+    },
+    {
+      "category": "grammar",
+      "front": "Passiv: wird + Partizip II",
+      "back": "passive: is/are being + past participle"
+    },
+    {
+      "category": "grammar",
+      "front": "weder ... noch",
+      "back": "neither ... nor"
+    },
+    {
+      "category": "grammar",
+      "front": "nicht nur ... sondern auch",
+      "back": "not only ... but also"
+    },
+    {
+      "category": "grammar",
+      "front": "sowohl ... als auch",
+      "back": "both ... and"
+    },
+    {
+      "category": "grammar",
+      "front": "Relativsatz",
+      "back": "relative clause"
+    },
+    {
+      "category": "grammar",
+      "front": "Präpositionaladverb",
+      "back": "pronominal adverb"
+    },
+    {
+      "category": "grammar",
+      "front": "N-Deklination",
+      "back": "n-declension"
+    },
+    {
+      "category": "formal_writing",
+      "front": "Mit freundlichen Grüßen",
+      "back": "kind regards"
+    },
+    {
+      "category": "formal_writing",
+      "front": "Ich möchte mich beschweren, weil ...",
+      "back": "I would like to complain because ..."
+    },
+    {
+      "category": "formal_writing",
+      "front": "Könnten Sie mir bitte mitteilen, ...",
+      "back": "Could you please let me know ..."
+    },
+    {
+      "category": "formal_writing",
+      "front": "Meiner Meinung nach",
+      "back": "in my opinion"
+    },
+    {
+      "category": "formal_writing",
+      "front": "Zusammenfassend lässt sich sagen, dass ...",
+      "back": "In summary, it can be said that ..."
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "warten auf",
+      "back": "to wait for"
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "sich interessieren für",
+      "back": "to be interested in"
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "teilnehmen an",
+      "back": "to take part in"
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "denken an",
+      "back": "to think of"
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "sprechen über",
+      "back": "to speak about"
+    },
+    {
+      "category": "verbs_with_prepositions",
+      "front": "sich freuen auf",
+      "back": "to look forward to"
+    }
+  ]
 }
