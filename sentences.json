@@ -1,5 +1,5 @@
 {
-  "a1": [
+  "A1": [
     {
       "en": "I live in Berlin.",
       "de": "Ich wohne in Berlin."
@@ -201,7 +201,7 @@
       "de": "Schreib den Satz!"
     }
   ],
-  "a2": [
+  "A2": [
     {
       "en": "I am learning German because I live in Germany.",
       "de": "Ich lerne Deutsch, weil ich in Deutschland wohne."
@@ -401,9 +401,129 @@
     {
       "en": "We drive to school by bus in the morning.",
       "de": "Wir fahren morgens mit dem Bus zur Schule."
+    },
+    {
+      "en": "I have to complain to the landlord.",
+      "de": "Ich muss mich beim Vermieter beschweren."
+    },
+    {
+      "en": "Could you please close the window?",
+      "de": "Könnten Sie bitte das Fenster schließen?"
+    },
+    {
+      "en": "Because the train was late, I arrived late.",
+      "de": "Weil der Zug Verspätung hatte, bin ich spät angekommen."
+    },
+    {
+      "en": "I am calling to make an appointment.",
+      "de": "Ich rufe an, um einen Termin zu vereinbaren."
+    },
+    {
+      "en": "When I have free time, I go for a walk.",
+      "de": "Wenn ich Freizeit habe, gehe ich spazieren."
+    },
+    {
+      "en": "I have already paid the bill.",
+      "de": "Ich habe die Rechnung schon bezahlt."
+    },
+    {
+      "en": "The children are playing in the courtyard.",
+      "de": "Die Kinder spielen im Hof."
+    },
+    {
+      "en": "I forgot to buy milk.",
+      "de": "Ich habe vergessen, Milch zu kaufen."
+    },
+    {
+      "en": "The doctor says that I should rest.",
+      "de": "Der Arzt sagt, dass ich mich ausruhen soll."
+    },
+    {
+      "en": "We save energy by switching off the light.",
+      "de": "Wir sparen Energie, indem wir das Licht ausschalten."
+    },
+    {
+      "en": "I would like to return this jacket.",
+      "de": "Ich möchte diese Jacke zurückgeben."
+    },
+    {
+      "en": "The neighbour asked me for help.",
+      "de": "Der Nachbar hat mich um Hilfe gebeten."
+    },
+    {
+      "en": "He is waiting for his package downstairs.",
+      "de": "Er wartet unten auf sein Paket."
+    },
+    {
+      "en": "I am happy because the weather is nice.",
+      "de": "Ich freue mich, weil das Wetter schön ist."
+    },
+    {
+      "en": "She is preparing for the exam.",
+      "de": "Sie bereitet sich auf die Prüfung vor."
+    },
+    {
+      "en": "We are planning a trip for next month.",
+      "de": "Wir planen eine Reise für nächsten Monat."
+    },
+    {
+      "en": "I am interested in German culture.",
+      "de": "Ich interessiere mich für die deutsche Kultur."
+    },
+    {
+      "en": "Please let me know if you come later.",
+      "de": "Bitte geben Sie mir Bescheid, wenn Sie später kommen."
+    },
+    {
+      "en": "The room has to be cleaned today.",
+      "de": "Das Zimmer muss heute geputzt werden."
+    },
+    {
+      "en": "I don't know whether the store is still open.",
+      "de": "Ich weiß nicht, ob das Geschäft noch geöffnet ist."
+    },
+    {
+      "en": "We meet in front of the station at six.",
+      "de": "Wir treffen uns um sechs Uhr vor dem Bahnhof."
+    },
+    {
+      "en": "She has been living in Berlin for two years.",
+      "de": "Sie wohnt seit zwei Jahren in Berlin."
+    },
+    {
+      "en": "I need a new charger for my phone.",
+      "de": "Ich brauche ein neues Ladegerät für mein Handy."
+    },
+    {
+      "en": "The soup tastes better with fresh herbs.",
+      "de": "Die Suppe schmeckt mit frischen Kräutern besser."
+    },
+    {
+      "en": "Can you show me how the machine works?",
+      "de": "Kannst du mir zeigen, wie die Maschine funktioniert?"
+    },
+    {
+      "en": "The customer is not satisfied with the service.",
+      "de": "Der Kunde ist mit dem Service nicht zufrieden."
+    },
+    {
+      "en": "At the market you can buy regional products.",
+      "de": "Auf dem Markt kann man regionale Produkte kaufen."
+    },
+    {
+      "en": "I am looking forward to the weekend.",
+      "de": "Ich freue mich auf das Wochenende."
+    },
+    {
+      "en": "He is taking part in a language course.",
+      "de": "Er nimmt an einem Sprachkurs teil."
+    },
+    {
+      "en": "We should talk about the problem calmly.",
+      "de": "Wir sollten ruhig über das Problem sprechen."
     }
   ],
-  "b1": [
+  "B1": [
     {
       "en": "Although it is raining, I go for a walk.",
       "de": "Obwohl es regnet, gehe ich spazieren."
@@ -607,9 +727,129 @@
     {
       "en": "As soon as he arrives, we can begin.",
       "de": "Sobald er ankommt, können wir anfangen."
+    },
+    {
+      "en": "Although the apartment is small, it is very bright.",
+      "de": "Obwohl die Wohnung klein ist, ist sie sehr hell."
+    },
+    {
+      "en": "I wonder why the delivery has not arrived yet.",
+      "de": "Ich frage mich, warum die Lieferung noch nicht angekommen ist."
+    },
+    {
+      "en": "Not only the rent but also the heating costs have increased.",
+      "de": "Nicht nur die Miete, sondern auch die Heizkosten sind gestiegen."
+    },
+    {
+      "en": "The meeting was postponed because several colleagues were sick.",
+      "de": "Die Besprechung wurde verschoben, weil mehrere Kollegen krank waren."
+    },
+    {
+      "en": "Since I started the new job, I have learned a lot.",
+      "de": "Seit ich die neue Stelle angefangen habe, habe ich viel gelernt."
+    },
+    {
+      "en": "The report has to be finished by Friday.",
+      "de": "Der Bericht muss bis Freitag fertiggestellt werden."
+    },
+    {
+      "en": "This is the colleague with whom I often work.",
+      "de": "Das ist der Kollege, mit dem ich oft zusammenarbeite."
+    },
+    {
+      "en": "If I had more time, I would do more sport.",
+      "de": "Wenn ich mehr Zeit hätte, würde ich mehr Sport machen."
+    },
+    {
+      "en": "She explained to me what I should do next.",
+      "de": "Sie hat mir erklärt, was ich als Nächstes tun soll."
+    },
+    {
+      "en": "The exhibition, which opens tomorrow, is already sold out.",
+      "de": "Die Ausstellung, die morgen eröffnet wird, ist schon ausverkauft."
+    },
+    {
+      "en": "Many people complain that public transport is too unreliable.",
+      "de": "Viele Menschen beklagen sich darüber, dass der öffentliche Nahverkehr zu unzuverlässig ist."
+    },
+    {
+      "en": "I have compared several offers before making a decision.",
+      "de": "Ich habe mehrere Angebote verglichen, bevor ich eine Entscheidung getroffen habe."
+    },
+    {
+      "en": "The patient was examined immediately.",
+      "de": "Der Patient wurde sofort untersucht."
+    },
+    {
+      "en": "He apologized for not answering earlier.",
+      "de": "Er entschuldigte sich dafür, dass er nicht früher geantwortet hat."
+    },
+    {
+      "en": "The information I found online was partly outdated.",
+      "de": "Die Informationen, die ich online gefunden habe, waren teilweise veraltet."
+    },
+    {
+      "en": "She is worried about whether she will pass the exam.",
+      "de": "Sie macht sich Sorgen darüber, ob sie die Prüfung bestehen wird."
+    },
+    {
+      "en": "During the interview I was asked about my experience.",
+      "de": "Während des Gesprächs wurde ich nach meiner Erfahrung gefragt."
+    },
+    {
+      "en": "I prefer products that are made fairly and sustainably.",
+      "de": "Ich bevorzuge Produkte, die fair und nachhaltig hergestellt werden."
+    },
+    {
+      "en": "What matters is not only the price, but also the quality.",
+      "de": "Wichtig ist nicht nur der Preis, sondern auch die Qualität."
+    },
+    {
+      "en": "As soon as I have the results, I will let you know.",
+      "de": "Sobald ich die Ergebnisse habe, gebe ich dir Bescheid."
+    },
+    {
+      "en": "The doctor advised me to avoid stress.",
+      "de": "Der Arzt hat mir geraten, Stress zu vermeiden."
+    },
+    {
+      "en": "The city is trying to become more bicycle-friendly.",
+      "de": "Die Stadt versucht, fahrradfreundlicher zu werden."
+    },
+    {
+      "en": "He was so tired that he fell asleep on the sofa.",
+      "de": "Er war so müde, dass er auf dem Sofa eingeschlafen ist."
+    },
+    {
+      "en": "I don't understand what this regulation is supposed to mean.",
+      "de": "Ich verstehe nicht, was diese Regelung bedeuten soll."
+    },
+    {
+      "en": "The event was cancelled due to the weather.",
+      "de": "Die Veranstaltung wurde wegen des Wetters abgesagt."
+    },
+    {
+      "en": "She has experience in dealing with customers.",
+      "de": "Sie hat Erfahrung im Umgang mit Kunden."
+    },
+    {
+      "en": "I was surprised at how friendly everyone was.",
+      "de": "Ich war überrascht, wie freundlich alle waren."
+    },
+    {
+      "en": "We discussed whether remote work should remain possible.",
+      "de": "Wir haben darüber diskutiert, ob Homeoffice weiterhin möglich sein sollte."
+    },
+    {
+      "en": "The employee to whom I spoke was very helpful.",
+      "de": "Der Mitarbeiter, mit dem ich gesprochen habe, war sehr hilfsbereit."
+    },
+    {
+      "en": "I write new vocabulary down so that I don't forget it.",
+      "de": "Ich schreibe neue Wörter auf, damit ich sie nicht vergesse."
     }
   ],
-  "b2": [
+  "B2": [
     {
       "en": "Even though the project was difficult, the team managed to finish it on time.",
       "de": "Obwohl das Projekt schwierig war, hat das Team es geschafft, es rechtzeitig zu beenden."
@@ -813,6 +1053,126 @@
     {
       "en": "Provided that the necessary resources are available, the project can begin immediately.",
       "de": "Vorausgesetzt, dass die notwendigen Ressourcen verfügbar sind, kann das Projekt sofort beginnen."
+    },
+    {
+      "en": "In my view, digital tools are helpful only when they are used with a clear purpose.",
+      "de": "Meiner Ansicht nach sind digitale Werkzeuge nur dann hilfreich, wenn sie mit einem klaren Ziel eingesetzt werden."
+    },
+    {
+      "en": "What is often underestimated is the fact that long commutes also affect family life.",
+      "de": "Oft unterschätzt wird, dass lange Arbeitswege auch das Familienleben beeinflussen."
+    },
+    {
+      "en": "The question is not whether change is necessary, but how it can be organised fairly.",
+      "de": "Die Frage ist nicht, ob Veränderung nötig ist, sondern wie sie gerecht gestaltet werden kann."
+    },
+    {
+      "en": "Many companies advertise flexibility, although employees are expected to be available at all times.",
+      "de": "Viele Unternehmen werben mit Flexibilität, obwohl von den Beschäftigten erwartet wird, ständig erreichbar zu sein."
+    },
+    {
+      "en": "Had the city invested earlier, the situation would be less tense today.",
+      "de": "Hätte die Stadt früher investiert, wäre die Situation heute weniger angespannt."
+    },
+    {
+      "en": "It is often claimed that social media connects people, yet it can also intensify isolation.",
+      "de": "Oft wird behauptet, dass soziale Medien Menschen verbinden, dabei können sie auch Isolation verstärken."
+    },
+    {
+      "en": "What matters above all is whether the measures are understandable and realistic.",
+      "de": "Entscheidend ist vor allem, ob die Maßnahmen nachvollziehbar und realistisch sind."
+    },
+    {
+      "en": "The results suggest that prevention is more effective in the long term than many short-term campaigns.",
+      "de": "Die Ergebnisse legen nahe, dass Prävention langfristig wirksamer ist als viele kurzfristige Kampagnen."
+    },
+    {
+      "en": "A society in which education depends strongly on background wastes a great deal of potential.",
+      "de": "Eine Gesellschaft, in der Bildung stark von der Herkunft abhängt, verschwendet viel Potenzial."
+    },
+    {
+      "en": "Not until I started working here did I realise how complex the processes really are.",
+      "de": "Erst als ich hier zu arbeiten begann, wurde mir klar, wie komplex die Abläufe tatsächlich sind."
+    },
+    {
+      "en": "Whether a reform succeeds depends largely on how transparently it is communicated.",
+      "de": "Ob eine Reform gelingt, hängt wesentlich davon ab, wie transparent sie kommuniziert wird."
+    },
+    {
+      "en": "The article deals with the question of how cultural participation can be made accessible to more people.",
+      "de": "Der Artikel befasst sich mit der Frage, wie kulturelle Teilhabe für mehr Menschen zugänglich gemacht werden kann."
+    },
+    {
+      "en": "It would be wrong to place all responsibility on individuals alone.",
+      "de": "Es wäre falsch, die gesamte Verantwortung allein den Einzelnen zuzuschieben."
+    },
+    {
+      "en": "Although the technology saves time, it also creates new dependencies.",
+      "de": "Die Technologie spart zwar Zeit, schafft jedoch zugleich neue Abhängigkeiten."
+    },
+    {
+      "en": "The decisive factor will be whether political goals are backed by concrete measures.",
+      "de": "Ausschlaggebend wird sein, ob politische Ziele durch konkrete Maßnahmen gestützt werden."
+    },
+    {
+      "en": "What impressed me most was how differentiated the discussion remained despite clear differences of opinion.",
+      "de": "Besonders beeindruckt hat mich, wie differenziert die Diskussion trotz klarer Meinungsunterschiede geblieben ist."
+    },
+    {
+      "en": "The proposal sounds convincing at first glance, but it leaves important practical questions unanswered.",
+      "de": "Der Vorschlag klingt auf den ersten Blick überzeugend, lässt aber wichtige praktische Fragen offen."
+    },
+    {
+      "en": "A sustainable solution would have to consider social as well as economic consequences.",
+      "de": "Eine nachhaltige Lösung müsste sowohl soziale als auch wirtschaftliche Folgen berücksichtigen."
+    },
+    {
+      "en": "The project could serve as a model for other cities, provided that it is evaluated carefully.",
+      "de": "Das Projekt könnte anderen Städten als Vorbild dienen, vorausgesetzt, es wird sorgfältig ausgewertet."
+    },
+    {
+      "en": "It is precisely in times of uncertainty that reliable information becomes especially important.",
+      "de": "Gerade in Zeiten der Unsicherheit werden verlässliche Informationen besonders wichtig."
+    },
+    {
+      "en": "Had I known how much effort it would take, I would have planned more time.",
+      "de": "Hätte ich gewusst, wie viel Aufwand das kosten würde, hätte ich mehr Zeit eingeplant."
+    },
+    {
+      "en": "The debate shows how emotionally issues of housing and mobility are discussed.",
+      "de": "Die Debatte zeigt, wie emotional Fragen des Wohnens und der Mobilität diskutiert werden."
+    },
+    {
+      "en": "There is broad agreement that change is necessary, but disagreement about who should bear the costs.",
+      "de": "Breite Einigkeit besteht darin, dass Veränderungen notwendig sind, Uneinigkeit herrscht jedoch darüber, wer die Kosten tragen soll."
+    },
+    {
+      "en": "One should not overlook the fact that small local initiatives can also have a major effect.",
+      "de": "Man sollte nicht übersehen, dass auch kleine lokale Initiativen eine große Wirkung entfalten können."
+    },
+    {
+      "en": "The study, according to which many respondents feel permanently stressed, deserves closer attention.",
+      "de": "Die Studie, der zufolge sich viele Befragte dauerhaft gestresst fühlen, verdient nähere Aufmerksamkeit."
+    },
+    {
+      "en": "The more precisely goals are formulated, the easier progress can be measured.",
+      "de": "Je genauer Ziele formuliert werden, desto leichter lässt sich Fortschritt messen."
+    },
+    {
+      "en": "What speaks in favour of the measure is that it combines environmental and social aims.",
+      "de": "Für die Maßnahme spricht, dass sie ökologische und soziale Ziele miteinander verbindet."
+    },
+    {
+      "en": "Even if no solution is perfect, some approaches are clearly more responsible than others.",
+      "de": "Auch wenn keine Lösung perfekt ist, sind manche Ansätze deutlich verantwortungsvoller als andere."
+    },
+    {
+      "en": "The fact that demand remains high despite rising prices shows how tense the market is.",
+      "de": "Dass die Nachfrage trotz steigender Preise hoch bleibt, zeigt, wie angespannt der Markt ist."
+    },
+    {
+      "en": "In the long run, those institutions will be successful that respond flexibly without losing reliability.",
+      "de": "Langfristig werden sich jene Institutionen behaupten, die flexibel reagieren, ohne ihre Verlässlichkeit zu verlieren."
     }
   ]
 }

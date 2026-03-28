@@ -2141,6 +2141,202 @@
         "ihr": "setzt euch zusammen",
         "sie": "setzen sich zusammen"
       }
+    },
+    {
+      "infinitive": "entscheiden",
+      "english": "to decide",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "entscheide",
+        "du": "entscheidest",
+        "er": "entscheidet",
+        "wir": "entscheiden",
+        "ihr": "entscheidet",
+        "sie": "entscheiden"
+      }
+    },
+    {
+      "infinitive": "untersuchen",
+      "english": "to examine",
+      "type": "regular",
+      "level": "B1",
+      "forms": {
+        "ich": "untersuche",
+        "du": "untersuchst",
+        "er": "untersucht",
+        "wir": "untersuchen",
+        "ihr": "untersucht",
+        "sie": "untersuchen"
+      }
+    },
+    {
+      "infinitive": "heilen",
+      "english": "to heal",
+      "type": "regular",
+      "level": "B1",
+      "forms": {
+        "ich": "heile",
+        "du": "heilst",
+        "er": "heilt",
+        "wir": "heilen",
+        "ihr": "heilt",
+        "sie": "heilen"
+      }
+    },
+    {
+      "infinitive": "schützen",
+      "english": "to protect",
+      "type": "regular",
+      "level": "B1",
+      "forms": {
+        "ich": "schütze",
+        "du": "schützt",
+        "er": "schützt",
+        "wir": "schützen",
+        "ihr": "schützt",
+        "sie": "schützen"
+      }
+    },
+    {
+      "infinitive": "abschließen",
+      "english": "to complete / conclude",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "schließe ab",
+        "du": "schließt ab",
+        "er": "schließt ab",
+        "wir": "schließen ab",
+        "ihr": "schließt ab",
+        "sie": "schließen ab"
+      }
+    },
+    {
+      "infinitive": "durchführen",
+      "english": "to carry out",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "führe durch",
+        "du": "führst durch",
+        "er": "führt durch",
+        "wir": "führen durch",
+        "ihr": "führt durch",
+        "sie": "führen durch"
+      }
+    },
+    {
+      "infinitive": "liegen",
+      "english": "to lie",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "liege",
+        "du": "liegst",
+        "er": "liegt",
+        "wir": "liegen",
+        "ihr": "liegt",
+        "sie": "liegen"
+      }
+    },
+    {
+      "infinitive": "steigen",
+      "english": "to rise",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "steige",
+        "du": "steigst",
+        "er": "steigt",
+        "wir": "steigen",
+        "ihr": "steigt",
+        "sie": "steigen"
+      }
+    },
+    {
+      "infinitive": "sinken",
+      "english": "to sink",
+      "type": "irregular",
+      "level": "B1",
+      "forms": {
+        "ich": "sinke",
+        "du": "sinkst",
+        "er": "sinkt",
+        "wir": "sinken",
+        "ihr": "sinkt",
+        "sie": "sinken"
+      }
+    },
+    {
+      "infinitive": "gestalten",
+      "english": "to shape",
+      "type": "regular",
+      "level": "B2",
+      "forms": {
+        "ich": "gestalte",
+        "du": "gestaltest",
+        "er": "gestaltet",
+        "wir": "gestalten",
+        "ihr": "gestaltet",
+        "sie": "gestalten"
+      }
+    },
+    {
+      "infinitive": "verringern",
+      "english": "to reduce",
+      "type": "regular",
+      "level": "B2",
+      "forms": {
+        "ich": "verringere",
+        "du": "verringerst",
+        "er": "verringert",
+        "wir": "verringern",
+        "ihr": "verringert",
+        "sie": "verringern"
+      }
+    },
+    {
+      "infinitive": "ermöglichen",
+      "english": "to enable",
+      "type": "regular",
+      "level": "B2",
+      "forms": {
+        "ich": "ermögliche",
+        "du": "ermöglichst",
+        "er": "ermöglicht",
+        "wir": "ermöglichen",
+        "ihr": "ermöglicht",
+        "sie": "ermöglichen"
+      }
+    },
+    {
+      "infinitive": "beobachten",
+      "english": "to observe",
+      "type": "regular",
+      "level": "B2",
+      "forms": {
+        "ich": "beobachte",
+        "du": "beobachtest",
+        "er": "beobachtet",
+        "wir": "beobachten",
+        "ihr": "beobachtet",
+        "sie": "beobachten"
+      }
+    },
+    {
+      "infinitive": "sichern",
+      "english": "to secure",
+      "type": "regular",
+      "level": "B2",
+      "forms": {
+        "ich": "sichere",
+        "du": "sicherst",
+        "er": "sichert",
+        "wir": "sichern",
+        "ihr": "sichert",
+        "sie": "sichern"
+      }
     }
   ]
 }

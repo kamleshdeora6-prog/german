@@ -5,168 +5,302 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>German Study App</title>
 <style>
-:root{--bg:#CDEDF6;--panel:#ffffff;--panel2:#edf6fb;--text:#12314a;--muted:#55738e;--line:#b9d5e5;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--success:#1c9f65;--danger:#c03a2b;--shadow:0 10px 30px rgba(11,28,43,.08)}
-body.theme-dark{--bg:#0b2330;--panel:#102d3d;--panel2:#16384b;--text:#e7f4fb;--muted:#a7c6d8;--line:#2b4b5d;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--success:#49c887;--danger:#ff7d6d;--shadow:0 12px 35px rgba(0,0,0,.35)}
-body.theme-light{--bg:#f7fbfd;--panel:#ffffff;--panel2:#f0f7fa;--text:#17324b;--muted:#5f7990;--line:#d2e2ea;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--success:#1c9f65;--danger:#c03a2b;--shadow:0 10px 30px rgba(11,28,43,.06)}
-body.theme-focus{--bg:#CDEDF6;--panel:#ffffff;--panel2:#edf6fb;--text:#12314a;--muted:#55738e;--line:#b9d5e5;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--success:#1c9f65;--danger:#c03a2b;--shadow:0 10px 30px rgba(11,28,43,.08)}
-*{box-sizing:border-box} html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(120deg,var(--bg),#eaf5f9 50%, var(--bg));color:var(--text)}
-body.theme-dark{background:linear-gradient(120deg,#08202b,#143243 50%,#0b2330)}
-.shell{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
-.sidebar{background:rgba(255,255,255,.24);backdrop-filter:blur(10px);border-right:1px solid var(--line);padding:20px;position:sticky;top:0;height:100vh;overflow:auto}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}.logo{font-size:34px}.brand h1{font-size:28px;margin:0}
-.sub{color:var(--muted);font-size:14px;margin-top:4px}
-.navbtn,.subbtn,button,.chip{border:none;border-radius:14px;background:var(--panel);color:var(--text);padding:12px 14px;cursor:pointer;box-shadow:var(--shadow);border:1px solid var(--line)}
-.navbtn{width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center;margin:10px 0;font-weight:700}.navbtn.active,.subbtn.active,button.primary{background:linear-gradient(135deg,var(--accent),#7dc2ce);color:#062433;border-color:transparent}
-.main{padding:22px}.topbar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:16px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.panel{background:rgba(255,255,255,.66);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}
-body.theme-dark .panel, body.theme-dark .sidebar{background:rgba(9,24,35,.75)}
-.missions{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-bottom:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:14px;border-radius:18px;background:var(--panel);border:1px solid var(--line)}.stat h3{margin:0;font-size:28px}.label{font-size:13px;color:var(--muted)}
-.meter{height:10px;background:var(--panel2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}.fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%}
-.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.hidden{display:none!important}
-.sectionTitle{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.sectionTitle h2{margin:0}.muted{color:var(--muted)}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.grow{flex:1}
-select,input,textarea{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--panel2);color:var(--text)} textarea{min-height:120px;resize:vertical}
-.list{display:grid;gap:12px}.card{padding:16px;border-radius:18px;background:var(--panel);border:1px solid var(--line)} .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:13px;color:var(--muted)}
-.small{font-size:14px}.subtabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}.subbtn{padding:10px 12px}.exerciseQ{font-size:28px;font-weight:800;line-height:1.3}.answerbox{font-size:20px}.result.good{color:var(--success)} .result.bad{color:var(--danger)}
-.flip{min-height:220px;display:grid;place-items:center;text-align:center;font-size:28px;font-weight:800}.flashhint{font-size:13px;color:var(--muted)}
-.match-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.match-btn{padding:14px;border-radius:14px;background:var(--panel);border:1px solid var(--line);cursor:pointer;text-align:left}.match-btn.selected{outline:3px solid var(--accent2)}.match-btn.done{opacity:.4}
-.conj-forms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.formbox{padding:12px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}
-.note-item pre{white-space:pre-wrap;margin:0;font-family:inherit;line-height:1.55}.sidebarFooter{margin-top:18px;font-size:13px;color:var(--muted)}
-@media (max-width: 1100px){.shell{grid-template-columns:1fr}.sidebar{position:static;height:auto}.missions,.grid2,.grid3,.stats,.conj-forms{grid-template-columns:1fr}}
+:root{--bg:#CDEDF6;--surface:#ffffff;--surface2:#eef7fb;--text:#153042;--muted:#547080;--line:#b7d6df;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--good:#16a34a;--bad:#dc2626;--shadow:0 10px 24px rgba(4,42,43,.08)}
+body.theme-light{--bg:#f5fbfc;--surface:#ffffff;--surface2:#f2f7f8;--text:#17324d;--muted:#5b7280;--line:#d7e8ee;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--shadow:0 12px 30px rgba(4,42,43,.08)}
+body.theme-dark{--bg:#042A2B;--surface:#0b3638;--surface2:#104244;--text:#e7f7fb;--muted:#98c4cc;--line:#1c5558;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--shadow:0 12px 30px rgba(0,0,0,.35)}
+body.theme-focus{--bg:#CDEDF6;--surface:#ffffff;--surface2:#edf7fa;--text:#14313d;--muted:#59707c;--line:#bdd8df;--accent:#5EB1BF;--accent2:#EF7B45;--accent3:#D84727;--shadow:0 18px 38px rgba(4,42,43,.12);background:linear-gradient(135deg,#cde9f4 0%,#eef8fc 44%,#fff7f2 100%)}
+*{box-sizing:border-box} html,body{height:100%} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:rgba(255,255,255,.3);backdrop-filter:blur(14px);border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:800;margin-bottom:14px}.brand .logo{font-size:28px}
+.navBtn{display:flex;align-items:center;gap:10px;width:100%;padding:12px 14px;border-radius:16px;border:1px solid transparent;background:transparent;color:var(--text);font-weight:700;cursor:pointer;margin-top:6px;text-align:left}.navBtn.active,.navBtn:hover{background:var(--surface);border-color:var(--line);box-shadow:var(--shadow)}
+.main{padding:18px}
+.topbar,.section{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+.topbar{padding:16px 18px;display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.grow{flex:1}.hidden{display:none!important}
+button,.btn{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:linear-gradient(180deg,var(--accent),#4ba2b1);color:#fff;font-weight:700;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.08)} button.ghost{background:var(--surface2);color:var(--text)} button.warn{background:linear-gradient(180deg,var(--accent2),#df6b37)} button.danger{background:linear-gradient(180deg,var(--accent3),#c93d22)}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:var(--surface2);color:var(--text);font:inherit} textarea{min-height:120px;resize:vertical}
+.grid{display:grid;gap:14px}.grid2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.grid3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.section{padding:16px;margin-top:16px}.sectionHeader{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.pill{padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;background:var(--surface2)}
+.small{font-size:13px;color:var(--muted)} .muted{color:var(--muted)} h1,h2,h3,h4{margin:0} .subtabs{display:flex;gap:8px;flex-wrap:wrap}.subtabs button{background:var(--surface2);color:var(--text)}.subtabs button.active{background:linear-gradient(180deg,var(--accent),#4ba2b1);color:#fff}
+.card{background:var(--surface2);border:1px solid var(--line);border-radius:20px;padding:14px}
+.progressWrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;width:100%}.pbar{height:10px;border-radius:999px;background:rgba(94,177,191,.15);overflow:hidden;margin-top:8px}.pbar>span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}
+.count{font-size:28px;font-weight:800}.exerciseQ{font-size:28px;font-weight:800;line-height:1.35}
+.flashcard{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:30px;font-weight:800;cursor:pointer}.table{width:100%;border-collapse:collapse}.table th,.table td{border:1px solid var(--line);padding:8px;vertical-align:top}.table th{background:rgba(94,177,191,.15)}
+.badge{display:inline-block;padding:4px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;background:var(--surface)}
+.missionChooser{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.missionChooser select{width:auto;min-width:110px}
+.matchGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.matchCard{padding:16px;border-radius:16px;border:1px solid var(--line);background:var(--surface2);cursor:pointer;min-height:80px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700}.matchCard.sel{outline:3px solid var(--accent2)}.matchCard.done{background:rgba(22,163,74,.12);color:var(--good)}
+.passageBody{white-space:pre-wrap;line-height:1.65}.diffBox{padding:10px;border-radius:14px;border:1px solid var(--line);background:var(--surface2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}.okChar{color:var(--good)} .badChar{color:var(--bad);text-decoration:underline}.missChar{background:rgba(220,38,38,.12);color:var(--bad)} .insChar{background:rgba(22,163,74,.12);color:var(--good)}
+.verbGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.verbCell{padding:12px;border-radius:16px;border:1px solid var(--line);background:var(--surface2)}
+.topMission{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+@media (max-width: 980px){.app{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}.brand{margin-bottom:8px}}
 </style>
-</head><body class="theme-focus">
-<div class="shell">
-<aside class="sidebar">
-  <div class="brand"><div class="logo">🦋</div><div><h1>German Study App</h1><div class="sub">GitHub-ready replacement build</div></div></div>
-  <button class="navbtn active" data-section="dashboard">🏠 Dashboard <span>›</span></button>
-  <button class="navbtn" data-section="practice">🧠 Practice <span>›</span></button>
-  <button class="navbtn" data-section="passages">📚 Passages <span>›</span></button>
-  <button class="navbtn" data-section="vocabulary">🧩 Vocabulary <span>›</span></button>
-  <button class="navbtn" data-section="conjugation">🔁 Conjugation <span>›</span></button>
-  <button class="navbtn" data-section="flashcards">🃏 Flashcards <span>›</span></button>
-  <button class="navbtn" data-section="grammar">📘 Grammar <span>›</span></button>
-  <button class="navbtn" data-section="notes">📝 Notes <span>›</span></button>
-  <div class="sidebarFooter">Progress saves in your browser. Upload these files to GitHub Pages to publish the app.</div>
-</aside>
-<main class="main">
-  <div class="topbar">
-    <div class="toolbar row">
-      <span class="pill">✅ <span id="dataCounts">Loading data…</span></span>
-      <span class="pill">🔥 <span id="streakBadge">Streak 0</span></span>
-      <span class="pill">🎯 <span id="weakAreaBadge">Weak area: —</span></span>
-    </div>
-    <div class="toolbar row" style="min-width:420px">
-      <div style="min-width:160px"><div class="label">Mission level</div><select id="missionPreset"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option><option value="intense">Intense</option></select></div>
-      <div style="min-width:140px"><div class="label">Theme</div><select id="themeSelect"><option value="theme-focus">Focus</option><option value="theme-light">Light</option><option value="theme-dark">Dark</option></select></div>
-      <button id="resetTodayBtn">Reset today</button>
-    </div>
-  </div>
-  <section class="missions">
-    <div class="panel">
-      <div class="sectionTitle"><h2>Today's missions</h2><span class="pill">Choose your pace and follow the bars</span></div>
-      <div class="grid2">
-        <div>
-          <div class="label">📚 Passages</div><div class="meter"><div id="missionPassages" class="fill"></div></div><div id="missionPassagesText" class="small muted"></div>
-          <div class="label" style="margin-top:10px">🧠 Exercises</div><div class="meter"><div id="missionExercises" class="fill"></div></div><div id="missionExercisesText" class="small muted"></div>
-          <div class="label" style="margin-top:10px">🧩 Vocabulary</div><div class="meter"><div id="missionVocab" class="fill"></div></div><div id="missionVocabText" class="small muted"></div>
-          <div class="label" style="margin-top:10px">✍️ Writing</div><div class="meter"><div id="missionWriting" class="fill"></div></div><div id="missionWritingText" class="small muted"></div>
+</head>
+<body class="theme-focus">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">🦋</div><div>German Study App</div></div>
+    <button class="navBtn active" data-view="dashboardView">🏠 Dashboard</button>
+    <button class="navBtn" data-view="practiceView">✍️ Practice</button>
+    <button class="navBtn" data-view="passagesView">📚 Passages</button>
+    <button class="navBtn" data-view="vocabView">🧠 Vocabulary</button>
+    <button class="navBtn" data-view="notesView">📝 Notes & Grammar</button>
+    <button class="navBtn" data-view="flashcardsView">🃏 Flashcards</button>
+    <button class="navBtn" data-view="toolsView">🛠 Tools</button>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div class="grow">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <div>
+            <h2>Daily mission</h2>
+            <div class="small">Choose your goal, then finish it with passages, exercises, sentence writing, and vocabulary review.</div>
+          </div>
+          <div class="missionChooser">
+            <label class="small">Mission</label>
+            <select id="missionPreset"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option><option value="custom">Custom</option></select>
+            <label class="small">Level</label>
+            <select id="missionLevel"><option>All</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option></select>
+            <button onclick="applyMissionPreset()">Apply</button>
+            <button class="ghost" onclick="resetTodayProgress()">Reset today</button>
+          </div>
         </div>
-        <div class="card">
-          <div class="label">Recommended order</div>
-          <ol class="small"><li>Read one passage and listen once</li><li>Do exercises from your weak area</li><li>Review 6–12 vocabulary items</li><li>Finish with one sentence-writing task</li></ol>
-          <button class="primary" onclick="goSection('practice')">Continue studying</button>
+        <div class="progressWrap topMission" id="missionBars"></div>
+      </div>
+      <div class="card" style="min-width:260px">
+        <div class="small">Theme</div>
+        <select id="themeSelect" onchange="setTheme(this.value)">
+          <option value="theme-focus">Focus</option>
+          <option value="theme-light">Light</option>
+          <option value="theme-dark">Dark</option>
+        </select>
+        <div class="row" style="margin-top:10px">
+          <button onclick="reloadAll()">Reload data</button>
+          <button class="ghost" onclick="goHome()">Home</button>
+        </div>
+        <div class="small" id="status" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+    <section id="dashboardView" class="section">
+      <div class="sectionHeader"><h3>Study dashboard</h3><div class="pill">Roadmap • Progress • Daily plan</div></div>
+      <div class="grid grid3">
+        <div class="card"><div class="small">Today</div><div class="count" id="todayEmoji">🌱</div><div class="small" id="todaySummary">Start with one task.</div></div>
+        <div class="card"><div class="small">Loaded passages</div><div class="count" id="countPassages">0</div><div class="small">A1 to B2 passages available.</div></div>
+        <div class="card"><div class="small">Practice questions</div><div class="count" id="countExercises">0</div><div class="small">Grouped by useful practice types.</div></div>
+      </div>
+      <div class="grid grid2" style="margin-top:14px">
+        <div class="card"><h4>Learning path</h4><div id="learningPathBox" class="small" style="margin-top:8px"></div></div>
+        <div class="card"><h4>Suggested order for today</h4><div id="todayPlan" class="small" style="margin-top:8px"></div></div>
+      </div>
+    </section>
+
+    <section id="practiceView" class="section hidden">
+      <div class="sectionHeader"><h3>Practice</h3><div class="pill">Typing • Exercises • Conjugation • Sentence writing</div></div>
+      <div class="subtabs">
+        <button class="active" data-psub="typingPane">Typing</button>
+        <button data-psub="exercisePane">Exercises</button>
+        <button data-psub="conjPane">Conjugation</button>
+        <button data-psub="sentencePane">Sentence writing</button>
+      </div>
+      <div id="typingPane" style="margin-top:14px">
+        <div class="grid grid3">
+          <div><div class="small">Level</div><select id="passageLevelFilter" onchange="renderPassages();renderTypingSelect()"></select></div>
+          <div><div class="small">Passage</div><select id="practiceSelect" onchange="updateReference()"></select></div>
+          <div><div class="small">Show English</div><select id="showEnglishToggle" onchange="updateReference()"><option value="0">Off</option><option value="1">On</option></select></div>
+        </div>
+        <div class="grid grid2" style="margin-top:12px">
+          <div><div class="small">Reference</div><textarea id="referenceArea" readonly></textarea><textarea id="referenceEnglishArea" class="hidden" readonly style="margin-top:8px"></textarea></div>
+          <div><div class="small">Type here</div><textarea id="practiceArea" oninput="onTypingInput()" placeholder="Type the passage exactly..."></textarea><div class="row" style="margin-top:8px"><button onclick="checkTyping()">Check</button><button class="ghost" onclick="clearTyping()">Clear</button><button class="ghost" onclick="speakSelectedPassage()">🔊 Listen</button></div><div class="small" style="margin-top:8px">WPM <b id="wpm">0</b> • Accuracy <b id="acc">0</b>% • Chars <b id="chars">0</b></div></div>
+        </div>
+        <div id="typingFeedback" style="margin-top:10px"></div>
+        <div id="diffOutput" class="diffBox hidden" style="margin-top:10px"></div>
+      </div>
+      <div id="exercisePane" class="hidden" style="margin-top:14px">
+        <div class="grid grid3">
+          <div><div class="small">Level</div><select id="exLevel" onchange="resetExerciseFlow()"></select></div>
+          <div><div class="small">Practice type</div><select id="exGroup" onchange="resetExerciseFlow()"></select></div>
+          <div><div class="small">Order</div><select id="exOrder" onchange="resetExerciseFlow()"><option value="random">Random</option><option value="sequence">Sequence</option></select></div>
+        </div>
+        <div class="row" style="justify-content:space-between;margin-top:12px"><div class="pill" id="exProg">0/0</div><div class="pill" id="exMeta">Mode: -</div></div>
+        <div class="card" style="margin-top:12px">
+          <div class="exerciseQ" id="exQ">Loading…</div>
+          <div class="small" id="exHint" style="margin-top:10px"></div>
+          <div id="exMCQ" class="grid grid2" style="margin-top:14px"></div>
+          <div id="exTypingWrap" style="margin-top:14px"><input id="exTyping" placeholder="Type your answer..."></div>
+          <div class="row" style="margin-top:14px"><button onclick="checkExerciseTyping()">Check</button><button class="ghost" onclick="nextExercise()">Next</button><button class="ghost" onclick="resetExerciseFlow()">Restart</button></div>
+          <div id="exFeedback" style="margin-top:10px"></div>
         </div>
       </div>
-    </div>
-    <div class="panel stats">
-      <div class="stat"><div class="label">Passages today</div><h3 id="statPassages">0</h3></div>
-      <div class="stat"><div class="label">Exercises correct</div><h3 id="statExercises">0</h3></div>
-      <div class="stat"><div class="label">Vocabulary seen</div><h3 id="statVocab">0</h3></div>
-      <div class="stat"><div class="label">Writing done</div><h3 id="statWriting">0</h3></div>
-    </div>
-  </section>
-
-  <section id="section-dashboard" class="app-section panel">
-    <div class="sectionTitle"><h2>Dashboard</h2><span class="pill">Roadmap • Weak spots • Daily guide</span></div>
-    <div class="grid2">
-      <div class="card">
-        <h3 style="margin-top:0">Learning roadmap</h3>
-        <div id="roadmapCards" class="list"></div>
+      <div id="conjPane" class="hidden" style="margin-top:14px">
+        <div class="grid grid3">
+          <div><div class="small">Search</div><input id="verbSearch" oninput="renderVerbList()" placeholder="Search verb or English meaning"></div>
+          <div><div class="small">Level</div><select id="verbLevel" onchange="renderVerbList()"></select></div>
+          <div><div class="small">Verb</div><select id="verbSelect" onchange="renderVerb()"></select></div>
+        </div>
+        <div class="grid grid2" style="margin-top:14px">
+          <div class="card"><div class="row" style="justify-content:space-between"><div><h4 id="verbTitle">Verb</h4><div class="small" id="verbMeta"></div></div><button class="ghost" onclick="startVerbQuiz()">Quiz me</button></div><div class="verbGrid" style="margin-top:12px"><div class="verbCell"><b>ich</b><div id="v_ich"></div></div><div class="verbCell"><b>du</b><div id="v_du"></div></div><div class="verbCell"><b>er/sie/es</b><div id="v_er"></div></div><div class="verbCell"><b>wir</b><div id="v_wir"></div></div><div class="verbCell"><b>ihr</b><div id="v_ihr"></div></div><div class="verbCell"><b>sie/Sie</b><div id="v_sie"></div></div></div></div>
+          <div class="card"><h4>Quick quiz</h4><div id="verbQuizQ" style="margin-top:10px">Pick a verb, then click “Quiz me”.</div><input id="verbQuizInput" placeholder="Type the correct form" style="margin-top:12px"><div class="row" style="margin-top:12px"><button onclick="checkVerbQuiz()">Check</button><button class="ghost" onclick="startVerbQuiz()">New prompt</button></div><div id="verbQuizFeedback" style="margin-top:10px"></div></div>
+        </div>
       </div>
-      <div class="card">
-        <h3 style="margin-top:0">Study insights</h3>
-        <div id="insightsBox" class="small"></div>
+      <div id="sentencePane" class="hidden" style="margin-top:14px">
+        <div class="grid grid3"><div><div class="small">Level</div><select id="sentLevel" onchange="resetSentencePractice()"></select></div><div><div class="small">Type</div><select id="sentType" onchange="resetSentencePractice()"></select></div><div><div class="small">Order</div><select id="sentOrder" onchange="resetSentencePractice()"><option value="random">Random</option><option value="sequence">Sequence</option></select></div></div>
+        <div class="card" style="margin-top:14px"><div class="exerciseQ" id="sentPrompt"></div><div class="small" id="sentMeta" style="margin-top:8px"></div><textarea id="sentAnswer" placeholder="Write your German sentence here" style="margin-top:12px"></textarea><div class="row" style="margin-top:12px"><button onclick="checkSentence()">Check</button><button class="ghost" onclick="showSentenceSample()">Show sample</button><button class="ghost" onclick="nextSentence()">Next</button></div><div id="sentFeedback" style="margin-top:10px"></div><div id="sentSamples" class="small" style="white-space:pre-wrap;margin-top:10px"></div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="section-practice" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Practice</h2><span class="pill">Exercises • Passage typing • Sentence writing</span></div>
-    <div class="subtabs"><button class="subbtn active" data-practice="exercises">Exercises</button><button class="subbtn" data-practice="typing">Passage typing</button><button class="subbtn" data-practice="writing">Sentence writing</button></div>
-    <div id="practice-exercises">
-      <div class="row">
-        <div style="min-width:160px"><div class="label">Level</div><select id="exerciseLevel"></select></div>
-        <div style="min-width:220px"><div class="label">Type</div><select id="exerciseType"></select></div>
-        <div style="min-width:160px"><div class="label">Order</div><select id="exerciseOrder"><option value="random">Random</option><option value="sequence">Sequence</option></select></div>
+    <section id="passagesView" class="section hidden">
+      <div class="sectionHeader"><h3>Passages library</h3><div class="pill">Filter • Read • Listen • Save locally if needed</div></div>
+      <div class="grid grid3"><div><div class="small">Level</div><select id="libLevel" onchange="renderPassages()"></select></div><div><div class="small">Search</div><input id="libSearch" oninput="renderPassages()" placeholder="Search title, chapter, German or English"></div><div><div class="small">Sort</div><select id="libSort" onchange="renderPassages()"><option value="level">Level</option><option value="title">Title</option></select></div></div>
+      <details style="margin-top:12px"><summary class="small">Add your own local passage</summary><div class="grid grid2" style="margin-top:10px"><textarea id="germanInput" placeholder="German text"></textarea><textarea id="englishInput" placeholder="English translation"></textarea></div><div class="row" style="margin-top:10px"><select id="localLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option></select><button onclick="saveParagraphLocal()">Save locally</button></div></details>
+      <div id="libraryList" style="margin-top:14px"></div>
+    </section>
+
+    <section id="vocabView" class="section hidden">
+      <div class="sectionHeader"><h3>Vocabulary</h3><div class="pill">Search • Learn • Match game • Dictionary</div></div>
+      <div class="subtabs"><button class="active" data-vsub="vocabListPane">Word list</button><button data-vsub="vocabGamePane">Match game</button><button data-vsub="dictPane">Find a word</button></div>
+      <div id="vocabListPane" style="margin-top:14px">
+        <div class="grid grid3"><div><div class="small">Level</div><select id="vocabLevel" onchange="renderVocab()"></select></div><div><div class="small">Topic</div><select id="vocabTopic" onchange="renderVocab()"></select></div><div><div class="small">Search</div><input id="vocabSearch" oninput="renderVocab()" placeholder="Search German or English"></div></div>
+        <div class="small" id="vocabCount" style="margin-top:10px"></div>
+        <div id="vocabList" style="margin-top:8px"></div>
       </div>
-      <div class="card" style="margin-top:12px">
-        <div class="row" style="justify-content:space-between"><span class="pill" id="exerciseProgressPill">Progress 0/0</span><span class="pill" id="exerciseHintPill">Mode: typing</span></div>
-        <div id="exerciseQuestion" class="exerciseQ" style="margin:14px 0"></div>
-        <input id="exerciseAnswer" class="answerbox" placeholder="Type your answer">
-        <div class="row" style="margin-top:12px"><button class="primary" id="checkExerciseBtn">Check</button><button id="nextExerciseBtn">Next</button><button id="restartExerciseBtn">Restart</button></div>
-        <div id="exerciseResult" class="result small" style="margin-top:10px"></div>
+      <div id="vocabGamePane" class="hidden" style="margin-top:14px">
+        <div class="row"><button onclick="newMatchGame()">New match game</button><button class="ghost" onclick="speakMatchWord()">🔊 Hear selected</button></div>
+        <div class="small" id="matchInfo" style="margin-top:10px">Match each German word with its English meaning.</div>
+        <div id="matchGrid" class="matchGrid" style="margin-top:12px"></div>
       </div>
-    </div>
-    <div id="practice-typing" class="hidden">
-      <div class="row"><div class="grow"><div class="label">Passage</div><select id="typingPassageSelect"></select></div><div style="min-width:140px"><div class="label">Show English</div><select id="typingShowEnglish"><option value="0">Off</option><option value="1">On</option></select></div></div>
-      <div class="grid2" style="margin-top:12px"><div class="card"><div class="row" style="justify-content:space-between"><strong>Reference</strong><button id="typingListenBtn">🔊 Listen</button></div><pre id="typingReference" style="white-space:pre-wrap"></pre><div id="typingEnglishWrap" class="small muted hidden"></div></div><div class="card"><strong>Your typing</strong><textarea id="typingInput" placeholder="Type the passage here..."></textarea><div class="row"><button class="primary" id="checkTypingBtn">Check typing</button><button id="clearTypingBtn">Clear</button></div><div id="typingResult" class="small" style="margin-top:8px"></div></div></div>
-    </div>
-    <div id="practice-writing" class="hidden">
-      <div class="card"><div class="row" style="justify-content:space-between"><strong>Translate into German</strong><button id="newWritingPromptBtn">New prompt</button></div><div id="writingPrompt" class="exerciseQ" style="margin:12px 0"></div><textarea id="writingInput" placeholder="Write your German sentence here..."></textarea><div class="row"><button class="primary" id="checkWritingBtn">Check</button></div><div id="writingResult" class="small" style="margin-top:8px"></div></div>
-    </div>
-  </section>
+      <div id="dictPane" class="hidden" style="margin-top:14px">
+        <div class="grid grid2"><div><div class="small">German or English word</div><input id="dictWord" placeholder="z.B. Bewerbung / application"></div><div style="display:flex;align-items:end"><button onclick="lookupWord()">Find</button></div></div>
+        <div id="dictResult" class="card small" style="margin-top:12px;white-space:pre-wrap"></div>
+      </div>
+    </section>
 
-  <section id="section-passages" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Passages library</h2><span class="pill">Read • Search • Listen • Save local notes</span></div>
-    <div class="row"><div style="min-width:140px"><div class="label">Level</div><select id="passageLevel"></select></div><div class="grow"><div class="label">Search</div><input id="passageSearch" placeholder="Search title, chapter or text"></div></div>
-    <details class="card" style="margin-top:12px"><summary><strong>Optional local passage entry</strong></summary><div class="row" style="margin-top:10px"><div style="min-width:120px"><div class="label">Level</div><select id="localPassageLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option></select></div></div><textarea id="localPassageGerman" placeholder="German text"></textarea><textarea id="localPassageEnglish" placeholder="English translation"></textarea><button class="primary" id="saveLocalPassageBtn">Save locally</button></details>
-    <div id="passagesList" class="list" style="margin-top:12px"></div>
-  </section>
+    <section id="notesView" class="section hidden">
+      <div class="sectionHeader"><h3>Notes & Grammar</h3><div class="pill">Study notes • Extra reference tables</div></div>
+      <div class="subtabs"><button class="active" data-nsub="notesPane">Study notes</button><button data-nsub="grammarPane">Grammar tables</button></div>
+      <div id="notesPane" style="margin-top:14px">
+        <div class="grid grid3"><div><div class="small">Topic</div><select id="notesTopic"></select></div><div style="grid-column:span 2"><div class="small">Your own note</div><input id="personalNotesInput" placeholder="Add a quick memory note and save it locally"></div></div>
+        <div class="row" style="margin-top:10px"><button onclick="savePersonalQuickNote()">Save note</button><button class="ghost" onclick="clearPersonalNotes()">Clear local note</button><div id="personalNotesStatus" class="small"></div></div>
+        <textarea id="notesArea" readonly style="margin-top:12px;min-height:240px"></textarea>
+        <textarea id="personalNotesArea" placeholder="Your local notes appear here" style="margin-top:12px;min-height:140px"></textarea>
+      </div>
+      <div id="grammarPane" class="hidden" style="margin-top:14px">
+        <div class="grid grid2">
+          <div class="card"><h4>Articles</h4><table class="table" style="margin-top:10px"><tr><th>Case</th><th>der</th><th>die</th><th>das</th><th>Plural</th></tr><tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Akkusativ</td><td>den</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Dativ</td><td>dem</td><td>der</td><td>dem</td><td>den</td></tr><tr><td>Genitiv</td><td>des</td><td>der</td><td>des</td><td>der</td></tr></table><div class="small" style="margin-top:8px">From your extra grammar reference image.</div></div>
+          <div class="card"><h4>Personal pronouns</h4><table class="table" style="margin-top:10px"><tr><th>Case</th><th>ich</th><th>du</th><th>er</th><th>sie</th><th>es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr><tr><td>Nom</td><td>ich</td><td>du</td><td>er</td><td>sie</td><td>es</td><td>wir</td><td>ihr</td><td>sie / Sie</td></tr><tr><td>Akk</td><td>mich</td><td>dich</td><td>ihn</td><td>sie</td><td>es</td><td>uns</td><td>euch</td><td>sie / Sie</td></tr><tr><td>Dat</td><td>mir</td><td>dir</td><td>ihm</td><td>ihr</td><td>ihm</td><td>uns</td><td>euch</td><td>ihnen / Ihnen</td></tr><tr><td>Gen</td><td>meiner</td><td>deiner</td><td>seiner</td><td>ihrer</td><td>seiner</td><td>unser</td><td>euer</td><td>ihrer / Ihrer</td></tr></table></div>
+        </div>
+        <div class="grid grid2" style="margin-top:14px">
+          <div class="card"><h4>Possessive pronouns</h4><table class="table" style="margin-top:10px"><tr><th></th><th>ich</th><th>du</th><th>er</th><th>sie</th><th>es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr><tr><td>Nom m.</td><td>mein</td><td>dein</td><td>sein</td><td>ihr</td><td>sein</td><td>unser</td><td>euer</td><td>ihr / Ihr</td></tr><tr><td>Nom f.</td><td>meine</td><td>deine</td><td>seine</td><td>ihre</td><td>seine</td><td>unsere</td><td>eure</td><td>ihre / Ihre</td></tr><tr><td>Akk m.</td><td>meinen</td><td>deinen</td><td>seinen</td><td>ihren</td><td>seinen</td><td>unseren</td><td>euren</td><td>ihren / Ihren</td></tr><tr><td>Dat m./n.</td><td>meinem</td><td>deinem</td><td>seinem</td><td>ihrem</td><td>seinem</td><td>unserem</td><td>eurem</td><td>ihrem / Ihrem</td></tr></table></div>
+          <div class="card"><h4>Prepositions by case</h4><table class="table" style="margin-top:10px"><tr><th>Akkusativ</th><td>durch, für, gegen, ohne, um</td></tr><tr><th>Dativ</th><td>aus, bei, mit, nach, seit, von, zu, gegenüber, außer</td></tr><tr><th>Two-way</th><td>an, auf, hinter, in, neben, über, unter, vor, zwischen</td></tr></table><div class="small" style="margin-top:10px">Movement = Akkusativ. Location = Dativ.</div></div>
+        </div>
+        <div class="card" style="margin-top:14px"><h4>Reference image</h4><img src="grammar_reference.png" alt="Grammar reference" style="max-width:100%;border-radius:16px;border:1px solid var(--line);margin-top:10px"></div>
+      </div>
+    </section>
 
-  <section id="section-vocabulary" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Vocabulary</h2><span class="pill">Word list • Search • Match game</span></div>
-    <div class="subtabs"><button class="subbtn active" data-vocabtab="list">Word list</button><button class="subbtn" data-vocabtab="game">Match game</button></div>
-    <div id="vocab-list-tab">
-      <div class="row"><div style="min-width:140px"><div class="label">Level</div><select id="vocabLevel"></select></div><div style="min-width:180px"><div class="label">Topic</div><select id="vocabTopic"></select></div><div class="grow"><div class="label">Search</div><input id="vocabSearch" placeholder="Search German or English"></div></div>
-      <div id="vocabStats" class="small muted" style="margin-top:10px"></div>
-      <div id="vocabList" class="list" style="margin-top:12px"></div>
-    </div>
-    <div id="vocab-game-tab" class="hidden">
-      <div class="card"><div class="row" style="justify-content:space-between"><strong>Match German and English</strong><button id="newMatchGameBtn">New round</button></div><div id="matchStatus" class="small muted" style="margin:8px 0"></div><div class="match-grid"><div id="matchGerman"></div><div id="matchEnglish"></div></div></div>
-    </div>
-  </section>
+    <section id="flashcardsView" class="section hidden">
+      <div class="sectionHeader"><h3>Flashcards</h3><div class="pill">Tap to flip • Filter by category</div></div>
+      <div class="grid grid3"><div><div class="small">Category</div><select id="fcCategory" onchange="startFlashcards()"></select></div><div><div class="small">Search</div><input id="fcSearch" oninput="startFlashcards()" placeholder="Search flashcards"></div><div style="display:flex;align-items:end" class="row"><button onclick="prevFlash()" class="ghost">Previous</button><button onclick="nextFlash()">Next</button></div></div>
+      <div id="flashCard" class="card flashcard" onclick="flipFlash()" style="margin-top:14px"></div><div class="small" id="flashMeta" style="margin-top:8px"></div>
+    </section>
 
-  <section id="section-conjugation" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Conjugation trainer</h2><span class="pill">Browse verbs • Mini quiz</span></div>
-    <div class="row"><div style="min-width:140px"><div class="label">Level</div><select id="conjLevel"></select></div><div class="grow"><div class="label">Search verb</div><input id="conjSearch" placeholder="e.g. gehen, arbeiten"></div></div>
-    <div class="grid2" style="margin-top:12px"><div class="card"><div class="row" style="justify-content:space-between"><strong id="conjVerbTitle">Verb</strong><button id="nextVerbBtn">Next verb</button></div><div id="conjVerbMeta" class="small muted"></div><div id="conjForms" class="conj-forms" style="margin-top:12px"></div></div><div class="card"><strong>Quick quiz</strong><div id="conjQuizPrompt" class="exerciseQ" style="margin:12px 0"></div><input id="conjQuizAnswer" placeholder="Type the form"><div class="row" style="margin-top:10px"><button class="primary" id="checkConjBtn">Check</button><button id="nextConjQuizBtn">Next</button></div><div id="conjQuizResult" class="small" style="margin-top:8px"></div></div></div>
-  </section>
-
-  <section id="section-flashcards" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Flashcards</h2><span class="pill">Flip • Filter • Review</span></div>
-    <div class="row"><div style="min-width:180px"><div class="label">Category</div><select id="flashCategory"></select></div><div style="min-width:180px"><div class="label">Order</div><select id="flashOrder"><option value="random">Random</option><option value="sequence">Sequence</option></select></div></div>
-    <div class="card flip" id="flashCard" style="margin-top:12px">Loading…</div><div class="flashhint">Tap card to flip. Use next to continue.</div><div class="row" style="margin-top:10px"><button class="primary" id="nextFlashBtn">Next card</button></div>
-  </section>
-
-  <section id="section-grammar" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Grammar tables</h2><span class="pill">Detailed overview + your reference image</span></div>
-    <div class="grid2"><div class="card note-item"><pre id="grammarTablesText"></pre></div><div class="card"><img src="grammar_reference.png" alt="Grammar reference" style="width:100%;border-radius:16px;border:1px solid var(--line)"></div></div>
-  </section>
-
-  <section id="section-notes" class="app-section panel hidden">
-    <div class="sectionTitle"><h2>Notes</h2><span class="pill">Search all grammar and study notes</span></div>
-    <input id="notesSearch" placeholder="Search notes">
-    <div id="notesList" class="list" style="margin-top:12px"></div>
-  </section>
-</main></div>
-<script src="app.js"></script>
-</body></html>
+    <section id="toolsView" class="section hidden">
+      <div class="sectionHeader"><h3>Tools</h3><div class="pill">Translator • Quick help</div></div>
+      <div class="grid grid2"><div class="card"><h4>Translator</h4><div class="grid grid2" style="margin-top:10px"><select id="langFrom"><option value="de">German</option><option value="en">English</option></select><select id="langTo"><option value="en">English</option><option value="de">German</option></select></div><textarea id="translateInput" placeholder="Type text to translate" style="margin-top:10px"></textarea><div class="row" style="margin-top:10px"><button onclick="translateText()">Translate</button><button class="ghost" onclick="swapLangs()">Swap</button></div><textarea id="translateOutput" readonly style="margin-top:10px"></textarea></div><div class="card"><h4>Quick suggestions</h4><div class="small" id="toolTips" style="white-space:pre-wrap;margin-top:10px"></div></div></div>
+    </section>
+  </main>
+</div>
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const byId=id=>document.getElementById(id);
+const LEVELS=['ALL','A1','A2','B1','B2'];
+let passages=[],notesObj={},exercises=[],flashcards=[],conjugations=[],sentences=[],vocabItems=[];
+let exPool=[],exIndex=0,exCurrent=null,fcPool=[],fcIndex=0,fcFlipped=false,sentPool=[],sentIndex=0,sentCurrent=null,typingStarted=false,typingStartMs=0,matchPool=[],matchSelected=[],matchSolved=0,matchLastWord='',verbQuiz=null;
+function normAnswer(s){return String(s??'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[„“”"'`´.,!?;:()\-]/g,' ').replace(/\s+/g,' ').trim()}
+function setStatus(t){byId('status').textContent=t}
+function loadJson(name){return fetch(name).then(r=>{if(!r.ok) throw new Error(name); return r.json()})}
+function shuffle(a){const x=a.slice(); for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [x[i],x[j]]=[x[j],x[i]]} return x}
+function makeId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function todayKey(){return new Date().toISOString().slice(0,10)}
+function getTodayProgress(){const all=JSON.parse(localStorage.getItem('daily_progress')||'{}'); return all[todayKey()]||{typing:0,exercises:0,sentences:0,vocab:0}}
+function setTodayProgress(obj){const all=JSON.parse(localStorage.getItem('daily_progress')||'{}'); all[todayKey()]=obj; localStorage.setItem('daily_progress',JSON.stringify(all)); renderMissionBars(); renderDashboard()}
+function addTodayProgress(patch){const cur=getTodayProgress(); Object.keys(patch).forEach(k=>cur[k]=(cur[k]||0)+(patch[k]||0)); setTodayProgress(cur)}
+function getMission(){return JSON.parse(localStorage.getItem('daily_mission')||'null')||{preset:'medium',level:'All',typing:3,exercises:10,sentences:5,vocab:10}}
+function setMission(m){localStorage.setItem('daily_mission',JSON.stringify(m)); renderMissionBars(); renderDashboard()}
+function applyMissionPreset(){const preset=byId('missionPreset').value, level=byId('missionLevel').value; let m={preset,level}; if(preset==='easy') Object.assign(m,{typing:1,exercises:10,sentences:5,vocab:10}); else if(preset==='medium') Object.assign(m,{typing:3,exercises:20,sentences:10,vocab:20}); else if(preset==='hard') Object.assign(m,{typing:5,exercises:40,sentences:20,vocab:40}); else Object.assign(m,getMission(),{preset,level}); setMission(m)}
+function resetTodayProgress(){setTodayProgress({typing:0,exercises:0,sentences:0,vocab:0})}
+function renderMissionBars(){const box=byId('missionBars'); const m=getMission(); byId('missionPreset').value=m.preset; byId('missionLevel').value=m.level; const p=getTodayProgress(); const items=[['Typing passages','typing'],['Exercises','exercises'],['Sentence writing','sentences'],['Vocabulary','vocab']]; box.innerHTML=items.map(([label,key])=>{const cur=p[key]||0,target=m[key]||1,pc=Math.min(100,Math.round(cur*100/target)); return `<div class="card"><div class="row" style="justify-content:space-between"><b>${label}</b><span>${cur}/${target}</span></div><div class="pbar"><span style="width:${pc}%"></span></div></div>`}).join('')}
+function setTheme(v){document.body.className=v; localStorage.setItem('theme',v)}
+function goHome(){showView('dashboardView')}
+function speak(text){if(!text) return; const u=new SpeechSynthesisUtterance(text); u.lang='de-DE'; speechSynthesis.cancel(); speechSynthesis.speak(u); matchLastWord=text}
+function showView(id){document.querySelectorAll('.navBtn').forEach(b=>b.classList.toggle('active',b.dataset.view===id)); document.querySelectorAll('main > section').forEach(s=>s.classList.toggle('hidden',s.id!==id))}
+document.querySelectorAll('.navBtn').forEach(b=>b.onclick=()=>showView(b.dataset.view));
+function populateLevelSelect(id, allowAll=true){const sel=byId(id); sel.innerHTML=''; (allowAll?LEVELS:LEVELS.slice(1)).forEach(v=>{const o=document.createElement('option'); o.value=v; o.textContent=v==='ALL'?'All':v; sel.appendChild(o)})}
+function groupPassage(p){return {id:p.id||makeId(), level:(p.level||'').toUpperCase(), chapter:p.chapter||'', title:p.title||((p.german||p.g||'').slice(0,55)), g:p.german||p.g||'', e:p.english||p.e||'', localOnly:!!p.localOnly}}
+async function reloadAll(){setStatus('Loading…');
+ try{const raw=await loadJson('passages.json'); passages=(Array.isArray(raw)?raw:raw.passages||[]).map(groupPassage).concat(JSON.parse(localStorage.getItem('passages_local')||'[]'));}catch(e){passages=JSON.parse(localStorage.getItem('passages_cache')||'[]')} localStorage.setItem('passages_cache',JSON.stringify(passages));
+ try{notesObj=await loadJson('notes.json')}catch(e){notesObj=JSON.parse(localStorage.getItem('notes_cache')||'{}')} localStorage.setItem('notes_cache',JSON.stringify(notesObj));
+ try{exercises=(await loadJson('exercises.json')).exercises||[]}catch(e){exercises=JSON.parse(localStorage.getItem('exercises_cache')||'[]')} localStorage.setItem('exercises_cache',JSON.stringify(exercises));
+ try{flashcards=(await loadJson('flashcards.json')).flashcards||[]}catch(e){flashcards=JSON.parse(localStorage.getItem('flashcards_cache')||'[]')} localStorage.setItem('flashcards_cache',JSON.stringify(flashcards));
+ try{const raw=await loadJson('conjugation.json'); const arr=Array.isArray(raw)?raw:(raw.verbs||[]); conjugations=arr.map(v=>({verb:v.infinitive||v.verb||v.base||'',english:v.english||v.en||'',level:(v.level||'').toUpperCase(),type:v.type||'',forms:v.forms||v.conjugation||v.present||v.prasens||{}})).filter(v=>v.verb)}catch(e){conjugations=JSON.parse(localStorage.getItem('conjugations_cache')||'[]')} localStorage.setItem('conjugations_cache',JSON.stringify(conjugations));
+ try{const raw=await loadJson('sentences.json'); if(Array.isArray(raw)) sentences=raw; else if(raw.sentences) sentences=raw.sentences; else {sentences=[]; Object.entries(raw).forEach(([lvl,items])=>Array.isArray(items)&&items.forEach(x=>{if(x&&typeof x==='object'){x.level=x.level||lvl.toUpperCase(); sentences.push(x)}}))}}catch(e){sentences=JSON.parse(localStorage.getItem('sentences_cache')||'[]')} localStorage.setItem('sentences_cache',JSON.stringify(sentences));
+ try{vocabItems=(await loadJson('vocab.json')).items||[]}catch(e){vocabItems=JSON.parse(localStorage.getItem('vocab_cache')||'[]')} localStorage.setItem('vocab_cache',JSON.stringify(vocabItems));
+ setStatus(`✅ passages:${passages.length} • ✅ notes:${Object.keys(notesObj).length} • ✅ exercises:${exercises.length} • ✅ flashcards:${flashcards.length} • ✅ conjugations:${conjugations.length} • ✅ sentences:${sentences.length} • ✅ vocab:${vocabItems.length}`);
+ initAllUI(); }
+function initAllUI(){['passageLevelFilter','libLevel','vocabLevel','exLevel','verbLevel','sentLevel'].forEach(id=>populateLevelSelect(id,true)); renderTypingSelect(); renderPassages(); renderVocabTopics(); renderVocab(); renderNotes(); renderExerciseFilters(); resetExerciseFlow(); renderVerbList(); renderSentenceTypes(); resetSentencePractice(); renderFlashcardCategories(); startFlashcards(); renderMissionBars(); renderDashboard(); byId('countPassages').textContent=passages.length; byId('countExercises').textContent=exercises.length; byId('personalNotesArea').value=localStorage.getItem('personal_notes')||''; byId('toolTips').textContent=`• Start from Dashboard, set a daily mission, then move to Practice.
+• Use Passages for reading and listening.
+• Use Vocabulary match game after each study session.
+• Use Grammar tables when cases or pronouns feel unclear.`}
+function getPassageFiltered(){const lvl=byId('passageLevelFilter')?.value||'ALL'; return passages.filter(p=>lvl==='ALL'||p.level===lvl)}
+function renderTypingSelect(){const sel=byId('practiceSelect'); const arr=getPassageFiltered(); sel.innerHTML=''; arr.forEach((p,i)=>{const o=document.createElement('option'); o.value=i; o.textContent=`${p.level} • ${p.title}`; sel.appendChild(o)}); if(arr.length) sel.value=0; updateReference()}
+function updateReference(){const arr=getPassageFiltered(), p=arr[Number(byId('practiceSelect').value)]||arr[0]; byId('referenceArea').value=p?p.g:''; byId('referenceEnglishArea').value=p?p.e:''; byId('referenceEnglishArea').classList.toggle('hidden', byId('showEnglishToggle').value!=='1')}
+function onTypingInput(){if(!typingStarted){typingStarted=true; typingStartMs=Date.now()} byId('chars').textContent=byId('practiceArea').value.length}
+function clearTyping(){byId('practiceArea').value=''; byId('typingFeedback').textContent=''; byId('diffOutput').classList.add('hidden'); byId('diffOutput').textContent=''; byId('wpm').textContent='0'; byId('acc').textContent='0'; byId('chars').textContent='0'; typingStarted=false}
+function diffStrings(ref,typed){let out='',correct=0,max=Math.max(ref.length,typed.length); for(let i=0;i<max;i++){const r=ref[i],t=typed[i]; if(r===undefined&&t!==undefined){out+=`<span class="insChar">${esc(t)}</span>`; continue} if(t===undefined&&r!==undefined){out+=`<span class="missChar">${esc(r)}</span>`; continue} if(r===t){correct++; out+=`<span class="okChar">${esc(t)}</span>`} else out+=`<span class="badChar">${esc(t)}</span>`} return {html:out,accuracy:ref.length?Math.round(correct*100/ref.length):0}}
+function checkTyping(){const arr=getPassageFiltered(), p=arr[Number(byId('practiceSelect').value)]||arr[0]; if(!p) return; const typed=byId('practiceArea').value||'', ref=p.g||'', mins=(Date.now()-typingStartMs)/60000||1, wpm=Math.round((typed.trim()?typed.trim().split(/\s+/).length:0)/mins), d=diffStrings(ref,typed); byId('wpm').textContent=wpm; byId('acc').textContent=d.accuracy; if(typed===ref){byId('typingFeedback').innerHTML='<span style="color:var(--good)">✅ Perfect match.</span>'; addTodayProgress({typing:1})} else {byId('typingFeedback').innerHTML='<span style="color:var(--bad)">Not exact.</span> Check punctuation, umlauts, and spacing.'; byId('diffOutput').innerHTML=d.html; byId('diffOutput').classList.remove('hidden'); addTodayProgress({typing:1})}}
+function speakSelectedPassage(){const arr=getPassageFiltered(), p=arr[Number(byId('practiceSelect').value)]||arr[0]; if(p) speak(p.g)}
+function saveParagraphLocal(){const g=byId('germanInput').value.trim(), e=byId('englishInput').value.trim(), level=byId('localLevel').value; if(!g) return alert('German text required.'); const local=JSON.parse(localStorage.getItem('passages_local')||'[]'); local.push({id:makeId(),g,e,level,title:g.slice(0,60),chapter:'Local passage',localOnly:true}); localStorage.setItem('passages_local',JSON.stringify(local)); byId('germanInput').value=''; byId('englishInput').value=''; reloadAll()}
+function renderPassages(){const lvl=byId('libLevel').value||'ALL', q=(byId('libSearch').value||'').toLowerCase(), sort=byId('libSort').value; const list=byId('libraryList'); let arr=passages.filter(p=>(lvl==='ALL'||p.level===lvl)&&(!q||(`${p.title} ${p.chapter} ${p.g} ${p.e}`).toLowerCase().includes(q))); arr=arr.sort((a,b)=> sort==='title' ? a.title.localeCompare(b.title) : (a.level+a.title).localeCompare(b.level+b.title)); list.innerHTML=arr.map(p=>`<div class="card" style="margin-top:10px"><div class="row" style="justify-content:space-between"><div><span class="badge">${esc(p.level)}</span> <b>${esc(p.title)}</b><div class="small" style="margin-top:4px">${esc(p.chapter||'')}</div></div><div class="row"><button class="ghost" onclick='speak(${JSON.stringify(p.g)})'>🔊 Listen</button>${p.localOnly?`<button class="danger" onclick="deleteLocalPassage('${p.id}')">Delete</button>`:''}</div></div><div class="passageBody" style="margin-top:10px">${esc(p.g)}</div>${p.e?`<div class="small passageBody" style="margin-top:8px">EN: ${esc(p.e)}</div>`:''}</div>`).join('')||'<div class="small">No passages found.</div>'}
+function deleteLocalPassage(id){const local=JSON.parse(localStorage.getItem('passages_local')||'[]').filter(x=>x.id!==id); localStorage.setItem('passages_local',JSON.stringify(local)); reloadAll()}
+function renderVocabTopics(){const sel=byId('vocabTopic'); const cur=sel.value||'ALL'; const topics=[...new Set(vocabItems.map(v=>v.topic).filter(Boolean))].sort(); sel.innerHTML='<option value="ALL">All topics</option>'+topics.map(t=>`<option>${esc(t)}</option>`).join(''); if(topics.includes(cur)) sel.value=cur}
+function renderVocab(){const lvl=byId('vocabLevel').value||'ALL', topic=byId('vocabTopic').value||'ALL', q=(byId('vocabSearch').value||'').toLowerCase(); const arr=vocabItems.filter(v=>(lvl==='ALL'||v.level===lvl)&&(topic==='ALL'||v.topic===topic)&&(!q||(`${v.de} ${v.en} ${v.topic}`).toLowerCase().includes(q))); byId('vocabCount').textContent=`${arr.length} vocabulary items shown`; byId('vocabList').innerHTML=arr.slice(0,250).map(v=>`<div class="card" style="margin-top:10px"><div class="row" style="justify-content:space-between"><div><span class="badge">${esc(v.level)}</span> <b>${esc(v.de)}</b> — ${esc(v.en)}</div><button class="ghost" onclick='speak(${JSON.stringify(v.de)})'>🔊</button></div><div class="small" style="margin-top:6px">${esc(v.topic||'')}</div>${v.example_de?`<div style="margin-top:8px">${esc(v.example_de)}</div>`:''}${v.example_en?`<div class="small" style="margin-top:4px">EN: ${esc(v.example_en)}</div>`:''}<div class="row" style="margin-top:8px"><button class="ghost" onclick="markVocabReviewed()">Mark reviewed</button></div></div>`).join('')||'<div class="small">No vocabulary found for this filter.</div>'}
+function markVocabReviewed(){addTodayProgress({vocab:1})}
+function newMatchGame(){const lvl=byId('vocabLevel').value||'ALL'; const arr=vocabItems.filter(v=>lvl==='ALL'||v.level===lvl); const picked=shuffle(arr).slice(0,5); matchPool=[]; picked.forEach((v,i)=>{matchPool.push({id:'g'+i,pair:i,text:v.de,lang:'de'},{id:'e'+i,pair:i,text:v.en,lang:'en'})}); matchPool=shuffle(matchPool); matchSelected=[]; matchSolved=0; renderMatchGrid(); byId('matchInfo').textContent='Match each German word with the English meaning.'}
+function renderMatchGrid(){byId('matchGrid').innerHTML=matchPool.map(c=>`<div class="matchCard ${c.done?'done':''} ${matchSelected.includes(c.id)?'sel':''}" onclick="selectMatch('${c.id}')">${c.done?'✓ '+esc(c.text):esc(c.text)}</div>`).join('')}
+function selectMatch(id){const card=matchPool.find(x=>x.id===id); if(!card||card.done) return; if(matchSelected.includes(id)){matchSelected=matchSelected.filter(x=>x!==id); renderMatchGrid(); return;} matchSelected.push(id); renderMatchGrid(); if(matchSelected.length===2){const [a,b]=matchSelected.map(id=>matchPool.find(x=>x.id===id)); if(a.pair===b.pair&&a.lang!==b.lang){a.done=b.done=true; matchSelected=[]; matchSolved++; byId('matchInfo').textContent='✅ Correct match!'; addTodayProgress({vocab:1}); if(matchSolved===5) byId('matchInfo').textContent='🎉 Great. All pairs matched.'; renderMatchGrid()} else {byId('matchInfo').textContent='Not a match. Try again.'; setTimeout(()=>{matchSelected=[]; renderMatchGrid()},650)}}}
+function speakMatchWord(){if(matchSelected.length){const c=matchPool.find(x=>x.id===matchSelected[0]); if(c&&c.lang==='de') speak(c.text)}}
+async function lookupWord(){const q=byId('dictWord').value.trim(); if(!q) return; const local=vocabItems.filter(v=>normAnswer(v.de)===normAnswer(q)||normAnswer(v.en)===normAnswer(q)); if(local.length){byId('dictResult').textContent='From your app vocabulary\n\n'+local.slice(0,8).map(v=>`${v.de} — ${v.en}${v.topic?` (${v.topic})`:''}`).join('\n'); return} byId('dictResult').textContent='Not found in app vocabulary yet. Try searching in the word list or add it to notes.'}
+function renderNotes(){const sel=byId('notesTopic'); const keys=Object.keys(notesObj); sel.innerHTML=keys.map(k=>`<option>${esc(k)}</option>`).join(''); sel.onchange=()=>byId('notesArea').value=String(notesObj[sel.value]||''); if(keys.length){sel.value=keys[0]; byId('notesArea').value=String(notesObj[keys[0]]||'')} }
+function savePersonalQuickNote(){const v=byId('personalNotesInput').value.trim(); if(!v) return; const existing=localStorage.getItem('personal_notes')||''; const next=existing ? existing+'\n• '+v : '• '+v; localStorage.setItem('personal_notes',next); byId('personalNotesArea').value=next; byId('personalNotesInput').value=''; byId('personalNotesStatus').textContent='Saved locally.'}
+function clearPersonalNotes(){localStorage.removeItem('personal_notes'); byId('personalNotesArea').value=''; byId('personalNotesStatus').textContent='Cleared.'}
+function renderExerciseFilters(){populateLevelSelect('exLevel',true); const groups=[...new Set(exercises.map(e=>e.group||'general'))].sort(); byId('exGroup').innerHTML='<option value="ALL">All useful types</option>'+groups.map(g=>`<option value="${g}">${g.replaceAll('_',' ')}</option>`).join('')}
+function buildExercisePool(){const lvl=byId('exLevel').value||'ALL', group=byId('exGroup').value||'ALL', order=byId('exOrder').value; exPool=exercises.filter(e=>(lvl==='ALL'||(e.level||'').toUpperCase()===lvl)&&(group==='ALL'||(e.group||'general')===group)); exPool=order==='random'?shuffle(exPool):exPool.slice().sort((a,b)=>(a.id||0)-(b.id||0)); exIndex=0}
+function resetExerciseFlow(){buildExercisePool(); byId('exFeedback').textContent=''; nextExercise(true)}
+function renderExercise(e){byId('exMCQ').innerHTML=''; byId('exTypingWrap').classList.add('hidden'); byId('exTyping').value=''; if(!e){byId('exQ').textContent='No exercises found for this filter.'; byId('exHint').textContent='Change the level or practice type.'; byId('exProg').textContent='0/0'; byId('exMeta').textContent='Mode: -'; return} byId('exQ').textContent=e.question; byId('exHint').textContent=`${e.level} • ${String(e.group||'general').replaceAll('_',' ')} • ${e.type}`; byId('exProg').textContent=`${Math.min(exIndex+1,exPool.length)}/${exPool.length}`; byId('exMeta').textContent=`Mode: ${e.mode||'typing'}`; if(e.mode==='mcq'&&Array.isArray(e.options)){e.options.forEach(opt=>{const b=document.createElement('button'); b.textContent=opt; b.className='ghost'; b.onclick=()=>checkExerciseMCQ(opt); byId('exMCQ').appendChild(b)})} else {byId('exTypingWrap').classList.remove('hidden')}}
+function nextExercise(first=false){if(!exPool.length){renderExercise(null); return} if(!first){exIndex=(exIndex+1)%exPool.length} exCurrent=exPool[exIndex]; byId('exFeedback').textContent=''; renderExercise(exCurrent)}
+function checkExerciseMCQ(choice){if(!exCurrent) return; const ok=normAnswer(choice)===normAnswer(exCurrent.answer); byId('exFeedback').innerHTML=ok?'<span style="color:var(--good)">✅ Correct</span>':`<span style="color:var(--bad)">❌</span> Correct: <b>${esc(exCurrent.answer)}</b>`; addTodayProgress({exercises:1})}
+function checkExerciseTyping(){if(!exCurrent) return; const inp=byId('exTyping').value; const ok=normAnswer(inp)===normAnswer(exCurrent.answer); byId('exFeedback').innerHTML=ok?'<span style="color:var(--good)">✅ Correct</span>':`<span style="color:var(--bad)">❌</span> Correct: <b>${esc(exCurrent.answer)}</b>`; addTodayProgress({exercises:1})}
+function renderVerbList(){const q=(byId('verbSearch').value||'').toLowerCase(), lvl=byId('verbLevel').value||'ALL'; const sel=byId('verbSelect'); sel.innerHTML=''; const arr=conjugations.filter(v=>(lvl==='ALL'||v.level===lvl)&&(!q||(`${v.verb} ${v.english}`).toLowerCase().includes(q))).sort((a,b)=>a.verb.localeCompare(b.verb)); arr.forEach(v=>{const o=document.createElement('option'); o.value=v.verb; o.textContent=`${v.verb} — ${v.english||''}`; sel.appendChild(o)}); if(arr.length) sel.value=arr[0].verb; renderVerb()}
+function renderVerb(){const chosen=byId('verbSelect').value; const v=conjugations.find(x=>x.verb===chosen); if(!v){byId('verbTitle').textContent='No verb'; return} byId('verbTitle').textContent=v.verb; byId('verbMeta').textContent=`${v.english||''} • ${v.level||''} • ${v.type||''}`; ['ich','du','er','wir','ihr','sie'].forEach(k=>{byId('v_'+k).textContent=(v.forms||{})[k]||'—'})}
+function startVerbQuiz(){const chosen=byId('verbSelect').value; const v=conjugations.find(x=>x.verb===chosen); if(!v) return; const pron=['ich','du','er','wir','ihr','sie'][Math.floor(Math.random()*6)]; verbQuiz={verb:v,pron,answer:(v.forms||{})[pron]||''}; byId('verbQuizQ').textContent=`Conjugate ${v.verb} for ${pron}:`; byId('verbQuizInput').value=''; byId('verbQuizFeedback').textContent=''}
+function checkVerbQuiz(){if(!verbQuiz) return; const ok=normAnswer(byId('verbQuizInput').value)===normAnswer(verbQuiz.answer); byId('verbQuizFeedback').innerHTML=ok?'<span style="color:var(--good)">✅ Correct</span>':`<span style="color:var(--bad)">❌</span> Correct: <b>${esc(verbQuiz.answer)}</b>`; addTodayProgress({exercises:1})}
+function guessSentenceType(de){const s=(de||'').toLowerCase(); if(/\?$/.test(de||'')) return 'questions'; if(/weil|dass|wenn|obwohl|damit/.test(s)) return 'subordinate clauses'; if(/mich|dich|sich|uns|euch/.test(s)) return 'reflexive'; if(/werde|wirst|wird|werden/.test(s)) return 'future/passive'; return 'core sentences'}
+function renderSentenceTypes(){populateLevelSelect('sentLevel',true); const types=[...new Set(sentences.map(s=>s.type||guessSentenceType(s.de||s.german||'')))].sort(); byId('sentType').innerHTML='<option value="ALL">All sentence types</option>'+types.map(t=>`<option>${esc(t)}</option>`).join('')}
+function buildSentencePool(){const lvl=byId('sentLevel').value||'ALL', type=byId('sentType').value||'ALL', order=byId('sentOrder').value; sentPool=sentences.map((s,i)=>({id:i+1,level:(s.level||'').toUpperCase(),prompt:s.en||s.english||s.title||'Write the German sentence',sample:s.de||s.german||'',type:s.type||guessSentenceType(s.de||s.german||''),hint:s.hint||''})).filter(s=>(lvl==='ALL'||s.level===lvl)&&(type==='ALL'||s.type===type)); sentPool=order==='random'?shuffle(sentPool):sentPool; sentIndex=0}
+function resetSentencePractice(){buildSentencePool(); nextSentence(true)}
+function nextSentence(first=false){if(!sentPool.length){byId('sentPrompt').textContent='No sentence task found.'; return} if(!first) sentIndex=(sentIndex+1)%sentPool.length; sentCurrent=sentPool[sentIndex]; byId('sentPrompt').textContent=sentCurrent.prompt; byId('sentMeta').textContent=`${sentCurrent.level} • ${sentCurrent.type}`; byId('sentAnswer').value=''; byId('sentFeedback').textContent=''; byId('sentSamples').textContent=''}
+function checkSentence(){if(!sentCurrent) return; const ok=normAnswer(byId('sentAnswer').value)===normAnswer(sentCurrent.sample); byId('sentFeedback').innerHTML=ok?'<span style="color:var(--good)">✅ Sample match.</span>':`Not an exact sample match. Sample: <b>${esc(sentCurrent.sample)}</b>`; addTodayProgress({sentences:1})}
+function showSentenceSample(){if(sentCurrent) byId('sentSamples').textContent='Sample: '+sentCurrent.sample}
+function renderFlashcardCategories(){const cats=[...new Set(flashcards.map(f=>f.category).filter(Boolean))].sort(); byId('fcCategory').innerHTML='<option value="ALL">All</option>'+cats.map(c=>`<option>${esc(c)}</option>`).join('')}
+function startFlashcards(){const cat=byId('fcCategory').value||'ALL', q=(byId('fcSearch').value||'').toLowerCase(); fcPool=flashcards.filter(f=>(cat==='ALL'||f.category===cat)&&(!q||(`${f.front} ${f.back}`).toLowerCase().includes(q))); fcPool=shuffle(fcPool); fcIndex=0; fcFlipped=false; renderFlash()}
+function renderFlash(){const f=fcPool[fcIndex]; byId('flashCard').innerHTML=f?esc(fcFlipped?f.back:f.front):'No flashcards'; byId('flashMeta').textContent=f?`${fcIndex+1}/${fcPool.length} • ${f.category||''} • tap to flip`:''}
+function flipFlash(){fcFlipped=!fcFlipped; renderFlash()} function nextFlash(){if(!fcPool.length) return; fcIndex=(fcIndex+1)%fcPool.length; fcFlipped=false; renderFlash()} function prevFlash(){if(!fcPool.length) return; fcIndex=(fcIndex-1+fcPool.length)%fcPool.length; fcFlipped=false; renderFlash()}
+function renderDashboard(){const p=getTodayProgress(), m=getMission(); const done=(p.typing+p.exercises+p.sentences+p.vocab), target=(m.typing+m.exercises+m.sentences+m.vocab); let emoji='🌱'; if(done>=target) emoji='🏆'; else if(done>target*0.66) emoji='🔥'; else if(done>target*0.33) emoji='🚀'; byId('todayEmoji').textContent=emoji; byId('todaySummary').textContent=`${done}/${target} tasks done today for ${m.level} mission.`; byId('learningPathBox').innerHTML=`<b>A1</b> build articles, question words, present tense, short daily passages.<br><br><b>A2</b> add Perfekt, modal verbs, weil/dass/wenn, reflexive verbs, short emails.<br><br><b>B1</b> focus on work, neighbours, health, environment, culture, connectors, relative clauses, passive basics.<br><br><b>B2</b> move to Konjunktiv II, passive alternatives, opinion writing, abstract vocabulary, longer arguments.`; byId('todayPlan').innerHTML=`• ${m.typing} passage typing checks<br>• ${m.exercises} exercises from grouped practice types<br>• ${m.sentences} sentence-writing prompts<br>• ${m.vocab} vocabulary reviews or match pairs<br><br>Best next step: start in Practice, then use Vocabulary match game, and finally revise Notes.`}
+async function translateText(){const txt=byId('translateInput').value.trim(); if(!txt) return; const sl=byId('langFrom').value, tl=byId('langTo').value; try{const res=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl='+sl+'&tl='+tl+'&dt=t&q='+encodeURIComponent(txt)); const data=await res.json(); byId('translateOutput').value=(data[0]||[]).map(x=>x[0]).join('')}catch(e){byId('translateOutput').value='Translation failed.'}}
+function swapLangs(){const a=byId('langFrom'), b=byId('langTo'); const t=a.value; a.value=b.value; b.value=t}
+document.querySelectorAll('[data-psub]').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('[data-psub]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); ['typingPane','exercisePane','conjPane','sentencePane'].forEach(id=>byId(id).classList.toggle('hidden',id!==b.dataset.psub))});
+document.querySelectorAll('[data-vsub]').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('[data-vsub]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); ['vocabListPane','vocabGamePane','dictPane'].forEach(id=>byId(id).classList.toggle('hidden',id!==b.dataset.vsub)); if(b.dataset.vsub==='vocabGamePane' && !matchPool.length) newMatchGame()});
+document.querySelectorAll('[data-nsub]').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('[data-nsub]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); ['notesPane','grammarPane'].forEach(id=>byId(id).classList.toggle('hidden',id!==b.dataset.nsub))});
+(function init(){const theme=localStorage.getItem('theme')||'theme-focus'; setTheme(theme); byId('themeSelect').value=theme; applyMissionPreset(); reloadAll();})();
+</script>
+</body>
+</html>
